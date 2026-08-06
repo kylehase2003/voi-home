@@ -1,0 +1,14 @@
+project_id = "REPLACE_WITH_NEW_SUPABASE_PROJECT_ID"
+
+[functions.send-contact-email]
+verify_jwt = false
+
+[functions.send-contact-reply]
+verify_jwt = false
+
+[functions.sitemap]
+verify_jwt = false
+
+[functions.og-preview]
+verify_jwt = false
+

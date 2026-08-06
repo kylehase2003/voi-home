@@ -1,0 +1,22 @@
+# MR. Property
+
+> Luxury real estate consultancy offering curated homes, villas, and investment properties in Istanbul, Bodrum, and Dubai — with Turkish citizenship-by-investment guidance.
+
+MR. Property helps international buyers find, evaluate, and purchase premium residential and investment property across Türkiye (Istanbul, Bodrum) and the UAE (Dubai). We provide end-to-end advisory, from shortlisting to closing, including Turkish citizenship eligibility through qualifying real estate investment (minimum $400,000 USD).
+
+## Pages
+
+- [Home](/): Overview of MR. Property services in Istanbul, Bodrum, and Dubai.
+- [Properties](/properties): Searchable catalog of luxury homes, villas, and investment properties.
+- [Properties Map](/properties-map): Map view of available listings across Türkiye and Dubai.
+- [About](/about): Company background, mission, and expertise in Turkish and Dubai real estate.
+- [Buyer Guide](/buyer-guide): Step-by-step guide for foreign buyers, including Turkish citizenship-by-investment.
+- [Blog](/blogs): Market insights, neighborhood guides, and investment articles.
+- [Team](/team): Advisors and consultants at MR. Property.
+- [Partners](/partners): Developer and institutional partners.
+- [Contact](/contact): Enquiry form, WhatsApp, and office details.
+
+## Optional
+
+- [Privacy Policy](/privacy)
+- [Terms & Conditions](/terms)

@@ -1,0 +1,29 @@
+# Route social crawlers to the og-preview edge function so link previews get
+# per-page title/description/image. Real users (non-matching User-Agents) fall
+# through to the SPA below. 200! forces a proxy rewrite (URL stays the same).
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=facebookexternalhit
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Facebot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Twitterbot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=LinkedInBot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=WhatsApp
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Slackbot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=TelegramBot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Discordbot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Pinterest
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=redditbot
+/property/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/property/:splat  200!  User-Agent=Applebot
+
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=facebookexternalhit
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Facebot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Twitterbot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=LinkedInBot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=WhatsApp
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Slackbot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=TelegramBot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Discordbot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Pinterest
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=redditbot
+/blog/*  https://vlzbfebuotkxnmmwxccj.supabase.co/functions/v1/og-preview/blog/:splat  200!  User-Agent=Applebot
+
+# SPA fallback for everything else
+/*  /index.html  200
