@@ -2,7 +2,6 @@ import { useState } from "react";
 import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { Button } from "@/components/ui/button";
 import { useToast } from "@/hooks/use-toast";
 import { supabase } from "@/integrations/supabase/client";
 import { triggerLeadWebhook } from "@/lib/leadWebhook";
@@ -16,6 +15,7 @@ import step2Image from "@/assets/buyer-guide-step2.webp";
 import step3Image from "@/assets/buyer-guide-step3.webp";
 import step4Image from "@/assets/buyer-guide-step4.webp";
 import OptimizedImage from "@/components/OptimizedImage";
+import RevealOnScroll from "@/components/RevealOnScroll";
 const BuyerGuide = () => {
   const {
     t,
@@ -201,66 +201,75 @@ const BuyerGuide = () => {
         <section className={`py-16 transition-colors duration-500 ${locationFilter === "dubai" ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
           <div className="container mx-auto px-4">
             {/* Filter Tabs */}
-            <div className="mb-8 flex justify-center gap-4">
-              <Button 
-                variant={locationFilter === "turkey" ? "default" : "outline"} 
-                onClick={() => setLocationFilter("turkey")} 
-                className={locationFilter === "turkey" ? "bg-gold hover:bg-gold/90 text-primary" : locationFilter === "dubai" ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
+            <div className="mb-8 flex justify-center gap-2.5">
+              <button
+                type="button"
+                onClick={() => setLocationFilter("turkey")}
+                className={`px-6 py-3 rounded-full border text-[15px] transition-all duration-300 ${
+                  locationFilter === "turkey"
+                    ? "bg-gold text-primary border-gold"
+                    : locationFilter === "dubai"
+                      ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)]"
+                      : "border-border text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                }`}
               >
                 {t("buyerGuidePage.buttonTurkey")}
-              </Button>
-              <Button 
-                variant={locationFilter === "dubai" ? "default" : "outline"} 
-                onClick={() => setLocationFilter("dubai")} 
-                className={locationFilter === "dubai" ? "bg-gold hover:bg-gold/90 text-primary" : ""}
+              </button>
+              <button
+                type="button"
+                onClick={() => setLocationFilter("dubai")}
+                className={`px-6 py-3 rounded-full border text-[15px] transition-all duration-300 ${
+                  locationFilter === "dubai"
+                    ? "bg-gold text-primary border-gold"
+                    : "border-border text-foreground hover:bg-primary hover:text-primary-foreground hover:border-primary"
+                }`}
               >
                 {t("buyerGuidePage.buttonDubai")}
-              </Button>
+              </button>
             </div>
 
-          <div className="text-center mb-16">
-            <h2 className={`text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in transition-colors duration-500 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'} ${locationFilter === "dubai" ? "text-white" : "text-[hsl(var(--olive))]"}`}>
+          <RevealOnScroll className="text-center mb-16 max-w-xl mx-auto">
+            <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 transition-colors duration-500 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'} ${locationFilter === "dubai" ? "text-white" : "text-foreground"}`}>
               {t("buyerGuidePage.mainTitle")}
             </h2>
-            <p className={`text-lg md:text-xl leading-relaxed animate-fade-in transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/80" : "text-[hsl(var(--muted-foreground))]"}`}>
+            <p className={`text-base leading-[1.7] transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/80" : "text-muted-foreground"}`}>
               {t("buyerGuidePage.mainSubtitle")}
             </p>
-            <div className="w-16 h-1 bg-[hsl(var(--gold))] mx-auto mt-2" />
-          </div>
+          </RevealOnScroll>
 
-          {steps.map((step, index) => <div key={step.number} className={`flex flex-col ${step.imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 items-center mb-20 last:mb-0 group`}>
+          {steps.map((step, index) => <RevealOnScroll key={step.number} delay={index * 80} className={`flex flex-col ${step.imagePosition === "right" ? "lg:flex-row" : "lg:flex-row-reverse"} gap-8 lg:gap-16 items-center mb-20 last:mb-0 group`}>
               <div className="flex-1">
-                <div className={`p-8 md:p-10 rounded-2xl shadow-luxury hover:shadow-xl transition-all duration-500 ${locationFilter === "dubai" ? "bg-[hsl(0,0%,15%)] border border-white/10" : "bg-[hsl(var(--card))] border border-[hsl(var(--border))]"}`}>
+                <div className={`p-8 md:p-10 rounded-[20px] shadow-luxury hover:shadow-xl transition-all duration-500 ${locationFilter === "dubai" ? "bg-[hsl(0,0%,15%)] border border-white/10" : "bg-card border border-border"}`}>
                   <div className="flex items-center gap-6 mb-6">
                     <div className="flex items-center justify-center w-16 h-16 rounded-full bg-gradient-gold text-gold font-bold font-serif text-2xl">
                       {step.number}
                     </div>
                   </div>
-                  <h3 className={`text-3xl md:text-4xl mb-6 transition-colors duration-500 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'} ${locationFilter === "dubai" ? "text-white" : "text-[hsl(var(--olive))]"}`}>{step.title}</h3>
-                  <p className={`mb-4 leading-relaxed text-base md:text-lg transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/70" : "text-[hsl(var(--muted-foreground))]"}`}>
+                  <h3 className={`text-2xl md:text-3xl tracking-[-0.5px] mb-5 transition-colors duration-500 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'} ${locationFilter === "dubai" ? "text-white" : "text-foreground"}`}>{step.title}</h3>
+                  <p className={`mb-4 leading-[1.7] text-base transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/70" : "text-muted-foreground"}`}>
                     {step.description}
                   </p>
-                  <p className={`leading-relaxed transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/70" : "text-[hsl(var(--muted-foreground))]"}`}>{step.fullDescription}</p>
+                  <p className={`leading-[1.7] transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/70" : "text-muted-foreground"}`}>{step.fullDescription}</p>
                 </div>
               </div>
 
               <div className="flex-1">
-                <div className="aspect-[4/3] rounded-2xl overflow-hidden shadow-luxury group-hover:shadow-xl transition-smooth">
+                <div className="aspect-[4/3] rounded-[20px] overflow-hidden shadow-luxury group-hover:shadow-xl transition-smooth">
                   <OptimizedImage src={[step1Image, step2Image, step3Image, step4Image][index]} alt={step.title} className="group-hover:scale-105 transition-smooth" containerClassName="w-full h-full" />
                 </div>
               </div>
-            </div>)}
+            </RevealOnScroll>)}
         </div>
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-20 md:py-32 gradient-hero">
+      <section className="py-20 md:py-32 gradient-hero mx-2 md:mx-3 my-3 rounded-[20px] overflow-hidden">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto">
-            <div className="bg-white/5 backdrop-blur-sm rounded-3xl p-8 md:p-12 lg:p-16 border border-white/10 shadow-luxury">
+            <RevealOnScroll className="bg-white/5 backdrop-blur-sm rounded-[20px] p-8 md:p-12 lg:p-16 border border-white/10 shadow-luxury">
               <div className="text-center mb-10">
-                <p className="text-[hsl(var(--gold))] uppercase tracking-widest mb-3 text-lg">{t("buyerGuidePage.ctaTitle")}</p>
-                <h2 className={`text-3xl md:text-4xl lg:text-5xl text-white mb-4 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
+                <div className="text-xs font-medium uppercase tracking-[1.5px] text-gold mb-4">{t("buyerGuidePage.ctaTitle")}</div>
+                <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-white mb-4 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
                   {locationFilter === "dubai" ? t("buyerGuidePage.ctaTitleDubai") : locationFilter === "turkey" ? t("buyerGuidePage.ctaTitleTurkey") : t("buyerGuidePage.ctaTitle")}
                 </h2>
                 <p className="text-white/70">
@@ -337,7 +346,7 @@ const BuyerGuide = () => {
                   {isSubmitting ? t("contactPage.sending") : t("buyerGuidePage.submitButton")}
                 </button>
               </form>
-            </div>
+            </RevealOnScroll>
           </div>
         </div>
       </section>

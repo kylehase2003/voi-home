@@ -57,13 +57,13 @@ const BlogPreview = () => {
   return (
     <section className="py-8 md:py-14 bg-muted/30">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 md:mb-16">
+        <div className="text-center mb-10 md:mb-16 max-w-xl mx-auto">
           <h2
-            className={`text-3xl md:text-5xl mb-3 md:mb-4 text-primary ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}
           >
             {t("homePage.blogsNews.title")}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">{t("homePage.blogsNews.subtitle")}</p>
+          <p className="text-base text-muted-foreground leading-[1.7]">{t("homePage.blogsNews.subtitle")}</p>
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">

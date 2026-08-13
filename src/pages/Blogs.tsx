@@ -7,10 +7,10 @@ import { supabase } from "@/integrations/supabase/client";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-villa.webp";
 import { getTranslatedContent, getTranslatedTags } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";
 import SEOHead from "@/components/SEOHead";
+import RevealOnScroll from "@/components/RevealOnScroll";
 interface Blog {
   id: string;
   title: string;
@@ -112,7 +112,16 @@ const Blogs = () => {
       />
       <Header />
       <main className="pt-24 flex-1">
-        
+        <RevealOnScroll className="text-center max-w-xl mx-auto px-6 pt-8 pb-2">
+          <div className={`text-xs font-medium uppercase tracking-[1.5px] mb-4 transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/60" : "text-muted-foreground"}`}>
+            {t("blogs.title")}
+          </div>
+          <h1
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] transition-colors duration-500 ${i18n.language === "ar" ? "font-arabic" : "font-serif"} ${locationFilter === "dubai" ? "text-white" : "text-foreground"}`}
+          >
+            {t("blogs.subtitle")}
+          </h1>
+        </RevealOnScroll>
 
         <section className={`py-16 transition-colors duration-500 ${locationFilter === "dubai" ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
           <div className="container mx-auto px-4">
@@ -134,9 +143,10 @@ const Blogs = () => {
               </div> : filteredBlogs.length === 0 ? <div className={`text-center max-w-2xl mx-auto transition-colors duration-500 ${locationFilter === "dubai" ? "text-white/70" : "text-muted-foreground"}`}>
                 {t("blogs.noPostsForLocation")}
               </div> : <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {filteredBlogs.map(blog => (
-                  <Link key={blog.id} to={`/blog/${blog.slug}`} className="block group">
-                    <Card className={`overflow-hidden hover:shadow-lg transition-all duration-500 h-full ${locationFilter === "dubai" ? "bg-[hsl(0,0%,15%)] border-white/10" : "bg-card"}`}>
+                {filteredBlogs.map((blog, index) => (
+                  <RevealOnScroll key={blog.id} delay={(index % 6) * 60}>
+                  <Link to={`/blog/${blog.slug}`} className="block group">
+                    <Card className={`overflow-hidden rounded-[20px] hover:shadow-lg transition-all duration-500 h-full ${locationFilter === "dubai" ? "bg-[hsl(0,0%,15%)] border-white/10" : "bg-card"}`}>
                       {blog.featured_image && <div className="aspect-video w-full overflow-hidden">
                           <OptimizedImage src={blog.featured_image} alt={blog.title} className="group-hover:scale-105 transition-transform duration-500" containerClassName="w-full h-full" />
                         </div>}
@@ -167,6 +177,7 @@ const Blogs = () => {
                       </CardContent>
                     </Card>
                   </Link>
+                  </RevealOnScroll>
                 ))}
               </div>}
           </div>

@@ -5,18 +5,20 @@ import RevealOnScroll from "@/components/RevealOnScroll";
 interface Stat {
   value: number;
   decimals?: number;
+  prefix?: string;
   suffix?: string;
   label: string;
 }
 
 interface StatsOverlayProps {
   image: string;
+  eyebrow?: string;
   title: string;
-  description: string;
+  description?: string;
   stats: Stat[];
 }
 
-const StatsOverlay = ({ image, title, description, stats }: StatsOverlayProps) => {
+const StatsOverlay = ({ image, eyebrow, title, description, stats }: StatsOverlayProps) => {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
   const [visible, setVisible] = useState(false);
@@ -59,15 +61,19 @@ const StatsOverlay = ({ image, title, description, stats }: StatsOverlayProps) =
       <div className="absolute inset-0 bg-black/50" />
       <div className="relative z-10 w-full px-6 md:px-14 py-24 flex flex-col items-center text-center">
         <RevealOnScroll className="max-w-[540px] mb-16">
+          {eyebrow && (
+            <div className="text-xs font-medium uppercase tracking-[1.5px] text-white/60 mb-4">{eyebrow}</div>
+          )}
           <h2 className={`text-3xl md:text-5xl leading-[1.08] tracking-[-2px] text-white mb-4 ${isRTL ? "font-arabic" : "font-serif"}`}>
             {title}
           </h2>
-          <p className="text-base text-white/70 leading-[1.65]">{description}</p>
+          {description && <p className="text-base text-white/70 leading-[1.65]">{description}</p>}
         </RevealOnScroll>
         <div className="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-8 w-full max-w-3xl pt-10 border-t border-white/15">
           {stats.map((stat, i) => (
             <div key={i} className="text-center">
               <div className="text-3xl md:text-5xl font-medium tracking-[-2px] text-white mb-1">
+                {stat.prefix}
                 {counts[i].toFixed(stat.decimals ?? 0)}
                 {stat.suffix}
               </div>

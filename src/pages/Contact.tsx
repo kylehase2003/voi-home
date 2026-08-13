@@ -10,7 +10,7 @@ import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { useTranslation } from "react-i18next";
-import heroImage from "@/assets/hero-villa.webp";
+import RevealOnScroll from "@/components/RevealOnScroll";
 import { supabase } from "@/integrations/supabase/client";
 import { triggerLeadWebhook } from "@/lib/leadWebhook";
 import { z } from "zod";
@@ -187,17 +187,31 @@ const Contact = () => {
       />
       <Header />
       <main className="pt-24">
-        <h1 className="sr-only">{t("seo.h1.contact")}</h1>
-        <MapSection />
+        <RevealOnScroll className="text-center max-w-xl mx-auto px-6 pb-10">
+          <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
+            {t("contactPage.title")}
+          </div>
+          <h1
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}
+          >
+            {t("contact.subtitle")}
+          </h1>
+        </RevealOnScroll>
+
+        <div className="rounded-[20px] overflow-hidden mx-2 md:mx-3 my-3">
+          <MapSection />
+        </div>
 
         <section className="py-20">
           <div className="container mx-auto px-4">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
               <div>
-                <h2 className={`text-4xl mb-6 text-primary ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}>
+                <h2
+                  className={`text-2xl md:text-3xl tracking-[-0.5px] mb-4 text-foreground ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}
+                >
                   {t("contactPage.formTitle")}
                 </h2>
-                <p className="text-muted-foreground mb-8 leading-relaxed">{t("contactPage.formSubtitle")}</p>
+                <p className="text-muted-foreground mb-8 leading-[1.7]">{t("contactPage.formSubtitle")}</p>
 
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
@@ -283,25 +297,29 @@ const Contact = () => {
               </div>
 
               <div className="space-y-6">
-                <h2 className={`text-4xl mb-6 text-primary ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}>
+                <h2
+                  className={`text-2xl md:text-3xl tracking-[-0.5px] mb-4 text-foreground ${i18n.language === "ar" ? "font-arabic" : "font-serif"}`}
+                >
                   {t("contactPage.infoTitle")}
                 </h2>
                 {contactInfo.map((info, index) => (
-                  <Card key={index} className="bg-card">
-                    <CardContent className="p-6 flex gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                        <info.icon className="h-6 w-6 text-gold" />
-                      </div>
-                      <div>
-                        <h3 className="font-semibold mb-2 text-card-foreground">{info.title}</h3>
-                        {info.details.map((detail, idx) => (
-                          <p key={idx} className="text-sm text-muted-foreground">
-                            {detail}
-                          </p>
-                        ))}
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <RevealOnScroll key={index} delay={index * 80}>
+                    <Card className="bg-card rounded-[20px]">
+                      <CardContent className="p-6 flex gap-4">
+                        <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
+                          <info.icon className="h-6 w-6 text-gold" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold mb-2 text-card-foreground">{info.title}</h3>
+                          {info.details.map((detail, idx) => (
+                            <p key={idx} className="text-sm text-muted-foreground">
+                              {detail}
+                            </p>
+                          ))}
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </RevealOnScroll>
                 ))}
               </div>
             </div>

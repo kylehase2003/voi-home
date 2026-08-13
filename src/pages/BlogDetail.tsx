@@ -131,7 +131,7 @@ const BlogDetail = () => {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 container mx-auto px-4 text-center">
-          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-primary-foreground mb-6 animate-fade-in px-4 ${i18n.language === 'ar' ? 'font-arabic leading-relaxed' : 'font-serif leading-tight'}`}>
+          <h1 className={`text-3xl sm:text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px] text-primary-foreground mb-6 animate-fade-in px-4 ${i18n.language === 'ar' ? 'font-arabic leading-relaxed' : 'font-serif leading-tight'}`}>
             {getTranslatedContent(blog, 'title', i18n.language)}
           </h1>
           <div className="flex items-center justify-center gap-2 text-primary-foreground/80 px-4 py-2 md:px-6 md:py-3 border border-primary-foreground/30 rounded-full max-w-[90%] mx-auto backdrop-blur-sm text-xs md:text-sm">
@@ -149,7 +149,7 @@ const BlogDetail = () => {
         <div className="container mx-auto px-4 max-w-7xl grid grid-cols-1 lg:grid-cols-[300px_1fr] gap-10">
           {/* Sticky Sidebar */}
           <aside className="lg:order-first order-last">
-            <div className="lg:sticky lg:top-36 bg-muted/30 rounded-lg shadow-lg p-6 space-y-6">
+            <div className="lg:sticky lg:top-36 bg-muted/30 rounded-[20px] shadow-lg p-6 space-y-6">
               {/* CTA */}
               <div>
                 <h3 className={`text-2xl mb-1 text-primary ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
@@ -232,7 +232,7 @@ const BlogDetail = () => {
                   </span>}
               </div>
 
-              <h1 className={`text-3xl sm:text-4xl md:text-5xl mb-6 text-primary animate-fade-in leading-tight ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
+              <h1 className={`text-3xl sm:text-4xl md:text-5xl tracking-[-1.2px] mb-6 text-primary animate-fade-in leading-tight ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
                 {getTranslatedContent(blog, 'title', i18n.language)}
               </h1>
 
@@ -241,7 +241,7 @@ const BlogDetail = () => {
                 </p>}
             </div>
 
-            {blog.featured_image && <div className="mb-12 rounded-lg overflow-hidden animate-fade-in" style={{
+            {blog.featured_image && <div className="mb-12 rounded-[20px] overflow-hidden animate-fade-in" style={{
             animationDelay: '0.2s'
           }}>
                 <img src={blog.featured_image} alt={getTranslatedContent(blog, 'title', i18n.language)} className="w-full h-auto object-cover" />

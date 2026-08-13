@@ -13,6 +13,7 @@ import { PropertyCard } from "@/components/property/PropertyCard";
 import { PropertyFilters } from "@/components/property/PropertyFilters";
 import LoadingSpinner from "@/components/property/LoadingSpinner";
 import SEOHead from "@/components/SEOHead";
+import RevealOnScroll from "@/components/RevealOnScroll";
 import {
   Pagination,
   PaginationContent,
@@ -270,7 +271,16 @@ const Properties = () => {
       />
       <Header />
       <main className="pt-24">
-        <h1 className="sr-only">{t("seo.h1.properties")}</h1>
+        <RevealOnScroll className="text-center max-w-2xl mx-auto px-6 pt-8 pb-2">
+          <div className={`text-xs font-medium uppercase tracking-[1.5px] mb-4 transition-colors duration-500 ${isDubaiTheme ? "text-white/60" : "text-muted-foreground"}`}>
+            {t("properties.title")}
+          </div>
+          <h1
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] transition-colors duration-500 ${i18n.language === "ar" ? "font-arabic" : "font-serif"} ${isDubaiTheme ? "text-white" : "text-foreground"}`}
+          >
+            {t("seo.h1.properties")}
+          </h1>
+        </RevealOnScroll>
         {/* Properties Listing Section */}
         <section className={`py-12 transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
           <div className="container mx-auto px-4">
@@ -378,8 +388,10 @@ const Properties = () => {
                 ) : (
                   <>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
-                      {paginatedProperties.map(property => (
-                        <PropertyCard key={property.id} property={property} isDubaiTheme={isDubaiTheme} />
+                      {paginatedProperties.map((property, index) => (
+                        <RevealOnScroll key={property.id} delay={(index % PAGE_SIZE) * 40}>
+                          <PropertyCard property={property} isDubaiTheme={isDubaiTheme} />
+                        </RevealOnScroll>
                       ))}
                     </div>
                     {totalPages > 1 && (

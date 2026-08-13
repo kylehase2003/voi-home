@@ -121,15 +121,18 @@ const PropertiesMap = () => {
       <main className="pt-24">
         <section className={`py-8 transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
           <div className="container mx-auto px-4">
-            <div className="text-center mb-6">
+            <div className="text-center mb-6 max-w-xl mx-auto">
+              <div className={`text-xs font-medium uppercase tracking-[1.5px] mb-4 ${isDubaiTheme ? "text-white/60" : "text-muted-foreground"}`}>
+                {t("properties.title")}
+              </div>
               <h1
-                className={`text-3xl md:text-4xl mb-2 ${isDubaiTheme ? "text-white" : "text-primary"} ${
+                className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 ${isDubaiTheme ? "text-white" : "text-foreground"} ${
                   i18n.language === "ar" ? "font-arabic" : "font-serif"
                 }`}
               >
                 {t("propertiesMap.title", "Properties Map")}
               </h1>
-              <p className={`max-w-2xl mx-auto ${isDubaiTheme ? "text-white/70" : "text-muted-foreground"}`}>
+              <p className={`text-base leading-[1.7] ${isDubaiTheme ? "text-white/70" : "text-muted-foreground"}`}>
                 {t(
                   "propertiesMap.subtitle",
                   "Explore our listings on an interactive map. Click any pin to see details."

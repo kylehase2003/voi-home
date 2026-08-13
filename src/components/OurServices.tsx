@@ -29,11 +29,10 @@ const OurServices = () => {
   return (
     <section className="py-10 md:py-14 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-10 md:mb-14">
-          <h2 className={`text-4xl md:text-5xl lg:text-6xl text-[hsl(var(--olive))] mb-4 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
+        <div className="text-center mb-10 md:mb-14 max-w-xl mx-auto">
+          <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
             {t("ourServices.title")}
           </h2>
-          <div className="w-16 h-1 bg-[hsl(var(--gold))] mx-auto" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">

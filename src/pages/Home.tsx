@@ -12,6 +12,7 @@ import BlogPreview from "@/components/BlogPreview";
 import PartnersSlider from "@/components/PartnersSlider";
 import SEOHead from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import StatementSection from "@/components/editorial/StatementSection";
 
 const Home = () => {
   const { t } = useTranslation();
@@ -33,6 +34,10 @@ const Home = () => {
         <RevealOnScroll delay={80}><AboutCompany /></RevealOnScroll>
         <RevealOnScroll delay={80}><OurServices /></RevealOnScroll>
         <RevealOnScroll delay={80}><Testimonials /></RevealOnScroll>
+        <StatementSection
+          tag="Why MR. Property"
+          lines={["Buying abroad shouldn't feel like a gamble.", "We make it feel like coming home."]}
+        />
         <RevealOnScroll delay={80}><BlogPreview /></RevealOnScroll>
       </main>
       <Footer />

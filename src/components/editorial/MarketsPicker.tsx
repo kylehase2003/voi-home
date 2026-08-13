@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import PillPicker from "./PillPicker";
 
 const MARKETS = [
   { label: "Istanbul", to: "/properties?country=turkiye&city=istanbul" },
@@ -28,16 +29,8 @@ const MarketsPicker = () => {
         </h2>
         <p className="text-base text-muted-foreground leading-[1.7]">{t("hero.subtitle")}</p>
       </RevealOnScroll>
-      <RevealOnScroll delay={100} className="flex flex-wrap justify-center gap-2.5 max-w-3xl mx-auto mb-10">
-        {MARKETS.map((market) => (
-          <Link
-            key={market.label}
-            to={market.to}
-            className="px-6 py-3 rounded-full border border-border text-foreground text-[15px] hover:bg-primary hover:text-primary-foreground hover:border-primary transition-all duration-300"
-          >
-            {market.label}
-          </Link>
-        ))}
+      <RevealOnScroll delay={100} className="max-w-3xl mx-auto mb-10">
+        <PillPicker options={MARKETS.map((m) => ({ label: m.label, to: m.to }))} />
       </RevealOnScroll>
       <RevealOnScroll delay={150} className="flex justify-center">
         <Link

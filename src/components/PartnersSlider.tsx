@@ -60,11 +60,15 @@ const PartnersSlider = () => {
   return (
     <section className="py-8 md:py-14 bg-background">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-12">
-          <h2 className={`text-4xl md:text-5xl mb-4 text-primary ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
+        <div className="text-center mb-12 max-w-xl mx-auto">
+          <h2
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${
+              i18n.language === 'ar' ? 'font-arabic' : 'font-serif'
+            }`}
+          >
             {t('partners.title')}
           </h2>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-base text-muted-foreground leading-[1.7]">
             {t('partners.description')}
           </p>
         </div>

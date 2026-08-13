@@ -3,15 +3,28 @@ import { useTranslation } from "react-i18next";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
 interface FeatureRowProps {
-  tag: string;
+  tag?: string;
   title: string;
   description: string;
-  image: string;
+  image?: string;
+  /** Overrides the image slot with custom content (e.g. a video embed). */
+  media?: ReactNode;
+  /** Aspect ratio for the media slot, e.g. "aspect-video" for embeds. Defaults to the portrait 4:5 used for photos. */
+  mediaAspectClassName?: string;
   reversed?: boolean;
   extra?: ReactNode;
 }
 
-const FeatureRow = ({ tag, title, description, image, reversed, extra }: FeatureRowProps) => {
+const FeatureRow = ({
+  tag,
+  title,
+  description,
+  image,
+  media,
+  mediaAspectClassName = "aspect-[4/5]",
+  reversed,
+  extra,
+}: FeatureRowProps) => {
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
 
@@ -22,7 +35,7 @@ const FeatureRow = ({ tag, title, description, image, reversed, extra }: Feature
           reversed ? "md:ml-auto" : "md:mr-auto"
         }`}
       >
-        <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">{tag}</div>
+        {tag && <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">{tag}</div>}
         <h2
           className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-5 text-foreground ${
             isRTL ? "font-arabic" : "font-serif"
@@ -30,16 +43,16 @@ const FeatureRow = ({ tag, title, description, image, reversed, extra }: Feature
         >
           {title}
         </h2>
-        <p className="text-base text-muted-foreground leading-[1.7] mb-7">{description}</p>
+        <p className="text-base text-muted-foreground leading-[1.7] mb-7 whitespace-pre-line">{description}</p>
         {extra}
       </RevealOnScroll>
       <RevealOnScroll
         delay={100}
-        className={`relative rounded-[20px] overflow-hidden aspect-[4/5] max-h-[70vh] m-5 bg-muted ${
+        className={`relative rounded-[20px] overflow-hidden ${mediaAspectClassName} max-h-[70vh] m-5 bg-muted ${
           reversed ? "md:order-1 mr-auto" : "md:order-2 ml-auto"
         }`}
       >
-        <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" />
+        {media ?? <img src={image} alt={title} className="absolute inset-0 w-full h-full object-cover" />}
       </RevealOnScroll>
     </section>
   );

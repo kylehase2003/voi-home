@@ -13,8 +13,8 @@ const PropertyOverview = ({ property }: PropertyOverviewProps) => {
   if (!hasData) return null;
 
   return (
-    <section className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-      <h2 className="text-2xl sm:text-3xl font-serif mb-6 text-foreground">{t('propertyDetail.propertyOverview')}</h2>
+    <section className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+      <h2 className="text-2xl sm:text-3xl tracking-[-0.5px] font-serif mb-6 text-foreground">{t('propertyDetail.propertyOverview')}</h2>
       <div className="rounded-lg bg-primary-foreground">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
           {/* Project Layout */}

@@ -525,7 +525,7 @@ const PropertyDetail = () => {
 
 
                 {/* Property Title, Description and Location Section */}
-                <div className="bg-background border border-border rounded-xl py-4 sm:py-8 px-4 sm:px-6 mb-8">
+                <div className="bg-background border border-border rounded-[20px] py-4 sm:py-8 px-4 sm:px-6 mb-8">
                   <div className="flex flex-col lg:flex-row justify-between gap-6">
                     {/* Left Side - Property ID, Title and Description */}
                     <div className="flex-1">
@@ -561,8 +561,8 @@ const PropertyDetail = () => {
                 <RevealOnScroll><InvestmentReturns property={property} /></RevealOnScroll>
 
               {/* Area Details */}
-              {(property.completion_date || property.plot_ratio || property.clear_height) && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                    <h3 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.areaDetailsSection')}</h3>
+              {(property.completion_date || property.plot_ratio || property.clear_height) && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                    <h3 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.areaDetailsSection')}</h3>
                     <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-6">
                       {property.completion_date && <div>
                           <p className="text-sm text-muted-foreground mb-1">{t('propertyDetail.completion')}</p>
@@ -581,8 +581,8 @@ const PropertyDetail = () => {
 
 
                 {/* Payment Plans */}
-                {property.payment_plans && property.payment_plans.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                    <h3 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.apartmentThatMatters')}</h3>
+                {property.payment_plans && property.payment_plans.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                    <h3 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.apartmentThatMatters')}</h3>
                     <div className="bg-primary/90 rounded-lg overflow-hidden">
                       <div className="grid grid-cols-2 gap-px bg-background/10">
                         <div className="bg-primary/80 p-4">
@@ -606,20 +606,20 @@ const PropertyDetail = () => {
                 {/* Apartment Types and Prices Section */}
                 {Array.isArray(property.floor_plans) && property.floor_plans.length > 0}
 
-                {property.long_description && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                  <h2 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.propertyInformation')}</h2>
+                {property.long_description && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                  <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.propertyInformation')}</h2>
                   <div className="text-muted-foreground leading-relaxed prose prose-sm max-w-none [&>h1]:text-foreground [&>h2]:text-foreground [&>h3]:text-foreground [&>p]:text-muted-foreground [&>ul]:text-muted-foreground [&>ol]:text-muted-foreground" dangerouslySetInnerHTML={{
                   __html: DOMPurify.sanitize(getTranslatedContent(property, 'long_description', i18n.language))
                 }} />
                 </div></RevealOnScroll>}
 
-                <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                  <h2 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.amenities')}</h2>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
+                <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                  <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.amenities')}</h2>
+                  <div className="flex flex-wrap gap-2.5">
                     {features.map((feature, index) => {
                     const AmenityIcon = getAmenityIcon(feature);
-                    return <div key={index} className="flex items-center gap-3 p-4 text-primary-foreground rounded-lg bg-primary">
-                          <AmenityIcon className="h-5 w-5 text-gold flex-shrink-0" />
+                    return <div key={index} className="flex items-center gap-2 pl-3 pr-4 py-2.5 text-primary-foreground rounded-full bg-primary">
+                          <AmenityIcon className="h-4 w-4 text-gold flex-shrink-0" />
                           <span className="text-sm">{getTranslatedAmenity(feature)}</span>
                         </div>;
                   })}
@@ -627,12 +627,12 @@ const PropertyDetail = () => {
                 </div></RevealOnScroll>
 
                 {/* Location - Nearby Places Grid */}
-                {property.nearby_places && property.nearby_places.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                    <h2 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.nearbyPlaces')}</h2>
+                {property.nearby_places && property.nearby_places.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                    <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.nearbyPlaces')}</h2>
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
                       {property.nearby_places.map((place, idx) => {
                     const Icon = getIconForPlace(place.icon);
-                    return <div key={idx} className="flex flex-col items-center justify-center p-8 text-primary-foreground rounded-lg text-center min-h-[160px] bg-primary">
+                    return <div key={idx} className="flex flex-col items-center justify-center p-8 text-primary-foreground rounded-[20px] text-center min-h-[160px] bg-primary">
                             <Icon className="h-12 w-12 mb-4 text-gold" strokeWidth={1.5} />
                             <p className="font-semibold text-lg mb-2">{getTranslatedPlaceName(place.name)}</p>
                             <p className="text-sm text-primary-foreground/90">{getTranslatedDistance(place.distance)}</p>
@@ -642,8 +642,8 @@ const PropertyDetail = () => {
                   </div></RevealOnScroll>}
 
                 {/* Why This Property */}
-                {property.why_this_property && <RevealOnScroll><section className="bg-card border border-border rounded-lg p-4 sm:p-8 mb-12">
-                    <h2 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.whyThisProperty')}</h2>
+                {property.why_this_property && <RevealOnScroll><section className="bg-card border border-border rounded-[20px] p-4 sm:p-8 mb-12">
+                    <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.whyThisProperty')}</h2>
                     <div 
                       className="prose prose-sm max-w-none text-muted-foreground leading-relaxed"
                       dangerouslySetInnerHTML={{ 
@@ -653,8 +653,8 @@ const PropertyDetail = () => {
                   </section></RevealOnScroll>}
 
                 {/* Floor Plans */}
-                {property.floor_plans && property.floor_plans.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-lg p-4 sm:p-8">
-                    <h2 className={`text-2xl sm:text-3xl mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.apartmentTypesAndPrices')}</h2>
+                {property.floor_plans && property.floor_plans.length > 0 && <RevealOnScroll><div className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
+                    <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.apartmentTypesAndPrices')}</h2>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       {property.floor_plans.map((plan, idx) => {
                         // Format price display with $ sign and range
@@ -717,8 +717,8 @@ const PropertyDetail = () => {
                 </Dialog>
 
                 {/* Map Section */}
-                <RevealOnScroll><div className="mb-12 border border-border rounded-lg p-4 sm:p-8 bg-primary">
-                  <h2 className={`text-2xl sm:text-3xl mb-6 text-primary-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.map')}</h2>
+                <RevealOnScroll><div className="mb-12 border border-border rounded-[20px] p-4 sm:p-8 bg-primary">
+                  <h2 className={`text-2xl sm:text-3xl tracking-[-0.5px] mb-6 text-primary-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>{t('propertyDetail.map')}</h2>
                   <div className="bg-primary/90 rounded-lg overflow-hidden">
                     <PropertyMap mapEmbedUrl={property.map_embed_url || undefined} mapLinkUrl={property.map_link_url || undefined} location={property.location} region={property.region} latitude={property.latitude} longitude={property.longitude} />
                   </div>
@@ -731,7 +731,7 @@ const PropertyDetail = () => {
               </div>
 
               <div className="lg:col-span-1 order-first lg:order-last">
-                <div className="lg:sticky lg:top-36 bg-muted/30 rounded-lg shadow-lg p-4 sm:p-8 mb-8 lg:mb-0">
+                <div className="lg:sticky lg:top-36 bg-muted/30 rounded-[20px] shadow-lg p-4 sm:p-8 mb-8 lg:mb-0">
                   <p className="text-sm text-muted-foreground mb-2">{t('propertyDetail.startingFrom')}</p>
                   <p className={`text-3xl sm:text-4xl mb-6 sm:mb-8 text-primary ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>${property.price.toLocaleString()}</p>
 

@@ -149,7 +149,7 @@ const HeroSection = () => {
               <span
                 key={i}
                 style={stagger(i + 1)}
-                className={`block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.05] tracking-tight animate-slide-up [animation-fill-mode:both] ${
+                className={`block text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-primary-foreground leading-[1.05] tracking-[-1px] md:tracking-[-2px] animate-slide-up [animation-fill-mode:both] ${
                   isRTL ? "" : i === 0 ? "font-serif font-bold" : "font-sans italic font-normal text-primary-foreground/90"
                 }`}
               >

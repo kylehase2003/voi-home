@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 import heroImage from "@/assets/hero-villa.webp";
 
@@ -34,7 +33,7 @@ const ComingSoon = () => {
           />
         </div>
         
-        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl mb-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
+        <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px] mb-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
           Something is in the making, <span className="text-gold animate-[shimmer_3s_ease-in-out_infinite] inline-block">YOU'LL LOVE IT!</span>
         </h1>
         
