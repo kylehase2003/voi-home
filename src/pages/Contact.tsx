@@ -140,12 +140,12 @@ const Contact = () => {
     {
       icon: Phone,
       title: t("contactPage.phone"),
-      details: ["\u202A+90 554 570 75 80\u202C"],
+      details: ["\u202A+90 552 797 10 00\u202C"],
     },
     {
       icon: Mail,
       title: t("contactPage.email"),
-      details: ["info@mrproperty.com"],
+      details: ["info@voi-home.com"],
     },
     {
       icon: MapPin,
@@ -168,8 +168,8 @@ const Contact = () => {
           "@context": "https://schema.org",
           "@type": "LocalBusiness",
           name: "MR. Property",
-          image: "https://mrpropertytr.com/og-image.jpg",
-          url: "https://mrpropertytr.com/contact",
+          image: "https://voi-home.com/og-image.jpg",
+          url: "https://voi-home.com/contact",
           telephone: "+90 545 120 22 37",
           address: {
             "@type": "PostalAddress",

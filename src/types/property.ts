@@ -22,7 +22,6 @@ export interface Property {
   id: string;
   title: string;
   title_ar?: string | null;
-  title_ru?: string | null;
   location: string;
   price: number;
   bedrooms: number | null;
@@ -36,10 +35,8 @@ export interface Property {
   images: string[];
   description: string;
   description_ar?: string | null;
-  description_ru?: string | null;
   long_description?: string | null;
   long_description_ar?: string | null;
-  long_description_ru?: string | null;
   features: string[];
   year_built: number | null;
   status: 'available' | 'sold' | 'rented' | 'draft';
@@ -69,7 +66,6 @@ export interface Property {
   investment_return_5y: string | null;
   why_this_property: string | null;
   why_this_property_ar?: string | null;
-  why_this_property_ru?: string | null;
   blocks: number | null;
   floors: number | null;
   rental_yield: string | null;
@@ -77,7 +73,6 @@ export interface Property {
   installments_count: number | null;
   benefit: string | null;
   benefit_ar?: string | null;
-  benefit_ru?: string | null;
   delivery_date: string | null;
   title_deed: string | null;
   created_at?: string;

@@ -44,24 +44,29 @@
     <!-- Hero image preload removed: /src/assets path is dev-only. Vite hashes assets in prod; the hero <img> uses fetchpriority="high" + eager loading instead. -->
     <link rel="preload" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;1,400&family=Scheherazade+New:wght@400;700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Crimson+Text:ital,wght@0,400;1,400&family=Scheherazade+New:wght@400;700&display=swap" rel="stylesheet"></noscript>
+    <!-- Satoshi + General Sans (free, Fontshare): the newer design language's type, loaded site-wide -->
+    <link rel="preconnect" href="https://api.fontshare.com">
+    <link rel="preload" href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&f[]=satoshi@500&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&f[]=satoshi@500&display=swap" rel="stylesheet"></noscript>
 
-    <link rel="icon" href="/favicon.ico?v=3" sizes="any" type="image/x-icon">
-    <link rel="icon" href="/favicon-32x32.png?v=3" sizes="32x32" type="image/png">
-    <link rel="icon" href="/favicon-16x16.png?v=3" sizes="16x16" type="image/png">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=3" sizes="180x180">
+    <link rel="icon" href="/favicon.svg?v=4" type="image/svg+xml">
+    <link rel="icon" href="/favicon.ico?v=4" sizes="any" type="image/x-icon">
+    <link rel="icon" href="/favicon-32x32.png?v=4" sizes="32x32" type="image/png">
+    <link rel="icon" href="/favicon-16x16.png?v=4" sizes="16x16" type="image/png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png?v=4" sizes="180x180">
     
     <!-- Open Graph -->
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://mrpropertytr.com/" />
+    <meta property="og:url" content="https://voi-home.com/" />
     <meta property="og:title" content="Luxury Property in Istanbul, Bodrum & Dubai | MR. Property" />
     <meta property="og:description" content="MR. Property offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available." />
-    <meta property="og:image" content="https://mrpropertytr.com/favicon.ico" />
+    <meta property="og:image" content="https://voi-home.com/favicon.ico" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Luxury Property in Istanbul, Bodrum & Dubai | MR. Property" />
     <meta name="twitter:description" content="MR. Property offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available." />
-    <meta name="twitter:image" content="https://mrpropertytr.com/favicon.ico" />
+    <meta name="twitter:image" content="https://voi-home.com/favicon.ico" />
 
     <!-- JSON-LD: RealEstateAgent -->
     <script type="application/ld+json">
@@ -70,8 +75,8 @@
       "@type": "RealEstateAgent",
       "name": "MR. Property",
       "description": "Luxury real estate consultancy offering curated homes, villas, and investment properties in Istanbul, Bodrum, and Dubai.",
-      "url": "https://mrpropertytr.com",
-      "logo": "https://mrpropertytr.com/favicon.ico",
+      "url": "https://voi-home.com",
+      "logo": "https://voi-home.com/favicon.ico",
       "areaServed": ["Istanbul", "Bodrum", "Dubai"],
       "contactPoint": {
         "@type": "ContactPoint",

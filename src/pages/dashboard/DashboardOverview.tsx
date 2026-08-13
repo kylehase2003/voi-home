@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-const LOCALE_MAP: Record<string, string> = { en: 'en-US', ar: 'ar', ru: 'ru-RU' };
+const LOCALE_MAP: Record<string, string> = { en: 'en-US', ar: 'ar' };
 import { supabase } from '@/integrations/supabase/client';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';

@@ -34,13 +34,10 @@ interface TeamMember {
   id: string;
   name: string;
   name_ar: string | null;
-  name_ru: string | null;
   role: string;
   role_ar: string | null;
-  role_ru: string | null;
   bio: string | null;
   bio_ar: string | null;
-  bio_ru: string | null;
   image_url: string | null;
   email: string | null;
   phone: string | null;
@@ -138,13 +135,10 @@ const TeamManagement = () => {
   const [formData, setFormData] = useState({
     name: "",
     name_ar: "",
-    name_ru: "",
     role: "",
     role_ar: "",
-    role_ru: "",
     bio: "",
     bio_ar: "",
-    bio_ru: "",
     image_url: "",
     email: "",
     phone: "",
@@ -220,13 +214,10 @@ const TeamManagement = () => {
       const memberData = {
         name: formData.name,
         name_ar: formData.name_ar || null,
-        name_ru: formData.name_ru || null,
         role: formData.role,
         role_ar: formData.role_ar || null,
-        role_ru: formData.role_ru || null,
         bio: formData.bio || null,
         bio_ar: formData.bio_ar || null,
-        bio_ru: formData.bio_ru || null,
         image_url: formData.image_url || null,
         email: formData.email || null,
         phone: formData.phone || null,
@@ -274,13 +265,10 @@ const TeamManagement = () => {
     setFormData({
       name: member.name,
       name_ar: member.name_ar || "",
-      name_ru: member.name_ru || "",
       role: member.role,
       role_ar: member.role_ar || "",
-      role_ru: member.role_ru || "",
       bio: member.bio || "",
       bio_ar: member.bio_ar || "",
-      bio_ru: member.bio_ru || "",
       image_url: member.image_url || "",
       email: member.email || "",
       phone: member.phone || "",
@@ -315,15 +303,12 @@ const TeamManagement = () => {
     return teamMembers.filter((m) =>
       (m.name || '').toLowerCase().includes(q) ||
       (m.name_ar || '').toLowerCase().includes(q) ||
-      (m.name_ru || '').toLowerCase().includes(q) ||
       (m.role || '').toLowerCase().includes(q) ||
       (m.role_ar || '').toLowerCase().includes(q) ||
-      (m.role_ru || '').toLowerCase().includes(q) ||
       (m.email || '').toLowerCase().includes(q) ||
       (m.phone || '').toLowerCase().includes(q) ||
       (m.bio || '').toLowerCase().includes(q) ||
-      (m.bio_ar || '').toLowerCase().includes(q) ||
-      (m.bio_ru || '').toLowerCase().includes(q)
+      (m.bio_ar || '').toLowerCase().includes(q)
     );
   }, [teamMembers, searchQuery]);
 
@@ -332,13 +317,10 @@ const TeamManagement = () => {
     setFormData({
       name: "",
       name_ar: "",
-      name_ru: "",
       role: "",
       role_ar: "",
-      role_ru: "",
       bio: "",
       bio_ar: "",
-      bio_ru: "",
       image_url: "",
       email: "",
       phone: "",
@@ -409,9 +391,9 @@ const TeamManagement = () => {
                 <LanguageTabs>
                   {(lang) => (
                     <Input
-                      value={lang === 'en' ? formData.name : lang === 'ar' ? formData.name_ar : formData.name_ru}
+                      value={lang === 'ar' ? formData.name_ar : formData.name}
                       onChange={(e) => setFormData({ ...formData, [lang === 'en' ? 'name' : `name_${lang}`]: e.target.value })}
-                      placeholder={`${t('teamManagement.name')} (${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'})`}
+                      placeholder={`${t('teamManagement.name')} (${lang === 'ar' ? 'Arabic' : 'English'})`}
                       required={lang === 'en'}
                     />
                   )}
@@ -423,9 +405,9 @@ const TeamManagement = () => {
                 <LanguageTabs>
                   {(lang) => (
                     <Input
-                      value={lang === 'en' ? formData.role : lang === 'ar' ? formData.role_ar : formData.role_ru}
+                      value={lang === 'ar' ? formData.role_ar : formData.role}
                       onChange={(e) => setFormData({ ...formData, [lang === 'en' ? 'role' : `role_${lang}`]: e.target.value })}
-                      placeholder={`${t('teamManagement.role')} (${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'})`}
+                      placeholder={`${t('teamManagement.role')} (${lang === 'ar' ? 'Arabic' : 'English'})`}
                       required={lang === 'en'}
                     />
                   )}
@@ -468,9 +450,9 @@ const TeamManagement = () => {
                 <LanguageTabs>
                   {(lang) => (
                     <Textarea
-                      value={lang === 'en' ? formData.bio : lang === 'ar' ? formData.bio_ar : formData.bio_ru}
+                      value={lang === 'ar' ? formData.bio_ar : formData.bio}
                       onChange={(e) => setFormData({ ...formData, [lang === 'en' ? 'bio' : `bio_${lang}`]: e.target.value })}
-                      placeholder={`${t('teamManagement.bio')} (${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'})`}
+                      placeholder={`${t('teamManagement.bio')} (${lang === 'ar' ? 'Arabic' : 'English'})`}
                       rows={3}
                     />
                   )}

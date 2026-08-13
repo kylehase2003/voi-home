@@ -15,10 +15,8 @@ interface Blog {
   id: string;
   title: string;
   title_ar: string | null;
-  title_ru: string | null;
   excerpt: string;
   excerpt_ar: string | null;
-  excerpt_ru: string | null;
   featured_image: string | null;
   category: string | null;
   published_at: string | null;
@@ -26,7 +24,6 @@ interface Blog {
   slug: string;
   tags: string[] | null;
   tags_ar: string[] | null;
-  tags_ru: string[] | null;
   region: string | null;
 }
 const Blogs = () => {
@@ -67,7 +64,7 @@ const Blogs = () => {
       const {
         data,
         error
-      } = await supabase.from("blogs").select("id, title, title_ar, title_ru, excerpt, excerpt_ar, excerpt_ru, featured_image, category, published_at, created_at, slug, tags, tags_ar, tags_ru, region").eq("published", true).order("published_at", {
+      } = await supabase.from("blogs").select("id, title, title_ar, excerpt, excerpt_ar, featured_image, category, published_at, created_at, slug, tags, tags_ar, region").eq("published", true).order("published_at", {
         ascending: false
       });
       if (error) throw error;
@@ -75,7 +72,6 @@ const Blogs = () => {
         ...blog,
         tags: Array.isArray(blog.tags) ? blog.tags as string[] : [],
         tags_ar: Array.isArray(blog.tags_ar) ? blog.tags_ar as string[] : [],
-        tags_ru: Array.isArray(blog.tags_ru) ? blog.tags_ru as string[] : [],
         region: blog.region || '',
       })) as Blog[];
       setBlogs(blogsData);

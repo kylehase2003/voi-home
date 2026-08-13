@@ -36,12 +36,10 @@ interface Testimonial {
   name: string;
   role: string;
   role_ar?: string | null;
-  role_ru?: string | null;
   image_url: string | null;
   rating: number;
   text: string;
   text_ar?: string | null;
-  text_ru?: string | null;
   is_active: boolean;
   display_order: number;
 }
@@ -138,12 +136,10 @@ const TestimonialsManagement = () => {
     name: '',
     role: '',
     role_ar: '',
-    role_ru: '',
     image_url: '',
     rating: 5,
     text: '',
     text_ar: '',
-    text_ru: '',
     is_active: true,
     display_order: 0
   });
@@ -156,10 +152,8 @@ const TestimonialsManagement = () => {
       (t.name || '').toLowerCase().includes(q) ||
       (t.role || '').toLowerCase().includes(q) ||
       (t.role_ar || '').toLowerCase().includes(q) ||
-      (t.role_ru || '').toLowerCase().includes(q) ||
       (t.text || '').toLowerCase().includes(q) ||
-      (t.text_ar || '').toLowerCase().includes(q) ||
-      (t.text_ru || '').toLowerCase().includes(q)
+      (t.text_ar || '').toLowerCase().includes(q)
     );
   }, [testimonials, searchQuery]);
 
@@ -285,12 +279,10 @@ const TestimonialsManagement = () => {
       name: testimonial.name,
       role: testimonial.role,
       role_ar: testimonial.role_ar || '',
-      role_ru: testimonial.role_ru || '',
       image_url: testimonial.image_url || '',
       rating: testimonial.rating,
       text: testimonial.text,
       text_ar: testimonial.text_ar || '',
-      text_ru: testimonial.text_ru || '',
       is_active: testimonial.is_active,
       display_order: testimonial.display_order
     });
@@ -303,12 +295,10 @@ const TestimonialsManagement = () => {
       name: '',
       role: '',
       role_ar: '',
-      role_ru: '',
       image_url: '',
       rating: 5,
       text: '',
       text_ar: '',
-      text_ru: '',
       is_active: true,
       display_order: 0
     });
@@ -386,9 +376,9 @@ const TestimonialsManagement = () => {
                 <LanguageTabs>
                   {(lang) => (
                     <Input
-                      value={lang === 'en' ? formData.role : lang === 'ar' ? formData.role_ar : formData.role_ru}
+                      value={lang === 'ar' ? formData.role_ar : formData.role}
                       onChange={(e) => setFormData({ ...formData, [lang === 'en' ? 'role' : `role_${lang}`]: e.target.value })}
-                      placeholder={t(`testimonialsManagement.roleIn${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'}`)}
+                      placeholder={t(`testimonialsManagement.roleIn${lang === 'ar' ? 'Arabic' : 'English'}`)}
                       required={lang === 'en'}
                     />
                   )}
@@ -419,9 +409,9 @@ const TestimonialsManagement = () => {
                 <LanguageTabs>
                   {(lang) => (
                     <Textarea
-                      value={lang === 'en' ? formData.text : lang === 'ar' ? formData.text_ar : formData.text_ru}
+                      value={lang === 'ar' ? formData.text_ar : formData.text}
                       onChange={(e) => setFormData({ ...formData, [lang === 'en' ? 'text' : `text_${lang}`]: e.target.value })}
-                      placeholder={t(`testimonialsManagement.textIn${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'}`)}
+                      placeholder={t(`testimonialsManagement.textIn${lang === 'ar' ? 'Arabic' : 'English'}`)}
                       rows={4}
                       required={lang === 'en'}
                     />

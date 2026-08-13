@@ -3,9 +3,9 @@ import { writeFileSync } from "fs";
 import { resolve } from "path";
 import { createClient } from "@supabase/supabase-js";
 
-const BASE_URL = "https://REPLACE_WITH_VOI_HOME_DOMAIN.com";
-const SUPABASE_URL = "REPLACE_WITH_NEW_SUPABASE_URL";
-const SUPABASE_ANON_KEY = "REPLACE_WITH_NEW_SUPABASE_ANON_KEY";
+const BASE_URL = "https://voi-home.com";
+const SUPABASE_URL = "https://pypvkelapzcmsaetjbbb.supabase.co";
+const SUPABASE_ANON_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InB5cHZrZWxhcHpjbXNhZXRqYmJiIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODYwMzgzODUsImV4cCI6MjEwMTYxNDM4NX0._m5iIE7D8HQNv4VsMA3-jNK3jYhCYxWuH8mysSZewuk";
 
 interface SitemapEntry {
   path: string;

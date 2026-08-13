@@ -38,11 +38,9 @@ interface Blog {
   id: string;
   title: string;
   title_ar?: string;
-  title_ru?: string;
   slug: string;
   excerpt: string;
   excerpt_ar?: string;
-  excerpt_ru?: string;
   featured_image: string | null;
   category: string | null;
   published: boolean;
@@ -140,20 +138,16 @@ const BlogsManagement = () => {
   const [formData, setFormData] = useState({
     title: '',
     title_ar: '',
-    title_ru: '',
     slug: '',
     excerpt: '',
     excerpt_ar: '',
-    excerpt_ru: '',
     content: '',
     content_ar: '',
-    content_ru: '',
     category: '',
     featured_image: '',
     published: false,
     tags: '',
     tags_ar: '',
-    tags_ru: '',
     region: '' as '' | 'turkey' | 'dubai' | 'both',
   });
 
@@ -166,12 +160,10 @@ const BlogsManagement = () => {
     return blogs.filter((b) =>
       (b.title || '').toLowerCase().includes(q) ||
       (b.title_ar || '').toLowerCase().includes(q) ||
-      (b.title_ru || '').toLowerCase().includes(q) ||
       (b.slug || '').toLowerCase().includes(q) ||
       (b.category || '').toLowerCase().includes(q) ||
       (b.excerpt || '').toLowerCase().includes(q) ||
-      (b.excerpt_ar || '').toLowerCase().includes(q) ||
-      (b.excerpt_ru || '').toLowerCase().includes(q)
+      (b.excerpt_ar || '').toLowerCase().includes(q)
     );
   }, [blogs, searchQuery]);
 
@@ -246,21 +238,17 @@ const BlogsManagement = () => {
     const blogData = {
       title: formData.title,
       title_ar: formData.title_ar,
-      title_ru: formData.title_ru,
       slug: formData.slug || generateSlug(formData.title),
       excerpt: formData.excerpt,
       excerpt_ar: formData.excerpt_ar,
-      excerpt_ru: formData.excerpt_ru,
       content: formData.content,
       content_ar: formData.content_ar,
-      content_ru: formData.content_ru,
       category: formData.category,
       featured_image: formData.featured_image,
       published: formData.published,
       published_at: formData.published ? new Date().toISOString() : null,
       tags: formData.tags ? formData.tags.split(',').map(t => t.trim()).filter(Boolean) : [],
       tags_ar: formData.tags_ar ? formData.tags_ar.split(',').map(t => t.trim()).filter(Boolean) : [],
-      tags_ru: formData.tags_ru ? formData.tags_ru.split(',').map(t => t.trim()).filter(Boolean) : [],
       region: formData.region,
     };
 
@@ -317,20 +305,16 @@ const BlogsManagement = () => {
       setFormData({
         title: fullBlog.title,
         title_ar: fullBlog.title_ar || '',
-        title_ru: fullBlog.title_ru || '',
         slug: fullBlog.slug,
         excerpt: fullBlog.excerpt || '',
         excerpt_ar: fullBlog.excerpt_ar || '',
-        excerpt_ru: fullBlog.excerpt_ru || '',
         content: fullBlog.content || '',
         content_ar: fullBlog.content_ar || '',
-        content_ru: fullBlog.content_ru || '',
         category: fullBlog.category || '',
         featured_image: fullBlog.featured_image || '',
         published: fullBlog.published,
         tags: Array.isArray(fullBlog.tags) ? fullBlog.tags.join(', ') : '',
         tags_ar: Array.isArray(fullBlog.tags_ar) ? fullBlog.tags_ar.join(', ') : '',
-        tags_ru: Array.isArray(fullBlog.tags_ru) ? fullBlog.tags_ru.join(', ') : '',
         region: (fullBlog as any).region || '',
       });
     }
@@ -364,20 +348,16 @@ const BlogsManagement = () => {
     setFormData({
       title: '',
       title_ar: '',
-      title_ru: '',
       slug: '',
       excerpt: '',
       excerpt_ar: '',
-      excerpt_ru: '',
       content: '',
       content_ar: '',
-      content_ru: '',
       category: '',
       featured_image: '',
       published: false,
       tags: '',
       tags_ar: '',
-      tags_ru: '',
       region: '',
     });
     setEditingBlog(null);
@@ -498,22 +478,19 @@ const BlogsManagement = () => {
                       <Input
                         id={`title-${language}`}
                         value={
-                          language === 'en' ? formData.title :
                           language === 'ar' ? formData.title_ar :
-                          formData.title_ru
+                          formData.title
                         }
                         onChange={(e) => {
                           const title = e.target.value;
                           if (language === 'en') {
-                            setFormData({ 
-                              ...formData, 
+                            setFormData({
+                              ...formData,
                               title,
                               slug: generateSlug(title)
                             });
-                          } else if (language === 'ar') {
-                            setFormData({ ...formData, title_ar: title });
                           } else {
-                            setFormData({ ...formData, title_ru: title });
+                            setFormData({ ...formData, title_ar: title });
                           }
                         }}
                         required={language === 'en'}
@@ -555,18 +532,15 @@ const BlogsManagement = () => {
                       <Textarea
                         id={`excerpt-${language}`}
                         value={
-                          language === 'en' ? formData.excerpt :
                           language === 'ar' ? formData.excerpt_ar :
-                          formData.excerpt_ru
+                          formData.excerpt
                         }
                         onChange={(e) => {
                           const excerpt = e.target.value;
                           if (language === 'en') {
                             setFormData({ ...formData, excerpt });
-                          } else if (language === 'ar') {
-                            setFormData({ ...formData, excerpt_ar: excerpt });
                           } else {
-                            setFormData({ ...formData, excerpt_ru: excerpt });
+                            setFormData({ ...formData, excerpt_ar: excerpt });
                           }
                         }}
                         rows={3}
@@ -577,17 +551,14 @@ const BlogsManagement = () => {
                       <Label htmlFor={`content-${language}`}>{t('blogsManagement.content')}</Label>
                       <RichTextEditor
                         content={
-                          language === 'en' ? formData.content :
                           language === 'ar' ? formData.content_ar :
-                          formData.content_ru
+                          formData.content
                         }
                         onChange={(content) => {
                           if (language === 'en') {
                             setFormData({ ...formData, content });
-                          } else if (language === 'ar') {
-                            setFormData({ ...formData, content_ar: content });
                           } else {
-                            setFormData({ ...formData, content_ru: content });
+                            setFormData({ ...formData, content_ar: content });
                           }
                         }}
                       />
@@ -599,18 +570,15 @@ const BlogsManagement = () => {
                         id={`tags-${language}`}
                         placeholder={t('blogsManagement.tagsPlaceholder')}
                         value={
-                          language === 'en' ? formData.tags :
                           language === 'ar' ? formData.tags_ar :
-                          formData.tags_ru
+                          formData.tags
                         }
                         onChange={(e) => {
                           const tags = e.target.value;
                           if (language === 'en') {
                             setFormData({ ...formData, tags });
-                          } else if (language === 'ar') {
-                            setFormData({ ...formData, tags_ar: tags });
                           } else {
-                            setFormData({ ...formData, tags_ru: tags });
+                            setFormData({ ...formData, tags_ar: tags });
                           }
                         }}
                       />

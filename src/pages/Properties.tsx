@@ -260,11 +260,11 @@ const Properties = () => {
           "@type": "CollectionPage",
           name: "Luxury Properties in Istanbul, Bodrum & Dubai",
           description: "Curated luxury homes, villas, and investment properties across Türkiye and Dubai.",
-          url: "https://mrpropertytr.com/properties",
+          url: "https://voi-home.com/properties",
           isPartOf: {
             "@type": "WebSite",
             name: "MR. Property",
-            url: "https://mrpropertytr.com",
+            url: "https://voi-home.com",
           },
         }}
       />

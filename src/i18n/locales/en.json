@@ -59,8 +59,11 @@
     "admin": "Admin"
   },
   "hero": {
+    "eyebrow": "Luxury Real Estate · Turkey & Dubai",
     "title": "Maximize Your Returns\nin Dubai & Turkey Real Estate",
     "subtitle": "Secure high-yield properties in the world’s fastest-growing markets with our expert team!",
+    "exploreProperties": "Explore Properties",
+    "bookConsultation": "Book a Consultation",
     "buy": "Buy",
     "rent": "Rent",
     "commercial": "Commercial",
@@ -72,7 +75,8 @@
     "selectLayout": "Layout",
     "minPrice": "Min Price",
     "maxPrice": "Max Price",
-    "search": "Search"
+    "search": "Search",
+    "scroll": "Scroll"
   },
   "propertyTypes": {
     "apartment": "Apartment",
@@ -1287,5 +1291,8 @@
   "pagination": {
     "previous": "Previous",
     "next": "Next"
+  },
+  "experience": {
+    "ctaTitle": "Ready to find your next investment?"
   }
 }

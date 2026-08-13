@@ -105,7 +105,7 @@ const PropertyDetail = () => {
     (async () => {
       const { data } = await supabase
         .from('properties')
-        .select('id, slug, title, title_ar, title_ru, description, description_ar, description_ru, images, price, region, location')
+        .select('id, slug, title, title_ar, description, description_ar, images, price, region, location')
         .neq('id', property.id)
         .neq('status', 'draft')
         .order('created_at', { ascending: false })
@@ -177,20 +177,6 @@ const PropertyDetail = () => {
       office: "مكتب",
       shop: "محل",
       "hotel-apartment": "شقة فندقية"
-    },
-    ru: {
-      apartment: "Квартира",
-      villa: "Вилла",
-      penthouse: "Пентхаус",
-      commercial: "Коммерческая",
-      studio: "Студия",
-      townhouse: "Таунхаус",
-      land: "Земля",
-      duplex: "Дуплекс",
-      loft: "Лофт",
-      office: "Офис",
-      shop: "Магазин",
-      "hotel-apartment": "Апарт-отель"
     }
   };
   const getTranslatedPropertyType = (type: string) => {
@@ -441,7 +427,7 @@ const PropertyDetail = () => {
           "@type": "RealEstateListing",
           "name": translatedTitle,
           "description": translatedDesc,
-          "url": `https://mrpropertytr.com/property/${property.slug}`,
+          "url": `https://voi-home.com/property/${property.slug}`,
           "image": mainImage,
           "price": property.price,
           "priceCurrency": "USD",
@@ -762,7 +748,7 @@ const PropertyDetail = () => {
                         // Get only the first benefit
                         const firstBenefit = property.benefit.split(',')[0].trim();
                         // Check if database has language-specific translation
-                        const langField = i18n.language === 'ar' ? 'benefit_ar' : i18n.language === 'ru' ? 'benefit_ru' : null;
+                        const langField = i18n.language === 'ar' ? 'benefit_ar' : null;
                         const dbTranslation = langField ? (property as any)[langField] : null;
                         if (dbTranslation && dbTranslation.trim() !== '') {
                           // Get only the first benefit from translated field too
@@ -791,7 +777,7 @@ const PropertyDetail = () => {
                   </div>
 
                   <Button asChild className="w-full bg-gold hover:bg-gold/90 text-primary font-semibold py-6">
-                    <a href={`https://wa.me/905545707580?text=${encodeURIComponent(`${t('propertyDetail.whatsappInquiry', { title: getTranslatedContent(property, 'title', i18n.language) })}\n${window.location.href}`)}`} target="_blank" rel="noopener noreferrer">
+                    <a href={`https://wa.me/905527971000?text=${encodeURIComponent(`${t('propertyDetail.whatsappInquiry', { title: getTranslatedContent(property, 'title', i18n.language) })}\n${window.location.href}`)}`} target="_blank" rel="noopener noreferrer">
                       {t('propertyDetail.wantToKnowMore')}
                     </a>
                   </Button>

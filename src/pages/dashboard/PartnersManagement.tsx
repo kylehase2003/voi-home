@@ -33,13 +33,10 @@ interface Partner {
   id: string;
   name: string;
   name_ar: string | null;
-  name_ru: string | null;
   subtitle: string | null;
   subtitle_ar: string | null;
-  subtitle_ru: string | null;
   description: string;
   description_ar: string | null;
-  description_ru: string | null;
   logo_url: string | null;
   website_url: string | null;
   is_active: boolean;
@@ -170,13 +167,10 @@ const PartnersManagement = () => {
     return partners.filter((p) =>
       (p.name || '').toLowerCase().includes(q) ||
       (p.name_ar || '').toLowerCase().includes(q) ||
-      (p.name_ru || '').toLowerCase().includes(q) ||
       (p.subtitle || '').toLowerCase().includes(q) ||
       (p.subtitle_ar || '').toLowerCase().includes(q) ||
-      (p.subtitle_ru || '').toLowerCase().includes(q) ||
       (p.description || '').toLowerCase().includes(q) ||
       (p.description_ar || '').toLowerCase().includes(q) ||
-      (p.description_ru || '').toLowerCase().includes(q) ||
       (p.website_url || '').toLowerCase().includes(q)
     );
   }, [partners, searchQuery]);

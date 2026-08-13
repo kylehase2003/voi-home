@@ -1,6 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://mrpropertytr.com";
+const SITE_URL = "https://voi-home.com";
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
 
 interface SEOHeadProps {

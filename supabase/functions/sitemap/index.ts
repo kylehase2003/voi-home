@@ -2,7 +2,7 @@
 // Public endpoint (no auth). Includes all published blogs and non-draft properties.
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const BASE_URL = "https://mrpropertytr.com";
+const BASE_URL = "https://voi-home.com";
 
 const staticEntries = [
   { path: "/", changefreq: "weekly", priority: "1.0" },

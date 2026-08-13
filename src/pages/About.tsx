@@ -186,7 +186,7 @@ const About = () => {
                   {t("aboutPage.story.closingLine1")}
                 </p>
                 <a
-                  href="https://api.whatsapp.com/send/?phone=905545707580&text=Hi%2C+I%27m+interested+in+your+properties.+I%27d+like+to+know+more%21&type=phone_number&app_absent=0"
+                  href="https://api.whatsapp.com/send/?phone=905527971000&text=Hi%2C+I%27m+interested+in+your+properties.+I%27d+like+to+know+more%21&type=phone_number&app_absent=0"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -7,8 +7,8 @@ const SUPABASE_ANON_KEY = Deno.env.get("SUPABASE_ANON_KEY");
 const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 
 const allowedOrigins = [
-  "https://mrpropertytr.com",
-  "https://www.mrpropertytr.com",
+  "https://voi-home.com",
+  "https://www.voi-home.com",
   "https://mrproperty.lovable.app",
 ];
 
@@ -138,7 +138,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@mrpropertytr.com>",
+        from: "MR. Property <noreply@voi-home.com>",
         to: [submission.email],
         subject: "Re: Your Inquiry to MR. Property",
         html: `

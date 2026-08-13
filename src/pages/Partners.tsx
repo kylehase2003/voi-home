@@ -14,13 +14,10 @@ interface Partner {
   id: string;
   name: string;
   name_ar?: string | null;
-  name_ru?: string | null;
   subtitle: string | null;
   subtitle_ar?: string | null;
-  subtitle_ru?: string | null;
   description: string;
   description_ar?: string | null;
-  description_ru?: string | null;
   logo_url: string | null;
   website_url: string | null;
 }

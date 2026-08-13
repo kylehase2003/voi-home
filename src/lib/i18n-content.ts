@@ -55,10 +55,9 @@ export function getTranslatedTags<T extends Record<string, any>>(
 export function getAllTranslations<T extends Record<string, any>>(
   item: T,
   field: string
-): { en: string; ar: string; ru: string } {
+): { en: string; ar: string } {
   return {
     en: item[field] || '',
     ar: item[`${field}_ar`] || '',
-    ru: item[`${field}_ru`] || '',
   };
 }

@@ -37,4 +37,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://mrpropertytr.com/sitemap.xml
+Sitemap: https://voi-home.com/sitemap.xml

@@ -51,7 +51,7 @@ const ComingSoon = () => {
 
         <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
           <a 
-            href="mailto:info@mrpropertytr.com"
+            href="mailto:info@voi-home.com"
             className="inline-block px-8 py-3 bg-gold text-primary rounded-md hover:bg-gold/90 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] font-medium"
           >
             Contact us

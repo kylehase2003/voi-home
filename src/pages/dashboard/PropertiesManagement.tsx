@@ -246,9 +246,9 @@ function SortableRow({ property, onEdit, onDelete, onToggleDraft, t }: SortableR
 // ==================== INITIAL FORM DATA ====================
 
 const getInitialFormData = () => ({
-  title: '', title_ar: '', title_ru: '', slug: '',
-  description: '', description_ar: '', description_ru: '',
-  long_description: '', long_description_ar: '', long_description_ru: '',
+  title: '', title_ar: '', slug: '',
+  description: '', description_ar: '',
+  long_description: '', long_description_ar: '',
   property_type: '', transaction_type: 'sale', price: '',
   location: '', region: '', district: '', layout: '',
   country: '', city: '',
@@ -261,9 +261,9 @@ const getInitialFormData = () => ({
   map_latitude: null as number | null, map_longitude: null as number | null,
   area_population: '', area_sex_ratio_male: '', area_sex_ratio_female: '', area_class: '',
   investment_return_1y: '', investment_return_3y: '', investment_return_5y: '',
-  why_this_property: '', why_this_property_ar: '', why_this_property_ru: '',
+  why_this_property: '', why_this_property_ar: '',
   blocks: '', floors: '', rental_yield: '', down_payment_percentage: '', installments_count: '',
-  benefit: '', benefit_ar: '', benefit_ru: '', delivery_date: '', title_deed: '',
+  benefit: '', benefit_ar: '', delivery_date: '', title_deed: '',
   newFloorTitle: '', newFloorPriceMin: '', newFloorPriceMax: '', newFloorAreaMin: '', newFloorAreaMax: '', newFloorImage: '',
   customLocation: '', customPropertyType: '', customBenefit: '', customTitleDeed: '',
   customStatus: '', customAmenity: '', customTransactionType: '', customDistrict: '',
@@ -399,7 +399,6 @@ const PropertiesManagement = () => {
       result = result.filter(p =>
         (p.title || '').toLowerCase().includes(q) ||
         (p.title_ar || '').toLowerCase().includes(q) ||
-        (p.title_ru || '').toLowerCase().includes(q) ||
         (p.location || '').toLowerCase().includes(q) ||
         (p.property_type || '').toLowerCase().includes(q) ||
         (p.status || '').toLowerCase().includes(q) ||
@@ -509,13 +508,10 @@ const PropertiesManagement = () => {
       title: property.title || '',
       slug: property.slug || '',
       title_ar: property.title_ar || '',
-      title_ru: property.title_ru || '',
       description: property.description || '',
       description_ar: property.description_ar || '',
-      description_ru: property.description_ru || '',
       long_description: property.long_description || '',
       long_description_ar: property.long_description_ar || '',
-      long_description_ru: property.long_description_ru || '',
       property_type: property.property_type || '',
       transaction_type: property.transaction_type || 'sale',
       price: property.price?.toLocaleString() || '',
@@ -554,7 +550,6 @@ const PropertiesManagement = () => {
       investment_return_5y: property.investment_return_5y || '',
       why_this_property: property.why_this_property || '',
       why_this_property_ar: property.why_this_property_ar || '',
-      why_this_property_ru: property.why_this_property_ru || '',
       blocks: property.blocks?.toString() || '',
       floors: property.floors?.toString() || '',
       rental_yield: property.rental_yield || '',
@@ -562,7 +557,6 @@ const PropertiesManagement = () => {
       installments_count: property.installments_count?.toString() || '',
       benefit: property.benefit || '',
       benefit_ar: property.benefit_ar || '',
-      benefit_ru: property.benefit_ru || '',
       delivery_date: property.delivery_date || '',
       title_deed: property.title_deed || '',
     });
@@ -637,13 +631,10 @@ const PropertiesManagement = () => {
       title: formData.title,
       slug: formData.slug || null,
       title_ar: formData.title_ar || null,
-      title_ru: formData.title_ru || null,
       description: formData.description,
       description_ar: formData.description_ar || null,
-      description_ru: formData.description_ru || null,
       long_description: formData.long_description || null,
       long_description_ar: formData.long_description_ar || null,
-      long_description_ru: formData.long_description_ru || null,
       property_type: formData.property_type,
       transaction_type: formData.transaction_type === 'custom' ? formData.customTransactionType : formData.transaction_type,
       price: parseFloat(formData.price.replace(/,/g, '')),
@@ -680,7 +671,6 @@ const PropertiesManagement = () => {
       investment_return_5y: formData.investment_return_5y || null,
       why_this_property: formData.why_this_property || null,
       why_this_property_ar: formData.why_this_property_ar || null,
-      why_this_property_ru: formData.why_this_property_ru || null,
       blocks: formData.blocks ? parseInt(formData.blocks) : null,
       floors: formData.floors ? parseInt(formData.floors) : null,
       rental_yield: formData.rental_yield || null,
@@ -688,7 +678,6 @@ const PropertiesManagement = () => {
       installments_count: formData.installments_count ? parseInt(formData.installments_count) : null,
       benefit: formData.benefit || null,
       benefit_ar: formData.benefit_ar || null,
-      benefit_ru: formData.benefit_ru || null,
       delivery_date: formData.delivery_date || null,
       title_deed: formData.title_deed === 'custom' ? formData.customTitleDeed : (formData.title_deed || null),
     };
@@ -930,16 +919,16 @@ const PropertiesManagement = () => {
 
                   <div>
                     <Label>2. {t('propertiesManagement.titleLabel')} *</Label>
-                    <LanguageTabs filledLanguages={{ en: !!formData.title, ar: !!formData.title_ar, ru: !!formData.title_ru }}>
+                    <LanguageTabs filledLanguages={{ en: !!formData.title, ar: !!formData.title_ar }}>
                       {(lang) => (
                         <Input
-                          value={lang === 'en' ? formData.title : lang === 'ar' ? formData.title_ar : formData.title_ru}
+                          value={lang === 'ar' ? formData.title_ar : formData.title}
                           onChange={(e) => setFormData(prev => ({
                             ...prev,
-                            ...(lang === 'en' ? { title: e.target.value } : lang === 'ar' ? { title_ar: e.target.value } : { title_ru: e.target.value })
+                            ...(lang === 'ar' ? { title_ar: e.target.value } : { title: e.target.value })
                           }))}
                           required={lang === 'en'}
-                          placeholder={lang === 'en' ? 'Property title in English' : lang === 'ar' ? 'عنوان العقار بالعربية' : 'Название объекта на русском'}
+                          placeholder={lang === 'ar' ? 'عنوان العقار بالعربية' : 'Property title in English'}
                         />
                       )}
                     </LanguageTabs>
@@ -970,13 +959,13 @@ const PropertiesManagement = () => {
 
                   <div>
                     <Label>3. {t('propertiesManagement.shortDescription')} *</Label>
-                    <LanguageTabs filledLanguages={{ en: !!formData.description, ar: !!formData.description_ar, ru: !!formData.description_ru }}>
+                    <LanguageTabs filledLanguages={{ en: !!formData.description, ar: !!formData.description_ar }}>
                       {(lang) => (
                         <Textarea
-                          value={lang === 'en' ? formData.description : lang === 'ar' ? formData.description_ar : formData.description_ru}
+                          value={lang === 'ar' ? formData.description_ar : formData.description}
                           onChange={(e) => setFormData(prev => ({
                             ...prev,
-                            ...(lang === 'en' ? { description: e.target.value } : lang === 'ar' ? { description_ar: e.target.value } : { description_ru: e.target.value })
+                            ...(lang === 'ar' ? { description_ar: e.target.value } : { description: e.target.value })
                           }))}
                           rows={3}
                           required={lang === 'en'}
@@ -1444,15 +1433,15 @@ const PropertiesManagement = () => {
                 
                 <div>
                   <Label>20. {t('propertiesManagement.whyThisPropertyMulti')}</Label>
-                  <LanguageTabs filledLanguages={{ en: !!formData.why_this_property, ar: !!formData.why_this_property_ar, ru: !!formData.why_this_property_ru }}>
+                  <LanguageTabs filledLanguages={{ en: !!formData.why_this_property, ar: !!formData.why_this_property_ar }}>
                     {(lang) => (
                       <RichTextEditor
-                        content={lang === 'en' ? (formData.why_this_property || '') : lang === 'ar' ? (formData.why_this_property_ar || '') : (formData.why_this_property_ru || '')}
+                        content={lang === 'ar' ? (formData.why_this_property_ar || '') : (formData.why_this_property || '')}
                         onChange={(content) => setFormData(prev => ({
                           ...prev,
                           [lang === 'en' ? 'why_this_property' : `why_this_property_${lang}`]: content
                         }))}
-                        placeholder={`Why invest in this property in ${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'}...`}
+                        placeholder={`Why invest in this property in ${lang === 'ar' ? 'Arabic' : 'English'}...`}
                       />
                     )}
                   </LanguageTabs>
@@ -1469,15 +1458,15 @@ const PropertiesManagement = () => {
                 
                 <div>
                   <Label>21. {t('propertiesManagement.projectInfoMulti')}</Label>
-                  <LanguageTabs filledLanguages={{ en: !!formData.long_description, ar: !!formData.long_description_ar, ru: !!formData.long_description_ru }}>
+                  <LanguageTabs filledLanguages={{ en: !!formData.long_description, ar: !!formData.long_description_ar }}>
                     {(lang) => (
                       <RichTextEditor
-                        content={lang === 'en' ? (formData.long_description || '') : lang === 'ar' ? (formData.long_description_ar || '') : (formData.long_description_ru || '')}
+                        content={lang === 'ar' ? (formData.long_description_ar || '') : (formData.long_description || '')}
                         onChange={(content) => setFormData(prev => ({
                           ...prev,
                           [lang === 'en' ? 'long_description' : `long_description_${lang}`]: content
                         }))}
-                        placeholder={`Detailed project information in ${lang === 'en' ? 'English' : lang === 'ar' ? 'Arabic' : 'Russian'}...`}
+                        placeholder={`Detailed project information in ${lang === 'ar' ? 'Arabic' : 'English'}...`}
                       />
                     )}
                   </LanguageTabs>
@@ -1503,9 +1492,9 @@ const PropertiesManagement = () => {
                       setCustomAmenityIcon('');
                     }
                   }}>
-                    <DialogContent className="sm:max-w-[500px] bg-background border-[#c9b47f]/20">
+                    <DialogContent className="sm:max-w-[500px] bg-background border-[#941300]/20">
                       <DialogHeader>
-                        <DialogTitle className="text-[#373623]">{t('propertiesManagement.addCustomAmenity')}</DialogTitle>
+                        <DialogTitle className="text-[#000000]">{t('propertiesManagement.addCustomAmenity')}</DialogTitle>
                       </DialogHeader>
                       <div className="space-y-4 py-4">
                         <div className="space-y-2">
@@ -1571,7 +1560,7 @@ const PropertiesManagement = () => {
                               setCustomAmenityDialogOpen(false);
                             }
                           }}
-                          className="bg-[#c9b47f] hover:bg-[#c9b47f]/90 text-[#373623]"
+                          className="bg-[#941300] hover:bg-[#941300]/90 text-[#000000]"
                         >
                           {t('propertiesManagement.ok')}
                         </Button>
@@ -1628,10 +1617,10 @@ const PropertiesManagement = () => {
                       {formData.features.map((feature, idx) => {
                         const AmenityIcon = getAmenityIcon(feature);
                         return (
-                          <div key={idx} className="bg-[#c9b47f] text-[#373623] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow">
+                          <div key={idx} className="bg-[#941300] text-[#000000] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow">
                             <AmenityIcon className="h-4 w-4" />
                             <span className="text-sm font-medium">{feature}</span>
-                            <button type="button" onClick={() => removeFeature(idx)} className="text-[#373623] hover:text-[#373623]/70 transition-colors">
+                            <button type="button" onClick={() => removeFeature(idx)} className="text-[#000000] hover:text-[#000000]/70 transition-colors">
                               <X className="h-4 w-4" />
                             </button>
                           </div>
@@ -1714,7 +1703,7 @@ const PropertiesManagement = () => {
                           const IconComponent = getIconComponent(place.icon);
                           return (
                             <div key={idx} className="bg-muted px-3 py-2 rounded-lg flex items-center gap-2 text-sm">
-                              <IconComponent className="h-4 w-4 text-[#c9b47f]" />
+                              <IconComponent className="h-4 w-4 text-[#941300]" />
                               <span>{place.name}</span>
                               <span className="text-muted-foreground">({place.distance})</span>
                               <Button type="button" variant="ghost" size="sm" onClick={() => openEditNearbyPlace(idx)} className="h-6 w-6 p-0"><Edit className="h-3 w-3" /></Button>

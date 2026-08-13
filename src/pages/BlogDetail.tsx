@@ -22,7 +22,6 @@ interface Blog {
   published_at: string | null;
   slug: string;
   title_ar?: string | null;
-  title_ru?: string | null;
 }
 const BlogDetail = () => {
   const {
@@ -117,9 +116,9 @@ const BlogDetail = () => {
           publisher: {
             "@type": "Organization",
             name: "MR. Property",
-            logo: { "@type": "ImageObject", url: "https://mrpropertytr.com/favicon.webp" },
+            logo: { "@type": "ImageObject", url: "https://voi-home.com/favicon.webp" },
           },
-          mainEntityOfPage: `https://mrpropertytr.com/blog/${blog.slug}`,
+          mainEntityOfPage: `https://voi-home.com/blog/${blog.slug}`,
         }}
       />
       <Header />
@@ -194,7 +193,7 @@ const BlogDetail = () => {
                             {b.published_at && (
                               <p className="text-xs text-muted-foreground mt-1">
                                 {new Date(b.published_at).toLocaleDateString(
-                                  i18n.language === 'ar' ? 'ar-SA' : i18n.language === 'ru' ? 'ru-RU' : 'en-US',
+                                  i18n.language === 'ar' ? 'ar-SA' : 'en-US',
                                   { year: 'numeric', month: 'short', day: 'numeric' }
                                 )}
                               </p>
@@ -225,7 +224,7 @@ const BlogDetail = () => {
                 })}</Badge>}
                 {blog.published_at && <span className="text-sm text-muted-foreground flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
-                    {new Date(blog.published_at).toLocaleDateString(i18n.language === 'ar' ? 'ar-SA' : i18n.language === 'ru' ? 'ru-RU' : 'en-US', {
+                    {new Date(blog.published_at).toLocaleDateString(i18n.language === 'ar' ? 'ar-SA' : 'en-US', {
                   year: 'numeric',
                   month: 'long',
                   day: 'numeric'

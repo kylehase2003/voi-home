@@ -456,10 +456,10 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
       
       <div 
         ref={containerRef}
-        className="w-full h-[400px] rounded-lg border-2 border-[#c9b47f]/20 overflow-hidden relative z-0"
+        className="w-full h-[400px] rounded-lg border-2 border-[#941300]/20 overflow-hidden relative z-0"
       />
       {latitude && longitude && (
-        <div className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg border border-[#c9b47f]/20">
+        <div className="text-sm text-muted-foreground bg-muted/50 p-3 rounded-lg border border-[#941300]/20">
           <p className="font-medium text-foreground mb-1">Selected Location:</p>
           <p>Latitude: {latitude.toFixed(6)}</p>
           <p>Longitude: {longitude.toFixed(6)}</p>

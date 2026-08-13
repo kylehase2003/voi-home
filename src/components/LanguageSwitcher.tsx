@@ -23,7 +23,6 @@ export const LanguageSwitcher = ({ variant = "outline", className = "" }: Langua
   const languageMap: { [key: string]: string } = {
     en: "EN",
     ar: "AR",
-    ru: "RU",
   };
 
   return (
@@ -40,9 +39,6 @@ export const LanguageSwitcher = ({ variant = "outline", className = "" }: Langua
         </DropdownMenuItem>
         <DropdownMenuItem onClick={() => changeLanguage("ar")}>
           العربية
-        </DropdownMenuItem>
-        <DropdownMenuItem onClick={() => changeLanguage("ru")}>
-          Русский
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>

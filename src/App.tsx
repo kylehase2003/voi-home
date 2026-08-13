@@ -46,6 +46,7 @@ const BuyerGuide = lazyWithRetry(() => import("./pages/BuyerGuide"));
 const ComingSoon = lazyWithRetry(() => import("./pages/ComingSoon"));
 const Partners = lazyWithRetry(() => import("./pages/Partners"));
 const Landing = lazyWithRetry(() => import("./pages/Landing"));
+const Experience = lazyWithRetry(() => import("./pages/Experience"));
 const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 // Lazy load dashboard (includes heavy Leaflet library)
@@ -80,6 +81,7 @@ const App = () => <QueryClientProvider client={queryClient}>
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/landing" element={<Landing />} />
+                <Route path="/experience" element={<Experience />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />

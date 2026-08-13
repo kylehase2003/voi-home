@@ -3,8 +3,8 @@ import { serve } from "https://deno.land/std@0.190.0/http/server.ts";
 const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 
 const allowedOrigins = [
-  "https://mrpropertytr.com",
-  "https://www.mrpropertytr.com",
+  "https://voi-home.com",
+  "https://www.voi-home.com",
   "https://mrproperty.lovable.app",
 ];
 
@@ -76,8 +76,8 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@mrpropertytr.com>",
-        to: ["info@mrpropertytr.com"],
+        from: "MR. Property <noreply@voi-home.com>",
+        to: ["info@voi-home.com"],
         subject: `New Contact Form Submission from ${escapeHtml(name)}`,
         html: `
           <h1>New Contact Form Submission</h1>
@@ -105,7 +105,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@mrpropertytr.com>",
+        from: "MR. Property <noreply@voi-home.com>",
         to: [email],
         subject: "Thank you for contacting MR. Property",
         html: `

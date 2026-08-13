@@ -4,7 +4,7 @@
 //   /og-preview/blog/:slug
 import { createClient } from "https://esm.sh/@supabase/supabase-js@2";
 
-const SITE_URL = "https://mrpropertytr.com";
+const SITE_URL = "https://voi-home.com";
 const DEFAULT_OG = `${SITE_URL}/og-image.jpg`;
 
 const escapeHtml = (s: string) =>

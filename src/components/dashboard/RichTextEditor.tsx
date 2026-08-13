@@ -21,7 +21,7 @@ const colors = [
   '#DC2626', '#EA580C', '#D97706', '#CA8A04',
   '#16A34A', '#059669', '#0D9488', '#0891B2',
   '#2563EB', '#4F46E5', '#7C3AED', '#9333EA',
-  '#C026D3', '#DB2777', '#E11D48', '#c9b47f',
+  '#C026D3', '#DB2777', '#E11D48', '#941300',
 ];
 
 const RichTextEditor = ({ content, onChange, placeholder }: RichTextEditorProps) => {

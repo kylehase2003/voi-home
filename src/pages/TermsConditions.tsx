@@ -71,7 +71,7 @@ const TermsConditions = () => {
               <h2 className="font-serif text-2xl text-primary mb-4">{t('terms.contact.title')}</h2>
               <p className="text-muted-foreground leading-relaxed">{t('terms.contact.content')}</p>
               <p className="text-muted-foreground mt-4">
-                <strong>Email:</strong> <a href="mailto:info@mrpropertytr.com" className="text-gold hover:underline">info@mrpropertytr.com</a>
+                <strong>Email:</strong> <a href="mailto:info@voi-home.com" className="text-gold hover:underline">info@voi-home.com</a>
               </p>
             </section>
 

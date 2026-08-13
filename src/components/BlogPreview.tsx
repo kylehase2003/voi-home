@@ -13,10 +13,8 @@ interface Blog {
   id: string;
   title: string;
   title_ar?: string | null;
-  title_ru?: string | null;
   excerpt: string;
   excerpt_ar?: string | null;
-  excerpt_ru?: string | null;
   featured_image: string | null;
   category: string | null;
   published_at: string | null;
@@ -37,7 +35,7 @@ const BlogPreview = () => {
       const { data, error } = await supabase
         .from("blogs")
         .select(
-          "id, title, title_ar, title_ru, excerpt, excerpt_ar, excerpt_ru, featured_image, category, published_at, slug",
+          "id, title, title_ar, excerpt, excerpt_ar, featured_image, category, published_at, slug",
         )
         .eq("published", true)
         .order("published_at", { ascending: false })

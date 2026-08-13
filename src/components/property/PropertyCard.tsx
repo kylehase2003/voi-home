@@ -204,7 +204,7 @@ export const PropertyCard = ({
           {/* Construction Status badge - bottom right */}
           {property.construction_status && (
             <div className="absolute bottom-2 right-2 md:bottom-4 md:right-4">
-              <Badge className="bg-[#c9b47f] text-[#373623] font-bold px-2 py-1 md:px-4 md:py-2 text-[10px] md:text-sm rounded-lg shadow-lg">
+              <Badge className="bg-[#941300] text-[#000000] font-bold px-2 py-1 md:px-4 md:py-2 text-[10px] md:text-sm rounded-lg shadow-lg">
                 {getTranslatedConstructionStatus(property.construction_status)}
               </Badge>
             </div>

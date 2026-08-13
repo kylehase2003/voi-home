@@ -59,8 +59,11 @@
     "admin": "المسؤول"
   },
   "hero": {
+    "eyebrow": "عقارات فاخرة · تركيا ودبي",
     "title": "استثمر بثقة في أسواق دبي وتركيا العقارية.",
     "subtitle": "ضاعف فرص نمو استثمارك مع فريقنا المتخصص.",
+    "exploreProperties": "استكشف العقارات",
+    "bookConsultation": "احجز استشارة",
     "buy": "شراء",
     "rent": "إيجار",
     "commercial": "تجاري",
@@ -72,7 +75,8 @@
     "selectLayout": "المخطط",
     "minPrice": "الحد الأدنى للسعر",
     "maxPrice": "الحد الأقصى للسعر",
-    "search": "بحث"
+    "search": "بحث",
+    "scroll": "مرر للأسفل"
   },
   "propertyTypes": {
     "apartment": "شقة",
@@ -1301,5 +1305,8 @@
   "pagination": {
     "previous": "السابق",
     "next": "التالي"
+  },
+  "experience": {
+    "ctaTitle": "هل أنت مستعد لإيجاد استثمارك القادم؟"
   }
 }

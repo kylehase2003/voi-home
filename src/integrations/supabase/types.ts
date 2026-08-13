@@ -10,7 +10,32 @@ export type Database = {
   // Allows to automatically instantiate createClient with right options
   // instead of createClient<Database, { PostgrestVersion: 'XX' }>(URL, KEY)
   __InternalSupabase: {
-    PostgrestVersion: "13.0.5"
+    PostgrestVersion: "14.15"
+  }
+  graphql_public: {
+    Tables: {
+      [_ in never]: never
+    }
+    Views: {
+      [_ in never]: never
+    }
+    Functions: {
+      graphql: {
+        Args: {
+          extensions?: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+        }
+        Returns: Json
+      }
+    }
+    Enums: {
+      [_ in never]: never
+    }
+    CompositeTypes: {
+      [_ in never]: never
+    }
   }
   public: {
     Tables: {
@@ -20,12 +45,10 @@ export type Database = {
           category: string | null
           content: string
           content_ar: string | null
-          content_ru: string | null
           created_at: string | null
           display_order: number | null
           excerpt: string | null
           excerpt_ar: string | null
-          excerpt_ru: string | null
           featured_image: string | null
           id: string
           published: boolean | null
@@ -34,10 +57,8 @@ export type Database = {
           slug: string
           tags: Json | null
           tags_ar: Json | null
-          tags_ru: Json | null
           title: string
           title_ar: string | null
-          title_ru: string | null
           updated_at: string | null
         }
         Insert: {
@@ -45,12 +66,10 @@ export type Database = {
           category?: string | null
           content: string
           content_ar?: string | null
-          content_ru?: string | null
           created_at?: string | null
           display_order?: number | null
           excerpt?: string | null
           excerpt_ar?: string | null
-          excerpt_ru?: string | null
           featured_image?: string | null
           id?: string
           published?: boolean | null
@@ -59,10 +78,8 @@ export type Database = {
           slug: string
           tags?: Json | null
           tags_ar?: Json | null
-          tags_ru?: Json | null
           title: string
           title_ar?: string | null
-          title_ru?: string | null
           updated_at?: string | null
         }
         Update: {
@@ -70,12 +87,10 @@ export type Database = {
           category?: string | null
           content?: string
           content_ar?: string | null
-          content_ru?: string | null
           created_at?: string | null
           display_order?: number | null
           excerpt?: string | null
           excerpt_ar?: string | null
-          excerpt_ru?: string | null
           featured_image?: string | null
           id?: string
           published?: boolean | null
@@ -84,10 +99,8 @@ export type Database = {
           slug?: string
           tags?: Json | null
           tags_ar?: Json | null
-          tags_ru?: Json | null
           title?: string
           title_ar?: string | null
-          title_ru?: string | null
           updated_at?: string | null
         }
         Relationships: []
@@ -157,17 +170,14 @@ export type Database = {
           created_at: string | null
           description: string
           description_ar: string | null
-          description_ru: string | null
           display_order: number | null
           id: string
           is_active: boolean | null
           logo_url: string | null
           name: string
           name_ar: string | null
-          name_ru: string | null
           subtitle: string | null
           subtitle_ar: string | null
-          subtitle_ru: string | null
           updated_at: string | null
           website_url: string | null
         }
@@ -175,17 +185,14 @@ export type Database = {
           created_at?: string | null
           description: string
           description_ar?: string | null
-          description_ru?: string | null
           display_order?: number | null
           id?: string
           is_active?: boolean | null
           logo_url?: string | null
           name: string
           name_ar?: string | null
-          name_ru?: string | null
           subtitle?: string | null
           subtitle_ar?: string | null
-          subtitle_ru?: string | null
           updated_at?: string | null
           website_url?: string | null
         }
@@ -193,17 +200,14 @@ export type Database = {
           created_at?: string | null
           description?: string
           description_ar?: string | null
-          description_ru?: string | null
           display_order?: number | null
           id?: string
           is_active?: boolean | null
           logo_url?: string | null
           name?: string
           name_ar?: string | null
-          name_ru?: string | null
           subtitle?: string | null
           subtitle_ar?: string | null
-          subtitle_ru?: string | null
           updated_at?: string | null
           website_url?: string | null
         }
@@ -244,7 +248,6 @@ export type Database = {
           bedrooms: number | null
           benefit: string | null
           benefit_ar: string | null
-          benefit_ru: string | null
           blocks: number | null
           clear_height: string | null
           completion_date: string | null
@@ -254,7 +257,6 @@ export type Database = {
           delivery_date: string | null
           description: string | null
           description_ar: string | null
-          description_ru: string | null
           display_order: number | null
           district: string | null
           down_payment_percentage: string | null
@@ -275,7 +277,6 @@ export type Database = {
           location: string
           long_description: string | null
           long_description_ar: string | null
-          long_description_ru: string | null
           longitude: number | null
           map_embed_url: string | null
           map_link_url: string | null
@@ -292,13 +293,11 @@ export type Database = {
           title: string
           title_ar: string | null
           title_deed: string | null
-          title_ru: string | null
           transaction_type: string
           updated_at: string | null
           video_url: string | null
           why_this_property: string | null
           why_this_property_ar: string | null
-          why_this_property_ru: string | null
           year_built: number | null
         }
         Insert: {
@@ -311,7 +310,6 @@ export type Database = {
           bedrooms?: number | null
           benefit?: string | null
           benefit_ar?: string | null
-          benefit_ru?: string | null
           blocks?: number | null
           clear_height?: string | null
           completion_date?: string | null
@@ -321,7 +319,6 @@ export type Database = {
           delivery_date?: string | null
           description?: string | null
           description_ar?: string | null
-          description_ru?: string | null
           display_order?: number | null
           district?: string | null
           down_payment_percentage?: string | null
@@ -342,7 +339,6 @@ export type Database = {
           location: string
           long_description?: string | null
           long_description_ar?: string | null
-          long_description_ru?: string | null
           longitude?: number | null
           map_embed_url?: string | null
           map_link_url?: string | null
@@ -359,13 +355,11 @@ export type Database = {
           title: string
           title_ar?: string | null
           title_deed?: string | null
-          title_ru?: string | null
           transaction_type: string
           updated_at?: string | null
           video_url?: string | null
           why_this_property?: string | null
           why_this_property_ar?: string | null
-          why_this_property_ru?: string | null
           year_built?: number | null
         }
         Update: {
@@ -378,7 +372,6 @@ export type Database = {
           bedrooms?: number | null
           benefit?: string | null
           benefit_ar?: string | null
-          benefit_ru?: string | null
           blocks?: number | null
           clear_height?: string | null
           completion_date?: string | null
@@ -388,7 +381,6 @@ export type Database = {
           delivery_date?: string | null
           description?: string | null
           description_ar?: string | null
-          description_ru?: string | null
           display_order?: number | null
           district?: string | null
           down_payment_percentage?: string | null
@@ -409,7 +401,6 @@ export type Database = {
           location?: string
           long_description?: string | null
           long_description_ar?: string | null
-          long_description_ru?: string | null
           longitude?: number | null
           map_embed_url?: string | null
           map_link_url?: string | null
@@ -426,13 +417,11 @@ export type Database = {
           title?: string
           title_ar?: string | null
           title_deed?: string | null
-          title_ru?: string | null
           transaction_type?: string
           updated_at?: string | null
           video_url?: string | null
           why_this_property?: string | null
           why_this_property_ar?: string | null
-          why_this_property_ru?: string | null
           year_built?: number | null
         }
         Relationships: []
@@ -441,7 +430,6 @@ export type Database = {
         Row: {
           bio: string | null
           bio_ar: string | null
-          bio_ru: string | null
           created_at: string | null
           display_order: number | null
           email: string | null
@@ -451,17 +439,14 @@ export type Database = {
           linkedin_url: string | null
           name: string
           name_ar: string | null
-          name_ru: string | null
           phone: string | null
           role: string
           role_ar: string | null
-          role_ru: string | null
           updated_at: string | null
         }
         Insert: {
           bio?: string | null
           bio_ar?: string | null
-          bio_ru?: string | null
           created_at?: string | null
           display_order?: number | null
           email?: string | null
@@ -471,17 +456,14 @@ export type Database = {
           linkedin_url?: string | null
           name: string
           name_ar?: string | null
-          name_ru?: string | null
           phone?: string | null
           role: string
           role_ar?: string | null
-          role_ru?: string | null
           updated_at?: string | null
         }
         Update: {
           bio?: string | null
           bio_ar?: string | null
-          bio_ru?: string | null
           created_at?: string | null
           display_order?: number | null
           email?: string | null
@@ -491,11 +473,9 @@ export type Database = {
           linkedin_url?: string | null
           name?: string
           name_ar?: string | null
-          name_ru?: string | null
           phone?: string | null
           role?: string
           role_ar?: string | null
-          role_ru?: string | null
           updated_at?: string | null
         }
         Relationships: []
@@ -511,10 +491,8 @@ export type Database = {
           rating: number
           role: string
           role_ar: string | null
-          role_ru: string | null
           text: string
           text_ar: string | null
-          text_ru: string | null
           updated_at: string | null
         }
         Insert: {
@@ -527,10 +505,8 @@ export type Database = {
           rating?: number
           role: string
           role_ar?: string | null
-          role_ru?: string | null
           text: string
           text_ar?: string | null
-          text_ru?: string | null
           updated_at?: string | null
         }
         Update: {
@@ -543,10 +519,8 @@ export type Database = {
           rating?: number
           role?: string
           role_ar?: string | null
-          role_ru?: string | null
           text?: string
           text_ar?: string | null
-          text_ru?: string | null
           updated_at?: string | null
         }
         Relationships: []
@@ -713,6 +687,9 @@ export type CompositeTypes<
     : never
 
 export const Constants = {
+  graphql_public: {
+    Enums: {},
+  },
   public: {
     Enums: {
       app_role: ["admin", "user"],

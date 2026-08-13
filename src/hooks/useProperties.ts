@@ -188,20 +188,16 @@ export const useProperties = (filters?: PropertyFilters, featured?: boolean) => 
         investment_return_5y: item.investment_return_5y || null,
         why_this_property: item.why_this_property || null,
         why_this_property_ar: item.why_this_property_ar || null,
-        why_this_property_ru: item.why_this_property_ru || null,
         blocks: item.blocks || null,
         floors: item.floors || null,
         rental_yield: item.rental_yield || null,
         down_payment_percentage: item.down_payment_percentage || null,
         benefit: item.benefit || null,
         benefit_ar: item.benefit_ar || null,
-        benefit_ru: item.benefit_ru || null,
         delivery_date: item.delivery_date || null,
         title_deed: item.title_deed || null,
         title_ar: item.title_ar || null,
-        title_ru: item.title_ru || null,
         description_ar: item.description_ar || null,
-        description_ru: item.description_ru || null,
       }));
       
       setProperties(mappedProperties);
@@ -261,7 +257,6 @@ export const useProperty = (slug?: string) => {
           investment_return_5y: data.investment_return_5y || null,
           why_this_property: data.why_this_property || null,
           why_this_property_ar: data.why_this_property_ar || null,
-          why_this_property_ru: data.why_this_property_ru || null,
           blocks: data.blocks || null,
           floors: data.floors || null,
           rental_yield: data.rental_yield || null,
@@ -269,13 +264,10 @@ export const useProperty = (slug?: string) => {
           installments_count: data.installments_count || null,
           benefit: data.benefit || null,
           benefit_ar: data.benefit_ar || null,
-          benefit_ru: data.benefit_ru || null,
           delivery_date: data.delivery_date || null,
           title_deed: data.title_deed || null,
           title_ar: data.title_ar || null,
-          title_ru: data.title_ru || null,
           description_ar: data.description_ar || null,
-          description_ru: data.description_ru || null,
         };
         setProperty(propertyData);
       }
