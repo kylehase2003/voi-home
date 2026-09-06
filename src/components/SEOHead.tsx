@@ -23,7 +23,7 @@ const SEOHead = ({
   jsonLd,
 }: SEOHeadProps) => {
   const canonicalUrl = `${SITE_URL}${path}`;
-  const fullTitle = title.includes("MR. Property") ? title : `${title} | MR. Property`;
+  const fullTitle = title.includes("Voi Home") ? title : `${title} | Voi Home`;
 
   return (
     <Helmet>

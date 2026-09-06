@@ -30,8 +30,8 @@ const Experience = () => {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
       <SEOHead
-        title="Luxury Property in Istanbul, Bodrum & Dubai"
-        description="MR. Property offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available. Contact us."
+        title="Luxury Real Estate in Istanbul, Bodrum & Dubai"
+        description="Voi Home offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available. Contact us."
         path="/"
       />
       <Helmet>
