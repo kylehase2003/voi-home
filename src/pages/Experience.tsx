@@ -14,6 +14,7 @@ import TestimonialBreak from "@/components/editorial/TestimonialBreak";
 import StatementSection from "@/components/editorial/StatementSection";
 import ProcessSteps from "@/components/editorial/ProcessSteps";
 import MarketsPicker from "@/components/editorial/MarketsPicker";
+import PropertyScrollShowcase from "@/components/editorial/PropertyScrollShowcase";
 import PhotoScroller from "@/components/editorial/PhotoScroller";
 import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
 import heroIstanbul2 from "@/assets/hero-istanbul-2-optimized.webp";
@@ -44,6 +45,7 @@ const Experience = () => {
 
       <Header />
       <ShatterHero />
+      <PropertyScrollShowcase />
 
       <main>
         <FeatureRow

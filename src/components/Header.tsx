@@ -8,9 +8,8 @@ import logo from "@/assets/logo.png";
 
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 
-// Site-wide primary nav. Permanent/non-collapsing floating pill (no
-// scroll-triggered condensing) - the hamburger and CTA are separate floating
-// elements on the right, not packed into the logo pill.
+// Site-wide primary nav. A full-width bar pinned to the top edge, not a
+// floating pill - logo left, links center, language/CTA right.
 const Header = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -38,68 +37,73 @@ const Header = () => {
 
   return (
     <Sheet>
-      <nav
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center rounded-full border pl-6 pr-6 xl:pr-2 py-2 bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)] max-w-[95vw]"
-        style={{ fontFamily: GENERAL_SANS }}
-      >
-        <Link to="/" className="flex items-center shrink-0 xl:mr-6">
-          <img src={logo} alt="VOI" className="h-6 w-auto" />
-        </Link>
+      <header className="fixed top-0 left-0 right-0 z-50">
+        <div
+          className="absolute inset-x-0 top-0 h-40 pointer-events-none backdrop-blur-[24px] backdrop-saturate-[140%] bg-gradient-to-b from-[rgba(29,27,24,0.6)] via-[rgba(29,27,24,0.28)] to-transparent"
+          style={{
+            WebkitMaskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
+            maskImage: "linear-gradient(to bottom, black 0%, black 45%, transparent 100%)",
+          }}
+        />
+        <div
+          className="relative flex items-center justify-between h-20 px-6 lg:px-10"
+          style={{ fontFamily: GENERAL_SANS }}
+        >
+          <Link to="/" className="flex items-center shrink-0">
+            <img src={logo} alt="VOI" className="h-9 w-auto" />
+          </Link>
 
-        {/* Desktop links */}
-        <div className="hidden xl:flex items-center gap-1 mr-2">
-          {navigation.map((item) => (
-            <Link
-              key={item.name}
-              to={item.href}
-              className={`px-3.5 py-2 text-[13.5px] font-medium tracking-[-0.1px] rounded-full whitespace-nowrap transition-colors ${
-                isActivePath(item.href) ? "text-white bg-white/15" : "text-white/70 hover:text-white hover:bg-white/10"
-              }`}
-            >
-              {item.name}
+          {/* Desktop links */}
+          <nav className="hidden xl:flex items-center gap-1">
+            {navigation.map((item) => (
+              <Link
+                key={item.name}
+                to={item.href}
+                className={`px-3.5 py-2 text-[13.5px] font-medium tracking-[-0.1px] rounded-full whitespace-nowrap transition-colors ${
+                  isActivePath(item.href) ? "text-white bg-white/15" : "text-white/70 hover:text-white hover:bg-white/10"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </nav>
+
+          {/* Language switcher + CTA */}
+          <div className="hidden xl:flex items-center gap-4">
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-medium text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
+                  <Globe className="h-3.5 w-3.5" />
+                  {languageMap[i18n.language] || "EN"}
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white">
+                <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage("ar")}>العربية</DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link to="/contact">
+              <Button
+                size="sm"
+                className="rounded-full bg-gold hover:bg-gold/90 text-white text-[13.5px] font-medium py-[11px] px-6"
+              >
+                {t("hero.bookConsultation")}
+              </Button>
             </Link>
-          ))}
+          </div>
+
+          {/* Mobile hamburger */}
+          <SheetTrigger asChild>
+            <button
+              className="xl:hidden flex items-center justify-center h-10 w-10 text-white"
+              aria-label="Open navigation menu"
+            >
+              <Menu size={22} />
+            </button>
+          </SheetTrigger>
         </div>
-
-        <div className="hidden xl:flex items-center shrink-0">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-medium text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
-                <Globe className="h-3.5 w-3.5" />
-                {languageMap[i18n.language] || "EN"}
-              </button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white">
-              <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
-              <DropdownMenuItem onClick={() => changeLanguage("ar")}>العربية</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </nav>
-
-      {/* CTA - separate floating pill on the right, not packed into the logo/links pill */}
-      <Link
-        to="/contact"
-        className="hidden xl:block fixed top-5 right-5 z-50"
-        style={{ fontFamily: GENERAL_SANS }}
-      >
-        <Button
-          size="sm"
-          className="rounded-full bg-gold hover:bg-gold/90 text-white text-[13.5px] font-medium py-[11px] px-6 shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
-        >
-          {t("hero.bookConsultation")}
-        </Button>
-      </Link>
-
-      {/* Mobile hamburger - separate floating button on the right */}
-      <SheetTrigger asChild>
-        <button
-          className="xl:hidden fixed top-5 right-5 z-50 flex items-center justify-center h-11 w-11 rounded-full border text-white bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
-          aria-label="Open navigation menu"
-        >
-          <Menu size={20} />
-        </button>
-      </SheetTrigger>
+      </header>
       <SheetContent side="right" className="bg-[#1D1B18] border-l border-white/10 w-[85vw] sm:w-[400px] p-0 shadow-2xl">
         <SheetHeader className="sr-only">
           <SheetTitle>{t("nav.home")}</SheetTitle>
