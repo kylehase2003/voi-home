@@ -30,13 +30,12 @@ const Experience = () => {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
       <SEOHead
-        title="The Voi Home Experience"
-        description="A closer look at how Voi Home finds, evaluates, and manages luxury real estate investments across Turkey and Dubai."
-        path="/experience"
-        noindex
+        title="Luxury Property in Istanbul, Bodrum & Dubai"
+        description="MR. Property offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available. Contact us."
+        path="/"
       />
       <Helmet>
-        {/* Satoshi + General Sans: free fonts from Fontshare, used only on this page */}
+        {/* Satoshi + General Sans: free fonts from Fontshare, used for this page's editorial typography */}
         <link
           href="https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&f[]=satoshi@500&display=swap"
           rel="stylesheet"

@@ -111,7 +111,7 @@ const ShatterHero = () => {
           <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectCountry")}>
             <SelectValue placeholder={t("hero.selectCountry")} />
           </SelectTrigger>
-          <SelectContent className="z-[60] bg-background">
+          <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10">
             {COUNTRIES.map((c) => (
               <SelectItem key={c.value} value={c.value}>
                 {c.label}
@@ -128,7 +128,7 @@ const ShatterHero = () => {
             <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectCity")}>
               <SelectValue placeholder={t("hero.selectCity")} />
             </SelectTrigger>
-            <SelectContent className="z-[60] bg-background max-h-[300px]">
+            <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10 max-h-[300px]">
               {getCityOptions().map((c) => (
                 <SelectItem key={c.value} value={c.value}>
                   {c.label}
@@ -148,7 +148,7 @@ const ShatterHero = () => {
             <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectDistrict")}>
               <SelectValue placeholder={t("hero.selectDistrict")} />
             </SelectTrigger>
-            <SelectContent className="z-[60] bg-background max-h-[300px]">
+            <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10 max-h-[300px]">
               {availableDistricts.map((option) => (
                 <SelectItem key={option} value={option}>
                   {option}
@@ -166,7 +166,7 @@ const ShatterHero = () => {
             <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectDistrict")}>
               <SelectValue placeholder={t("hero.selectDistrict")} />
             </SelectTrigger>
-            <SelectContent className="z-[60] bg-background max-h-[300px]">
+            <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10 max-h-[300px]">
               {availableDistricts.map((option) => (
                 <SelectItem key={option} value={option}>
                   {option}
@@ -183,7 +183,7 @@ const ShatterHero = () => {
           <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectPropertyType")}>
             <SelectValue placeholder={t("hero.selectPropertyType")} />
           </SelectTrigger>
-          <SelectContent className="z-[60] bg-background">
+          <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10">
             {filterOptions.propertyTypes.map((type) => (
               <SelectItem key={type.value} value={type.value}>
                 {type.label}
@@ -199,7 +199,7 @@ const ShatterHero = () => {
           <SelectTrigger className={filterFieldClass} aria-label={t("hero.selectLayout")}>
             <SelectValue placeholder={t("hero.selectLayout")} />
           </SelectTrigger>
-          <SelectContent className="z-[60] bg-background">
+          <SelectContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white [&_[data-state=checked]]:bg-white/10">
             {filterOptions.layouts.map((l) => (
               <SelectItem key={l.value} value={l.value}>
                 {l.label}
@@ -319,7 +319,7 @@ const ShatterHero = () => {
   return (
     <div ref={wrapperRef} className="relative h-auto md:h-[300vh]">
 
-      <div ref={pinRef} className="sticky top-0 h-screen w-full overflow-hidden bg-background">
+      <div ref={pinRef} className="relative md:sticky md:top-0 h-[70vh] md:h-screen w-full overflow-hidden bg-background">
         {/* Hero image + headline + badge, animated together as one unit as you scroll */}
         <div ref={heroImgRef} className="absolute inset-0">
           <img src={heroDubai} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
@@ -334,7 +334,7 @@ const ShatterHero = () => {
         {/* Headline, bottom-left anchored. top-28 keeps it clear of the fixed
             mobile nav when the text block is tall enough to grow upward. */}
         <div
-          className={`absolute inset-x-0 top-28 bottom-0 md:top-auto z-10 flex flex-col justify-end overflow-y-auto px-6 md:px-14 pb-16 md:pb-20 max-w-[1100px] ${
+          className={`absolute inset-x-0 top-28 bottom-0 md:top-auto z-10 flex flex-col justify-end overflow-y-auto px-6 md:px-14 pb-24 md:pb-20 max-w-[1100px] ${
             isRTL ? "font-arabic text-right ml-auto" : ""
           }`}
         >
@@ -395,7 +395,7 @@ const ShatterHero = () => {
             e.preventDefault();
             navigate("/contact");
           }}
-          className="absolute bottom-8 right-6 md:right-14 z-10 w-[100px] h-[100px] md:w-[120px] md:h-[120px] hidden sm:block opacity-70 hover:opacity-100 transition-opacity"
+          className="absolute bottom-8 right-6 md:right-14 z-10 w-[100px] h-[100px] md:w-[120px] md:h-[120px] hidden md:block opacity-70 hover:opacity-100 transition-opacity"
         >
           <svg viewBox="0 0 100 100" className="w-full h-full animate-[spin_12s_linear_infinite]">
             <defs>

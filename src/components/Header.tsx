@@ -39,15 +39,15 @@ const Header = () => {
   return (
     <Sheet>
       <nav
-        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center rounded-full border pl-6 pr-6 lg:pr-2 py-2 bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)] max-w-[95vw]"
+        className="fixed top-5 left-1/2 -translate-x-1/2 z-50 flex items-center rounded-full border pl-6 pr-6 xl:pr-2 py-2 bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)] max-w-[95vw]"
         style={{ fontFamily: GENERAL_SANS }}
       >
-        <Link to="/" className="flex items-center shrink-0 lg:mr-6">
+        <Link to="/" className="flex items-center shrink-0 xl:mr-6">
           <img src={logo} alt="VOI" className="h-6 w-auto" />
         </Link>
 
         {/* Desktop links */}
-        <div className="hidden lg:flex items-center gap-1 mr-2">
+        <div className="hidden xl:flex items-center gap-1 mr-2">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -61,7 +61,7 @@ const Header = () => {
           ))}
         </div>
 
-        <div className="hidden lg:flex items-center shrink-0">
+        <div className="hidden xl:flex items-center shrink-0">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
               <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-medium text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
@@ -69,7 +69,7 @@ const Header = () => {
                 {languageMap[i18n.language] || "EN"}
               </button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="bg-card z-[60]">
+            <DropdownMenuContent className="z-[60] bg-[rgba(29,27,24,0.92)] backdrop-blur-2xl backdrop-saturate-150 border border-white/[0.15] text-white shadow-[0_8px_32px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)] [&_[data-highlighted]]:bg-white/10 [&_[data-highlighted]]:text-white">
               <DropdownMenuItem onClick={() => changeLanguage("en")}>English</DropdownMenuItem>
               <DropdownMenuItem onClick={() => changeLanguage("ar")}>العربية</DropdownMenuItem>
             </DropdownMenuContent>
@@ -80,7 +80,7 @@ const Header = () => {
       {/* CTA - separate floating pill on the right, not packed into the logo/links pill */}
       <Link
         to="/contact"
-        className="hidden lg:block fixed top-5 right-5 z-50"
+        className="hidden xl:block fixed top-5 right-5 z-50"
         style={{ fontFamily: GENERAL_SANS }}
       >
         <Button
@@ -94,7 +94,7 @@ const Header = () => {
       {/* Mobile hamburger - separate floating button on the right */}
       <SheetTrigger asChild>
         <button
-          className="lg:hidden fixed top-5 right-5 z-50 flex items-center justify-center h-11 w-11 rounded-full border text-white bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
+          className="xl:hidden fixed top-5 right-5 z-50 flex items-center justify-center h-11 w-11 rounded-full border text-white bg-[rgba(29,27,24,0.55)] border-white/[0.12] backdrop-blur-[32px] backdrop-saturate-[140%] shadow-[0_8px_32px_rgba(0,0,0,0.15)]"
           aria-label="Open navigation menu"
         >
           <Menu size={20} />

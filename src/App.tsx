@@ -2,13 +2,13 @@ import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import { Suspense, lazy, ComponentType } from "react";
 import { HelmetProvider } from "react-helmet-async";
 import { AuthProvider } from "./contexts/AuthContext";
 import ScrollToTop from "./components/ScrollToTop";
 import MaintenanceCheck from "./components/MaintenanceCheck";
-import Home from "./pages/Home";
+import Experience from "./pages/Experience";
 import ContactPopup from "./components/ContactPopup";
 import WhatsAppButton from "./components/WhatsAppButton";
 
@@ -46,7 +46,6 @@ const BuyerGuide = lazyWithRetry(() => import("./pages/BuyerGuide"));
 const ComingSoon = lazyWithRetry(() => import("./pages/ComingSoon"));
 const Partners = lazyWithRetry(() => import("./pages/Partners"));
 const Landing = lazyWithRetry(() => import("./pages/Landing"));
-const Experience = lazyWithRetry(() => import("./pages/Experience"));
 const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 // Lazy load dashboard (includes heavy Leaflet library)
@@ -65,7 +64,7 @@ const App = () => <QueryClientProvider client={queryClient}>
           <MaintenanceCheck>
             <Suspense fallback={<div className="min-h-screen flex items-center justify-center"><div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary" /></div>}>
               <Routes>
-                <Route path="/" element={<Home />} />
+                <Route path="/" element={<Experience />} />
                 <Route path="/properties" element={<Properties />} />
                 <Route path="/properties-map" element={<PropertiesMap />} />
                 <Route path="/property/:slug" element={<PropertyDetail />} />
@@ -81,7 +80,7 @@ const App = () => <QueryClientProvider client={queryClient}>
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/landing" element={<Landing />} />
-                <Route path="/experience" element={<Experience />} />
+                <Route path="/experience" element={<Navigate to="/" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
                 <Route path="*" element={<NotFound />} />
