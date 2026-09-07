@@ -162,7 +162,7 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
           <Link to="/" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img 
               src={logo} 
-              alt="MR. Property" 
+              alt="Voi Home"
               className={`transition-all duration-200 ${isCollapsed ? 'h-8 w-8 object-contain' : 'h-10 w-auto'}`} 
             />
           </Link>

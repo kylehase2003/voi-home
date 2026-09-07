@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { RefreshCw, Landmark, TrendingUp, Building2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { ArrowRight, RefreshCw, Landmark, TrendingUp, Building2 } from "lucide-react";
 import { getBlogUrl } from "@/constants/routes";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
@@ -35,24 +34,22 @@ const OurServices = () => {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 max-w-6xl mx-auto">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
-              <RevealOnScroll key={service.slug} delay={index * 100} className="h-full">
-                <div className="h-full flex flex-col items-center text-center p-8 rounded-2xl shadow-luxury hover:shadow-xl transition-shadow duration-500 bg-[hsl(var(--card))] border border-[hsl(var(--border))]">
-                  <div className="w-14 h-14 rounded-full bg-[hsl(var(--gold))]/10 flex items-center justify-center mb-5">
-                    <Icon className="w-7 h-7 text-[hsl(var(--gold))]" />
-                  </div>
-                  <h3 className={`text-lg mb-6 flex-1 text-[hsl(var(--olive))] ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
-                    {service.title}
-                  </h3>
-                  <Link to={getBlogUrl(service.slug)}>
-                    <Button variant="outline" className="border-2 border-gold text-gold hover:bg-gold hover:text-primary">
-                      {t("homePage.blogsNews.readMore")}
-                    </Button>
-                  </Link>
-                </div>
+              <RevealOnScroll key={service.slug} delay={index * 100} className="pt-6 border-t border-border">
+                <Icon className="w-6 h-6 text-foreground mb-5" strokeWidth={1.5} />
+                <h3 className={`text-lg mb-4 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
+                  {service.title}
+                </h3>
+                <Link
+                  to={getBlogUrl(service.slug)}
+                  className="group inline-flex items-center gap-1.5 text-sm font-medium text-gold hover:text-gold/80 transition-colors"
+                >
+                  {t("homePage.blogsNews.readMore")}
+                  <ArrowRight className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1" />
+                </Link>
               </RevealOnScroll>
             );
           })}

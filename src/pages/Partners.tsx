@@ -52,7 +52,7 @@ const Partners = () => {
     <div className="min-h-screen bg-background">
       <SEOHead
         title="Our Partners - Trusted Real Estate Developers"
-        description="Explore MR. Property's trusted network of real estate developers and partners in Istanbul, Bodrum, and Dubai."
+        description="Explore Voi Home's trusted network of real estate developers and partners in Istanbul and Bodrum, Türkiye."
         path="/partners"
       />
       <Header />
@@ -119,7 +119,7 @@ const Partners = () => {
                   </CardHeader>
                   <CardContent>
                     <p className="text-primary-foreground/90 mb-6">{t("partnersPage.cta.description")}</p>
-                    <Button className="bg-gold text-primary hover:bg-gold/90 w-full">{t("partnersPage.cta.button")}</Button>
+                    <Button className="bg-gold text-white hover:bg-gold/90 w-full">{t("partnersPage.cta.button")}</Button>
                   </CardContent>
                 </Card>
               </RevealOnScroll>
@@ -132,7 +132,7 @@ const Partners = () => {
               >
                 {t("partnersPage.banner.title")}
               </h2>
-              <Button className="bg-gold text-primary hover:bg-gold/90 px-8">{t("partnersPage.banner.button")}</Button>
+              <Button className="bg-gold text-white hover:bg-gold/90 px-8">{t("partnersPage.banner.button")}</Button>
             </RevealOnScroll>
           </div>
         </section>

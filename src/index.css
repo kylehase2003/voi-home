@@ -79,12 +79,12 @@ All colors MUST be HSL.
     --radius: 0.5rem;
 
     --olive: 0 0% 0%;
-    --gold: 7.7027 100% 29.0196%;
+    --gold: 0 0% 0%;
     --cream: 40 25% 95%;
     --luxury-black: 0 0% 11%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--olive)) 0%, hsl(57 22% 25%) 100%);
-    --gradient-gold: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(7.7027 70% 45%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(0 0% 0%) 0%, hsl(0 0% 22%) 100%);
     --shadow-luxury: 0 10px 40px -10px hsl(var(--olive) / 0.3);
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 

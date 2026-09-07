@@ -15,8 +15,8 @@ L.Icon.Default.mergeOptions({
   shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/images/marker-shadow.png',
 });
 
-// Default to Dubai coordinates
-const DEFAULT_CENTER: [number, number] = [25.2048, 55.2708];
+// Default to Istanbul coordinates
+const DEFAULT_CENTER: [number, number] = [41.0082, 28.9784];
 const DEFAULT_ZOOM = 11;
 
 // Extract short code and location reference from input like "3X7Q+H4 Şişli, İstanbul"
@@ -161,18 +161,7 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
         }
       );
       
-      // Strategy 2: Search with UAE context
-      const uaeSearch = fetch(
-        `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query + ', Dubai, UAE')}&limit=5&addressdetails=1`,
-        {
-          headers: {
-            'Accept-Language': 'en',
-            'User-Agent': 'MRProperty-Dashboard/1.0',
-          },
-        }
-      );
-      
-      // Strategy 3: Global search
+      // Strategy 2: Global search
       const globalSearch = fetch(
         `https://nominatim.openstreetmap.org/search?format=json&q=${encodeURIComponent(query)}&limit=5&addressdetails=1`,
         {
@@ -183,18 +172,13 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
         }
       );
       
-      const [turkeyRes, uaeRes, globalRes] = await Promise.all([turkeySearch, uaeSearch, globalSearch]);
-      
+      const [turkeyRes, globalRes] = await Promise.all([turkeySearch, globalSearch]);
+
       if (turkeyRes.ok) {
         const data = await turkeyRes.json();
         allResults.push(...data);
       }
-      
-      if (uaeRes.ok) {
-        const data = await uaeRes.json();
-        allResults.push(...data);
-      }
-      
+
       if (globalRes.ok) {
         const data = await globalRes.json();
         allResults.push(...data);

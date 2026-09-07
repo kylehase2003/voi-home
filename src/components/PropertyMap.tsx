@@ -4,8 +4,6 @@ import L from 'leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapPin, ExternalLink } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
-import mapPinIcon from '@/assets/map-pin.png';
-
 interface PropertyMapProps {
   mapEmbedUrl?: string;
   mapLinkUrl?: string;
@@ -15,10 +13,15 @@ interface PropertyMapProps {
   longitude?: number | null;
 }
 
-const propertyMarkerIcon = L.icon({
-  iconUrl: mapPinIcon,
-  iconSize: [40, 40],
-  iconAnchor: [20, 38],
+// Plain teardrop pin, drawn inline so it never carries any brand mark.
+const propertyMarkerIcon = L.divIcon({
+  className: "voi-map-pin",
+  html: `<svg width="32" height="40" viewBox="0 0 32 40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 24 16 24s16-13 16-24C32 7.163 24.837 0 16 0z" fill="#111"/>
+    <circle cx="16" cy="16" r="6" fill="#fff"/>
+  </svg>`,
+  iconSize: [32, 40],
+  iconAnchor: [16, 38],
   popupAnchor: [0, -34],
 });
 
@@ -52,14 +55,9 @@ const normalizeLocationKey = (value?: string | null) =>
 const matchesExpectedRegion = (lat: number, lng: number, location: string, region?: string) => {
   const locationText = `${normalizeLocationKey(location)} ${normalizeLocationKey(region)}`;
   const isTurkiye = /turkey|turkiye|turkiye|istanbul|bodrum|antalya|ankara/.test(locationText);
-  const isUae = /dubai|uae|united arab emirates|abu dhabi|sharjah|ajman/.test(locationText);
 
   if (isTurkiye) {
     return lat >= 35 && lat <= 43.5 && lng >= 25 && lng <= 45;
-  }
-
-  if (isUae) {
-    return lat >= 22 && lat <= 26.8 && lng >= 51 && lng <= 57.8;
   }
 
   return true;
@@ -188,9 +186,6 @@ const PropertyMap = ({
     }
 
     // UAE regions
-    if (locationKey === 'dubai') {
-      return t('propertiesPage.dubai', 'Dubai');
-    }
     if (locationKey === 'abu dhabi' || locationKey === 'abudhabi') {
       return t('regions.abuDhabi', 'Abu Dhabi');
     }

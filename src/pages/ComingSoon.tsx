@@ -23,9 +23,9 @@ const ComingSoon = () => {
       {/* Content */}
       <div className="relative z-10 text-center text-white px-4 max-w-4xl">
         <div className="animate-fade-in" style={{ animationDelay: '0.2s' }}>
-          <img 
-            src={logo} 
-            alt="MR. PROPERTY" 
+          <img
+            src={logo}
+            alt="Voi Home"
             width={160}
             height={160}
             fetchPriority="high"
@@ -38,7 +38,7 @@ const ComingSoon = () => {
         </h1>
         
         <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          From premium listings to expert property guidance, Mr. Property will soon be your go-to destination for buying, selling, and investing in real estate in TURKEY AND DUBAI!
+          From vetted listings to expert guidance, Voi Home will soon be your go-to partner for buying, selling, and investing in real estate across Türkiye.
         </p>
 
         {/* Animated dots */}
@@ -51,7 +51,7 @@ const ComingSoon = () => {
         <div className="animate-fade-in" style={{ animationDelay: '1s' }}>
           <a 
             href="mailto:info@voi-home.com"
-            className="inline-block px-8 py-3 bg-gold text-primary rounded-md hover:bg-gold/90 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(212,175,55,0.5)] font-medium"
+            className="inline-block px-8 py-3 bg-gold text-white rounded-md hover:bg-gold/90 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] font-medium"
           >
             Contact us
           </a>

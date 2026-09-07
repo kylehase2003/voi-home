@@ -460,7 +460,7 @@ const PropertyDetail = () => {
                             containerClassName="w-full h-full"
                           />
                           {idx === 0 && (
-                            <Badge className="absolute top-4 left-4 bg-gold text-primary">
+                            <Badge className="absolute top-4 left-4 bg-gold text-white">
                               {statusText}
                             </Badge>
                           )}
@@ -772,11 +772,11 @@ const PropertyDetail = () => {
                     
                     <div className="flex justify-between items-center text-sm">
                       <span className="text-muted-foreground">{t('propertyDetail.status')}</span>
-                      <Badge className="bg-gold text-primary">{property.construction_status || statusText}</Badge>
+                      <Badge className="bg-gold text-white">{property.construction_status || statusText}</Badge>
                     </div>
                   </div>
 
-                  <Button asChild className="w-full bg-gold hover:bg-gold/90 text-primary font-semibold py-6">
+                  <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white font-semibold py-6">
                     <a href={`https://wa.me/905527971000?text=${encodeURIComponent(`${t('propertyDetail.whatsappInquiry', { title: getTranslatedContent(property, 'title', i18n.language) })}\n${window.location.href}`)}`} target="_blank" rel="noopener noreferrer">
                       {t('propertyDetail.wantToKnowMore')}
                     </a>

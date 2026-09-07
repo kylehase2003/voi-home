@@ -39,7 +39,7 @@
     "noCoords": "No properties have map coordinates yet. Add latitude and longitude in the dashboard to display them here."
   },
   "footer": {
-    "description": "Your trusted partner in finding luxury properties in Istanbul, Bodrum, and Dubai.",
+    "description": "Voi Home looks past the listing photos - into the paperwork, the neighborhood, and the details that decide whether a property is actually worth owning.",
     "quickLinks": "Quick Links",
     "browseProperties": "Browse Properties",
     "aboutUs": "About Us",
@@ -49,7 +49,7 @@
     "penthouses": "Penthouses",
     "commercial": "Commercial",
     "contactInfo": "Contact Info",
-    "rights": "MR. Property. All rights reserved.",
+    "rights": "Voi Home. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions",
     "importantLinks": "Important Links",
@@ -59,9 +59,9 @@
     "admin": "Admin"
   },
   "hero": {
-    "eyebrow": "Luxury Real Estate · Turkey & Dubai",
-    "title": "Maximize Your Returns\nin Dubai & Turkey Real Estate",
-    "subtitle": "Secure high-yield properties in the world’s fastest-growing markets with our expert team!",
+    "eyebrow": "Real Estate in Türkiye, Done Properly",
+    "title": "Every Detail, Verified.\nEvery Property, Understood.",
+    "subtitle": "We look at what's underneath the listing - the paperwork, the building, the neighborhood - so you can invest in Türkiye with real confidence, not just good photos.",
     "exploreProperties": "Explore Properties",
     "bookConsultation": "Book a Consultation",
     "buy": "Buy",
@@ -129,10 +129,10 @@
     "team": "Team Members"
   },
   "aboutCompany": {
-    "subtitle": "MR. PROPERTY",
-    "title": "The Name Behind Every Smart Property Decision",
-    "description": "The best investments begin with the right guidance.\n\nMR. PROPERTY is the trusted real estate partner for international buyers looking to invest, relocate, or build their future in Türkiye and Dubai. We combine local market expertise with transparent advice to help you move forward with confidence, from your first question to the moment you receive your keys.",
-    "point1": "Market knowledge.",
+    "subtitle": "VOI HOME",
+    "title": "The Details Behind Every Smart Property Decision",
+    "description": "The best investments begin with the right guidance, and the right guidance begins with paying attention.\n\nVoi Home is the trusted real estate partner for buyers looking to invest, relocate, or build their future in Türkiye. We combine deep local market expertise with transparent advice to help you move forward with confidence, from your first question to the moment you receive your keys.",
+    "point1": "Local market knowledge.",
     "point2": "Trusted guidance.",
     "point3": "Confidence in every decision.",
     "contactButton": "Contact us"
@@ -156,8 +156,8 @@
     "featuredProperties": {
       "discoverHomes": "Discover Homes In Your Area",
       "noProperties": "No featured properties available at the moment. Check back soon!",
-      "ourListings": "Our top listings in Istanbul!",
-      "exploreOpportunities": "Whats hot in the market today!",
+      "ourListings": "Every property we have in Turkey.",
+      "exploreOpportunities": "From Istanbul to Bodrum, here's what's currently available.",
       "loadingProperties": "Loading properties...",
       "viewAllProperties": "View All Properties"
     },
@@ -275,38 +275,12 @@
   "buyerGuidePage": {
     "title": "Buyer Guide",
     "breadcrumb": "Buyer Guide",
-    "buttonTurkey": "Türkiye",
-    "buttonDubai": "Dubai",
-    "mainTitle": "MR. PROPERTY Your Partner in Real Estate",
+    "mainTitle": "Voi Home, Your Partner in Real Estate",
     "mainSubtitle": "We guarantee that every real estate decision is wise, safe, and successful from the initial search to the closing.",
     "ctaTitle": "Ready to Start?",
-    "ctaTitleDubai": "Connect with Our Dubai Team",
     "ctaTitleTurkey": "Connect with Our Türkiye Team",
-    "ctaSubtitleDubai": "Our Dubai specialists are ready to help you find your perfect property",
     "ctaSubtitleTurkey": "Our Türkiye experts will guide you through the Turkish real estate market",
     "submitButton": "Submit Message",
-    "dubai": {
-      "step1": {
-        "title": "Why Dubai?",
-        "description": "Investing in Dubai offers a stable economy, strong government rules, and a safe, fast-growing environment. The city's tax-free property ownership, excellent rental returns, and steady demand from locals and visitors bring in foreign investors.",
-        "fullDescription": "Dubai's infrastructure, world-class lifestyle, and fast developing communities generate tremendous long-term value. Additionally, investors benefit from the Dubai Land Department's clear procedures, which guarantee secure transactions. With all of that Dubai offers a dependable, profitable, and globally renowned real estate market."
-      },
-      "step2": {
-        "title": "Know the Basics",
-        "description": "Investing in Dubai is straightforward, but knowing the basic rules makes the process smooth. Foreign buyers can purchase property freely in designated freehold areas, meaning you fully own the property and the land beneath it.",
-        "fullDescription": "Buyers only need a valid passport to begin, and residents can use their Emirates ID or visa for additional benefits. Dubai has no property tax or capital gains tax, and fees are transparent. Financing is available for foreigners through local banks, with down payments starting from 20–25%. Understanding these essentials helps you invest confidently and avoid delays."
-      },
-      "step3": {
-        "title": "Buy With Confidence",
-        "description": "Once you choose a property, the purchase process is fast and structured. Buyer and seller sign a simple agreement (Form F) and place a security deposit. Then an NOC is issued by the developer to confirm the property is clear of any dues.",
-        "fullDescription": "The final step is visiting a trustee office to transfer ownership, pay the remaining balance, and receive the official title deed from the Dubai Land Department. If you buy off-plan, all payments go into a regulated escrow account for full protection. After the transfer, you can register for utilities and start renting or moving in immediately."
-      },
-      "step4": {
-        "title": "MR. PROPERTY Has Your Back",
-        "description": "At MR. PROPERTY, we simplify the entire investment journey so you don't have to deal with the complication and paperwork mess in Dubai's real estate market.",
-        "fullDescription": "From choosing the right property to managing paperwork, inspections, negotiations, and transfers, our team handles everything with complete transparency and expertise. We work directly with developers, follow all DLD and RERA regulations, making sure your investment is secure and profitable. You can invest in Dubai with confidence, knowing your time, money, and peace of mind are always protected with MR. Property."
-      }
-    },
     "turkey": {
       "step1": {
         "title": "Why Türkiye?",
@@ -324,8 +298,8 @@
         "fullDescription": "When all documents are ready, you and the seller meet at the Land Registry Office to transfer the title. After the fees and remaining balance are paid, the TAPU is issued in your name. From that moment, the property is officially yours. You can then open the utilities, register the home, and start using it or renting it out right away."
       },
       "step4": {
-        "title": "MR. PROPERTY Has Your Back",
-        "description": "At MR PROPERTY, we make sure the entire process stays simple and organized. We help you choose the right project, check every document, follow up with developers, and handle the transfer at the Land Registry until you receive your TAPU.",
+        "title": "Voi Home Has Your Back",
+        "description": "At Voi Home, we make sure the entire process stays simple and organized. We help you choose the right project, check every document, follow up with developers, and handle the transfer at the Land Registry until you receive your TAPU.",
         "fullDescription": "We only work with trusted developers and follow every rule so you don't deal with stress or surprises. With our team beside you, you can buy property in Turkey knowing your time, your money, and your peace of mind are protected."
       }
     }
@@ -348,19 +322,9 @@
     "success": "Message sent successfully!",
     "error": "Failed to send message. Please try again."
   },
-  "about": {
-    "title": "About MR. Property",
-    "subtitle": "Your Trusted Real Estate Partner",
-    "mission": "Our Mission",
-    "missionText": "To provide exceptional real estate services and help our clients find their perfect property in the most prestigious locations.",
-    "vision": "Our Vision",
-    "visionText": "To be the leading real estate consultancy in luxury property markets across Turkey and the UAE.",
-    "values": "Our Values",
-    "valuesText": "Excellence, Integrity, Trust, and Customer Satisfaction are at the core of everything we do."
-  },
   "blogs": {
     "title": "Real Estate Insights & Market Updates",
-    "subtitle": "Expert Analysis of Dubai & Turkey Property Markets",
+    "subtitle": "Expert Analysis of the Turkish Property Market",
     "viewAll": "View All",
     "readMore": "Read full article",
     "recentPosts": "Recent Posts",
@@ -380,7 +344,6 @@
     "home": "Home",
     "filterAll": "View All",
     "filterTurkey": "Türkiye",
-    "filterDubai": "Dubai",
     "noPostsForLocation": "No blogs found for the selected location.",
     "category": {
       "buying-guide": "Buying Guide",
@@ -396,7 +359,7 @@
     "title": "Privacy Policy",
     "intro": {
       "title": "Introduction",
-      "content": "At MR. Property, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data."
+      "content": "At Voi Home, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data."
     },
     "collection": {
       "title": "Information We Collect",
@@ -436,11 +399,11 @@
     "title": "Terms & Conditions",
     "acceptance": {
       "title": "Acceptance of Terms",
-      "content": "By accessing and using MR. Property's services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services."
+      "content": "By accessing and using Voi Home's services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services."
     },
     "services": {
       "title": "Our Services",
-      "content": "MR. Property provides real estate consultancy services including:",
+      "content": "Voi Home provides real estate consultancy services including:",
       "item1": "Property listing and search services",
       "item2": "Property viewing arrangements",
       "item3": "Real estate consultation and advice",
@@ -455,11 +418,11 @@
     },
     "intellectual": {
       "title": "Intellectual Property",
-      "content": "All content on this website, including text, images, logos, and designs, is the property of MR. Property and is protected by copyright and intellectual property laws. Unauthorized use is prohibited."
+      "content": "All content on this website, including text, images, logos, and designs, is the property of Voi Home and is protected by copyright and intellectual property laws. Unauthorized use is prohibited."
     },
     "limitation": {
       "title": "Limitation of Liability",
-      "content": "MR. Property shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. We provide information in good faith but do not guarantee the accuracy of third-party property listings."
+      "content": "Voi Home shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. We provide information in good faith but do not guarantee the accuracy of third-party property listings."
     },
     "modifications": {
       "title": "Modifications",
@@ -477,7 +440,7 @@
   },
   "aboutPage": {
     "hero": {
-      "title": "About MR. Property",
+      "title": "About Voi Home",
       "breadcrumb": {
         "home": "Home",
         "about": "About"
@@ -485,49 +448,37 @@
     },
     "philosophy": {
       "label": "Our Philosophy",
-      "title": "A Track Record Built on Trust"
+      "title": "A Track Record Built on Detail"
     },
     "story": {
-      "title": "The Story Behind MR.PROPERTY",
-      "tagline": "Some people know a property.\nMR. PROPERTY knows the market.",
-      "paragraph1": "Behind every successful investment is the right advice, the right timing, and the right people. That's what MR. PROPERTY was built to be the trusted name that sees the opportunities others miss and turns complexity into confidence.",
-      "paragraph2": "We don't believe international buyers should have to navigate unfamiliar regulations, hidden risks, or conflicting advice. Instead, we become the one trusted source you can rely on, from your first question to the day you receive your keys and beyond.",
-      "paragraph3": "With deep expertise across Türkiye and Dubai, MR. PROPERTY connects clients from around the world with opportunities that create lasting value.",
-      "closingLine1": "Because when it comes to real estate, you don't just need another agent.",
-      "closingLine2": "You need MR. PROPERTY."
+      "title": "The Story Behind Voi Home",
+      "tagline": "Some people sell a property.\nVoi Home studies the life around it.",
+      "paragraph1": "Behind every sound investment is a hundred small decisions most buyers never see: the direction a building faces, how a management company answers the phone, the gap between a listing photo and the apartment itself. Voi Home was built to catch every one of them.",
+      "paragraph2": "We don't believe our clients should have to take a developer's word for it, or navigate title deeds, permits, and inspection reports alone. We do that work first, so the only decision left for you is whether the home is right for your life.",
+      "paragraph3": "Rooted in Istanbul and Bodrum, Voi Home works exclusively across Türkiye, so every recommendation comes from firsthand knowledge of the street, the building, and the neighborhood, not a spreadsheet.",
+      "closingLine1": "Because a property is never just a property.",
+      "closingLine2": "Talk to Voi Home."
     },
     "missionVision": {
       "mission": {
         "title": "What We Stand For",
-        "tagline": "To be the name people trust before they trust the market.",
-        "description": "MR. PROPERTY exists to remove uncertainty from international real estate by transforming complex decisions into clear opportunities. Through market intelligence, strategic guidance, and unwavering transparency, we help our clients invest with confidence, not assumptions."
+        "tagline": "To look past the listing and into the life it holds.",
+        "description": "Voi Home exists to remove guesswork from buying property in Türkiye. We inspect what others overlook, ask the questions others skip, and turn every detail, large or small, into something our clients can rely on."
       },
       "vision": {
         "title": "Our Long-Term Vision",
-        "tagline": "To become the world's most trusted authority in international real estate.",
-        "description": "A brand that investors turn to first, not because we sell properties, but because we understand the market better than anyone else. From Türkiye and Dubai to tomorrow's emerging destinations, MR. PROPERTY will continue connecting people with opportunities worth believing in."
+        "tagline": "To be the most trusted name in Turkish real estate, one detail at a time.",
+        "description": "A brand our clients return to long after the keys change hands, not because we sold them a property, but because we understood what they were actually looking for. Voi Home is committed to Türkiye, and to doing right by everyone who trusts us here."
       }
     },
     "founder": {
       "title": "About the Founder",
-      "description": "Samer Al Helwani is a real estate professional with over 15 years of experience, having facilitated property transactions with a collective value exceeding $40 million USD. Trusted by investors, homeowners, and international buyers, he has built his reputation on market expertise, transparency, and a client-first approach. His vision for MR. PROPERTY is to make investing in Türkiye and Dubai simple, secure, and rewarding by providing honest guidance and personalized support at every stage of the journey."
+      "description": "Samer Al Helwani is a real estate professional with over 15 years of experience, having facilitated property transactions with a collective value exceeding $40 million USD. Trusted by investors, homeowners, and international buyers, he has built his reputation on market expertise, transparency, and a client-first approach. His vision for Voi Home is to make investing in Türkiye simple, secure, and rewarding, by paying attention to the details that matter and providing honest guidance at every stage of the journey."
     },
     "stats": {
       "propertiesSold": "Happy Clients",
       "foreignInvestment": "Property Transactions",
       "priceGrowth": "Nationalities"
-    },
-    "welcome": {
-      "title": "Welcome to MR. Property",
-      "paragraph1": "With over 15 years of experience in the luxury real estate market, MR. Property has established itself as a premier consultancy firm specializing in high-end properties across Turkey and the UAE.",
-      "paragraph2": "Our team of experienced consultants understands that finding the perfect property is more than just a transaction—it's about discovering a place where you can build your future, create memories, and achieve your dreams.",
-      "paragraph3": "We pride ourselves on our personalized approach, market expertise, and commitment to excellence. Whether you're looking for a modern apartment in Istanbul, a seaside villa in Bodrum, or a luxurious penthouse in Dubai, we're here to guide you every step of the way."
-    },
-    "experience": {
-      "years": "Years of Experience",
-      "properties": "Properties Listed",
-      "clients": "Happy Clients",
-      "satisfaction": "Satisfaction Rate"
     },
     "principles": {
       "title": "The Principles Behind Every Decision",
@@ -739,7 +690,7 @@
     "mapLocation": "Map Location",
     "pinPropertyLocation": "Pin Property Location",
     "clickToPin": "Click on the map to pin the property location",
-    "resetToDubai": "Reset to Dubai",
+    "resetToDubai": "Reset to Istanbul",
     "selectedLocation": "Selected Location",
     "latitude": "Latitude",
     "longitude": "Longitude",
@@ -772,7 +723,7 @@
     "excerpt": "Excerpt",
     "content": "Content",
     "tags": "Tags (comma-separated)",
-    "tagsPlaceholder": "e.g. Dubai, Investment, Luxury",
+    "tagsPlaceholder": "e.g. Istanbul, Investment, Luxury",
     "publishBlog": "Publish Blog",
     "save": "Save",
     "update": "Update",
@@ -941,7 +892,6 @@
     "filters": "Filters",
     "viewAll": "View All",
     "turkey": "Türkiye",
-    "dubai": "Dubai",
     "loading": "Loading properties...",
     "noProperties": "No properties found. Try adjusting your filters.",
     "viewAllProperties": "View All Properties",
@@ -1037,8 +987,7 @@
       "Villas and Apartments": "Villas and Apartments"
     },
     "countryValues": {
-      "turkiye": "Türkiye",
-      "dubai": "Dubai"
+      "turkiye": "Türkiye"
     },
     "cityValues": {
       "istanbul": "Istanbul",
@@ -1240,7 +1189,6 @@
     "news": "News",
     "guide": "Guide",
     "tips": "Tips",
-    "dubai": "Dubai",
     "turkey": "Turkey",
     "istanbul": "Istanbul",
     "marina": "Marina",
@@ -1255,10 +1203,6 @@
     "bodrum": "Bodrum",
     "antalya": "Antalya",
     "ankara": "Ankara",
-    "abuDhabi": "Abu Dhabi",
-    "sharjah": "Sharjah",
-    "ajman": "Ajman",
-    "dubai": "Dubai",
     "turkey": "Türkiye"
   },
   "propertyStatuses": {
@@ -1282,10 +1226,10 @@
   },
   "seo": {
     "h1": {
-      "home": "Luxury Real Estate in Istanbul, Bodrum & Dubai",
-      "properties": "Luxury Properties for Sale in Istanbul, Bodrum & Dubai",
-      "about": "About MR. Property — Luxury Real Estate Consultancy",
-      "contact": "Contact MR. Property — Real Estate Advisors in Istanbul, Bodrum & Dubai"
+      "home": "Luxury Real Estate in Istanbul & Bodrum, Türkiye",
+      "properties": "Luxury Properties for Sale in Istanbul & Bodrum, Türkiye",
+      "about": "About Voi Home — Luxury Real Estate Consultancy in Türkiye",
+      "contact": "Contact Voi Home — Real Estate Advisors in Istanbul & Bodrum"
     }
   },
   "pagination": {

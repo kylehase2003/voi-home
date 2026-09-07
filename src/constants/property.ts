@@ -1,7 +1,6 @@
 // Countries
 export const COUNTRIES = [
   { value: 'turkiye', label: 'Türkiye' },
-  { value: 'dubai', label: 'Dubai' },
 ] as const;
 
 // Turkish Cities
@@ -79,27 +78,11 @@ export const FETHIYE_DISTRICTS = [
   "Merkez", "Ölüdeniz", "Çalış", "Hisarönü", "Ovacık", "Kayaköy", "Calis"
 ] as const;
 
-// Dubai Districts/Communities
-export const DUBAI_DISTRICTS = [
-  "Downtown Dubai", "Dubai Marina", "Palm Jumeirah", "Business Bay",
-  "Dubai Hills Estate", "Arabian Ranches", "Jumeirah Lake Towers (JLT)",
-  "Dubai Sports City", "Dubai Silicon Oasis", "International City",
-  "Jumeirah Beach Residence (JBR)", "La Mer", "Bluewaters Island",
-  "DIFC", "City Walk", "Al Barsha", "Jumeirah Village Circle (JVC)",
-  "Damac Hills", "Town Square", "Meydan", "Mohammed Bin Rashid City",
-  "Dubai Creek Harbour", "Emaar Beachfront", "Port de La Mer",
-  "Madinat Jumeirah Living", "District One", "The Villa", "Mudon",
-  "Villanova", "Serena", "Pearl Jumeirah", "Al Wasl"
-] as const;
-
 // Legacy exports for backward compatibility
 export const REGIONS = [
   { value: 'istanbul', label: 'Turkey - Istanbul' },
   { value: 'bodrum', label: 'Turkey - Bodrum' },
-  { value: 'dubai', label: 'Dubai' },
 ] as const;
-
-export const DUBAI_COMMUNITIES = DUBAI_DISTRICTS;
 
 export const PROPERTY_TYPES = [
   { value: 'apartment', label: 'Apartment' },
@@ -171,8 +154,6 @@ export const DEFAULT_FEATURES = [
 
 // Get districts based on country and city
 export const getDistrictsForCity = (country: string, city: string): readonly string[] => {
-  if (country === 'dubai') return DUBAI_DISTRICTS;
-  
   if (country === 'turkiye') {
     switch (city) {
       case 'istanbul': return ISTANBUL_DISTRICTS;
@@ -196,7 +177,6 @@ export const getDistrictsForCity = (country: string, city: string): readonly str
 export const getCityForDistrict = (country: string, district: string): string => {
   if (!district) return '';
   const normalized = district.trim().toLowerCase();
-  if (country === 'dubai') return '';
   const cityMap: Record<string, readonly string[]> = {
     istanbul: ISTANBUL_DISTRICTS,
     ankara: ANKARA_DISTRICTS,
@@ -218,7 +198,6 @@ export const getCityForDistrict = (country: string, district: string): string =>
 // Legacy function for backward compatibility
 export const getDistrictOptions = (region: string) => {
   if (region === "istanbul") return ISTANBUL_DISTRICTS;
-  if (region === "dubai") return DUBAI_DISTRICTS;
   return [];
 };
 

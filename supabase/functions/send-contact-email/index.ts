@@ -76,7 +76,7 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@voi-home.com>",
+        from: "Voi Home <noreply@voi-home.com>",
         to: ["info@voi-home.com"],
         subject: `New Contact Form Submission from ${escapeHtml(name)}`,
         html: `
@@ -105,13 +105,13 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@voi-home.com>",
+        from: "Voi Home <noreply@voi-home.com>",
         to: [email],
-        subject: "Thank you for contacting MR. Property",
+        subject: "Thank you for contacting Voi Home",
         html: `
           <h1>Thank you for contacting us, ${escapeHtml(name)}!</h1>
           <p>We have received your message and will get back to you as soon as possible.</p>
-          <p>Best regards,<br>The MR. Property Team</p>
+          <p>Best regards,<br>The Voi Home Team</p>
         `,
       }),
     });

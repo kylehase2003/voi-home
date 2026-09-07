@@ -61,7 +61,7 @@ const NotFoundState = ({
         {/* Action Buttons */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center px-4">
           <Link to={primaryAction.to} className="w-full sm:w-auto">
-            <Button className="w-full sm:w-auto bg-gold hover:bg-gold/90 text-primary px-6 gap-2">
+            <Button className="w-full sm:w-auto bg-gold hover:bg-gold/90 text-white px-6 gap-2">
               {primaryAction.showBackArrow && (
                 <ArrowLeft className={`h-4 w-4 ${isRTL ? "rotate-180" : ""}`} />
               )}

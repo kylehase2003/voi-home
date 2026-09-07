@@ -148,7 +148,6 @@ const BlogsManagement = () => {
     published: false,
     tags: '',
     tags_ar: '',
-    region: '' as '' | 'turkey' | 'dubai' | 'both',
   });
 
   // Search state
@@ -249,7 +248,7 @@ const BlogsManagement = () => {
       published_at: formData.published ? new Date().toISOString() : null,
       tags: formData.tags ? formData.tags.split(',').map(t => t.trim()).filter(Boolean) : [],
       tags_ar: formData.tags_ar ? formData.tags_ar.split(',').map(t => t.trim()).filter(Boolean) : [],
-      region: formData.region,
+      region: 'turkey',
     };
 
     if (editingBlog) {
@@ -315,7 +314,6 @@ const BlogsManagement = () => {
         published: fullBlog.published,
         tags: Array.isArray(fullBlog.tags) ? fullBlog.tags.join(', ') : '',
         tags_ar: Array.isArray(fullBlog.tags_ar) ? fullBlog.tags_ar.join(', ') : '',
-        region: (fullBlog as any).region || '',
       });
     }
     setDialogOpen(true);
@@ -358,7 +356,6 @@ const BlogsManagement = () => {
       published: false,
       tags: '',
       tags_ar: '',
-      region: '',
     });
     setEditingBlog(null);
   };
@@ -407,60 +404,6 @@ const BlogsManagement = () => {
               <DialogTitle>{editingBlog ? t('blogsManagement.editBlog') : t('blogsManagement.addNewBlog')}</DialogTitle>
             </DialogHeader>
             <form onSubmit={handleSubmit} className="space-y-4">
-              {/* Region Selection at the top - Tab style toggle buttons */}
-              <div className="space-y-2">
-                <Label>{t('blogsManagement.showInRegion')}</Label>
-                <div className="flex gap-2">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const hasTurkey = formData.region === 'turkey' || formData.region === 'both';
-                      const hasDubai = formData.region === 'dubai' || formData.region === 'both';
-                      if (hasTurkey) {
-                        // Uncheck Turkey
-                        setFormData({ ...formData, region: hasDubai ? 'dubai' : '' });
-                      } else {
-                        // Check Turkey
-                        setFormData({ ...formData, region: hasDubai ? 'both' : 'turkey' });
-                      }
-                    }}
-                    className={`px-4 py-2 rounded-md border text-sm font-medium transition-colors ${
-                      formData.region === 'turkey' || formData.region === 'both'
-                        ? 'bg-primary text-primary-foreground border-primary'
-                        : 'bg-background text-foreground border-input hover:bg-accent'
-                    }`}
-                  >
-                    Türkiye ✓
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      const hasTurkey = formData.region === 'turkey' || formData.region === 'both';
-                      const hasDubai = formData.region === 'dubai' || formData.region === 'both';
-                      if (hasDubai) {
-                        // Uncheck Dubai
-                        setFormData({ ...formData, region: hasTurkey ? 'turkey' : '' });
-                      } else {
-                        // Check Dubai
-                        setFormData({ ...formData, region: hasTurkey ? 'both' : 'dubai' });
-                      }
-                    }}
-                    className={`px-4 py-2 rounded-md border text-sm font-medium transition-colors ${
-                      formData.region === 'dubai' || formData.region === 'both'
-                        ? 'bg-primary text-primary-foreground border-primary'
-                        : 'bg-background text-foreground border-input hover:bg-accent'
-                    }`}
-                  >
-                    Dubai ✓
-                  </button>
-                </div>
-                <p className="text-xs text-muted-foreground">
-                  {formData.region === '' 
-                    ? t('blogsManagement.regionNoneHint', 'No region selected - will only appear in "View All"')
-                    : ''}
-                </p>
-              </div>
-
               <div className="space-y-2">
                 <Label htmlFor="featured_image">{t('blogsManagement.featuredImage')}</Label>
                 <ImageUpload

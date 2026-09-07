@@ -9,7 +9,6 @@ import { AuthProvider } from "./contexts/AuthContext";
 import ScrollToTop from "./components/ScrollToTop";
 import MaintenanceCheck from "./components/MaintenanceCheck";
 import Experience from "./pages/Experience";
-import ContactPopup from "./components/ContactPopup";
 import WhatsAppButton from "./components/WhatsAppButton";
 
 // Retry wrapper for lazy imports to handle stale chunk errors after deployments
@@ -42,10 +41,8 @@ const Team = lazyWithRetry(() => import("./pages/Team"));
 const Auth = lazyWithRetry(() => import("./pages/Auth"));
 const PrivacyPolicy = lazyWithRetry(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazyWithRetry(() => import("./pages/TermsConditions"));
-const BuyerGuide = lazyWithRetry(() => import("./pages/BuyerGuide"));
 const ComingSoon = lazyWithRetry(() => import("./pages/ComingSoon"));
 const Partners = lazyWithRetry(() => import("./pages/Partners"));
-const Landing = lazyWithRetry(() => import("./pages/Landing"));
 const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 // Lazy load dashboard (includes heavy Leaflet library)
@@ -58,7 +55,6 @@ const App = () => <QueryClientProvider client={queryClient}>
         <Toaster />
         <Sonner />
         <BrowserRouter>
-          <ContactPopup />
           <WhatsAppButton />
           <ScrollToTop />
           <MaintenanceCheck>
@@ -75,11 +71,9 @@ const App = () => <QueryClientProvider client={queryClient}>
                 <Route path="/team" element={<Team />} />
                 <Route path="/privacy" element={<PrivacyPolicy />} />
                 <Route path="/terms" element={<TermsConditions />} />
-                <Route path="/buyer-guide" element={<BuyerGuide />} />
                 <Route path="/coming-soon" element={<ComingSoon />} />
                 <Route path="/partners" element={<Partners />} />
                 <Route path="/auth" element={<Auth />} />
-                <Route path="/landing" element={<Landing />} />
                 <Route path="/experience" element={<Navigate to="/" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />
                 {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}

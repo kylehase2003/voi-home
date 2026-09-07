@@ -9,7 +9,7 @@ import { Filter } from "lucide-react";
 import { useProperties } from "@/hooks/useProperties";
 import { useFilterOptions } from "@/hooks/useFilterOptions";
 import { PropertyFilters as Filters } from "@/types/property";
-import { PropertyCard } from "@/components/property/PropertyCard";
+import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
 import { PropertyFilters } from "@/components/property/PropertyFilters";
 import LoadingSpinner from "@/components/property/LoadingSpinner";
 import SEOHead from "@/components/SEOHead";
@@ -38,17 +38,6 @@ const Properties = () => {
   const maxPriceParam = searchParams.get('max_price') || "";
   const benefitParam = searchParams.get('benefit') || "";
 
-  // Determine initial location filter from URL params
-  const getInitialLocationFilter = () => {
-    if (countryParam === 'turkiye' || countryParam.toLowerCase().includes('turkey')) {
-      return 'turkey';
-    } else if (countryParam === 'dubai') {
-      return 'dubai';
-    }
-    return 'turkey';
-  };
-
-  const [locationFilter, setLocationFilter] = useState<string>(getInitialLocationFilter);
   const [isInitialized, setIsInitialized] = useState(false);
 
   // Default country to turkiye when no URL params so listings match the selected tab
@@ -75,7 +64,7 @@ const Properties = () => {
   // React to URL search param changes (e.g. navigating from header links)
   useEffect(() => {
     if (!isInitialized) return;
-    
+
     const newBenefit = searchParams.get('benefit') || "";
     const newPropertyType = searchParams.get('property_type') || searchParams.get('propertyType') || "";
     const newCountry = searchParams.get('country') || "";
@@ -108,15 +97,6 @@ const Properties = () => {
       benefits: newBenefit ? [newBenefit] : [],
       amenities: []
     });
-
-    // Update location tab
-    if (newCountry === 'turkiye' || newCountry.toLowerCase().includes('turkey')) {
-      setLocationFilter('turkey');
-    } else if (newCountry === 'dubai') {
-      setLocationFilter('dubai');
-    } else {
-      setLocationFilter('all');
-    }
   }, [searchParams, isInitialized]);
 
   // Mark as initialized after first render
@@ -131,35 +111,6 @@ const Properties = () => {
     loading: optionsLoading
   } = useFilterOptions(filters.region);
 
-  // Sync location filter with country filter - only after initialization
-  // This prevents clearing URL params on initial load
-  useEffect(() => {
-    if (!isInitialized) return;
-
-    if (locationFilter === "turkey") {
-      setFilters(prev => ({
-        ...prev,
-        country: "turkiye",
-        region: "turkiye"
-      }));
-    } else if (locationFilter === "dubai") {
-      setFilters(prev => ({
-        ...prev,
-        country: "dubai",
-        city: "",
-        region: "dubai"
-      }));
-    } else if (locationFilter === "all") {
-      setFilters(prev => ({
-        ...prev,
-        country: "",
-        city: "",
-        region: "",
-        district: ""
-      }));
-    }
-  }, [locationFilter, isInitialized]);
-
   // Fetch properties based on filters
   const {
     properties,
@@ -171,7 +122,7 @@ const Properties = () => {
   const [currentPage, setCurrentPage] = useState(1);
   useEffect(() => {
     setCurrentPage(1);
-  }, [filters, locationFilter]);
+  }, [filters]);
   const totalPages = Math.max(1, Math.ceil(properties.length / PAGE_SIZE));
   const paginatedProperties = properties.slice(
     (currentPage - 1) * PAGE_SIZE,
@@ -208,15 +159,6 @@ const Properties = () => {
         newFilters.city = "";
         newFilters.district = "";
         newFilters.region = value === "all" ? "" : value as string;
-        
-        // Update location filter tabs
-        if (value === 'turkiye') {
-          setLocationFilter('turkey');
-        } else if (value === 'dubai') {
-          setLocationFilter('dubai');
-        } else {
-          setLocationFilter('all');
-        }
       }
 
       // Clear district when city changes
@@ -229,7 +171,6 @@ const Properties = () => {
   };
 
   const clearFilters = () => {
-    setLocationFilter("turkey");
     setFilters({
       country: "turkiye",
       city: "",
@@ -248,23 +189,22 @@ const Properties = () => {
   };
 
   const loading = optionsLoading || propertiesLoading;
-  const isDubaiTheme = locationFilter === "dubai";
 
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
+    <div className="min-h-screen bg-background">
       <SEOHead
-        title="Luxury Properties in Istanbul & Dubai"
-        description="Browse luxury apartments, villas & investment properties in Istanbul, Bodrum & Dubai. Filter by location, type, budget. Turkish citizenship eligible."
+        title="Luxury Properties in Istanbul & Bodrum"
+        description="Browse luxury apartments, villas & investment properties in Istanbul and Bodrum, every one personally vetted. Filter by location, type, budget. Turkish citizenship eligible."
         path="/properties"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "Luxury Properties in Istanbul, Bodrum & Dubai",
-          description: "Curated luxury homes, villas, and investment properties across Türkiye and Dubai.",
+          name: "Luxury Properties in Istanbul & Bodrum, Türkiye",
+          description: "Curated luxury homes, villas, and investment properties across Türkiye, chosen for the details that matter.",
           url: "https://voi-home.com/properties",
           isPartOf: {
             "@type": "WebSite",
-            name: "MR. Property",
+            name: "Voi Home",
             url: "https://voi-home.com",
           },
         }}
@@ -272,98 +212,71 @@ const Properties = () => {
       <Header />
       <main className="pt-24">
         <RevealOnScroll className="text-center max-w-2xl mx-auto px-6 pt-8 pb-2">
-          <div className={`text-xs font-medium uppercase tracking-[1.5px] mb-4 transition-colors duration-500 ${isDubaiTheme ? "text-white/60" : "text-muted-foreground"}`}>
+          <div className="text-xs font-medium uppercase tracking-[1.5px] mb-4 text-muted-foreground">
             {t("properties.title")}
           </div>
           <h1
-            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] transition-colors duration-500 ${i18n.language === "ar" ? "font-arabic" : "font-serif"} ${isDubaiTheme ? "text-white" : "text-foreground"}`}
+            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${
+              i18n.language === "ar" ? "font-arabic" : "font-serif"
+            }`}
           >
             {t("seo.h1.properties")}
           </h1>
         </RevealOnScroll>
         {/* Properties Listing Section */}
-        <section className={`py-12 transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
+        <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
-            {/* Location Filter Tabs */}
-            <div className="mb-8 flex justify-center gap-4 flex-wrap">
-              <Button 
-                variant={locationFilter === "all" ? "default" : "outline"} 
-                onClick={() => setLocationFilter("all")} 
-                className={locationFilter === "all" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-              >
-                {t('properties.viewAll')}
-              </Button>
-              {filterOptions.regions.some(r => r.value.toLowerCase().includes('turkey') || r.value.toLowerCase().includes('turkiye')) && (
-                <Button 
-                  variant={locationFilter === "turkey" ? "default" : "outline"} 
-                  onClick={() => setLocationFilter("turkey")} 
-                  className={locationFilter === "turkey" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-                >
-                  {t('properties.turkey')}
-                </Button>
-              )}
-              {filterOptions.regions.some(r => r.value.toLowerCase().includes('dubai')) && (
-                <Button 
-                  variant={locationFilter === "dubai" ? "default" : "outline"} 
-                  onClick={() => setLocationFilter("dubai")} 
-                  className={locationFilter === "dubai" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-                >
-                  {t('properties.dubai')}
-                </Button>
-              )}
-            </div>
-
             {/* Mobile Filter Button */}
             <div className="lg:hidden mb-6">
               <Sheet>
                 <SheetTrigger asChild>
-                  <Button variant="outline" className="w-full">
+                  <Button variant="outline" className="w-full rounded-full">
                     <Filter className="mr-2 h-4 w-4" />
                     {t('properties.filters')}
                   </Button>
                 </SheetTrigger>
-                <SheetContent side="left" className={`w-[300px] overflow-y-auto transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
+                <SheetContent side="left" className="w-[300px] overflow-y-auto bg-background">
                   <SheetHeader>
-                    <SheetTitle className={`transition-colors duration-500 ${isDubaiTheme ? "text-white" : ""}`}>
-                      {t('properties.filters')}
-                    </SheetTitle>
+                    <SheetTitle>{t('properties.filters')}</SheetTitle>
                   </SheetHeader>
                   <div className="mt-6 pb-6">
-                    <PropertyFilters 
-                      filters={filters} 
-                      onFilterChange={handleFilterChange} 
-                      onClearFilters={clearFilters} 
-                      locationFilter={locationFilter} 
-                      availableAmenities={filterOptions.amenities} 
-                      availablePropertyTypes={filterOptions.propertyTypes} 
-                      availableLayouts={filterOptions.layouts} 
-                      availableTransactionTypes={filterOptions.transactionTypes} 
-                      availableBenefits={filterOptions.benefits} 
-                      availableStatuses={filterOptions.statuses} 
+                    <PropertyFilters
+                      filters={filters}
+                      onFilterChange={handleFilterChange}
+                      onClearFilters={clearFilters}
+                      availableAmenities={filterOptions.amenities}
+                      availablePropertyTypes={filterOptions.propertyTypes}
+                      availableLayouts={filterOptions.layouts}
+                      availableTransactionTypes={filterOptions.transactionTypes}
+                      availableBenefits={filterOptions.benefits}
+                      availableStatuses={filterOptions.statuses}
                     />
                   </div>
                 </SheetContent>
               </Sheet>
             </div>
 
-            <div className="flex gap-8">
+            <div className="flex gap-10">
               {/* Desktop Sidebar Filters */}
               <aside className="hidden lg:block w-64 space-y-6 flex-shrink-0 max-h-[calc(100vh-12rem)] overflow-y-auto sticky top-28">
-                <div className={`p-6 rounded-lg shadow transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,15%)] border border-white/10" : "bg-card"}`}>
-                  <h2 className={`text-xl mb-4 transition-colors duration-500 ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'} ${isDubaiTheme ? "text-white" : "text-card-foreground"}`}>
+                <div className="pr-2">
+                  <h2
+                    className={`text-xs font-medium uppercase tracking-[1.5px] mb-5 text-muted-foreground ${
+                      i18n.language === 'ar' ? 'font-arabic' : ''
+                    }`}
+                  >
                     {t('properties.filters')}
                   </h2>
-                  <PropertyFilters 
-                    filters={filters} 
-                    onFilterChange={handleFilterChange} 
-                    onClearFilters={clearFilters} 
-                    locationFilter={locationFilter} 
-                    availableAmenities={filterOptions.amenities} 
-                    availablePropertyTypes={filterOptions.propertyTypes} 
-                    availableLayouts={filterOptions.layouts} 
-                    availableTransactionTypes={filterOptions.transactionTypes} 
-                    availableBenefits={filterOptions.benefits} 
-                    availableStatuses={filterOptions.statuses} 
+                  <PropertyFilters
+                    filters={filters}
+                    onFilterChange={handleFilterChange}
+                    onClearFilters={clearFilters}
+                    availableAmenities={filterOptions.amenities}
+                    availablePropertyTypes={filterOptions.propertyTypes}
+                    availableLayouts={filterOptions.layouts}
+                    availableTransactionTypes={filterOptions.transactionTypes}
+                    availableBenefits={filterOptions.benefits}
+                    availableStatuses={filterOptions.statuses}
                   />
                 </div>
               </aside>
@@ -371,15 +284,15 @@ const Properties = () => {
               {/* Properties Grid */}
               <div className="flex-1 min-w-0">
                 {loading ? (
-                  <LoadingSpinner message={t('properties.loading')} isDarkTheme={isDubaiTheme} />
+                  <LoadingSpinner message={t('properties.loading')} />
                 ) : properties.length === 0 ? (
                   <div className="text-center py-12">
-                    <p className={`mb-6 transition-colors duration-500 ${isDubaiTheme ? "text-white/70" : "text-muted-foreground"}`}>
+                    <p className="mb-6 text-muted-foreground">
                       {t('properties.noProperties')}
                     </p>
-                    <Button 
-                      variant="outline" 
-                      className={`border-gold text-gold hover:bg-gold hover:text-primary ${isDubaiTheme ? "bg-[hsl(220,15%,18%)]" : ""}`} 
+                    <Button
+                      variant="outline"
+                      className="border-gold text-gold hover:bg-gold hover:text-white rounded-full"
                       onClick={clearFilters}
                     >
                       {t('properties.viewAllProperties')}
@@ -387,22 +300,22 @@ const Properties = () => {
                   </div>
                 ) : (
                   <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-10">
                       {paginatedProperties.map((property, index) => (
                         <RevealOnScroll key={property.id} delay={(index % PAGE_SIZE) * 40}>
-                          <PropertyCard property={property} isDubaiTheme={isDubaiTheme} />
+                          <PropertyCardMinimal property={property} />
                         </RevealOnScroll>
                       ))}
                     </div>
                     {totalPages > 1 && (
-                      <Pagination className="mt-10">
-                        <PaginationContent className={`flex-wrap justify-center ${isDubaiTheme ? "text-white" : ""}`}>
+                      <Pagination className="mt-12">
+                        <PaginationContent className="flex-wrap justify-center">
                           <PaginationItem>
                             <PaginationPrevious
                               href="#"
                               onClick={(e) => { e.preventDefault(); goToPage(currentPage - 1); }}
                               aria-disabled={currentPage === 1}
-                              className={`${currentPage === 1 ? "pointer-events-none opacity-50" : ""} ${isDubaiTheme ? "text-white hover:bg-white/10 hover:text-white" : ""}`}
+                              className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
                             />
                           </PaginationItem>
                           {getPageNumbers().map((p, idx) =>
@@ -416,15 +329,7 @@ const Properties = () => {
                                   href="#"
                                   isActive={p === currentPage}
                                   onClick={(e) => { e.preventDefault(); goToPage(p); }}
-                                  className={
-                                    isDubaiTheme
-                                      ? p === currentPage
-                                        ? "bg-gold text-primary border-gold hover:bg-gold/90 hover:text-primary"
-                                        : "bg-transparent border-white/20 text-white hover:bg-white/10 hover:text-white"
-                                      : p === currentPage
-                                        ? "bg-gold text-primary border-gold hover:bg-gold/90 hover:text-primary"
-                                        : ""
-                                  }
+                                  className={p === currentPage ? "bg-gold text-white border-gold hover:bg-gold/90 hover:text-white" : ""}
                                 >
                                   {p}
                                 </PaginationLink>
@@ -436,7 +341,7 @@ const Properties = () => {
                               href="#"
                               onClick={(e) => { e.preventDefault(); goToPage(currentPage + 1); }}
                               aria-disabled={currentPage === totalPages}
-                              className={`${currentPage === totalPages ? "pointer-events-none opacity-50" : ""} ${isDubaiTheme ? "text-white hover:bg-white/10 hover:text-white" : ""}`}
+                              className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
                             />
                           </PaginationItem>
                         </PaginationContent>

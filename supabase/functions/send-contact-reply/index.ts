@@ -138,16 +138,16 @@ const handler = async (req: Request): Promise<Response> => {
         Authorization: `Bearer ${RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: "MR. Property <noreply@voi-home.com>",
+        from: "Voi Home <noreply@voi-home.com>",
         to: [submission.email],
-        subject: "Re: Your Inquiry to MR. Property",
+        subject: "Re: Your Inquiry to Voi Home",
         html: `
           <p>Hello ${escapeHtml(submission.name)},</p>
-          <p>Thank you for reaching out to MR. Property. Here is our response to your inquiry:</p>
+          <p>Thank you for reaching out to Voi Home. Here is our response to your inquiry:</p>
           <hr />
           <p>${escapeHtml(reply).replace(/\n/g, "<br>")}</p>
           <hr />
-          <p>Best regards,<br>The MR. Property Team</p>
+          <p>Best regards,<br>The Voi Home Team</p>
           <p><small>This is an automated response. Please do not reply to this email.</small></p>
         `,
       }),

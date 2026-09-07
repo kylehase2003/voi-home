@@ -2,7 +2,13 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useProperties } from "@/hooks/useProperties";
-import { PropertyCard } from "@/components/property/PropertyCard";
+import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
+import type { PropertyFilters } from "@/types/property";
+
+// Stable reference - useProperties' effect depends on this object by
+// identity, so a new inline literal on every render would refetch in a loop.
+const TURKEY_FILTER: PropertyFilters = { region: "turkey" };
+
 const FeaturedProperties = () => {
   const {
     t,
@@ -11,9 +17,9 @@ const FeaturedProperties = () => {
   const {
     properties,
     loading
-  } = useProperties(undefined, true);
+  } = useProperties(TURKEY_FILTER);
   if (loading) {
-    return <section className="py-24 bg-muted/30">
+    return <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-muted-foreground">{t('homePage.featuredProperties.loadingProperties')}</p>
@@ -22,7 +28,7 @@ const FeaturedProperties = () => {
       </section>;
   }
   if (properties.length === 0) {
-    return <section className="py-24 bg-muted/30">
+    return <section className="py-24 bg-white">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl mb-4 text-primary ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
@@ -35,7 +41,7 @@ const FeaturedProperties = () => {
         </div>
       </section>;
   }
-  return <section className="py-8 md:py-14 bg-muted/30">
+  return <section className="py-8 md:py-14 bg-white">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 md:mb-16 max-w-xl mx-auto">
           <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
@@ -46,13 +52,13 @@ const FeaturedProperties = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 mb-8 md:mb-12">
-          {properties.map((property, index) => <PropertyCard key={property.id} property={property} featured animationDelay={index * 0.2} />)}
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-8 md:mb-12">
+          {properties.slice(0, 3).map((property, index) => <PropertyCardMinimal key={property.id} property={property} animationDelay={index * 0.2} />)}
         </div>
 
         <div className="text-center">
           <Link to="/properties">
-            <Button variant="outline" size="lg" className="border-2 border-gold text-gold hover:bg-gold hover:text-primary">
+            <Button variant="outline" size="lg" className="border-2 border-gold text-gold hover:bg-gold hover:text-white">
               {t('homePage.featuredProperties.viewAllProperties')}
             </Button>
           </Link>

@@ -49,7 +49,7 @@ export const useFilterOptions = (selectedRegion?: string) => {
         if (error) throw error;
 
         // === REGIONS ===
-        const defaultLocations = ['Dubai', 'Turkey', 'Istanbul'];
+        const defaultLocations = ['Turkey', 'Istanbul'];
         const hiddenLocations = JSON.parse(localStorage.getItem('hidden_default_locations') || '[]');
         const customLocations = JSON.parse(localStorage.getItem('property_custom_locations') || '[]');
         const activeDefaultLocations = defaultLocations.filter(loc => !hiddenLocations.includes(loc));
@@ -231,9 +231,7 @@ export const useFilterOptions = (selectedRegion?: string) => {
     let districts: string[] = [];
 
     // Check for region-specific custom districts stored by dashboard
-    if (selectedRegion.toLowerCase().includes('dubai')) {
-      districts = JSON.parse(localStorage.getItem('property_custom_districts_dubai') || '[]');
-    } else if (selectedRegion.toLowerCase().includes('turkey') || selectedRegion.toLowerCase().includes('istanbul')) {
+    if (selectedRegion.toLowerCase().includes('turkey') || selectedRegion.toLowerCase().includes('istanbul')) {
       districts = JSON.parse(localStorage.getItem('property_custom_districts_turkey') || '[]');
     }
     

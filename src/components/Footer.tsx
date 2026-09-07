@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           <div className="lg:col-span-2">
-            <img src={logo} alt="MR. Property" className="h-14 w-auto mb-4" width={66} height={56} />
+            <img src={logo} alt="Voi Home" className="h-14 w-auto mb-4" width={66} height={56} />
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">{t("footer.description")}</p>
 
             <div className="flex gap-1">
@@ -121,10 +121,10 @@ const Footer = () => {
             <ul className="space-y-2">
               <li>
                 <Link
-                  to="/buyer-guide"
+                  to="/properties-map"
                   className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
                 >
-                  {t("footer.buyerGuide")}
+                  {t("nav.propertiesMap")}
                 </Link>
               </li>
               <li>

@@ -175,7 +175,7 @@ const ContactSubmissions = () => {
     if (!selectedSubmission || !replyText.trim()) return;
     setIsSendingReply(true);
     try {
-      const subject = `Re: Your message to Mr Property`;
+      const subject = `Re: Your message to Voi Home`;
       const bodyLines = [
         replyText.trim(),
         '',

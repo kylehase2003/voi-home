@@ -1,9 +1,10 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { useProperties } from "@/hooks/useProperties";
-import { PropertyCard } from "@/components/property/PropertyCard";
+import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
+import { Button } from "@/components/ui/button";
 
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 
@@ -21,32 +22,9 @@ const PropertyScrollShowcase = () => {
   const featured = properties.slice(0, 3);
 
   const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const headingRef = useRef<HTMLDivElement | null>(null);
   const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
   const leftRefs = useRef<(HTMLDivElement | null)[]>([]);
   const rightRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  // Heading reveal is intentionally decoupled from the pinned scroll-scrub
-  // timeline below - it just fades/blurs in once as soon as it enters the
-  // viewport (same pattern as StatementSection) and never reverses, instead
-  // of depending on ScrollTrigger's pixel math lining up with the pin.
-  const [headingVisible, setHeadingVisible] = useState(false);
-
-  useEffect(() => {
-    const el = headingRef.current;
-    if (!el) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setHeadingVisible(true);
-          observer.disconnect();
-        }
-      },
-      { threshold: 0.1 },
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
 
   useEffect(() => {
     if (featured.length === 0) return;
@@ -123,37 +101,20 @@ const PropertyScrollShowcase = () => {
   return (
     <div ref={wrapperRef} className={`relative bg-background ${featured.length > 1 ? "md:h-[320vh]" : ""}`}>
       <div className="relative md:sticky md:top-0 md:h-screen w-full flex flex-col items-center justify-center px-6 py-20 md:py-0 overflow-hidden">
-        <div className="text-center mb-10 md:mb-12 max-w-xl" style={{ fontFamily: GENERAL_SANS }}>
-          <div
-            ref={headingRef}
-            style={{
-              transitionProperty: "opacity, filter, transform",
-              transitionDuration: "900ms",
-              transitionTimingFunction: "cubic-bezier(0.16,1,0.3,1)",
-              opacity: headingVisible ? 1 : 0,
-              filter: headingVisible ? "blur(0)" : "blur(8px)",
-              transform: headingVisible ? "translateY(0)" : "translateY(30%)",
-            }}
-          >
+        <div className="text-center mb-6 md:mb-8 max-w-xl" style={{ fontFamily: GENERAL_SANS }}>
+          <div>
             <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
               {t("hero.eyebrow")}
             </div>
-            <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
+            <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
               Homes worth stopping to scroll for.
             </h2>
           </div>
-          <Link
-            to="/properties"
-            className="group inline-flex items-center gap-2 text-sm font-medium text-gold hover:text-gold/80 transition-colors"
-          >
-            {t("hero.exploreProperties")}
-            <ArrowRight className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
-          </Link>
         </div>
 
         <div className="w-full md:grid md:grid-cols-[1fr_24rem_1fr] md:items-center md:gap-8 md:max-w-4xl md:mx-auto">
           {/* Left annotation column - desktop only */}
-          <div className="hidden md:block relative h-[460px]">
+          <div className="hidden md:block relative h-[560px]">
             {featured.map((property, i) => (
               <div
                 key={property.id}
@@ -172,21 +133,27 @@ const PropertyScrollShowcase = () => {
 
           {/* Card stack - center */}
           <div className="relative w-full max-w-sm mx-auto">
-            <div className="flex flex-col gap-6 md:block md:relative md:h-[460px]">
+            <div className="flex flex-col gap-10 md:block md:relative md:h-[560px]">
               {featured.map((property, i) => (
                 <div
                   key={property.id}
                   ref={(el) => (cardRefs.current[i] = el)}
-                  className="md:absolute md:inset-0"
+                  className="md:absolute md:inset-0 flex flex-col justify-center"
                 >
-                  <PropertyCard property={property} featured />
+                  <PropertyCardMinimal property={property} />
+                  <Link to="/properties" className="block mt-3 shrink-0">
+                    <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                      {t("hero.exploreProperties")}
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Right annotation column - desktop only */}
-          <div className="hidden md:block relative h-[460px]">
+          <div className="hidden md:block relative h-[560px]">
             {featured.map((property, i) => (
               <div
                 key={property.id}

@@ -49,7 +49,7 @@ import { useCustomOptions, STORAGE_KEYS, DEFAULT_OPTIONS, CATEGORY_CONFIGS } fro
 
 // ==================== CONSTANTS ====================
 
-import { COUNTRIES, TURKIYE_CITIES, getDistrictsForCity, DUBAI_DISTRICTS, getCityForDistrict } from '@/constants/property';
+import { COUNTRIES, TURKIYE_CITIES, getDistrictsForCity, getCityForDistrict } from '@/constants/property';
 
 const COUNTRIES_OPTIONS = COUNTRIES;
 const TURKIYE_CITIES_OPTIONS = TURKIYE_CITIES;
@@ -479,30 +479,19 @@ const PropertiesManagement = () => {
   const handleEdit = (property: Property) => {
     setEditingProperty(property);
     const locLower = (property.location || '').toLowerCase();
-    const regLower = (property.region || '').toLowerCase();
-    const isDubai =
-      regLower === 'dubai' ||
-      locLower === 'dubai' ||
-      locLower === 'uae' ||
-      locLower.includes('dubai');
-    const derivedCountry = isDubai
-      ? 'dubai'
-      : property.region || property.location
-      ? 'turkiye'
-      : '';
-    const derivedCity = !isDubai
-      ? getCityForDistrict('turkiye', property.district || '') ||
-        (locLower.includes('istanbul') ? 'istanbul' :
-         locLower.includes('ankara') ? 'ankara' :
-         locLower.includes('izmir') ? 'izmir' :
-         locLower.includes('antalya') ? 'antalya' :
-         locLower.includes('bursa') ? 'bursa' :
-         locLower.includes('bodrum') ? 'bodrum' :
-         locLower.includes('trabzon') ? 'trabzon' :
-         locLower.includes('mersin') ? 'mersin' :
-         locLower.includes('alanya') ? 'alanya' :
-         locLower.includes('fethiye') ? 'fethiye' : '')
-      : '';
+    const derivedCountry = property.region || property.location ? 'turkiye' : '';
+    const derivedCity =
+      getCityForDistrict('turkiye', property.district || '') ||
+      (locLower.includes('istanbul') ? 'istanbul' :
+       locLower.includes('ankara') ? 'ankara' :
+       locLower.includes('izmir') ? 'izmir' :
+       locLower.includes('antalya') ? 'antalya' :
+       locLower.includes('bursa') ? 'bursa' :
+       locLower.includes('bodrum') ? 'bodrum' :
+       locLower.includes('trabzon') ? 'trabzon' :
+       locLower.includes('mersin') ? 'mersin' :
+       locLower.includes('alanya') ? 'alanya' :
+       locLower.includes('fethiye') ? 'fethiye' : '');
     setFormData({
       ...getInitialFormData(),
       title: property.title || '',
@@ -982,8 +971,8 @@ const PropertiesManagement = () => {
                       onValueChange={(value) => setFormData(prev => ({
                         ...prev,
                         country: value,
-                        location: value === 'dubai' ? 'Dubai' : 'Turkey',
-                        region: value === 'dubai' ? 'Dubai' : 'Turkey',
+                        location: 'Turkey',
+                        region: 'Turkey',
                         city: '',
                         district: '',
                         customDistrict: ''
@@ -1560,7 +1549,7 @@ const PropertiesManagement = () => {
                               setCustomAmenityDialogOpen(false);
                             }
                           }}
-                          className="bg-[#941300] hover:bg-[#941300]/90 text-[#000000]"
+                          className="bg-[#941300] hover:bg-[#941300]/90 text-white"
                         >
                           {t('propertiesManagement.ok')}
                         </Button>
@@ -1617,10 +1606,10 @@ const PropertiesManagement = () => {
                       {formData.features.map((feature, idx) => {
                         const AmenityIcon = getAmenityIcon(feature);
                         return (
-                          <div key={idx} className="bg-[#941300] text-[#000000] px-4 py-2 rounded-full flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow">
+                          <div key={idx} className="bg-[#941300] text-white px-4 py-2 rounded-full flex items-center gap-2 shadow-sm hover:shadow-md transition-shadow">
                             <AmenityIcon className="h-4 w-4" />
                             <span className="text-sm font-medium">{feature}</span>
-                            <button type="button" onClick={() => removeFeature(idx)} className="text-[#000000] hover:text-[#000000]/70 transition-colors">
+                            <button type="button" onClick={() => removeFeature(idx)} className="text-white hover:text-white/70 transition-colors">
                               <X className="h-4 w-4" />
                             </button>
                           </div>

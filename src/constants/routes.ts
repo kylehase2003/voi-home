@@ -10,7 +10,6 @@ export const ROUTES = {
   CONTACT: '/contact',
   BLOGS: '/blogs',
   BLOG_DETAIL: (slug: string) => `/blog/${slug}`,
-  BUYER_GUIDE: '/buyer-guide',
   TEAM: '/team',
   PARTNERS: '/partners',
   PRIVACY_POLICY: '/privacy-policy',

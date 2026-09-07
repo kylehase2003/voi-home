@@ -19,7 +19,7 @@ export const STORAGE_KEYS = {
 
 // Default values configuration
 export const DEFAULT_OPTIONS = {
-  locations: ['Dubai', 'Turkey'],
+  locations: ['Turkey'],
   propertyTypes: ['Apartment', 'Villa', 'Penthouse', 'Commercial', 'Office', 'Warehouse'],
   benefits: ['High ROI', 'Citizenship Eligible', 'Rental Yields', 'Lifestyle', 'Investment Opportunity'],
   titleDeeds: ['Freehold', 'Leasehold', 'Shared Ownership', 'Ready', 'Not Ready'],

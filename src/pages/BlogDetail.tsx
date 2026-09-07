@@ -100,7 +100,7 @@ const BlogDetail = () => {
   return <div className="min-h-screen">
       <SEOHead
         title={blogTitle}
-        description={blogExcerpt || `Read "${blogTitle}" on the MR. Property blog.`}
+        description={blogExcerpt || `Read "${blogTitle}" on the Voi Home blog.`}
         path={`/blog/${blog.slug}`}
         ogImage={blog.featured_image || undefined}
         ogType="article"
@@ -112,10 +112,10 @@ const BlogDetail = () => {
           datePublished: blog.published_at || undefined,
           dateModified: blog.published_at || undefined,
           description: blogExcerpt || undefined,
-          author: { "@type": "Organization", name: "MR. Property" },
+          author: { "@type": "Organization", name: "Voi Home" },
           publisher: {
             "@type": "Organization",
-            name: "MR. Property",
+            name: "Voi Home",
             logo: { "@type": "ImageObject", url: "https://voi-home.com/favicon.webp" },
           },
           mainEntityOfPage: `https://voi-home.com/blog/${blog.slug}`,
@@ -159,7 +159,7 @@ const BlogDetail = () => {
                   {t('blogs.sidebarCtaSubtitle')}
                 </p>
                 <Link to="/contact">
-                  <Button className="w-full bg-gold text-primary hover:bg-gold/90 font-medium">
+                  <Button className="w-full bg-gold text-white hover:bg-gold/90 font-medium">
                     {t('blogs.sidebarCtaButton')}
                   </Button>
                 </Link>

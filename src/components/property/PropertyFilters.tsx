@@ -39,10 +39,9 @@ export const PropertyFilters = ({
   const {
     t
   } = useTranslation();
-  const isDubai = locationFilter === "dubai";
-  const labelClass = `text-sm font-medium mb-2 block transition-colors duration-500 ${isDubai ? "text-white" : "text-foreground"}`;
-  const inputClass = isDubai ? "bg-[hsl(0,0%,15%)] border-white/20 text-white placeholder:text-white/70" : "bg-background";
-  const selectContentClass = isDubai ? "z-[60] bg-[hsl(0,0%,15%)] border-white/20 text-white" : "z-[60] bg-background";
+  const labelClass = "text-sm font-medium mb-2 block text-foreground";
+  const inputClass = "bg-background";
+  const selectContentClass = "z-[60] bg-background";
 
   // Helper to translate dynamic filter values
   const translateWith = (namespace: string, value: string) => {
@@ -78,12 +77,7 @@ export const PropertyFilters = ({
   useEffect(() => {
     const country = filters.country || "";
     const city = filters.city || "";
-    if (country === 'dubai') {
-      // For Dubai, load districts directly from country
-      const defaultDistricts = [...getDistrictsForCity('dubai', '')];
-      const customDistricts = JSON.parse(localStorage.getItem('property_custom_districts') || '[]');
-      setAvailableDistricts([...defaultDistricts, ...customDistricts]);
-    } else if (country === 'turkiye' && city) {
+    if (country === 'turkiye' && city) {
       // For Turkey, load districts based on selected city
       const defaultDistricts = [...getDistrictsForCity('turkiye', city)];
       const customDistricts = JSON.parse(localStorage.getItem('property_custom_districts') || '[]');
@@ -153,8 +147,8 @@ export const PropertyFilters = ({
           </Select>
         </div>}
 
-      {/* 3. District/Area - Show for Dubai or when Turkey city is selected */}
-      {(filters.country === 'dubai' || filters.country === 'turkiye' && filters.city && filters.city !== 'all') && availableDistricts.length > 0 && <div>
+      {/* 3. District/Area - Show when Turkey city is selected */}
+      {(filters.country === 'turkiye' && filters.city && filters.city !== 'all') && availableDistricts.length > 0 && <div>
           <label className={labelClass}>{t("properties.district")}</label>
           <Select value={filters.district || ""} onValueChange={v => onFilterChange("district", v)}>
             <SelectTrigger className={inputClass}>
@@ -245,7 +239,7 @@ export const PropertyFilters = ({
       {/* 9. Benefits - Checkboxes */}
       <div>
         <label className={labelClass}>{t("properties.benefits")}</label>
-        <div className={`space-y-3 max-h-[200px] overflow-y-auto border rounded-md p-3 ${isDubai ? "bg-[hsl(0,0%,15%)] border-white/20" : "bg-background"}`}>
+        <div className="space-y-3 max-h-[200px] overflow-y-auto border rounded-md p-3 bg-background">
           {availableBenefits.length > 0 ? availableBenefits.map(benefit => <div key={benefit.value} className="flex items-center space-x-2 gap-[8px]">
                 <Checkbox id={`benefit-${benefit.value}`} checked={filters.benefits?.includes(benefit.value) || filters.benefit === benefit.value} onCheckedChange={checked => {
             const currentBenefits = filters.benefits || [];
@@ -255,8 +249,8 @@ export const PropertyFilters = ({
             if (filters.benefit) {
               onFilterChange("benefit", "");
             }
-          }} className={isDubai ? "border-white/20 bg-[hsl(0,0%,20%)] data-[state=checked]:bg-gold data-[state=checked]:border-gold" : ""} />
-                <label htmlFor={`benefit-${benefit.value}`} className={`text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer transition-colors duration-500 ${isDubai ? "text-white" : ""}`}>
+          }} />
+                <label htmlFor={`benefit-${benefit.value}`} className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer">
                   {translateBenefit(benefit.value)}
                 </label>
               </div>) : <p className="text-sm text-muted-foreground">{t("properties.noBenefits")}</p>}
@@ -266,21 +260,21 @@ export const PropertyFilters = ({
       {/* 10. Amenities */}
       <div>
         <label className={labelClass}>{t("properties.amenities")}</label>
-        <div className={`space-y-3 max-h-[300px] overflow-y-auto border rounded-md p-3 ${isDubai ? "bg-[hsl(0,0%,15%)] border-white/20" : "bg-background"}`}>
+        <div className="space-y-3 max-h-[300px] overflow-y-auto border rounded-md p-3 bg-background">
           {availableAmenities.length > 0 ? availableAmenities.map(amenity => <div key={amenity} className="flex items-center space-x-2 gap-[8px]">
                 <Checkbox id={amenity} checked={filters.amenities?.includes(amenity)} onCheckedChange={checked => {
             const currentAmenities = filters.amenities || [];
             const newAmenities = checked ? [...currentAmenities, amenity] : currentAmenities.filter(a => a !== amenity);
             onFilterChange("amenities", newAmenities);
-          }} className={isDubai ? "border-white/20 bg-[hsl(0,0%,20%)] data-[state=checked]:bg-gold data-[state=checked]:border-gold" : ""} />
-                <label htmlFor={amenity} className={`text-sm text-secondary-foreground font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer transition-colors duration-500 ${isDubai ? "text-white" : ""}`}>
+          }} />
+                <label htmlFor={amenity} className="text-sm text-secondary-foreground font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70 cursor-pointer">
                   {translateAmenity(amenity)}
                 </label>
               </div>) : <p className="text-sm text-muted-foreground">{t("properties.noAmenities")}</p>}
         </div>
       </div>
 
-      <Button variant="outline" className={`w-full ${isDubai ? "bg-[hsl(0,0%,15%)] border-white/20 text-white " : ""}`} onClick={onClearFilters}>
+      <Button variant="outline" className="w-full rounded-full" onClick={onClearFilters}>
         {t("properties.clearFilters")}
       </Button>
     </div>;

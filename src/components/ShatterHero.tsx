@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import { COUNTRIES, TURKIYE_CITIES, getDistrictsForCity } from "@/constants/property";
 import { useFilterOptions } from "@/hooks/useFilterOptions";
-import heroDubai from "@/assets/hero-dubai-optimized.webp";
+import heroBuilding from "@/assets/hero-building.jpg";
 import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
 import heroIstanbul2 from "@/assets/hero-istanbul-2-optimized.webp";
 import heroIstanbul3 from "@/assets/hero-istanbul-3-optimized.webp";
@@ -24,8 +24,7 @@ const TILES = [
   { src: heroIstanbul1, top: "9%", left: "5%", w: 170, h: 135 },
   { src: apartmentModern, top: "5%", left: "80%", w: 155, h: 195 },
   { src: heroVilla, top: "42%", left: "2%", w: 190, h: 145 },
-  { src: heroDubai, top: "50%", left: "84%", w: 165, h: 165 },
-  { src: heroIstanbul2, top: "76%", left: "12%", w: 145, h: 185 },
+  { src: heroIstanbul2, top: "50%", left: "84%", w: 165, h: 165 },
   { src: penthouseView, top: "72%", left: "78%", w: 180, h: 135 },
   { src: heroIstanbul3, top: "22%", left: "20%", w: 135, h: 115 },
 ];
@@ -68,11 +67,7 @@ const ShatterHero = () => {
 
   useEffect(() => {
     setDistrict("");
-    if (country === "dubai") {
-      const defaultDistricts = [...getDistrictsForCity("dubai", "")];
-      const customDistricts = JSON.parse(localStorage.getItem("property_custom_districts") || "[]");
-      setAvailableDistricts([...defaultDistricts, ...customDistricts]);
-    } else if (country === "turkiye" && city) {
+    if (country === "turkiye" && city) {
       const defaultDistricts = [...getDistrictsForCity("turkiye", city)];
       const customDistricts = JSON.parse(localStorage.getItem("property_custom_districts") || "[]");
       setAvailableDistricts([...defaultDistricts, ...customDistricts]);
@@ -322,7 +317,7 @@ const ShatterHero = () => {
       <div ref={pinRef} className="relative md:sticky md:top-0 h-[70vh] md:h-screen w-full overflow-hidden bg-background">
         {/* Hero image + headline + badge, animated together as one unit as you scroll */}
         <div ref={heroImgRef} className="absolute inset-0">
-          <img src={heroDubai} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
+          <img src={heroBuilding} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
           <div
             className="absolute inset-0"
             style={{

@@ -101,7 +101,7 @@ const Auth = () => {
       </div>
       <Card className="w-full max-w-md shadow-xl">
         <CardHeader className="text-center space-y-4">
-          <img src={logo} alt="MR. Property" className="h-20 w-auto mx-auto" />
+          <img src={logo} alt="Voi Home" className="h-20 w-auto mx-auto" />
           <div>
             <CardTitle className="text-2xl font-serif text-foreground">{t('auth.title')}</CardTitle>
             <CardDescription>

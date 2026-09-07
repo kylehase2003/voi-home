@@ -85,8 +85,6 @@ export const useProperties = (filters?: PropertyFilters, featured?: boolean) => 
         const regionValue = filters.region.toLowerCase();
         if (regionValue === 'turkiye' || regionValue === 'turkey') {
           query = query.or('location.ilike.%Turkey%,location.ilike.%Türkiye%,region.ilike.%Turkey%,region.ilike.%Türkiye%,region.ilike.%Turkiye%,region.ilike.%Istanbul%,region.ilike.%İstanbul%');
-        } else if (regionValue === 'dubai') {
-          query = query.or('location.ilike.%Dubai%,region.ilike.%Dubai%');
         } else {
           query = query.ilike('region', `%${filters.region}%`);
         }

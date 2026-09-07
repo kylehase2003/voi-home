@@ -58,7 +58,7 @@ const TermsConditions = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Terms & Conditions"
-        description="Terms and conditions governing the use of MR. Property's website and luxury real estate consultancy services in Istanbul, Bodrum, and Dubai."
+        description="Terms and conditions governing the use of Voi Home's website and luxury real estate consultancy services in Istanbul and Bodrum, Türkiye."
         path="/terms"
       />
       <Header />

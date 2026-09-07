@@ -50,7 +50,7 @@ const Team = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Our Team - Expert Real Estate Consultants"
-        description="Meet the MR. Property team of experienced real estate consultants specializing in luxury properties across Istanbul, Bodrum, and Dubai."
+        description="Meet the Voi Home team of experienced real estate consultants specializing in luxury properties across Istanbul and Bodrum, Türkiye."
         path="/team"
       />
       <Header />

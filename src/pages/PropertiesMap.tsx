@@ -16,14 +16,17 @@ import { useProperties } from "@/hooks/useProperties";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";
 import apartmentImage from "@/assets/apartment-modern.jpg";
-import mapPinIcon from "@/assets/map-pin.png";
 import { Property } from "@/types/property";
 
-// Branded MR. Property pin
-const goldIcon = L.icon({
-  iconUrl: mapPinIcon,
-  iconSize: [40, 40],
-  iconAnchor: [20, 38],
+// Plain teardrop pin, drawn inline so it never carries any brand mark.
+const goldIcon = L.divIcon({
+  className: "voi-map-pin",
+  html: `<svg width="32" height="40" viewBox="0 0 32 40" xmlns="http://www.w3.org/2000/svg">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 11 16 24 16 24s16-13 16-24C32 7.163 24.837 0 16 0z" fill="#111"/>
+    <circle cx="16" cy="16" r="6" fill="#fff"/>
+  </svg>`,
+  iconSize: [32, 40],
+  iconAnchor: [16, 38],
   popupAnchor: [0, -34],
 });
 
@@ -48,7 +51,6 @@ const FitBounds = ({ positions }: FitBoundsProps) => {
 const PropertiesMap = () => {
   const { t, i18n } = useTranslation();
   const { properties, loading } = useProperties();
-  const [region, setRegion] = useState<"all" | "turkey" | "dubai">("turkey");
   const [isExpanded, setIsExpanded] = useState(false);
   const mapRef = useRef<L.Map | null>(null);
 
@@ -82,15 +84,7 @@ const PropertiesMap = () => {
     [properties]
   );
 
-  const filtered = useMemo(() => {
-    if (region === "all") return withCoords;
-    return withCoords.filter((p) => {
-      const r = (p.region || "").toLowerCase();
-      if (region === "turkey") return r.includes("turkey") || r.includes("turk");
-      if (region === "dubai") return r.includes("dubai") || r.includes("uae");
-      return true;
-    });
-  }, [withCoords, region]);
+  const filtered = withCoords;
 
   const positions = useMemo<[number, number][]>(
     () => filtered.map((p) => [Number(p.latitude), Number(p.longitude)]),
@@ -107,32 +101,30 @@ const PropertiesMap = () => {
     });
   };
 
-  const isDubaiTheme = region === "dubai";
-
   return (
-    <div className={`min-h-screen transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
+    <div className="min-h-screen bg-background">
       <SEOHead
         title="Properties Map - Explore Listings on the Map"
-        description="Explore our properties for sale and rent on an interactive map covering Istanbul, Bodrum, and Dubai. Click pins to view property details."
+        description="Explore our properties for sale and rent on an interactive map covering Istanbul and Bodrum. Click pins to view property details."
         path="/properties-map"
       />
       <Header />
 
       <main className="pt-24">
-        <section className={`py-8 transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,11%)]" : "bg-background"}`}>
+        <section className="py-8 bg-background">
           <div className="container mx-auto px-4">
             <div className="text-center mb-6 max-w-xl mx-auto">
-              <div className={`text-xs font-medium uppercase tracking-[1.5px] mb-4 ${isDubaiTheme ? "text-white/60" : "text-muted-foreground"}`}>
+              <div className="text-xs font-medium uppercase tracking-[1.5px] mb-4 text-muted-foreground">
                 {t("properties.title")}
               </div>
               <h1
-                className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 ${isDubaiTheme ? "text-white" : "text-foreground"} ${
+                className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${
                   i18n.language === "ar" ? "font-arabic" : "font-serif"
                 }`}
               >
                 {t("propertiesMap.title", "Properties Map")}
               </h1>
-              <p className={`text-base leading-[1.7] ${isDubaiTheme ? "text-white/70" : "text-muted-foreground"}`}>
+              <p className="text-base leading-[1.7] text-muted-foreground">
                 {t(
                   "propertiesMap.subtitle",
                   "Explore our listings on an interactive map. Click any pin to see details."
@@ -140,47 +132,22 @@ const PropertiesMap = () => {
               </p>
             </div>
 
-            {/* Region tabs */}
-            <div className="mb-6 flex justify-center gap-3 flex-wrap">
-              <Button
-                variant={region === "all" ? "default" : "outline"}
-                onClick={() => setRegion("all")}
-                className={region === "all" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-              >
-                {t("properties.viewAll", "View All")}
-              </Button>
-              <Button
-                variant={region === "turkey" ? "default" : "outline"}
-                onClick={() => setRegion("turkey")}
-                className={region === "turkey" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-              >
-                {t("properties.turkey", "Türkiye")}
-              </Button>
-              <Button
-                variant={region === "dubai" ? "default" : "outline"}
-                onClick={() => setRegion("dubai")}
-                className={region === "dubai" ? "bg-gold hover:bg-gold/90 text-primary" : isDubaiTheme ? "bg-[hsl(0,0%,15%)] border-white/20 text-white hover:bg-[hsl(0,0%,20%)] hover:text-white" : ""}
-              >
-                {t("properties.dubai", "Dubai")}
-              </Button>
-            </div>
-
             {loading ? (
               <LoadingSpinner message={t("properties.loading", "Loading properties...")} />
             ) : (
               <div className={isExpanded ? "block" : "grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-6"}>
                 {/* Map */}
-                <div className={`shadow-lg [&_.leaflet-pane]:!z-[1] [&_.leaflet-top]:!z-[2] [&_.leaflet-bottom]:!z-[2] [&_.leaflet-control]:!z-[2] ${
+                <div className={`shadow-lg [&_.leaflet-pane]:!z-[1] [&_.leaflet-top]:!z-[2] [&_.leaflet-bottom]:!z-[2] [&_.leaflet-control]:!z-[2] border border-border ${
                   isExpanded
                     ? "fixed top-0 left-0 right-0 bottom-0 w-screen h-screen rounded-none z-[9999]"
                     : "relative w-full h-[70vh] min-h-[500px] rounded-xl overflow-hidden isolate z-0"
-                } ${isDubaiTheme ? "border border-white/10" : "border border-border"}`}>
+                }`}>
                   <Button
                     type="button"
                     size="icon"
                     onClick={() => setIsExpanded((v) => !v)}
                     aria-label={isExpanded ? t("propertiesMap.collapse", "Collapse map") : t("propertiesMap.expand", "Expand map")}
-                    className="absolute top-3 right-3 z-[3] bg-gold hover:bg-gold/90 text-primary shadow-md"
+                    className="absolute top-3 right-3 z-[3] bg-gold hover:bg-gold/90 text-white shadow-md"
                   >
                     {isExpanded ? <Minimize2 className="h-4 w-4" /> : <Maximize2 className="h-4 w-4" />}
                   </Button>
@@ -233,16 +200,16 @@ const PropertiesMap = () => {
                 </div>
 
                 {/* Side list */}
-                <aside className={`${isExpanded ? "hidden" : ""} rounded-xl p-4 max-h-[70vh] overflow-y-auto transition-colors duration-500 ${isDubaiTheme ? "bg-[hsl(0,0%,15%)] border border-white/10" : "bg-card border border-border"}`}>
+                <aside className={`${isExpanded ? "hidden" : ""} rounded-xl p-4 max-h-[70vh] overflow-y-auto bg-card border border-border`}>
                   <div className="flex items-center justify-between mb-3">
-                    <h2 className={`text-lg font-semibold ${isDubaiTheme ? "text-white" : "text-foreground"}`}>
+                    <h2 className="text-lg font-semibold text-foreground">
                       {t("propertiesMap.listings", "Listings")}
                     </h2>
                     <Badge variant="secondary">{filtered.length}</Badge>
                   </div>
 
                   {filtered.length === 0 ? (
-                    <p className={`text-sm text-center py-8 ${isDubaiTheme ? "text-white/80" : "text-muted-foreground"}`}>
+                    <p className="text-sm text-center py-8 text-muted-foreground">
                       {t(
                         "propertiesMap.noProperties",
                         "No properties with location data."
@@ -253,7 +220,7 @@ const PropertiesMap = () => {
                       {filtered.map((p) => (
                         <li
                           key={p.id}
-                          className={`group rounded-lg transition-colors overflow-hidden cursor-pointer ${isDubaiTheme ? "border border-white/10 hover:border-gold/60 bg-[hsl(0,0%,12%)]" : "border border-border hover:border-gold/60"}`}
+                          className="group rounded-lg transition-colors overflow-hidden cursor-pointer border border-border hover:border-gold/60"
                           onClick={() => flyTo(p)}
                         >
                           <div className="flex gap-3 p-2">
@@ -265,10 +232,10 @@ const PropertiesMap = () => {
                               />
                             </div>
                             <div className="min-w-0 flex-1">
-                              <h3 className={`text-sm font-semibold line-clamp-1 group-hover:text-gold transition-colors ${isDubaiTheme ? "text-white" : "text-foreground"}`}>
+                              <h3 className="text-sm font-semibold line-clamp-1 group-hover:text-gold transition-colors text-foreground">
                                 {getTranslatedContent(p, "title", i18n.language)}
                               </h3>
-                              <div className={`flex items-center gap-1 text-xs mt-1 ${isDubaiTheme ? "text-white/80" : "text-muted-foreground"}`}>
+                              <div className="flex items-center gap-1 text-xs mt-1 text-muted-foreground">
                                 <MapPin className="h-3 w-3" />
                                 <span className="line-clamp-1">
                                   {p.district || p.location}
@@ -281,7 +248,7 @@ const PropertiesMap = () => {
                                 <Link
                                   to={`/property/${p.slug}`}
                                   onClick={(e) => e.stopPropagation()}
-                                  className={`text-xs hover:text-gold underline ${isDubaiTheme ? "text-white/80" : "text-primary"}`}
+                                  className="text-xs hover:text-gold underline text-primary"
                                 >
                                   {t("propertiesMap.view", "View")}
                                 </Link>
@@ -297,7 +264,7 @@ const PropertiesMap = () => {
             )}
 
             {!loading && withCoords.length === 0 && (
-              <p className={`text-center text-sm mt-6 ${isDubaiTheme ? "text-white/80" : "text-muted-foreground"}`}>
+              <p className="text-center text-sm mt-6 text-muted-foreground">
                 {t(
                   "propertiesMap.noCoords",
                   "No properties have map coordinates yet. Add latitude and longitude in the dashboard to display them here."

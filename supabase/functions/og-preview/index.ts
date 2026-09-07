@@ -74,7 +74,7 @@ Deno.serve(async (req) => {
   if (!kind || !slug || (kind !== "property" && kind !== "blog")) {
     return new Response(
       renderHtml({
-        title: "MR. Property — Premium Real Estate in Türkiye & Dubai",
+        title: "Voi Home — Premium Real Estate in Türkiye",
         description: "Discover premium properties for sale and investment.",
         url: SITE_URL,
         image: DEFAULT_OG,
@@ -101,8 +101,8 @@ Deno.serve(async (req) => {
     if (!data) {
       return new Response(
         renderHtml({
-          title: "Property — MR. Property",
-          description: "Explore premium properties on MR. Property.",
+          title: "Property — Voi Home",
+          description: "Explore premium properties on Voi Home.",
           url: canonical,
           image: DEFAULT_OG,
           type: "website",
@@ -116,8 +116,8 @@ Deno.serve(async (req) => {
         : DEFAULT_OG;
     return new Response(
       renderHtml({
-        title: `${data.title} | MR. Property`,
-        description: truncate(data.description || `View ${data.title} on MR. Property.`),
+        title: `${data.title} | Voi Home`,
+        description: truncate(data.description || `View ${data.title} on Voi Home.`),
         url: canonical,
         image,
         type: "product",
@@ -138,8 +138,8 @@ Deno.serve(async (req) => {
   if (!data) {
     return new Response(
       renderHtml({
-        title: "Blog — MR. Property",
-        description: "Insights on real estate in Türkiye and Dubai.",
+        title: "Blog — Voi Home",
+        description: "Insights on real estate in Türkiye.",
         url: canonical,
         image: DEFAULT_OG,
         type: "website",
@@ -149,8 +149,8 @@ Deno.serve(async (req) => {
   }
   return new Response(
     renderHtml({
-      title: `${data.title} | MR. Property`,
-      description: truncate(data.excerpt || `Read "${data.title}" on the MR. Property blog.`),
+      title: `${data.title} | Voi Home`,
+      description: truncate(data.excerpt || `Read "${data.title}" on the Voi Home blog.`),
       url: canonical,
       image: data.featured_image || DEFAULT_OG,
       type: "article",

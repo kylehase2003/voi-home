@@ -19,9 +19,6 @@ const Header = () => {
   const navigation = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.properties"), href: "/properties" },
-    { name: t("nav.propertiesMap"), href: "/properties-map" },
-    { name: t("nav.turkishCitizenship"), href: "/properties?benefit=Citizenship+Eligible" },
-    { name: t("nav.buyerGuide"), href: "/buyer-guide" },
     { name: t("nav.blogs"), href: "/blogs" },
     { name: t("nav.about"), href: "/about" },
   ];
@@ -46,15 +43,16 @@ const Header = () => {
           }}
         />
         <div
-          className="relative flex items-center justify-between h-20 px-6 lg:px-10"
+          className="relative flex items-center h-20 px-6 lg:px-10"
           style={{ fontFamily: GENERAL_SANS }}
         >
           <Link to="/" className="flex items-center shrink-0">
-            <img src={logo} alt="VOI" className="h-9 w-auto" />
+            <img src={logo} alt="VOI" className="h-14 w-auto" />
           </Link>
 
-          {/* Desktop links */}
-          <nav className="hidden xl:flex items-center gap-1">
+          {/* Desktop links - absolutely centered on the header, independent
+              of the logo/CTA widths on either side. */}
+          <nav className="hidden xl:flex items-center gap-1 absolute left-1/2 -translate-x-1/2">
             {navigation.map((item) => (
               <Link
                 key={item.name}
@@ -69,7 +67,7 @@ const Header = () => {
           </nav>
 
           {/* Language switcher + CTA */}
-          <div className="hidden xl:flex items-center gap-4">
+          <div className="hidden xl:flex items-center gap-4 ml-auto">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-medium text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
@@ -96,7 +94,7 @@ const Header = () => {
           {/* Mobile hamburger */}
           <SheetTrigger asChild>
             <button
-              className="xl:hidden flex items-center justify-center h-10 w-10 text-white"
+              className="xl:hidden ml-auto flex items-center justify-center h-10 w-10 text-white"
               aria-label="Open navigation menu"
             >
               <Menu size={22} />
@@ -110,7 +108,7 @@ const Header = () => {
         </SheetHeader>
         <div className="flex flex-col h-full" style={{ fontFamily: GENERAL_SANS }}>
           <div className="px-6 pt-10 pb-6 border-b border-white/10">
-            <img src={logo} alt="VOI" className="h-8 w-auto" />
+            <img src={logo} alt="VOI" className="h-12 w-auto" />
           </div>
 
           <nav className="flex-1 px-6 py-6 space-y-1 overflow-y-auto">
@@ -146,7 +144,7 @@ const Header = () => {
             </div>
 
             <Link to="/contact">
-              <Button className="w-full bg-gold hover:bg-gold/90 text-white py-5 text-base font-medium rounded-lg">
+              <Button className="w-full bg-gold hover:bg-gold/90 text-white py-5 text-base font-medium">
                 <HomeIcon className="mr-2 h-5 w-5" />
                 {t("nav.contactUs")}
               </Button>

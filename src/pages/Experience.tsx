@@ -8,18 +8,16 @@ import Header from "@/components/Header";
 import ShatterHero from "@/components/ShatterHero";
 import FeaturedProperties from "@/components/FeaturedProperties";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import FeatureRow from "@/components/editorial/FeatureRow";
-import StatsOverlay from "@/components/editorial/StatsOverlay";
+import ServicesRows from "@/components/editorial/ServicesRows";
 import TestimonialBreak from "@/components/editorial/TestimonialBreak";
 import StatementSection from "@/components/editorial/StatementSection";
 import ProcessSteps from "@/components/editorial/ProcessSteps";
-import MarketsPicker from "@/components/editorial/MarketsPicker";
+import BlogCategoryPicker from "@/components/editorial/BlogCategoryPicker";
 import PropertyScrollShowcase from "@/components/editorial/PropertyScrollShowcase";
 import PhotoScroller from "@/components/editorial/PhotoScroller";
 import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
 import heroIstanbul2 from "@/assets/hero-istanbul-2-optimized.webp";
 import heroIstanbul3 from "@/assets/hero-istanbul-3-optimized.webp";
-import heroDubai from "@/assets/hero-dubai-optimized.webp";
 import heroVilla from "@/assets/hero-villa.webp";
 import apartmentModern from "@/assets/apartment-modern.jpg";
 import penthouseView from "@/assets/penthouse-view.jpg";
@@ -31,8 +29,8 @@ const Experience = () => {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
       <SEOHead
-        title="Luxury Real Estate in Istanbul, Bodrum & Dubai"
-        description="Voi Home offers curated luxury homes, villas, and investment properties in Istanbul, Bodrum & Dubai. Turkish citizenship eligibility available. Contact us."
+        title="Luxury Real Estate in Istanbul & Bodrum, Türkiye"
+        description="Voi Home offers curated luxury homes, villas, and investment properties in Istanbul and Bodrum, every detail checked before it reaches you. Turkish citizenship eligibility available. Contact us."
         path="/"
       />
       <Helmet>
@@ -48,28 +46,25 @@ const Experience = () => {
       <PropertyScrollShowcase />
 
       <main>
-        <FeatureRow
-          tag={t("ourServices.item3.title")}
-          title="We evaluate every opportunity before you commit."
-          description="Rental yield, projected appreciation, title status, developer track record — every listing we bring you has already been checked against the fundamentals that actually decide whether an investment performs."
-          image={apartmentModern}
-        />
-        <FeatureRow
-          reversed
-          tag={t("ourServices.item1.title")}
-          title="When it's time to sell, we handle the whole process."
-          description="From pricing it correctly for the current market to marketing it to the right buyers, our team manages the resale from listing to closing so you don't have to."
-          image={heroVilla}
-        />
-
-        <StatsOverlay
-          image={heroDubai}
-          title="Real numbers from a market that keeps moving."
-          description="Turkey and Dubai remain two of the most active real estate markets for foreign investors — here's what that's looked like recently."
-          stats={[
-            { value: 1.69, decimals: 2, suffix: "M+", label: t("homePage.stats.propertiesSold") },
-            { value: 364905, decimals: 0, suffix: "", label: t("homePage.stats.foreignInvestment") },
-            { value: 29.0, decimals: 1, suffix: "%", label: t("homePage.stats.priceGrowth") },
+        <ServicesRows
+          headline="That's not all we do."
+          subheadline="Finding the property is the easy part. Here's how we support you before, during, and after the deal."
+          rows={[
+            {
+              tag: t("ourServices.item3.title"),
+              title: "We evaluate every opportunity before you commit.",
+              description:
+                "Rental yield, projected appreciation, title status, developer track record — every listing we bring you has already been checked against the fundamentals that actually decide whether an investment performs.",
+              image: apartmentModern,
+            },
+            {
+              reversed: true,
+              tag: t("ourServices.item1.title"),
+              title: "When it's time to sell, we handle the whole process.",
+              description:
+                "From pricing it correctly for the current market to marketing it to the right buyers, our team manages the resale from listing to closing so you don't have to.",
+              image: heroVilla,
+            },
           ]}
         />
 
@@ -97,9 +92,9 @@ const Experience = () => {
           ]}
         />
 
-        <MarketsPicker />
+        <BlogCategoryPicker />
 
-        <PhotoScroller images={[heroIstanbul1, heroDubai, heroVilla, apartmentModern, penthouseView, heroIstanbul2]} />
+        <PhotoScroller images={[heroIstanbul1, heroIstanbul3, heroVilla, apartmentModern, penthouseView, heroIstanbul2]} />
 
         <RevealOnScroll>
           <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">

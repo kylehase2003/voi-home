@@ -70,7 +70,7 @@ const PrivacyPolicy = () => {
     <div className="min-h-screen">
       <SEOHead
         title="Privacy Policy"
-        description="How MR. Property collects, uses, and protects your personal data across our luxury real estate services in Istanbul, Bodrum, and Dubai."
+        description="How Voi Home collects, uses, and protects your personal data across our luxury real estate services in Istanbul and Bodrum, Türkiye."
         path="/privacy"
       />
       <Header />
