@@ -7,7 +7,8 @@ interface InvestmentReturnsProps {
 }
 
 const InvestmentReturns = ({ property }: InvestmentReturnsProps) => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const isRTL = i18n.language === "ar";
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -55,37 +56,19 @@ const InvestmentReturns = ({ property }: InvestmentReturnsProps) => {
   const labels = [t("propertyDetail.year1"), t("propertyDetail.years3"), t("propertyDetail.years5")];
 
   return (
-    <section ref={ref} className="mb-12 bg-card border border-border rounded-[20px] p-4 sm:p-8">
-      <h2 className="text-2xl sm:text-3xl tracking-[-0.5px] font-serif mb-6 text-foreground">
+    <section ref={ref} className="py-8 md:py-10 border-t border-border">
+      <h2 className={`text-xl md:text-2xl mb-6 text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
         {t("propertyDetail.numbersThatMatter")}
       </h2>
-      <div className="rounded-[20px] p-4 sm:p-8 bg-primary">
-        <div className="flex flex-col sm:flex-row items-center justify-around text-center gap-6 sm:gap-0">
-          <div className="flex-1 w-full sm:w-auto">
-            <p className="text-sm text-primary-foreground/80 mb-3">{labels[0]}</p>
-            <p className="text-3xl sm:text-4xl font-bold tracking-[-1px] text-gold">
-              {values[0] ? `${counts[0].toFixed(1)}%` : "-"}
+      <div className="grid grid-cols-3 divide-x divide-border border-y border-border">
+        {values.map((value, i) => (
+          <div key={i} className="text-center py-6 px-2">
+            <p className="text-xs uppercase tracking-[1px] text-muted-foreground mb-2">{labels[i]}</p>
+            <p className="text-2xl md:text-4xl font-serif tracking-[-1px] text-foreground">
+              {value ? `${counts[i].toFixed(1)}%` : "-"}
             </p>
           </div>
-          <div className="hidden sm:block h-24 w-px bg-gold mx-6" />
-          <div className="sm:hidden w-full h-px bg-gold/30" />
-
-          <div className="flex-1 w-full sm:w-auto">
-            <p className="text-sm text-primary-foreground/80 mb-3">{labels[1]}</p>
-            <p className="text-3xl sm:text-4xl font-bold tracking-[-1px] text-gold">
-              {values[1] ? `${counts[1].toFixed(1)}%` : "-"}
-            </p>
-          </div>
-          <div className="hidden sm:block h-24 w-px bg-gold mx-6" />
-          <div className="sm:hidden w-full h-px bg-gold/30" />
-
-          <div className="flex-1 w-full sm:w-auto">
-            <p className="text-sm text-primary-foreground/80 mb-3">{labels[2]}</p>
-            <p className="text-3xl sm:text-4xl font-bold tracking-[-1px] text-gold">
-              {values[2] ? `${counts[2].toFixed(1)}%` : "-"}
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   );

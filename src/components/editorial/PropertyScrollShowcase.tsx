@@ -131,8 +131,10 @@ const PropertyScrollShowcase = () => {
             ))}
           </div>
 
-          {/* Card stack - center */}
-          <div className="relative w-full max-w-sm mx-auto">
+          {/* Card stack - center. Smaller on desktop so the card, caption,
+              and button comfortably fit the pinned viewport without
+              clipping - mobile isn't height-constrained so it stays larger. */}
+          <div className="relative w-full max-w-sm md:max-w-[280px] mx-auto">
             <div className="flex flex-col gap-10 md:block md:relative md:h-[560px]">
               {featured.map((property, i) => (
                 <div
@@ -141,7 +143,9 @@ const PropertyScrollShowcase = () => {
                   className="md:absolute md:inset-0 flex flex-col justify-center"
                 >
                   <PropertyCardMinimal property={property} />
-                  <Link to="/properties" className="block mt-3 shrink-0">
+                  {/* Desktop only - mobile gets a single button below the
+                      whole stack instead of one repeated under every card. */}
+                  <Link to="/properties" className="hidden md:block mt-3 shrink-0">
                     <Button className="w-full bg-gold hover:bg-gold/90 text-white">
                       {t("hero.exploreProperties")}
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -150,6 +154,13 @@ const PropertyScrollShowcase = () => {
                 </div>
               ))}
             </div>
+
+            <Link to="/properties" className="md:hidden block mt-6">
+              <Button className="w-full bg-gold hover:bg-gold/90 text-white">
+                {t("hero.exploreProperties")}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
           </div>
 
           {/* Right annotation column - desktop only */}

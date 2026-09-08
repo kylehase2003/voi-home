@@ -48,7 +48,7 @@ const FeatureRow = ({
       </RevealOnScroll>
       <RevealOnScroll
         delay={100}
-        className={`relative w-full rounded-[20px] overflow-hidden ${mediaAspectClassName} max-h-[70vh] m-5 bg-muted ${
+        className={`relative w-[calc(100%-2.5rem)] rounded-[20px] overflow-hidden ${mediaAspectClassName} max-h-[70vh] m-5 bg-muted ${
           reversed ? "md:order-1 mr-auto" : "md:order-2 ml-auto"
         }`}
       >

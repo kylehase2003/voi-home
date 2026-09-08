@@ -19,7 +19,7 @@ const FeaturedProperties = () => {
     loading
   } = useProperties(TURKEY_FILTER);
   if (loading) {
-    return <section className="py-24 bg-white">
+    return <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center">
             <p className="text-muted-foreground">{t('homePage.featuredProperties.loadingProperties')}</p>
@@ -28,7 +28,7 @@ const FeaturedProperties = () => {
       </section>;
   }
   if (properties.length === 0) {
-    return <section className="py-24 bg-white">
+    return <section className="py-24 bg-background">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
           <h2 className={`text-4xl md:text-5xl mb-4 text-primary ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>
@@ -41,7 +41,7 @@ const FeaturedProperties = () => {
         </div>
       </section>;
   }
-  return <section className="py-8 md:py-14 bg-white">
+  return <section className="py-8 md:py-14 bg-background">
       <div className="container mx-auto px-4">
         <div className="text-center mb-10 md:mb-16 max-w-xl mx-auto">
           <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] mb-4 text-foreground ${i18n.language === 'ar' ? 'font-arabic' : 'font-serif'}`}>

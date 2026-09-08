@@ -76,7 +76,7 @@ const ServicesRows = ({ headline, subheadline, rows }: ServicesRowsProps) => {
           </RevealOnScroll>
           <RevealOnScroll
             delay={100}
-            className={`relative w-full rounded-[20px] overflow-hidden aspect-[4/5] max-h-[42vh] m-4 bg-white/5 ${
+            className={`relative w-[calc(100%-2rem)] rounded-[20px] overflow-hidden aspect-[4/5] max-h-[42vh] m-4 bg-white/5 ${
               row.reversed ? "md:order-1 mr-auto" : "md:order-2 ml-auto"
             }`}
           >
