@@ -267,7 +267,7 @@ const PropertyMap = ({
         aria-label={`${t('propertyDetail.openInGoogleMaps', 'Open in Google Maps')} - ${displayLocation}`}
         className="absolute inset-0 z-[500] flex items-center justify-center bg-foreground/0 transition-colors hover:bg-foreground/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2"
       >
-        <span className="inline-flex items-center gap-2 rounded-md bg-secondary px-3 py-2 text-sm font-medium text-secondary-foreground opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
+        <span className="inline-flex items-center gap-2 rounded-md bg-primary px-3 py-2 text-sm font-medium text-primary-foreground opacity-0 shadow-lg transition-opacity group-hover:opacity-100 group-focus-within:opacity-100">
           <ExternalLink className="h-4 w-4" />
           {t('propertyDetail.openInGoogleMaps', 'Open in Google Maps')}
         </span>
