@@ -18,7 +18,7 @@ import PropertyOverview from "@/components/property/PropertyOverview";
 import AreaDetails from "@/components/property/AreaDetails";
 import InvestmentReturns from "@/components/property/InvestmentReturns";
 import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
-import apartmentImage from "@/assets/apartment-modern.jpg";
+import apartmentImage from "@/assets/photos/fallback-property.webp";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";
 import RevealOnScroll from "@/components/RevealOnScroll";
@@ -96,7 +96,7 @@ const PropertyDetail = () => {
       <div className="min-h-screen flex flex-col">
         <Header />
         <div className="flex-1 flex items-center justify-center">
-          <LoadingSpinner message="Loading property details..." />
+          <LoadingSpinner message={t("common.loading")} />
         </div>
         <Footer />
       </div>
@@ -255,8 +255,8 @@ const PropertyDetail = () => {
     `${translatedTitle} - Luxury property in ${property.location}. ${property.bedrooms ? property.bedrooms + " bedrooms, " : ""}${property.bathrooms ? property.bathrooms + " bathrooms. " : ""}Price: $${property.price.toLocaleString()}.`;
 
   const specs = [
-    property.bedrooms ? `${property.bedrooms} Bed` : null,
-    property.bathrooms ? `${property.bathrooms} Bath` : null,
+    property.bedrooms ? t("common.bed", { count: property.bedrooms }) : null,
+    property.bathrooms ? t("common.bath", { count: property.bathrooms }) : null,
     property.area_sqm ? `${property.area_sqm.toLocaleString()} m²` : null,
   ].filter(Boolean);
 

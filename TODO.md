@@ -1,5 +1,42 @@
 # Voi Home — Setup Checklist
 
+## Launch status (2026-09-30)
+
+The original checklist below is partly stale: the new Supabase project
+(`pypvkelapzcmsaetjbbb`), domain (`voi-home.com`), contact details, branding and site
+photography are done. What's actually left before launch:
+
+- [ ] Deploy edge functions to the new project (`supabase login`, then
+      `supabase functions deploy og-preview sitemap send-contact-email send-contact-reply`,
+      and set the `RESEND_API_KEY` secret). None are deployed yet.
+- [ ] After `og-preview` is deployed, uncomment the crawler rules in `public/_redirects`
+      (they're disabled so link previews fall back to the default Voi Home OG tags
+      instead of the old MR. Property project).
+- [ ] Unpublish/delete the `dubai-off-plan-demand-2026` blog post (dashboard).
+- [ ] Add real testimonials — with 0 rows the homepage testimonial section is hidden.
+- [ ] Add team members and partners, or hide `/team` and `/partners` until there are some.
+- [ ] More properties (4 live).
+- [ ] Confirm GTM `GTM-T2QKMTMP`, GA4 `G-ERQ8NMYJ6P` and the Search Console
+      verification tag in `index.html` belong to Voi Home's Google accounts.
+- [ ] Decide on AR/RU: keep and properly rewrite, or drop.
+- [ ] About page redesign + founder/team photos (`src/assets/hero-villa.webp` is the
+      founder placeholder).
+- [ ] Pick one phone number: the site now uses +90 552 797 10 00 everywhere; the Contact
+      page previously listed +90 545 120 22 37 in its SEO data. Confirm which is right.
+- [ ] Post-launch: lazy-load translations. AR+RU+EN (~180 KB) ship in the first download;
+      keep EN bundled and load AR/RU only when chosen (~20–25% smaller first load).
+      Depends on the AR/RU decision above. The rest of the 773 KB main bundle is
+      Supabase + React + router, which the homepage genuinely needs.
+- [ ] Voice: site copy follows `docs/voice.md` (boutique, "fine wine"). Still in the old
+      voice because it lives in the database, not the code: the 6 blog posts and the
+      property descriptions / "why this property" text. Rewrite them in the dashboard
+      (EN/AR/RU) using the voice guide.
+- [ ] The hero photo (`src/assets/photos/hero-skyline.webp`) shows a QNB bank logo and
+      billboard ads on the towers. Consider a different hero shot or a crop/retouch.
+- [ ] Founder block on /about is hidden until real photo, name and introduction exist
+      (see the commented `FounderProfile` in `src/pages/About.tsx`).
+- [ ] Nice-to-have: clean up 32 lint errors (all `no-explicit-any`-style, no functional bugs).
+
 This project is a copy of the MR. Property codebase, kept because it shares the same
 property filtering mechanism (search bar, `/properties`, `/properties-map`, filters,
 Supabase schema for listings). Everything below still needs to change before this is

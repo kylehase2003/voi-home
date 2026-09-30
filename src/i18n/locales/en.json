@@ -20,28 +20,28 @@
   },
   "nav": {
     "home": "Home",
-    "properties": "Properties",
+    "properties": "Homes",
     "propertiesMap": "Map View",
-    "blogs": "Blogs",
+    "blogs": "Journal",
     "about": "About",
     "contact": "Contact",
-    "contactUs": "Contact us",
+    "contactUs": "Speak with us",
     "buyerGuide": "Buyer Guide",
     "turkishCitizenship": "Turkish Citizenship",
     "language": "Language"
   },
   "propertiesMap": {
-    "title": "Properties Map",
-    "subtitle": "Explore our listings on an interactive map. Click any pin to see details.",
+    "title": "The map",
+    "subtitle": "Where each home sits: its street, its neighbors, its distance to the water. Select a pin to step inside.",
     "listings": "Listings",
     "view": "View",
-    "noProperties": "No properties with location data.",
-    "noCoords": "No properties have map coordinates yet. Add latitude and longitude in the dashboard to display them here."
+    "noProperties": "No homes with a location to show yet.",
+    "noCoords": "The map is still being drawn. In the meantime, every home can be viewed in the list."
   },
   "footer": {
-    "description": "Voi Home looks past the listing photos - into the paperwork, the neighborhood, and the details that decide whether a property is actually worth owning.",
-    "quickLinks": "Quick Links",
-    "browseProperties": "Browse Properties",
+    "description": "A small real estate house in Istanbul and Bodrum. We keep our list of homes short and our attention long, so every client is known by name and every property by its details.",
+    "quickLinks": "Explore",
+    "browseProperties": "Our homes",
     "aboutUs": "About Us",
     "propertyTypes": "Property Types",
     "apartments": "Apartments",
@@ -52,18 +52,18 @@
     "rights": "Voi Home. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions",
-    "importantLinks": "Important Links",
+    "importantLinks": "The house",
     "ourPartners": "Our Partners",
     "buyerGuide": "Buyer Guide",
     "ourTeam": "Our Team",
     "admin": "Admin"
   },
   "hero": {
-    "eyebrow": "Real Estate in Türkiye, Done Properly",
-    "title": "Every Detail, Verified.\nEvery Property, Understood.",
-    "subtitle": "We look at what's underneath the listing - the paperwork, the building, the neighborhood - so you can invest in Türkiye with real confidence, not just good photos.",
-    "exploreProperties": "Explore Properties",
-    "bookConsultation": "Book a Consultation",
+    "eyebrow": "A boutique real estate house · Istanbul & Bodrum",
+    "title": "Chosen slowly.\nKnown completely.",
+    "subtitle": "We take on a few clients and fewer homes, and come to know each one down to the grain of the stone, the angle of the afternoon light, and the last line of the title deed.",
+    "exploreProperties": "View our homes",
+    "bookConsultation": "Speak with us",
     "buy": "Buy",
     "rent": "Rent",
     "commercial": "Commercial",
@@ -135,36 +135,36 @@
     "point1": "Local market knowledge.",
     "point2": "Trusted guidance.",
     "point3": "Confidence in every decision.",
-    "contactButton": "Contact us"
+    "contactButton": "Speak with us"
   },
   "ourServices": {
-    "title": "Our Services",
+    "title": "What we do",
     "item1": {
-      "title": "Property Resale"
+      "title": "Resale"
     },
     "item2": {
-      "title": "Turkish Citizenship Guide"
+      "title": "Citizenship guidance"
     },
     "item3": {
-      "title": "Investment Consultation"
+      "title": "Investment counsel"
     },
     "item4": {
-      "title": "Property Management"
+      "title": "Property care"
     }
   },
   "homePage": {
     "featuredProperties": {
-      "discoverHomes": "Discover Homes In Your Area",
-      "noProperties": "No featured properties available at the moment. Check back soon!",
-      "ourListings": "Every property we have in Turkey.",
-      "exploreOpportunities": "From Istanbul to Bodrum, here's what's currently available.",
-      "loadingProperties": "Loading properties...",
-      "viewAllProperties": "View All Properties"
+      "discoverHomes": "Homes we are representing now",
+      "noProperties": "Our current homes have found their owners. New ones are being considered. Speak with us to hear of them first.",
+      "ourListings": "The homes we are representing now.",
+      "exploreOpportunities": "Istanbul and Bodrum. Each one walked, measured and questioned before it was allowed onto this page.",
+      "loadingProperties": "Loading homes…",
+      "viewAllProperties": "View all homes"
     },
     "blogsNews": {
       "title": "Blogs & News",
       "subtitle": "Your Source for Market Trends, Investment Insights, and Property Opportunities.",
-      "readMore": "Read more",
+      "readMore": "Read on",
       "viewAllArticles": "View All Articles"
     },
     "stats": {
@@ -195,7 +195,7 @@
   },
   "partners": {
     "title": "Our Trusted Partners",
-    "description": "We collaborate with industry-leading partners to deliver exceptional real estate services"
+    "description": "The architects, developers, lawyers and lenders we trust with our clients' decisions, chosen as carefully as the homes themselves."
   },
   "auth": {
     "title": "Admin Login",
@@ -252,7 +252,7 @@
     "error": "Error"
   },
   "contactPage": {
-    "title": "Contact Us",
+    "title": "Contact",
     "breadcrumb": "Contact",
     "formTitle": "Book a Private Call With Our Top Agents",
     "formSubtitle": "100% Guarantee that Your Real Estate Needs Are Met",
@@ -266,11 +266,11 @@
     "successMessage": "We'll get back to you as soon as possible.",
     "errorTitle": "Error",
     "errorMessage": "Failed to send message. Please try again.",
-    "infoTitle": "The Keys To Your Dreams!",
+    "infoTitle": "Every good decision begins with a conversation.",
     "phone": "Phone",
     "email": "Email",
     "office": "Office",
-    "workingHours": "Round-the-Clock Availability"
+    "workingHours": "Availability"
   },
   "buyerGuidePage": {
     "title": "Buyer Guide",
@@ -305,15 +305,15 @@
     }
   },
   "teamPage": {
-    "title": "Our Team",
-    "subtitle": "Meet the dedicated professionals who make your property dreams come true",
+    "title": "The team",
+    "subtitle": "The people you will actually speak with. A small team, by design.",
     "breadcrumb": "Our Team",
-    "loading": "Loading team members...",
-    "noMembers": "No team members to display at the moment."
+    "loading": "Loading…",
+    "noMembers": "Introductions are on their way."
   },
   "contact": {
     "title": "Get in Touch",
-    "subtitle": "We're here to help you find your perfect property",
+    "subtitle": "Tell us what you are looking for, and what you would rather not settle for.",
     "name": "Name",
     "email": "Email",
     "phone": "Phone",
@@ -323,24 +323,24 @@
     "error": "Failed to send message. Please try again."
   },
   "blogs": {
-    "title": "Real Estate Insights & Market Updates",
-    "subtitle": "Expert Analysis of the Turkish Property Market",
-    "viewAll": "View All",
-    "readMore": "Read full article",
+    "title": "The journal",
+    "subtitle": "Considered notes on property, law and daily life in Türkiye.",
+    "viewAll": "The full journal",
+    "readMore": "Read the full piece",
     "recentPosts": "Recent Posts",
     "categories": "Categories",
     "allCategories": "All Categories",
     "loading": "Loading...",
     "loadingBlogs": "Loading blogs...",
-    "noPosts": "No blog posts available yet. Check back soon!",
-    "notFound": "Blog Post Not Found",
-    "notFoundMessage": "The blog post you're looking for doesn't exist.",
-    "backToBlogs": "Back to Blogs",
-    "backToAllArticles": "Back to all articles",
-    "sidebarCtaTitle": "Looking to invest?",
-    "sidebarCtaSubtitle": "Contact us today!",
-    "sidebarCtaButton": "Contact Us",
-    "featuredBlogs": "Featured Blogs",
+    "noPosts": "Our first notes are still being written.",
+    "notFound": "This piece is not here",
+    "notFoundMessage": "It may have been moved, or quietly retired.",
+    "backToBlogs": "Back to the journal",
+    "backToAllArticles": "Back to the journal",
+    "sidebarCtaTitle": "Considering a home in Türkiye?",
+    "sidebarCtaSubtitle": "We would be glad to talk it through, without obligation.",
+    "sidebarCtaButton": "Speak with us",
+    "featuredBlogs": "From the journal",
     "home": "Home",
     "filterAll": "View All",
     "filterTurkey": "Türkiye",
@@ -359,84 +359,84 @@
     "title": "Privacy Policy",
     "intro": {
       "title": "Introduction",
-      "content": "At Voi Home, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, and safeguard your data."
+      "content": "Buying a home involves trusting us with details about your life. We treat that information with the same care we give the properties themselves. This policy sets out what we collect, why we collect it, and how we keep it safe."
     },
     "collection": {
       "title": "Information We Collect",
-      "content": "We collect information that you provide directly to us, including:",
-      "item1": "Personal identification information (name, email, phone number)",
-      "item2": "Property preferences and search criteria",
-      "item3": "Communication history with our team",
-      "item4": "Usage data and website analytics"
+      "content": "We collect only what you share with us directly, and what we need to serve you well:",
+      "item1": "Your name, email address and phone number",
+      "item2": "The kind of home you are looking for, and your search preferences",
+      "item3": "Our correspondence with you",
+      "item4": "How our website is used, through standard analytics"
     },
     "usage": {
       "title": "How We Use Your Information",
-      "content": "We use the collected information for:",
-      "item1": "Providing and improving our real estate services",
-      "item2": "Communicating with you about properties and services",
-      "item3": "Sending marketing communications (with your consent)",
-      "item4": "Analyzing and enhancing user experience"
+      "content": "We use this information to:",
+      "item1": "Advise you, and improve the service we provide",
+      "item2": "Write to you about homes and matters relevant to your search",
+      "item3": "Send occasional news, only with your consent",
+      "item4": "Understand how our website is used, so we can make it better"
     },
     "protection": {
       "title": "Data Protection",
-      "content": "We implement appropriate security measures to protect your personal information against unauthorized access, alteration, disclosure, or destruction. We use industry-standard encryption and secure servers to safeguard your data."
+      "content": "We protect your personal information against unauthorized access, alteration, disclosure or destruction, using industry-standard encryption and secure servers. Access is limited to the people who need it to help you."
     },
     "rights": {
       "title": "Your Rights",
-      "content": "You have the right to:",
-      "item1": "Access your personal data",
-      "item2": "Request correction of inaccurate data",
-      "item3": "Request deletion of your data",
-      "item4": "Opt-out of marketing communications"
+      "content": "At any time, you may ask us to:",
+      "item1": "Show you the personal data we hold about you",
+      "item2": "Correct anything that is inaccurate",
+      "item3": "Delete your data",
+      "item4": "Stop sending you news and updates"
     },
     "contact": {
       "title": "Contact Us",
-      "content": "If you have any questions about this Privacy Policy or our data practices, please contact us:"
+      "content": "If you have a question about this policy or how we handle your information, write to us directly:"
     },
-    "lastUpdated": "Last updated: November 2025"
+    "lastUpdated": "Last updated: October 2026"
   },
   "terms": {
     "title": "Terms & Conditions",
     "acceptance": {
       "title": "Acceptance of Terms",
-      "content": "By accessing and using Voi Home's services, you agree to be bound by these Terms and Conditions. If you do not agree with any part of these terms, please do not use our services."
+      "content": "By using Voi Home's website and services, you agree to these Terms and Conditions. If you do not agree with any part of them, please do not use our services."
     },
     "services": {
       "title": "Our Services",
-      "content": "Voi Home provides real estate consultancy services including:",
-      "item1": "Property listing and search services",
-      "item2": "Property viewing arrangements",
-      "item3": "Real estate consultation and advice",
-      "item4": "Transaction facilitation and support"
+      "content": "Voi Home is a real estate advisory house. Our services include:",
+      "item1": "Presenting homes and helping you search for the right one",
+      "item2": "Arranging private viewings, in person or by video",
+      "item3": "Advice on property, investment and citizenship by investment",
+      "item4": "Support through the purchase, from offer to title deed"
     },
     "userResponsibilities": {
       "title": "User Responsibilities",
-      "content": "As a user of our services, you agree to:",
-      "item1": "Provide accurate and truthful information",
-      "item2": "Maintain the confidentiality of your account",
-      "item3": "Use our services in compliance with applicable laws"
+      "content": "When using our services, you agree to:",
+      "item1": "Give us accurate and truthful information",
+      "item2": "Keep any account details confidential",
+      "item3": "Use our services in line with applicable law"
     },
     "intellectual": {
       "title": "Intellectual Property",
-      "content": "All content on this website, including text, images, logos, and designs, is the property of Voi Home and is protected by copyright and intellectual property laws. Unauthorized use is prohibited."
+      "content": "Everything on this website, including text, photographs, logos and design, belongs to Voi Home and is protected by copyright and intellectual property law. Please do not reuse it without our written permission."
     },
     "limitation": {
       "title": "Limitation of Liability",
-      "content": "Voi Home shall not be liable for any indirect, incidental, special, or consequential damages arising from the use of our services. We provide information in good faith but do not guarantee the accuracy of third-party property listings."
+      "content": "Voi Home is not liable for any indirect, incidental, special or consequential damages arising from the use of our services. We share information in good faith, but cannot guarantee the accuracy of listings or information provided by third parties."
     },
     "modifications": {
       "title": "Modifications",
-      "content": "We reserve the right to modify these Terms and Conditions at any time. Changes will be effective immediately upon posting on our website. Your continued use of our services constitutes acceptance of the modified terms."
+      "content": "We may update these Terms and Conditions from time to time. Changes take effect when they are published on this website, and continuing to use our services means you accept the updated terms."
     },
     "governing": {
       "title": "Governing Law",
-      "content": "These Terms and Conditions are governed by the laws of Turkey. Any disputes arising from these terms shall be subject to the exclusive jurisdiction of Turkish courts."
+      "content": "These Terms and Conditions are governed by the laws of the Republic of Türkiye. Any dispute arising from them falls under the exclusive jurisdiction of the Turkish courts."
     },
     "contact": {
       "title": "Contact Information",
-      "content": "For questions about these Terms and Conditions, please contact us:"
+      "content": "If you have a question about these Terms and Conditions, please write to us:"
     },
-    "lastUpdated": "Last updated: November 2025"
+    "lastUpdated": "Last updated: October 2026"
   },
   "aboutPage": {
     "hero": {
@@ -444,31 +444,33 @@
       "breadcrumb": {
         "home": "Home",
         "about": "About"
-      }
+      },
+      "lead": "We check what decides whether a home is worth owning: the paperwork, the building, the neighbors. Only then do we recommend it."
     },
     "philosophy": {
-      "label": "Our Philosophy",
-      "title": "A Track Record Built on Detail"
+      "label": "Our philosophy",
+      "title": "Small by choice."
     },
     "story": {
-      "title": "The Story Behind Voi Home",
-      "tagline": "Some people sell a property.\nVoi Home studies the life around it.",
-      "paragraph1": "Behind every sound investment is a hundred small decisions most buyers never see: the direction a building faces, how a management company answers the phone, the gap between a listing photo and the apartment itself. Voi Home was built to catch every one of them.",
-      "paragraph2": "We don't believe our clients should have to take a developer's word for it, or navigate title deeds, permits, and inspection reports alone. We do that work first, so the only decision left for you is whether the home is right for your life.",
-      "paragraph3": "Rooted in Istanbul and Bodrum, Voi Home works exclusively across Türkiye, so every recommendation comes from firsthand knowledge of the street, the building, and the neighborhood, not a spreadsheet.",
-      "closingLine1": "Because a property is never just a property.",
-      "closingLine2": "Talk to Voi Home."
+      "title": "The story behind Voi Home",
+      "tagline": "Some agencies sell a property.\nWe take the time to understand one.",
+      "paragraph1": "A good home reveals itself slowly: the way morning light crosses the kitchen, how the building manager answers the phone, what the street sounds like at eleven at night, whether the title deed is as clean as the listing suggests. Voi Home exists to notice all of it before you have to.",
+      "paragraph2": "We keep our practice deliberately small. Fewer clients means each one is known by name, and fewer homes means each one is known in full: its paperwork, its developer, its neighbors. When we recommend a property, we have already asked the questions you would ask, and a few you would not have thought to.",
+      "paragraph3": "We are rooted in Istanbul and Bodrum and work only in Türkiye. Everything we tell you comes from having walked the street, stood in the rooms and read the documents ourselves.",
+      "closingLine1": "A home is never just a property.",
+      "closingLine2": "Let us show you what we mean.",
+      "imageAlt": "Carved stone facade of a historic building in Istanbul"
     },
     "missionVision": {
       "mission": {
-        "title": "What We Stand For",
-        "tagline": "To look past the listing and into the life it holds.",
-        "description": "Voi Home exists to remove guesswork from buying property in Türkiye. We inspect what others overlook, ask the questions others skip, and turn every detail, large or small, into something our clients can rely on."
+        "title": "What we stand for",
+        "tagline": "To know a home as well as the person who will live in it.",
+        "description": "We take the guesswork out of buying in Türkiye by doing the slow, careful work first. We inspect what others overlook, ask what others skip, and give our clients a clear, honest account of every home we put in front of them."
       },
       "vision": {
-        "title": "Our Long-Term Vision",
-        "tagline": "To be the most trusted name in Turkish real estate, one detail at a time.",
-        "description": "A brand our clients return to long after the keys change hands, not because we sold them a property, but because we understood what they were actually looking for. Voi Home is committed to Türkiye, and to doing right by everyone who trusts us here."
+        "title": "Where we are going",
+        "tagline": "To be the name people pass on quietly, to the friends they care about most.",
+        "description": "We would rather be recommended than advertised. Our measure of success is the client who calls us again years later, for a second home or for a friend, because we understood what they were really looking for the first time."
       }
     },
     "founder": {
@@ -476,32 +478,35 @@
       "description": "Samer Al Helwani is a real estate professional with over 15 years of experience, having facilitated property transactions with a collective value exceeding $40 million USD. Trusted by investors, homeowners, and international buyers, he has built his reputation on market expertise, transparency, and a client-first approach. His vision for Voi Home is to make investing in Türkiye simple, secure, and rewarding, by paying attention to the details that matter and providing honest guidance at every stage of the journey."
     },
     "stats": {
-      "propertiesSold": "Happy Clients",
-      "foreignInvestment": "Property Transactions",
+      "propertiesSold": "Clients advised",
+      "foreignInvestment": "Homes handed over",
       "priceGrowth": "Nationalities"
     },
     "principles": {
-      "title": "The Principles Behind Every Decision",
+      "title": "The principles behind every recommendation",
       "item1": {
-        "title": "Knowledge Leads",
-        "description": "Every recommendation is backed by research, market insight, and experience. We don't follow trends, we understand them before they become obvious."
+        "title": "Knowledge first",
+        "description": "Every recommendation rests on research, on the ground and on paper. We would rather understand a market deeply than follow it loudly."
       },
       "item2": {
-        "title": "Trust Above Everything",
-        "description": "Trust isn't earned through promises. It's built through honesty, transparency, and consistently putting our clients' interests first."
+        "title": "Trust is earned in the details",
+        "description": "Not through promises, but through telling you the uncomfortable thing early: the missing permit, the optimistic rental estimate, the better home next door."
       },
       "item3": {
-        "title": "Opportunities, Not Listings",
-        "description": "Anyone can show a property. We identify opportunities that align with our clients' financial goals, lifestyle, and long-term vision."
+        "title": "A few homes, well chosen",
+        "description": "Anyone can show a hundred listings. We would rather show you three that genuinely fit your life, your finances and your plans for the years ahead."
       },
       "item4": {
-        "title": "Every Client Has a Strategy",
-        "description": "No two investors are alike. Every recommendation is tailored to the person behind the investment, ensuring every decision has purpose."
+        "title": "One client at a time",
+        "description": "No two buyers want the same thing, even when they ask for the same thing. We listen for the difference, and build our advice around the person, not the brief."
       },
       "item5": {
-        "title": "Built for the Long Term",
-        "description": "Our relationship doesn't end when the contract is signed. We aim to become the trusted advisor our clients return to for every step of their real estate journey."
+        "title": "Long after the keys",
+        "description": "Our work does not end at the title deed office. Furnishing, letting, resale, a second purchase: we intend to be the advisor you return to for all of it."
       }
+    },
+    "closing": {
+      "title": "Every detail we check is one less thing you have to wonder about."
     }
   },
   "dashboardOverview": {
@@ -829,21 +834,21 @@
     "deleteFailed": "Failed to delete team member"
   },
   "partnersPage": {
-    "title": "Our Partners",
+    "title": "Our partners",
     "breadcrumb": {
       "home": "Home",
       "partners": "Partners"
     },
-    "visitWebsite": "Visit Website",
+    "visitWebsite": "Visit website",
     "cta": {
-      "title": "Get Free Consultations",
-      "description": "SPECIAL ADVISORS: Quis autem vel eum iure repre ende",
-      "button": "Get A Quote"
+      "title": "A first conversation, without obligation",
+      "description": "Tell us what you are looking for. We will tell you honestly whether we are the right people to help.",
+      "button": "Speak with us"
     },
     "banner": {
-      "subtitle": "Your story starts from here",
-      "title": "Let's visit the best places",
-      "button": "Make It Happen"
+      "subtitle": "Where to begin",
+      "title": "Let us show you around.",
+      "button": "Arrange a viewing"
     }
   },
   "contactSubmissions": {
@@ -887,15 +892,15 @@
     "deleteSelected": "Delete Selected"
   },
   "properties": {
-    "title": "Properties",
-    "breadcrumb": "Properties",
+    "title": "Our homes",
+    "breadcrumb": "Homes",
     "filters": "Filters",
     "viewAll": "View All",
     "turkey": "Türkiye",
-    "loading": "Loading properties...",
-    "noProperties": "No properties found. Try adjusting your filters.",
-    "viewAllProperties": "View All Properties",
-    "clearFilters": "Clear Filters",
+    "loading": "Loading homes…",
+    "noProperties": "Nothing matches those filters just yet. Loosen one, or tell us what you are after. We often hear of homes before they are listed.",
+    "viewAllProperties": "View all homes",
+    "clearFilters": "Clear filters",
     "country": "Country",
     "selectCountry": "Select Country",
     "allCountries": "All Countries",
@@ -1003,21 +1008,39 @@
     }
   },
   "propertyDetail": {
-    "faqTitle": "Frequently Asked Questions",
+    "faqTitle": "Questions we are often asked",
     "faqs": [
-      { "q": "Can I buy this property remotely?", "a": "Yes. You can complete the entire purchasing process remotely. Our team will guide you through every step, from selecting your property and signing the necessary documents to the title deed transfer and after-sales support." },
-      { "q": "Can I schedule a private viewing?", "a": "Absolutely. You can arrange a private or virtual viewing with one of our property consultants at a time that suits you." },
-      { "q": "Do you provide after-sales support?", "a": "Yes. We continue to support you after your purchase with services such as title deed assistance, utility setup, property management, furnishing solutions, and rental support." },
-      { "q": "Is this property right for me?", "a": "Whether you're looking for a family home, a holiday residence, or an investment, our consultants will help you find the best fit." },
-      { "q": "Can I receive personalized recommendations?", "a": "Yes. Based on your budget and goals, we'll recommend properties that best match your requirements." },
-      { "q": "How can I speak with a property expert?", "a": "You can contact us by phone, WhatsApp, or through the inquiry form, and one of our specialists will assist you promptly." }
+      {
+        "q": "Can I buy this home without travelling to Türkiye?",
+        "a": "Yes. Many of our clients complete the entire purchase from abroad. We arrange video viewings, a translated review of every document, and a notarized power of attorney, and we stay with you through the title deed transfer and beyond."
+      },
+      {
+        "q": "Can I arrange a private viewing?",
+        "a": "Of course. Viewings are private and unhurried, in person or by live video, at a time that suits you. We will tell you what to look for, and what we have already checked."
+      },
+      {
+        "q": "What happens after the purchase?",
+        "a": "We stay involved. Title deed follow-up, utility connections, furnishing, property management and letting are all things we can arrange, so the home is ready when you are."
+      },
+      {
+        "q": "How do I know this home is right for me?",
+        "a": "Tell us how you plan to use it: to live in, to spend summers in, to let, or to secure citizenship. We will give you an honest view, including when a different home would serve you better."
+      },
+      {
+        "q": "Can you recommend homes that are not listed here?",
+        "a": "Often, yes. We hear of homes before they reach the market. Share your budget and priorities, and we will come back to you with a short, considered list."
+      },
+      {
+        "q": "How do I speak with someone?",
+        "a": "Call, message us on WhatsApp, or write to us. You will speak with an advisor directly, never a call center, and usually within the hour."
+      }
     ],
-    "notFound": "Property Not Found",
-    "notFoundDescription": "The property you're looking for doesn't exist.",
-    "viewAllProperties": "View All Properties",
+    "notFound": "This home is no longer listed",
+    "notFoundDescription": "It may have found its owner. We would be glad to show you something in the same spirit.",
+    "viewAllProperties": "View all homes",
     "loading": "Loading property details...",
     "location": "Location",
-    "propertyOverview": "Property Overview",
+    "propertyOverview": "Overview",
     "projectLayout": "Project Layout",
     "blocks": "Blocks",
     "floors": "Floors",
@@ -1033,7 +1056,7 @@
     "male": "Male",
     "female": "Female",
     "class": "Class",
-    "numbersThatMatter": "This Is What Value Increase Looks Like!",
+    "numbersThatMatter": "How the value has moved",
     "year1": "1 Year",
     "years3": "3 Years",
     "years5": "5 Years",
@@ -1041,14 +1064,14 @@
     "completion": "Completion",
     "plotRatio": "Plot Ratio",
     "clearHeight": "Clear Height",
-    "apartmentThatMatters": "This Apartment That Matters!",
+    "apartmentThatMatters": "The details that matter",
     "item": "Item",
     "price": "Price",
-    "propertyInformation": "Property Information",
+    "propertyInformation": "The particulars",
     "amenities": "Amenities",
     "nearbyPlaces": "Location",
-    "whyThisProperty": "Why This Property?",
-    "apartmentTypesAndPrices": "Apartment Types and Prices",
+    "whyThisProperty": "Why we chose this home",
+    "apartmentTypesAndPrices": "Residences and prices",
     "map": "Map",
     "openInGoogleMaps": "Open in Google Maps",
     "propertyType": "Property Type",
@@ -1057,9 +1080,9 @@
     "titleDeed": "Title Deed",
     "status": "Status",
     "startingFrom": "Starting from",
-    "wantToKnowMore": "I Want To Know More!",
-    "suggestedProperties": "Suggested Properties",
-    "whatsappInquiry": "Hi, I'm interested in property {{title}}. I'd like to know more!",
+    "wantToKnowMore": "Ask about this home",
+    "suggestedProperties": "You may also consider",
+    "whatsappInquiry": "Hello, I would like to hear more about {{title}}.",
     "forSale": "For Sale",
     "forRent": "For Rent",
     "titleDeedValues": {
@@ -1213,22 +1236,26 @@
     "under_construction": "Under Construction"
   },
   "notFound": {
-    "title": "Page Not Found",
-    "description": "The page you're looking for doesn't exist or has been moved.",
-    "backHome": "Back to Home",
-    "browseProperties": "Browse Properties"
+    "title": "This page has moved on",
+    "description": "The address may have changed, or the page may no longer exist.",
+    "backHome": "Return home",
+    "browseProperties": "View our homes"
   },
   "common": {
     "cancel": "Cancel",
     "delete": "Delete",
     "deleting": "Deleting...",
-    "loading": "Loading..."
+    "loading": "Loading...",
+    "bed_one": "{{count}} bed",
+    "bed_other": "{{count}} beds",
+    "bath_one": "{{count}} bath",
+    "bath_other": "{{count}} baths"
   },
   "seo": {
     "h1": {
       "home": "Luxury Real Estate in Istanbul & Bodrum, Türkiye",
-      "properties": "Luxury Properties for Sale in Istanbul & Bodrum, Türkiye",
-      "about": "About Voi Home — Luxury Real Estate Consultancy in Türkiye",
+      "properties": "Homes for sale in Istanbul and Bodrum, Türkiye",
+      "about": "About Voi Home, a boutique real estate house in Türkiye",
       "contact": "Contact Voi Home — Real Estate Advisors in Istanbul & Bodrum"
     }
   },
@@ -1237,6 +1264,62 @@
     "next": "Next"
   },
   "experience": {
-    "ctaTitle": "Ready to find your next investment?"
+    "ctaTitle": "Let's begin with a conversation."
+  },
+  "home": {
+    "badge": "SPEAK WITH US • VOI HOME • ",
+    "statement": {
+      "line1": "We visit a great many homes.",
+      "line2": "We recommend very few."
+    },
+    "showcase": {
+      "title": "A few homes, currently in our care."
+    },
+    "services": {
+      "headline": "Beyond the search.",
+      "subheadline": "Finding the home is only the beginning. We stay beside you through the decision, the purchase, and everything that follows.",
+      "row1": {
+        "title": "We weigh every home before you do.",
+        "description": "Rental yield, likely appreciation, the state of the title, the developer's record on its last handovers. Every home we show you has already been measured against what actually decides whether it will serve you well."
+      },
+      "row2": {
+        "title": "When it is time to sell, we see it through.",
+        "description": "We price it honestly for the market as it is, present it to buyers we believe will value it, and manage every step from the first viewing to the final signature."
+      }
+    },
+    "why": {
+      "tag": "Why Voi Home",
+      "line1": "A small house, on purpose.",
+      "line2": "So every client has our full attention."
+    },
+    "process": {
+      "tag": "The process",
+      "title": "From the first conversation to the keys in your hand.",
+      "description": "Buying abroad has more steps than buying at home. We carry the ones that usually slow people down, and explain the rest in plain language.",
+      "step1": {
+        "title": "We listen",
+        "desc": "Your plans, budget and non-negotiables"
+      },
+      "step2": {
+        "title": "We verify",
+        "desc": "Title, permits, the developer's record"
+      },
+      "step3": {
+        "title": "We close",
+        "desc": "Paperwork and transfer, handled with care"
+      },
+      "step4": {
+        "title": "We stay",
+        "desc": "Furnishing, letting, resale and beyond"
+      }
+    }
+  },
+  "comingSoon": {
+    "titleStart": "Something is being prepared,",
+    "titleAccent": "with care.",
+    "subtitle": "A small real estate house for Istanbul and Bodrum. A few homes, chosen slowly and known completely. We will open our doors shortly."
+  },
+  "whatsapp": {
+    "defaultMessage": "Hello, I would like to speak with Voi Home about finding a home."
   }
 }

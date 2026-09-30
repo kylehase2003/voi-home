@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MapPin, ArrowUpRight } from "lucide-react";
 import { Property } from "@/types/property";
-import apartmentImage from "@/assets/apartment-modern.jpg";
+import apartmentImage from "@/assets/photos/fallback-property.webp";
 import { useTranslation } from "react-i18next";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";
@@ -72,7 +72,7 @@ const locationTranslations: Record<string, Record<string, string>> = {
 // serif-heading, generous-whitespace language instead of a generic
 // real-estate-template look.
 const PropertyCardMinimal = ({ property, animationDelay = 0 }: PropertyCardMinimalProps) => {
-  const { i18n } = useTranslation();
+  const { t, i18n } = useTranslation();
 
   const getTranslatedPropertyType = (type: string) => {
     const lang = i18n.language;
@@ -147,8 +147,8 @@ const PropertyCardMinimal = ({ property, animationDelay = 0 }: PropertyCardMinim
           {(property.bedrooms || property.bathrooms) && (
             <div className="text-sm text-muted-foreground mt-2">
               {[
-                property.bedrooms ? `${property.bedrooms} Bed` : null,
-                property.bathrooms ? `${property.bathrooms} Bath` : null,
+                property.bedrooms ? t("common.bed", { count: property.bedrooms }) : null,
+                property.bathrooms ? t("common.bath", { count: property.bathrooms }) : null,
               ]
                 .filter(Boolean)
                 .join(" · ")}

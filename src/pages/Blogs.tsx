@@ -79,8 +79,8 @@ const Blogs = () => {
 
   return <div className="min-h-screen flex flex-col bg-background">
       <SEOHead
-        title="Real Estate Blog - Market Insights & Investment Tips"
-        description="Read expert articles on the Istanbul and Bodrum real estate markets. Property investment guides, Turkish citizenship updates, and the details that matter before you buy."
+        title="The Journal — Notes on Property in Türkiye"
+        description="Considered writing on the Istanbul and Bodrum property markets, Turkish citizenship by investment, and the details worth knowing before you buy."
         path="/blogs"
       />
       <Header />

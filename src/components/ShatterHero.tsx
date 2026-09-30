@@ -7,13 +7,13 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
 import { COUNTRIES, TURKIYE_CITIES, getDistrictsForCity } from "@/constants/property";
 import { useFilterOptions } from "@/hooks/useFilterOptions";
-import heroBuilding from "@/assets/hero-building.jpg";
-import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
-import heroIstanbul2 from "@/assets/hero-istanbul-2-optimized.webp";
-import heroIstanbul3 from "@/assets/hero-istanbul-3-optimized.webp";
-import heroVilla from "@/assets/hero-villa.webp";
-import apartmentModern from "@/assets/apartment-modern.jpg";
-import penthouseView from "@/assets/penthouse-view.jpg";
+import heroSkyline from "@/assets/photos/hero-skyline.webp";
+import tileVillaGarden from "@/assets/photos/tile-villa-garden.webp";
+import tileInteriorLounge from "@/assets/photos/tile-interior-lounge.webp";
+import tileWalkInCloset from "@/assets/photos/tile-walk-in-closet.webp";
+import tilePoolGarden from "@/assets/photos/tile-pool-garden.webp";
+import tileMarinaApartments from "@/assets/photos/tile-marina-apartments.webp";
+import tileBrickResidence from "@/assets/photos/tile-brick-residence.webp";
 
 const SATOSHI = "'Satoshi', 'General Sans', sans-serif";
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
@@ -21,12 +21,12 @@ const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 // Scattered final resting positions for each tile (percent of viewport, desktop).
 // No rotation - the reference keeps every tile axis-aligned, just scattered by position.
 const TILES = [
-  { src: heroIstanbul1, top: "9%", left: "5%", w: 170, h: 135 },
-  { src: apartmentModern, top: "5%", left: "80%", w: 155, h: 195 },
-  { src: heroVilla, top: "42%", left: "2%", w: 190, h: 145 },
-  { src: heroIstanbul2, top: "50%", left: "84%", w: 165, h: 165 },
-  { src: penthouseView, top: "72%", left: "78%", w: 180, h: 135 },
-  { src: heroIstanbul3, top: "22%", left: "20%", w: 135, h: 115 },
+  { src: tileVillaGarden, top: "9%", left: "5%", w: 170, h: 135 },
+  { src: tileInteriorLounge, top: "5%", left: "80%", w: 155, h: 195 },
+  { src: tileWalkInCloset, top: "42%", left: "2%", w: 190, h: 145 },
+  { src: tilePoolGarden, top: "50%", left: "84%", w: 165, h: 165 },
+  { src: tileMarinaApartments, top: "72%", left: "78%", w: 180, h: 135 },
+  { src: tileBrickResidence, top: "22%", left: "20%", w: 135, h: 115 },
 ];
 
 const ShatterHero = () => {
@@ -286,18 +286,23 @@ const ShatterHero = () => {
             },
           });
 
-          // Tween durations/positions are chosen so the whole timeline sums to
-          // exactly 1 - each position below IS the scroll-progress fraction
+          // Positions below are in timeline units; the timeline ends at 0.62,
+          // so each position / 0.62 is the scroll-progress fraction
           // (0-1) at which that beat starts. Keeps the "when does X happen"
           // math legible instead of fighting stagger overflow every edit.
+          // Statement comes in while the hero image is still fading, then the
+          // tiles and filter follow - no blank beat in between. Everything is
+          // in by ~0.55; the empty set at 0.62 adds a short hold before the
+          // pin releases (wrapper height is sized to keep this pacing).
           tl.to(heroImgRef.current, { scale: 0.86, opacity: 0, duration: 0.25, ease: "power1.in" }, 0)
-            .to(tiles, { scale: 1, opacity: 1, duration: 0.25, stagger: 0.015, ease: "power2.out" }, 0.12)
             .to(
               statementRef.current,
-              { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.2, ease: "power2.out" },
-              0.68,
+              { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.15, ease: "power2.out" },
+              0.14,
             )
-            .to(filterRef.current, { scale: 1, opacity: 1, duration: 0.2, ease: "power2.out" }, 0.82);
+            .to(tiles, { scale: 1, opacity: 1, duration: 0.2, stagger: 0.01, ease: "power2.out" }, 0.2)
+            .to(filterRef.current, { scale: 1, opacity: 1, duration: 0.15, ease: "power2.out" }, 0.38)
+            .set({}, {}, 0.62);
         });
       }, wrapperRef);
     })();
@@ -312,12 +317,12 @@ const ShatterHero = () => {
   let wordIndex = 0;
 
   return (
-    <div ref={wrapperRef} className="relative h-auto md:h-[300vh]">
+    <div ref={wrapperRef} className="relative h-auto md:h-[225vh]">
 
       <div ref={pinRef} className="relative md:sticky md:top-0 h-[70vh] md:h-screen w-full overflow-hidden bg-background">
         {/* Hero image + headline + badge, animated together as one unit as you scroll */}
         <div ref={heroImgRef} className="absolute inset-0">
-          <img src={heroBuilding} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
+          <img src={heroSkyline} alt="" className="absolute inset-0 w-full h-full object-cover" style={{ objectPosition: "center 30%" }} />
           <div
             className="absolute inset-0"
             style={{
@@ -401,10 +406,11 @@ const ShatterHero = () => {
               fill="rgba(255,255,255,0.85)"
               style={{ fontFamily: GENERAL_SANS, fontWeight: 500 }}
               className="uppercase"
-              letterSpacing="3.5"
+              // Arabic letters must stay joined, so no tracking in RTL.
+              letterSpacing={isRTL ? 0 : 3.5}
             >
               <textPath href="#voiSpinPath" startOffset="0%">
-                LUXURY REAL ESTATE • INVEST WITH VOI • LUXURY REAL ESTATE • INVEST WITH VOI •
+                {t("home.badge")}
               </textPath>
             </text>
           </svg>
@@ -436,9 +442,9 @@ const ShatterHero = () => {
             ref={statementRef}
             className="text-center text-2xl lg:text-[32px] leading-[1.25] tracking-[-0.5px] text-foreground font-serif"
           >
-            Every market has a right time to buy.
+            {t("home.statement.line1")}
             <br />
-            We make sure you don&apos;t miss it.
+            {t("home.statement.line2")}
           </div>
           <div
             ref={filterRef}

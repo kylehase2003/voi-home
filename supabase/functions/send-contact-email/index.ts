@@ -5,7 +5,6 @@ const RESEND_API_KEY = Deno.env.get("RESEND_API_KEY");
 const allowedOrigins = [
   "https://voi-home.com",
   "https://www.voi-home.com",
-  "https://mrproperty.lovable.app",
 ];
 
 function getCorsHeaders(req: Request) {
@@ -107,11 +106,12 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Voi Home <noreply@voi-home.com>",
         to: [email],
-        subject: "Thank you for contacting Voi Home",
+        subject: "Thank you for writing to Voi Home",
         html: `
-          <h1>Thank you for contacting us, ${escapeHtml(name)}!</h1>
-          <p>We have received your message and will get back to you as soon as possible.</p>
-          <p>Best regards,<br>The Voi Home Team</p>
+          <p>Dear ${escapeHtml(name)},</p>
+          <p>Thank you for writing to us. Your message has reached us, and one of our advisors will read it personally and reply, usually within a few hours.</p>
+          <p>If anything else comes to mind in the meantime, simply reply to this email or message us on WhatsApp at +90 552 797 10 00.</p>
+          <p>With warm regards,<br>Voi Home</p>
         `,
       }),
     });

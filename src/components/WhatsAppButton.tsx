@@ -1,7 +1,9 @@
 import { useLocation } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const WhatsAppButton = () => {
   const location = useLocation();
+  const { t } = useTranslation();
 
   // Hide on single property pages
   if (location.pathname.startsWith("/property/")) {
@@ -10,7 +12,7 @@ const WhatsAppButton = () => {
 
   return (
     <a
-      href="https://api.whatsapp.com/send/?phone=905527971000&text=Hi%2C+I%27m+interested+in+your+properties.+I%27d+like+to+know+more%21&type=phone_number&app_absent=0"
+      href={`https://api.whatsapp.com/send/?phone=905527971000&text=${encodeURIComponent(t("whatsapp.defaultMessage"))}&type=phone_number&app_absent=0`}
       target="_blank"
       rel="noopener noreferrer"
       aria-label="Chat on WhatsApp"

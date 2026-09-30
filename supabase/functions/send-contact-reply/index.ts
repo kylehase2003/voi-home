@@ -9,7 +9,6 @@ const SUPABASE_SERVICE_ROLE_KEY = Deno.env.get("SUPABASE_SERVICE_ROLE_KEY");
 const allowedOrigins = [
   "https://voi-home.com",
   "https://www.voi-home.com",
-  "https://mrproperty.lovable.app",
 ];
 
 function getCorsHeaders(req: Request) {
@@ -140,15 +139,15 @@ const handler = async (req: Request): Promise<Response> => {
       body: JSON.stringify({
         from: "Voi Home <noreply@voi-home.com>",
         to: [submission.email],
-        subject: "Re: Your Inquiry to Voi Home",
+        subject: "Re: Your message to Voi Home",
         html: `
-          <p>Hello ${escapeHtml(submission.name)},</p>
-          <p>Thank you for reaching out to Voi Home. Here is our response to your inquiry:</p>
+          <p>Dear ${escapeHtml(submission.name)},</p>
+          <p>Thank you for your patience. Here is our reply to your message:</p>
           <hr />
           <p>${escapeHtml(reply).replace(/\n/g, "<br>")}</p>
           <hr />
-          <p>Best regards,<br>The Voi Home Team</p>
-          <p><small>This is an automated response. Please do not reply to this email.</small></p>
+          <p>With warm regards,<br>Voi Home</p>
+          <p><small>This mailbox is not monitored. To continue the conversation, write to info@voi-home.com or message us on WhatsApp at +90 552 797 10 00.</small></p>
         `,
       }),
     });

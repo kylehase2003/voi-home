@@ -193,14 +193,14 @@ const Properties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Luxury Properties in Istanbul & Bodrum"
-        description="Browse luxury apartments, villas & investment properties in Istanbul and Bodrum, every one personally vetted. Filter by location, type, budget. Turkish citizenship eligible."
+        title="Homes for Sale in Istanbul & Bodrum"
+        description="A short, carefully chosen collection of apartments, villas and investment homes in Istanbul and Bodrum, each one personally visited and checked. Citizenship-eligible homes available."
         path="/properties"
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "Luxury Properties in Istanbul & Bodrum, Türkiye",
-          description: "Curated luxury homes, villas, and investment properties across Türkiye, chosen for the details that matter.",
+          name: "Homes for Sale in Istanbul & Bodrum, Türkiye",
+          description: "A carefully chosen collection of homes in Istanbul and Bodrum, each one personally visited and checked.",
           url: "https://voi-home.com/properties",
           isPartOf: {
             "@type": "WebSite",

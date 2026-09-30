@@ -8,7 +8,7 @@ import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
-import heroImage from "@/assets/hero-villa.webp";
+import heroImage from "@/assets/photos/fallback-blog.webp";
 import { useTranslation } from "react-i18next";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import SEOHead from "@/components/SEOHead";

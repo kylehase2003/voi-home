@@ -74,8 +74,8 @@ Deno.serve(async (req) => {
   if (!kind || !slug || (kind !== "property" && kind !== "blog")) {
     return new Response(
       renderHtml({
-        title: "Voi Home — Premium Real Estate in Türkiye",
-        description: "Discover premium properties for sale and investment.",
+        title: "Voi Home — Boutique Real Estate in Istanbul & Bodrum",
+        description: "A few carefully chosen homes in Istanbul and Bodrum, each one known in full.",
         url: SITE_URL,
         image: DEFAULT_OG,
         type: "website",
@@ -101,8 +101,8 @@ Deno.serve(async (req) => {
     if (!data) {
       return new Response(
         renderHtml({
-          title: "Property — Voi Home",
-          description: "Explore premium properties on Voi Home.",
+          title: "A home in Türkiye — Voi Home",
+          description: "A carefully chosen home in Istanbul or Bodrum, from Voi Home.",
           url: canonical,
           image: DEFAULT_OG,
           type: "website",
@@ -117,7 +117,7 @@ Deno.serve(async (req) => {
     return new Response(
       renderHtml({
         title: `${data.title} | Voi Home`,
-        description: truncate(data.description || `View ${data.title} on Voi Home.`),
+        description: truncate(data.description || `${data.title}, chosen and checked by Voi Home.`),
         url: canonical,
         image,
         type: "product",
@@ -138,8 +138,8 @@ Deno.serve(async (req) => {
   if (!data) {
     return new Response(
       renderHtml({
-        title: "Blog — Voi Home",
-        description: "Insights on real estate in Türkiye.",
+        title: "The Journal — Voi Home",
+        description: "Considered notes on property, law and daily life in Türkiye.",
         url: canonical,
         image: DEFAULT_OG,
         type: "website",
@@ -150,7 +150,7 @@ Deno.serve(async (req) => {
   return new Response(
     renderHtml({
       title: `${data.title} | Voi Home`,
-      description: truncate(data.excerpt || `Read "${data.title}" on the Voi Home blog.`),
+      description: truncate(data.excerpt || `Read "${data.title}" in the Voi Home journal.`),
       url: canonical,
       image: data.featured_image || DEFAULT_OG,
       type: "article",

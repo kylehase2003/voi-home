@@ -86,6 +86,12 @@ const PropertyScrollShowcase = () => {
           });
           // The last property has no "out" beat above - it stays fully
           // visible once revealed, instead of fading away like the rest.
+          // Pad the timeline to 1 so there's a hold on the last property
+          // (~half a screen of scroll) before the pin releases; without it
+          // GSAP stretches the timeline to the last tween and the section
+          // scrolls away the moment the final card lands. The wrapper height
+          // below was grown to keep the per-card pacing unchanged.
+          tl.set({}, {}, 1);
         });
       }, wrapperRef);
     })();
@@ -99,7 +105,7 @@ const PropertyScrollShowcase = () => {
   if (loading || featured.length === 0) return null;
 
   return (
-    <div ref={wrapperRef} className={`relative bg-background ${featured.length > 1 ? "md:h-[320vh]" : ""}`}>
+    <div ref={wrapperRef} className={`relative bg-background ${featured.length > 1 ? "md:h-[370vh]" : ""}`}>
       <div className="relative md:sticky md:top-0 md:h-screen w-full flex flex-col items-center justify-center px-6 py-20 md:py-0 overflow-hidden">
         <div className="text-center mb-6 md:mb-8 max-w-xl" style={{ fontFamily: GENERAL_SANS }}>
           <div>
@@ -107,7 +113,7 @@ const PropertyScrollShowcase = () => {
               {t("hero.eyebrow")}
             </div>
             <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
-              Homes worth stopping to scroll for.
+              {t("home.showcase.title")}
             </h2>
           </div>
         </div>
@@ -176,8 +182,8 @@ const PropertyScrollShowcase = () => {
                 </div>
                 <div className="text-sm text-muted-foreground max-w-[200px]">
                   {[
-                    property.bedrooms ? `${property.bedrooms} Bed` : null,
-                    property.bathrooms ? `${property.bathrooms} Bath` : null,
+                    property.bedrooms ? t("common.bed", { count: property.bedrooms }) : null,
+                    property.bathrooms ? t("common.bath", { count: property.bathrooms }) : null,
                     property.area_sqm ? `${property.area_sqm} m²` : null,
                   ]
                     .filter(Boolean)

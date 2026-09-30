@@ -156,7 +156,7 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
         {
           headers: {
             'Accept-Language': 'en',
-            'User-Agent': 'MRProperty-Dashboard/1.0',
+            'User-Agent': 'VoiHome-Dashboard/1.0',
           },
         }
       );
@@ -167,7 +167,7 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
         {
           headers: {
             'Accept-Language': 'en',
-            'User-Agent': 'MRProperty-Dashboard/1.0',
+            'User-Agent': 'VoiHome-Dashboard/1.0',
           },
         }
       );
@@ -275,7 +275,7 @@ const MapPicker = ({ latitude, longitude, onLocationSelect }: MapPickerProps) =>
           {
             headers: {
               'Accept-Language': 'en',
-              'User-Agent': 'MRProperty-Dashboard/1.0',
+              'User-Agent': 'VoiHome-Dashboard/1.0',
             },
           }
         );

@@ -185,16 +185,6 @@ const PropertyMap = ({
       return t('regions.ankara', 'Ankara');
     }
 
-    // UAE regions
-    if (locationKey === 'abu dhabi' || locationKey === 'abudhabi') {
-      return t('regions.abuDhabi', 'Abu Dhabi');
-    }
-    if (locationKey === 'sharjah') {
-      return t('regions.sharjah', 'Sharjah');
-    }
-    if (locationKey === 'ajman') {
-      return t('regions.ajman', 'Ajman');
-    }
     return loc;
   };
 

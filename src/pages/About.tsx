@@ -3,16 +3,17 @@ import { useTranslation } from "react-i18next";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
-import founderPhoto from "@/assets/hero-villa.webp";
-import buildingDetail from "@/assets/hero-building.jpg";
-import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
+// Founder placeholder photo; see the hidden FounderProfile block below.
+// import founderPhoto from "@/assets/hero-villa.webp";
+import buildingDetail from "@/assets/photos/about-facade.webp";
+import heroIstanbul1 from "@/assets/photos/about-rooftops.webp";
 import SEOHead from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import AboutHero from "@/components/editorial/AboutHero";
 import StoryScroll from "@/components/editorial/StoryScroll";
 import StatBand from "@/components/editorial/StatBand";
 import ManifestoList from "@/components/editorial/ManifestoList";
-import FounderProfile from "@/components/editorial/FounderProfile";
+// import FounderProfile from "@/components/editorial/FounderProfile";
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -29,8 +30,8 @@ const About = () => {
   return (
     <div className="min-h-screen">
       <SEOHead
-        title="About Us - Luxury Real Estate Consultancy"
-        description="Voi Home's expert team delivers luxury real estate consultancy in Istanbul and Bodrum, Türkiye, with personalized, detail-first service."
+        title="About Voi Home — Boutique Real Estate in Türkiye"
+        description="A small, personal real estate house in Istanbul and Bodrum. Fewer clients, fewer homes, and every one of them known in full."
         path="/about"
       />
       <Header />
@@ -40,13 +41,13 @@ const About = () => {
         <AboutHero
           eyebrow={t("aboutPage.hero.title")}
           title={t("aboutPage.philosophy.title")}
-          lead="We check the things that decide whether a property is actually worth owning - the paperwork, the building, the neighborhood - before we ever recommend it to you."
+          lead={t("aboutPage.hero.lead")}
           image={heroIstanbul1}
         />
 
         <StoryScroll
           image={buildingDetail}
-          imageAlt="Close-up of a building facade in Istanbul"
+          imageAlt={t("aboutPage.story.imageAlt")}
           tagline={t("aboutPage.story.tagline")}
           paragraphs={[
             t("aboutPage.story.paragraph1"),
@@ -55,7 +56,7 @@ const About = () => {
           ]}
           closingLine={t("aboutPage.story.closingLine1")}
           ctaLabel={t("aboutPage.story.closingLine2")}
-          ctaHref="https://api.whatsapp.com/send/?phone=905527971000&text=Hi%2C+I%27m+interested+in+your+properties.+I%27d+like+to+know+more%21&type=phone_number&app_absent=0"
+          ctaHref={`https://api.whatsapp.com/send/?phone=905527971000&text=${encodeURIComponent(t("whatsapp.defaultMessage"))}&type=phone_number&app_absent=0`}
         />
 
         <StatBand
@@ -106,19 +107,21 @@ const About = () => {
           items={principles}
         />
 
-        <FounderProfile
-          image={founderPhoto}
-          imageAlt="Voi Home"
-          quote="Add a short introduction from your founder here - a few lines on their experience, philosophy, and what clients can expect when working with them."
-          name="Founder Name"
-          role="Title, Voi Home"
-        />
+        {/* Founder profile is hidden until the real photo, name and introduction are ready
+            (About page redesign). Re-enable by restoring this block with real content:
+            <FounderProfile
+            image={founderPhoto}
+            imageAlt="Voi Home"
+            quote="Add a short introduction from your founder here - a few lines on their experience, philosophy, and what clients can expect when working with them."
+            name="Founder Name"
+            role="Title, Voi Home"
+            /> */}
 
         <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
           <div className="container mx-auto px-6">
             <RevealOnScroll>
               <h2 className={`text-3xl md:text-5xl mb-8 max-w-2xl mx-auto ${isRTL ? "font-arabic" : "font-serif"}`}>
-                Every detail we check is one less thing you have to worry about.
+                {t("aboutPage.closing.title")}
               </h2>
               <Link to="/contact">
                 <Button size="lg" className="bg-white text-primary hover:bg-white/90">

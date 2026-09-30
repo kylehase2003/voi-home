@@ -51,8 +51,8 @@ const Partners = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Our Partners - Trusted Real Estate Developers"
-        description="Explore Voi Home's trusted network of real estate developers and partners in Istanbul and Bodrum, Türkiye."
+        title="Our Partners — Voi Home"
+        description="The developers, lawyers and specialists Voi Home trusts with its clients' decisions in Istanbul and Bodrum."
         path="/partners"
       />
       <Header />

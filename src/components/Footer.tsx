@@ -17,7 +17,7 @@ const Footer = () => {
 
             <div className="flex gap-1">
               <a
-                href="https://www.facebook.com/profile.php?id=61576846872911&locale=sv_SE"
+                href="https://www.facebook.com/profile.php?id=61576846872911"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"

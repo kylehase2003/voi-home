@@ -15,12 +15,16 @@ import ProcessSteps from "@/components/editorial/ProcessSteps";
 import BlogCategoryPicker from "@/components/editorial/BlogCategoryPicker";
 import PropertyScrollShowcase from "@/components/editorial/PropertyScrollShowcase";
 import PhotoScroller from "@/components/editorial/PhotoScroller";
-import heroIstanbul1 from "@/assets/hero-istanbul-1-optimized.webp";
-import heroIstanbul2 from "@/assets/hero-istanbul-2-optimized.webp";
-import heroIstanbul3 from "@/assets/hero-istanbul-3-optimized.webp";
-import heroVilla from "@/assets/hero-villa.webp";
-import apartmentModern from "@/assets/apartment-modern.jpg";
-import penthouseView from "@/assets/penthouse-view.jpg";
+import serviceKitchen from "@/assets/photos/service-kitchen.webp";
+import serviceTower from "@/assets/photos/service-tower.webp";
+import testimonialBosphorus from "@/assets/photos/testimonial-bosphorus.webp";
+import processLivingRoom from "@/assets/photos/process-living-room.webp";
+import scrollerSkylineTower from "@/assets/photos/scroller-skyline-tower.webp";
+import scrollerBosphorusFerry from "@/assets/photos/scroller-bosphorus-ferry.webp";
+import scrollerHillsideHomes from "@/assets/photos/scroller-hillside-homes.webp";
+import scrollerBosphorusBridge from "@/assets/photos/scroller-bosphorus-bridge.webp";
+import scrollerPeraFacades from "@/assets/photos/scroller-pera-facades.webp";
+import scrollerTurret from "@/assets/photos/scroller-turret.webp";
 
 const Experience = () => {
   const { t, i18n } = useTranslation();
@@ -29,8 +33,8 @@ const Experience = () => {
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
       <SEOHead
-        title="Luxury Real Estate in Istanbul & Bodrum, Türkiye"
-        description="Voi Home offers curated luxury homes, villas, and investment properties in Istanbul and Bodrum, every detail checked before it reaches you. Turkish citizenship eligibility available. Contact us."
+        title="Boutique Real Estate in Istanbul & Bodrum, Türkiye"
+        description="Voi Home is a boutique real estate house in Istanbul and Bodrum. A few carefully chosen homes, each checked down to the title deed, with personal guidance on investment and Turkish citizenship."
         path="/"
       />
       <Helmet>
@@ -47,23 +51,21 @@ const Experience = () => {
 
       <main>
         <ServicesRows
-          headline="That's not all we do."
-          subheadline="Finding the property is the easy part. Here's how we support you before, during, and after the deal."
+          headline={t("home.services.headline")}
+          subheadline={t("home.services.subheadline")}
           rows={[
             {
               tag: t("ourServices.item3.title"),
-              title: "We evaluate every opportunity before you commit.",
-              description:
-                "Rental yield, projected appreciation, title status, developer track record — every listing we bring you has already been checked against the fundamentals that actually decide whether an investment performs.",
-              image: apartmentModern,
+              title: t("home.services.row1.title"),
+              description: t("home.services.row1.description"),
+              image: serviceKitchen,
             },
             {
               reversed: true,
               tag: t("ourServices.item1.title"),
-              title: "When it's time to sell, we handle the whole process.",
-              description:
-                "From pricing it correctly for the current market to marketing it to the right buyers, our team manages the resale from listing to closing so you don't have to.",
-              image: heroVilla,
+              title: t("home.services.row2.title"),
+              description: t("home.services.row2.description"),
+              image: serviceTower,
             },
           ]}
         />
@@ -72,29 +74,29 @@ const Experience = () => {
           <FeaturedProperties />
         </RevealOnScroll>
 
-        <TestimonialBreak backgroundImage={heroIstanbul3} />
+        <TestimonialBreak backgroundImage={testimonialBosphorus} />
 
         <StatementSection
-          tag="Why Voi Home"
-          lines={["Every market has a right time to buy.", "We make sure you don't miss it."]}
+          tag={t("home.why.tag")}
+          lines={[t("home.why.line1"), t("home.why.line2")]}
         />
 
         <ProcessSteps
-          tag="How it works"
-          title="From first search to the keys in your hand."
-          description="Buying property abroad has more steps than buying at home. We handle the parts that usually slow people down."
-          image={heroIstanbul2}
+          tag={t("home.process.tag")}
+          title={t("home.process.title")}
+          description={t("home.process.description")}
+          image={processLivingRoom}
           steps={[
-            { num: "01", title: "We search", desc: "Matched to your budget and goals" },
-            { num: "02", title: "We verify", desc: "Title, permits, developer standing" },
-            { num: "03", title: "We close", desc: "Paperwork and transfer, handled" },
-            { num: "04", title: "We support", desc: "Ongoing, after you own it" },
+            { num: "01", title: t("home.process.step1.title"), desc: t("home.process.step1.desc") },
+            { num: "02", title: t("home.process.step2.title"), desc: t("home.process.step2.desc") },
+            { num: "03", title: t("home.process.step3.title"), desc: t("home.process.step3.desc") },
+            { num: "04", title: t("home.process.step4.title"), desc: t("home.process.step4.desc") },
           ]}
         />
 
         <BlogCategoryPicker />
 
-        <PhotoScroller images={[heroIstanbul1, heroIstanbul3, heroVilla, apartmentModern, penthouseView, heroIstanbul2]} />
+        <PhotoScroller images={[scrollerSkylineTower, scrollerBosphorusFerry, scrollerHillsideHomes, scrollerBosphorusBridge, scrollerPeraFacades, scrollerTurret]} />
 
         <RevealOnScroll>
           <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">

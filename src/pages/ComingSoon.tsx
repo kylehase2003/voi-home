@@ -1,7 +1,9 @@
 import logo from "@/assets/logo.png";
-import heroImage from "@/assets/hero-villa.webp";
+import heroImage from "@/assets/photos/hero-skyline.webp";
+import { useTranslation } from "react-i18next";
 
 const ComingSoon = () => {
+  const { t } = useTranslation();
   return (
     <div className="min-h-screen relative flex items-center justify-center overflow-hidden">
       {/* Background Image with Green Overlay */}
@@ -34,11 +36,11 @@ const ComingSoon = () => {
         </div>
         
         <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl tracking-[-1.5px] mb-6 animate-fade-in" style={{ animationDelay: '0.4s' }}>
-          Something is in the making, <span className="text-gold animate-[shimmer_3s_ease-in-out_infinite] inline-block">YOU'LL LOVE IT!</span>
+          {t("comingSoon.titleStart")} <span className="text-gold animate-[shimmer_3s_ease-in-out_infinite] inline-block">{t("comingSoon.titleAccent")}</span>
         </h1>
         
         <p className="text-lg md:text-xl text-white/90 mb-12 leading-relaxed max-w-3xl mx-auto animate-fade-in" style={{ animationDelay: '0.6s' }}>
-          From vetted listings to expert guidance, Voi Home will soon be your go-to partner for buying, selling, and investing in real estate across Türkiye.
+          {t("comingSoon.subtitle")}
         </p>
 
         {/* Animated dots */}
@@ -53,7 +55,7 @@ const ComingSoon = () => {
             href="mailto:info@voi-home.com"
             className="inline-block px-8 py-3 bg-gold text-white rounded-md hover:bg-gold/90 transition-all duration-300 hover:scale-110 hover:shadow-[0_0_30px_rgba(0,0,0,0.5)] font-medium"
           >
-            Contact us
+            {t("aboutCompany.contactButton")}
           </a>
         </div>
 

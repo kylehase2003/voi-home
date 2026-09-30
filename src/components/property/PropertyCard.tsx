@@ -3,7 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { MapPin, Building2 } from "lucide-react";
 import { Property } from "@/types/property";
-import apartmentImage from "@/assets/apartment-modern.jpg";
+import apartmentImage from "@/assets/photos/fallback-property.webp";
 import { useTranslation } from "react-i18next";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";

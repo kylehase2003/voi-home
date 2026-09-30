@@ -15,7 +15,7 @@ import { MapPin, Maximize2, Minimize2 } from "lucide-react";
 import { useProperties } from "@/hooks/useProperties";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import OptimizedImage from "@/components/OptimizedImage";
-import apartmentImage from "@/assets/apartment-modern.jpg";
+import apartmentImage from "@/assets/photos/fallback-property.webp";
 import { Property } from "@/types/property";
 
 // Plain teardrop pin, drawn inline so it never carries any brand mark.
@@ -104,8 +104,8 @@ const PropertiesMap = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Properties Map - Explore Listings on the Map"
-        description="Explore our properties for sale and rent on an interactive map covering Istanbul and Bodrum. Click pins to view property details."
+        title="Map of Our Homes in Istanbul & Bodrum"
+        description="See where each Voi Home property sits in Istanbul and Bodrum: its street, its neighborhood, its distance to the water."
         path="/properties-map"
       />
       <Header />
@@ -122,12 +122,12 @@ const PropertiesMap = () => {
                   i18n.language === "ar" ? "font-arabic" : "font-serif"
                 }`}
               >
-                {t("propertiesMap.title", "Properties Map")}
+                {t("propertiesMap.title", "The map")}
               </h1>
               <p className="text-base leading-[1.7] text-muted-foreground">
                 {t(
                   "propertiesMap.subtitle",
-                  "Explore our listings on an interactive map. Click any pin to see details."
+                  "Where each home sits: its street, its neighbors, its distance to the water. Select a pin to step inside."
                 )}
               </p>
             </div>
@@ -267,7 +267,7 @@ const PropertiesMap = () => {
               <p className="text-center text-sm mt-6 text-muted-foreground">
                 {t(
                   "propertiesMap.noCoords",
-                  "No properties have map coordinates yet. Add latitude and longitude in the dashboard to display them here."
+                  "The map is still being drawn. In the meantime, every home can be viewed in the list."
                 )}
               </p>
             )}
