@@ -1,8 +1,8 @@
 # Voi Home — Voice
 
-Voi Home is a small, personal real estate house in Türkiye. We take on a limited number
-of clients and know each one by name. The writing should feel like that: unhurried,
-attentive, and specific.
+Voi Home is a personal, boutique real estate firm in Türkiye. We are selective about the
+homes we represent and attentive to every client, each known by name. The writing should
+feel like that: unhurried, attentive, and specific.
 
 **The image to write toward: fine wine.** Layered rather than loud. It rewards a
 second read. It names the vineyard, the year, the slope — never just "excellent."
@@ -23,8 +23,11 @@ second read. It names the vineyard, the year, the slope — never just "excellen
 5. **Sensory where it matters, precise where it counts.** Homes get texture — stone,
    light, the sound of a street. Money, law, and process get plain, exact language.
    Never be poetic about a contract.
-6. **Few, not many.** We are boutique. We talk about a handful of homes, chosen, not a
-   catalogue. Avoid volume language ("thousands of listings," "huge selection").
+6. **Chosen, not collected.** We talk about homes we have selected, not a catalogue.
+   Avoid volume language ("thousands of listings," "huge selection").
+7. **Never call Voi Home "small."** Boutique and selective describe how we choose homes
+   and treat clients, not the size of the team or of the properties. Avoid
+   "small house" and "real estate house" (ambiguous in real estate); say "firm".
 
 ## Mechanics
 

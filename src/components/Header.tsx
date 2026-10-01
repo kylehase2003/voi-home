@@ -13,6 +13,7 @@ const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 const Header = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
+  const isRTL = i18n.language === "ar";
 
   const changeLanguage = (lng: string) => i18n.changeLanguage(lng);
 
@@ -67,7 +68,7 @@ const Header = () => {
           </nav>
 
           {/* Language switcher + CTA */}
-          <div className="hidden xl:flex items-center gap-4 ml-auto">
+          <div className="hidden xl:flex items-center gap-4 ms-auto">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center gap-1.5 px-3 py-2 text-[13.5px] font-medium text-white/70 hover:text-white rounded-full hover:bg-white/10 transition-colors">
@@ -94,7 +95,7 @@ const Header = () => {
           {/* Mobile hamburger */}
           <SheetTrigger asChild>
             <button
-              className="xl:hidden ml-auto flex items-center justify-center h-10 w-10 text-white"
+              className="xl:hidden ms-auto flex items-center justify-center h-10 w-10 text-white"
               aria-label="Open navigation menu"
             >
               <Menu size={22} />
@@ -102,7 +103,7 @@ const Header = () => {
           </SheetTrigger>
         </div>
       </header>
-      <SheetContent side="right" className="bg-[#1D1B18] border-l border-white/10 w-[85vw] sm:w-[400px] p-0 shadow-2xl">
+      <SheetContent side={isRTL ? "left" : "right"} className="bg-[#1D1B18] border-white/10 w-[85vw] sm:w-[400px] p-0 shadow-2xl">
         <SheetHeader className="sr-only">
           <SheetTitle>{t("nav.home")}</SheetTitle>
         </SheetHeader>
@@ -145,7 +146,7 @@ const Header = () => {
 
             <Link to="/contact">
               <Button className="w-full bg-gold hover:bg-gold/90 text-white py-5 text-base font-medium">
-                <HomeIcon className="mr-2 h-5 w-5" />
+                <HomeIcon className="me-2 h-5 w-5" />
                 {t("nav.contactUs")}
               </Button>
             </Link>

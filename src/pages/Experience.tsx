@@ -34,7 +34,7 @@ const Experience = () => {
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
       <SEOHead
         title="Boutique Real Estate in Istanbul & Bodrum, Türkiye"
-        description="Voi Home is a boutique real estate house in Istanbul and Bodrum. A few carefully chosen homes, each checked down to the title deed, with personal guidance on investment and Turkish citizenship."
+        description="Voi Home is a boutique real estate firm in Istanbul and Bodrum. A few carefully chosen homes, each checked down to the title deed, with personal guidance on investment and Turkish citizenship."
         path="/"
       />
       <Helmet>

@@ -14,6 +14,8 @@ import StoryScroll from "@/components/editorial/StoryScroll";
 import StatBand from "@/components/editorial/StatBand";
 import ManifestoList from "@/components/editorial/ManifestoList";
 // import FounderProfile from "@/components/editorial/FounderProfile";
+import TeamSection from "@/components/editorial/TeamSection";
+import { TEAM } from "@/data/team";
 
 const About = () => {
   const { t, i18n } = useTranslation();
@@ -31,7 +33,7 @@ const About = () => {
     <div className="min-h-screen">
       <SEOHead
         title="About Voi Home — Boutique Real Estate in Türkiye"
-        description="A small, personal real estate house in Istanbul and Bodrum. Fewer clients, fewer homes, and every one of them known in full."
+        description="Voi Home is a personal, boutique real estate firm in Istanbul and Bodrum: selective with the homes we represent, attentive to every client."
         path="/about"
       />
       <Header />
@@ -105,6 +107,13 @@ const About = () => {
           eyebrow={t("aboutPage.philosophy.label")}
           title={t("aboutPage.principles.title")}
           items={principles}
+        />
+
+        <TeamSection
+          eyebrow={t("aboutPage.team.eyebrow")}
+          title={t("aboutPage.team.title")}
+          intro={t("aboutPage.team.intro")}
+          members={TEAM}
         />
 
         {/* Founder profile is hidden until the real photo, name and introduction are ready

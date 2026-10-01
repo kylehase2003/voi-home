@@ -20,7 +20,7 @@
   },
   "nav": {
     "home": "Home",
-    "properties": "Homes",
+    "properties": "Collection",
     "propertiesMap": "Map View",
     "blogs": "Journal",
     "about": "About",
@@ -39,7 +39,7 @@
     "noCoords": "The map is still being drawn. In the meantime, every home can be viewed in the list."
   },
   "footer": {
-    "description": "A small real estate house in Istanbul and Bodrum. We keep our list of homes short and our attention long, so every client is known by name and every property by its details.",
+    "description": "Boutique real estate in Istanbul and Bodrum. We keep our list of homes short and our attention long, so every client is known by name and every property by its details.",
     "quickLinks": "Explore",
     "browseProperties": "Our homes",
     "aboutUs": "About Us",
@@ -52,16 +52,16 @@
     "rights": "Voi Home. All rights reserved.",
     "privacyPolicy": "Privacy Policy",
     "termsConditions": "Terms & Conditions",
-    "importantLinks": "The house",
+    "importantLinks": "Voi Home",
     "ourPartners": "Our Partners",
     "buyerGuide": "Buyer Guide",
     "ourTeam": "Our Team",
     "admin": "Admin"
   },
   "hero": {
-    "eyebrow": "A boutique real estate house · Istanbul & Bodrum",
+    "eyebrow": "Boutique real estate · Istanbul & Bodrum",
     "title": "Chosen slowly.\nKnown completely.",
-    "subtitle": "We take on a few clients and fewer homes, and come to know each one down to the grain of the stone, the angle of the afternoon light, and the last line of the title deed.",
+    "subtitle": "We choose every home we represent, and come to know each one down to the grain of the stone, the angle of the afternoon light, and the last line of the title deed.",
     "exploreProperties": "View our homes",
     "bookConsultation": "Speak with us",
     "buy": "Buy",
@@ -306,7 +306,7 @@
   },
   "teamPage": {
     "title": "The team",
-    "subtitle": "The people you will actually speak with. A small team, by design.",
+    "subtitle": "The people you will work with, from the first conversation to the keys.",
     "breadcrumb": "Our Team",
     "loading": "Loading…",
     "noMembers": "Introductions are on their way."
@@ -403,7 +403,7 @@
     },
     "services": {
       "title": "Our Services",
-      "content": "Voi Home is a real estate advisory house. Our services include:",
+      "content": "Voi Home is a real estate advisory firm. Our services include:",
       "item1": "Presenting homes and helping you search for the right one",
       "item2": "Arranging private viewings, in person or by video",
       "item3": "Advice on property, investment and citizenship by investment",
@@ -449,13 +449,13 @@
     },
     "philosophy": {
       "label": "Our philosophy",
-      "title": "Small by choice."
+      "title": "Chosen, not collected."
     },
     "story": {
       "title": "The story behind Voi Home",
       "tagline": "Some agencies sell a property.\nWe take the time to understand one.",
       "paragraph1": "A good home reveals itself slowly: the way morning light crosses the kitchen, how the building manager answers the phone, what the street sounds like at eleven at night, whether the title deed is as clean as the listing suggests. Voi Home exists to notice all of it before you have to.",
-      "paragraph2": "We keep our practice deliberately small. Fewer clients means each one is known by name, and fewer homes means each one is known in full: its paperwork, its developer, its neighbors. When we recommend a property, we have already asked the questions you would ask, and a few you would not have thought to.",
+      "paragraph2": "We are selective by design. We take on only the clients we can serve properly, so each one is known by name, and only the homes we can stand behind, so each one is known in full: its paperwork, its developer, its neighbors. When we recommend a property, we have already asked the questions you would ask, and a few you would not have thought to.",
       "paragraph3": "We are rooted in Istanbul and Bodrum and work only in Türkiye. Everything we tell you comes from having walked the street, stood in the rooms and read the documents ourselves.",
       "closingLine1": "A home is never just a property.",
       "closingLine2": "Let us show you what we mean.",
@@ -483,30 +483,35 @@
       "priceGrowth": "Nationalities"
     },
     "principles": {
-      "title": "The principles behind every recommendation",
+      "title": "What we hold ourselves to.",
       "item1": {
-        "title": "Knowledge first",
-        "description": "Every recommendation rests on research, on the ground and on paper. We would rather understand a market deeply than follow it loudly."
+        "title": "We read every line.",
+        "description": "The title deed, the zoning plan, the management contract, the developer's last handovers. If a document can change what a home is worth, we have read it before you ever see the home."
       },
       "item2": {
-        "title": "Trust is earned in the details",
-        "description": "Not through promises, but through telling you the uncomfortable thing early: the missing permit, the optimistic rental estimate, the better home next door."
+        "title": "Most homes do not make it.",
+        "description": "We turn down far more homes than we show. A beautiful listing earns a visit. Only a home that holds up to scrutiny earns a recommendation."
       },
       "item3": {
-        "title": "A few homes, well chosen",
-        "description": "Anyone can show a hundred listings. We would rather show you three that genuinely fit your life, your finances and your plans for the years ahead."
+        "title": "You hear the hard part first.",
+        "description": "A missing permit, an optimistic rental figure, a street that is loud after midnight. If a home has a weakness, you will hear it from us before you hear anything else."
       },
       "item4": {
-        "title": "One client at a time",
-        "description": "No two buyers want the same thing, even when they ask for the same thing. We listen for the difference, and build our advice around the person, not the brief."
+        "title": "Your timing, not ours.",
+        "description": "A good decision takes the time it takes. We never hurry anyone toward a signature, and we will tell you plainly when waiting is the wiser choice."
       },
       "item5": {
-        "title": "Long after the keys",
-        "description": "Our work does not end at the title deed office. Furnishing, letting, resale, a second purchase: we intend to be the advisor you return to for all of it."
+        "title": "Discretion, always.",
+        "description": "What you tell us about your plans, your finances and your family stays with us. Most of our clients find us through a friend. None of them through a list."
       }
     },
     "closing": {
       "title": "Every detail we check is one less thing you have to wonder about."
+    },
+    "team": {
+      "eyebrow": "The team",
+      "title": "The people behind every recommendation.",
+      "intro": "Advisors, analysts and specialists who know Istanbul and Bodrum street by street. These are the people you will work with, from the first conversation to the keys."
     }
   },
   "dashboardOverview": {
@@ -892,8 +897,8 @@
     "deleteSelected": "Delete Selected"
   },
   "properties": {
-    "title": "Our homes",
-    "breadcrumb": "Homes",
+    "title": "The collection",
+    "breadcrumb": "Collection",
     "filters": "Filters",
     "viewAll": "View All",
     "turkey": "Türkiye",
@@ -1255,7 +1260,7 @@
     "h1": {
       "home": "Luxury Real Estate in Istanbul & Bodrum, Türkiye",
       "properties": "Homes for sale in Istanbul and Bodrum, Türkiye",
-      "about": "About Voi Home, a boutique real estate house in Türkiye",
+      "about": "About Voi Home, boutique real estate in Türkiye",
       "contact": "Contact Voi Home — Real Estate Advisors in Istanbul & Bodrum"
     }
   },
@@ -1269,8 +1274,8 @@
   "home": {
     "badge": "SPEAK WITH US • VOI HOME • ",
     "statement": {
-      "line1": "We visit a great many homes.",
-      "line2": "We recommend very few."
+      "line1": "We see hundreds of homes.",
+      "line2": "We recommend only a few."
     },
     "showcase": {
       "title": "A few homes, currently in our care."
@@ -1289,8 +1294,8 @@
     },
     "why": {
       "tag": "Why Voi Home",
-      "line1": "A small house, on purpose.",
-      "line2": "So every client has our full attention."
+      "line1": "Personal, from the first call.",
+      "line2": "Every client has our full attention."
     },
     "process": {
       "tag": "The process",
@@ -1317,7 +1322,7 @@
   "comingSoon": {
     "titleStart": "Something is being prepared,",
     "titleAccent": "with care.",
-    "subtitle": "A small real estate house for Istanbul and Bodrum. A few homes, chosen slowly and known completely. We will open our doors shortly."
+    "subtitle": "Boutique real estate in Istanbul and Bodrum. Homes chosen slowly and known completely. We will open our doors shortly."
   },
   "whatsapp": {
     "defaultMessage": "Hello, I would like to speak with Voi Home about finding a home."
