@@ -20,7 +20,7 @@
   },
   "nav": {
     "home": "Home",
-    "properties": "Collection",
+    "properties": "Properties",
     "propertiesMap": "Map View",
     "blogs": "Journal",
     "about": "About",
@@ -897,8 +897,8 @@
     "deleteSelected": "Delete Selected"
   },
   "properties": {
-    "title": "The collection",
-    "breadcrumb": "Collection",
+    "title": "Properties",
+    "breadcrumb": "Properties",
     "filters": "Filters",
     "viewAll": "View All",
     "turkey": "Türkiye",

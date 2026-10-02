@@ -182,7 +182,7 @@ const Footer = () => {
         </div>
 
         <div className="border-t border-primary-foreground/20 pt-5 flex flex-col md:flex-row justify-between items-center gap-4">
-          <p className="text-sm text-primary-foreground/60">© 2025 {t("footer.rights")}</p>
+          <p className="text-sm text-primary-foreground/60">© {new Date().getFullYear()} {t("footer.rights")}</p>
           <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/60 justify-center md:justify-end">
             <Link
               to="/privacy"

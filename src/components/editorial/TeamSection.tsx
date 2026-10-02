@@ -9,10 +9,9 @@ interface TeamSectionProps {
   members: TeamMember[];
 }
 
-// Each person gets their own card - portrait, name, role and a short
-// introduction - rather than a wall of headshots. Cards wrap and center, so
-// an uneven last row still sits balanced.
-// Without a photo, the portrait shows the person's number in the same
+// One person per row: a landscape photo on one side and their introduction
+// on the other, alternating sides down the page like a magazine profile.
+// Without a photo, the frame shows the person's number in the same
 // oversized serif as the About page's manifesto list.
 const TeamSection = ({ eyebrow, title, intro, members }: TeamSectionProps) => {
   const { i18n } = useTranslation();
@@ -31,34 +30,47 @@ const TeamSection = ({ eyebrow, title, intro, members }: TeamSectionProps) => {
           <p className="text-muted-foreground leading-[1.7] max-w-xl">{intro}</p>
         </RevealOnScroll>
 
-        <div className="flex flex-wrap justify-center gap-x-6 gap-y-14 md:gap-x-8 md:gap-y-16">
-          {members.map((m, i) => (
-            <RevealOnScroll
-              key={`${m.name}-${i}`}
-              delay={(i % 4) * 60}
-              className="w-full sm:w-[calc(50%-12px)] md:w-[calc(33.333%-22px)] lg:w-[calc(25%-24px)]"
-            >
-              <article>
-                <div className="relative aspect-[4/5] rounded-[20px] overflow-hidden bg-muted mb-5">
-                  {m.photo ? (
-                    <img src={m.photo} alt={m.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
-                  ) : (
-                    <span
-                      aria-hidden
-                      className="absolute inset-0 flex items-center justify-center text-6xl font-serif text-foreground/15 tabular-nums"
+        <div className="space-y-16 md:space-y-24">
+          {members.map((m, i) => {
+            const flip = i % 2 === 1;
+            return (
+              <RevealOnScroll key={`${m.name}-${i}`}>
+                <article
+                  className={`grid grid-cols-1 gap-8 md:gap-16 items-center ${
+                    flip ? "md:grid-cols-[1fr_1.35fr]" : "md:grid-cols-[1.35fr_1fr]"
+                  }`}
+                >
+                  <div
+                    className={`relative aspect-[3/2] rounded-[20px] overflow-hidden bg-muted ${
+                      flip ? "md:order-2" : ""
+                    }`}
+                  >
+                    {m.photo ? (
+                      <img src={m.photo} alt={m.localName?.[lang] ?? m.name} loading="lazy" className="absolute inset-0 w-full h-full object-cover" />
+                    ) : (
+                      <span
+                        aria-hidden
+                        className="absolute inset-0 flex items-center justify-center text-7xl md:text-8xl font-serif text-foreground/15 tabular-nums"
+                      >
+                        {String(i + 1).padStart(2, "0")}
+                      </span>
+                    )}
+                  </div>
+                  <div className={`max-w-md ${flip ? "md:order-1 md:justify-self-end" : ""}`}>
+                    <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
+                      {m.role[lang] ?? m.role.en}
+                    </div>
+                    <h3
+                      className={`text-3xl md:text-[40px] leading-[1.1] tracking-[-1px] text-foreground mb-5 ${serif}`}
                     >
-                      {String(i + 1).padStart(2, "0")}
-                    </span>
-                  )}
-                </div>
-                <h3 className={`text-xl leading-[1.25] tracking-[-0.3px] text-foreground mb-1.5 ${serif}`}>{m.name}</h3>
-                <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-3">
-                  {m.role[lang] ?? m.role.en}
-                </div>
-                <p className="text-sm text-muted-foreground leading-[1.65]">{m.bio[lang] ?? m.bio.en}</p>
-              </article>
-            </RevealOnScroll>
-          ))}
+                      {m.localName?.[lang] ?? m.name}
+                    </h3>
+                    <p className="text-muted-foreground leading-[1.7]">{m.bio[lang] ?? m.bio.en}</p>
+                  </div>
+                </article>
+              </RevealOnScroll>
+            );
+          })}
         </div>
       </div>
     </section>

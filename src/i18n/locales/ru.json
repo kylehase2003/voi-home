@@ -20,7 +20,7 @@
   },
   "nav": {
     "home": "Главная",
-    "properties": "Коллекция",
+    "properties": "Недвижимость",
     "propertiesMap": "Карта",
     "blogs": "Журнал",
     "about": "О нас",
@@ -878,8 +878,8 @@
     "deleteSelected": "Удалить выбранные"
   },
   "properties": {
-    "title": "Коллекция",
-    "breadcrumb": "Коллекция",
+    "title": "Недвижимость",
+    "breadcrumb": "Недвижимость",
     "filters": "Фильтры",
     "viewAll": "Показать все",
     "turkey": "Турция",
