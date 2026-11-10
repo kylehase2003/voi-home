@@ -28,7 +28,8 @@
     "contactUs": "Speak with us",
     "buyerGuide": "Buyer Guide",
     "turkishCitizenship": "Turkish Citizenship",
-    "language": "Language"
+    "language": "Language",
+    "services": "Services"
   },
   "propertiesMap": {
     "title": "The map",
@@ -36,7 +37,13 @@
     "listings": "Listings",
     "view": "View",
     "noProperties": "No homes with a location to show yet.",
-    "noCoords": "The map is still being drawn. In the meantime, every home can be viewed in the list."
+    "noCoords": "The map is still being drawn. In the meantime, every home can be viewed in the list.",
+    "homesCount_one": "{{count}} home",
+    "homesCount_other": "{{count}} homes",
+    "styleLight": "Map",
+    "styleDark": "Dark",
+    "styleSatellite": "Satellite",
+    "recenter": "Show all homes"
   },
   "footer": {
     "description": "Boutique real estate in Istanbul and Bodrum. We keep our list of homes short and our attention long, so every client is known by name and every property by its details.",
@@ -56,12 +63,14 @@
     "ourPartners": "Our Partners",
     "buyerGuide": "Buyer Guide",
     "ourTeam": "Our Team",
-    "admin": "Admin"
+    "admin": "Admin",
+    "services": "Services"
   },
   "hero": {
     "eyebrow": "Boutique real estate · Istanbul & Bodrum",
     "title": "Chosen slowly.\nKnown completely.",
     "subtitle": "We choose every home we represent, and come to know each one down to the grain of the stone, the angle of the afternoon light, and the last line of the title deed.",
+    "mapView": "Map view",
     "exploreProperties": "View our homes",
     "bookConsultation": "Speak with us",
     "buy": "Buy",
@@ -226,7 +235,9 @@
     "nearbyPlacesDetails": "Nearby Places Details",
     "sectionMain": "Main",
     "sectionContent": "Content",
-    "sectionSystem": "System"
+    "sectionSystem": "System",
+    "viewSite": "View site",
+    "linksPage": "Links page"
   },
   "maintenance": {
     "title": "Maintenance Mode",
@@ -548,7 +559,11 @@
     "statusPublished": "Published",
     "statusDraft": "Draft",
     "statusResolved": "resolved",
-    "statusNewLabel": "new"
+    "statusNewLabel": "new",
+    "goodMorning": "Good morning",
+    "goodAfternoon": "Good afternoon",
+    "goodEvening": "Good evening",
+    "pendingNotice": "You have {{count}} new message(s) waiting for a reply."
   },
   "propertiesManagement": {
     "pageTitle": "Properties Management",
@@ -1317,6 +1332,15 @@
         "title": "We stay",
         "desc": "Furnishing, letting, resale and beyond"
       }
+    },
+    "municipalities": {
+      "tag": "Neighbourhood guides",
+      "title": "Get to know the districts.",
+      "cardLabel": "Read the guide"
+    },
+    "partners": {
+      "tag": "Trusted partners",
+      "viewAll": "View all partners"
     }
   },
   "comingSoon": {
@@ -1326,5 +1350,82 @@
   },
   "whatsapp": {
     "defaultMessage": "Hello, I would like to speak with Voi Home about finding a home."
+  },
+  "servicesPage": {
+    "eyebrow": "Our services",
+    "title": "Everything between the first viewing and the years that follow.",
+    "lead": "Buying in another country asks for more than a list of homes. We bring the judgement, the paperwork and the people, and stay with you long after the keys change hands.",
+    "ctaTitle": "Tell us what you are looking for.",
+    "ctaText": "A short conversation is usually enough to know whether we can help, and how.",
+    "items": {
+      "search": {
+        "title": "Home search & selection",
+        "description": "We shortlist only the homes we would buy ourselves, matched to how you actually plan to live or invest.",
+        "points": [
+          "Private shortlist, not a catalogue",
+          "Viewings in person or by video",
+          "Honest notes on every home"
+        ]
+      },
+      "investment": {
+        "title": "Investment counsel",
+        "description": "Yield, appreciation and exit, weighed before you commit, using real numbers from the district rather than brochure figures.",
+        "points": [
+          "Rental yield and resale outlook",
+          "Developer track record",
+          "Payment plan review"
+        ]
+      },
+      "citizenship": {
+        "title": "Turkish citizenship guidance",
+        "description": "For buyers qualifying through property investment, we coordinate the valuation, the deposit and the application with licensed lawyers.",
+        "points": [
+          "Eligibility check",
+          "Official valuation report",
+          "Application follow-through"
+        ]
+      },
+      "legal": {
+        "title": "Purchase & paperwork",
+        "description": "Title checks, contracts, tax number, bank account and the title deed transfer, all handled with independent legal counsel.",
+        "points": [
+          "Title deed (tapu) verification",
+          "Contract review and translation",
+          "Transfer day, managed end to end"
+        ]
+      },
+      "resale": {
+        "title": "Resale",
+        "description": "When it is time to sell, we price it for the market as it is and present it to buyers who will value it.",
+        "points": [
+          "Honest market valuation",
+          "Photography and presentation",
+          "Negotiation to signature"
+        ]
+      },
+      "care": {
+        "title": "Property care",
+        "description": "Furnishing, letting and upkeep for owners who live elsewhere, so the home is looked after while you are away.",
+        "points": [
+          "Furnishing and interior setup",
+          "Tenant search and management",
+          "Utilities, bills and maintenance"
+        ]
+      }
+    },
+    "whatsapp": "Chat on WhatsApp",
+    "askAbout": "Ask about this",
+    "askMessage": "Hello Voi Home, I'd like to ask about {{service}}."
+  },
+  "links": {
+    "bio": "Boutique real estate in Istanbul & Bodrum. A few homes, known completely.",
+    "whatsapp": "Message us on WhatsApp",
+    "call": "Call",
+    "properties": "Browse our properties",
+    "map": "Properties on the map",
+    "services": "Our services",
+    "journal": "Read the journal",
+    "email": "Email info@voi-home.com",
+    "office": "Visit our office"
   }
 }

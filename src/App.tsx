@@ -43,6 +43,8 @@ const PrivacyPolicy = lazyWithRetry(() => import("./pages/PrivacyPolicy"));
 const TermsConditions = lazyWithRetry(() => import("./pages/TermsConditions"));
 const ComingSoon = lazyWithRetry(() => import("./pages/ComingSoon"));
 const Partners = lazyWithRetry(() => import("./pages/Partners"));
+const Services = lazyWithRetry(() => import("./pages/Services"));
+const Links = lazyWithRetry(() => import("./pages/Links"));
 const NotFound = lazyWithRetry(() => import("./pages/NotFound"));
 
 // Lazy load dashboard (includes heavy Leaflet library)
@@ -73,6 +75,8 @@ const App = () => <QueryClientProvider client={queryClient}>
                 <Route path="/terms" element={<TermsConditions />} />
                 <Route path="/coming-soon" element={<ComingSoon />} />
                 <Route path="/partners" element={<Partners />} />
+                <Route path="/services" element={<Services />} />
+                <Route path="/links" element={<Links />} />
                 <Route path="/auth" element={<Auth />} />
                 <Route path="/experience" element={<Navigate to="/" replace />} />
                 <Route path="/dashboard" element={<Dashboard />} />

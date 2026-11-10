@@ -4,7 +4,6 @@ import DOMPurify from "dompurify";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import NotFoundState from "@/components/NotFoundState";
-import { Badge } from "@/components/ui/badge";
 import { Calendar, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { supabase } from "@/integrations/supabase/client";
@@ -219,9 +218,9 @@ const BlogDetail = () => {
               </Link>
 
               <div className="flex flex-wrap items-center gap-3 mb-6">
-                {blog.category && <Badge variant="secondary">{t(`blogs.category.${blog.category}`, {
+                {blog.category && <span className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground">{t(`blogs.category.${blog.category}`, {
                   defaultValue: blog.category
-                })}</Badge>}
+                })}</span>}
                 {blog.published_at && <span className="text-sm text-muted-foreground flex items-center gap-2">
                     <Calendar className="h-4 w-4" />
                     {new Date(blog.published_at).toLocaleDateString(i18n.language === 'ar' ? 'ar-SA' : 'en-US', {

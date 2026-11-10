@@ -6,7 +6,7 @@ import { SidebarProvider, SidebarTrigger, useSidebar } from '@/components/ui/sid
 import { DashboardSidebar } from '@/components/dashboard/DashboardSidebar';
 import { Tabs, TabsContent } from '@/components/ui/tabs';
 import { LanguageSwitcher } from '@/components/LanguageSwitcher';
-import { Menu } from 'lucide-react';
+import { ExternalLink, Menu } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import DashboardOverview from './DashboardOverview';
@@ -44,29 +44,50 @@ const DashboardContent = ({ activeTab, setActiveTab }: {
   setActiveTab: (tab: DashboardTab) => void;
 }) => {
   const { t } = useTranslation();
+  const { user } = useAuth();
   const { isMobile, toggleSidebar } = useSidebar();
+  const initials = (user?.email || '?').slice(0, 2).toUpperCase();
 
   return (
     <main className="flex-1 flex flex-col min-w-0">
-      <header className="sticky top-0 z-10 h-14 lg:h-16 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 flex items-center gap-4 px-4 lg:px-6">
+      <header className="sticky top-0 z-20 h-16 bg-[hsl(40_20%_97%)]/80 dark:bg-background/80 backdrop-blur-xl border-b border-border/60 flex items-center gap-3 px-4 lg:px-8">
         {isMobile ? (
-          <Button variant="ghost" size="icon" onClick={toggleSidebar} className="h-9 w-9">
+          <Button variant="ghost" size="icon" onClick={toggleSidebar} className="h-9 w-9 rounded-full">
             <Menu className="h-5 w-5" />
           </Button>
         ) : (
-          <SidebarTrigger className="h-9 w-9" />
+          <SidebarTrigger className="h-9 w-9 rounded-full" />
         )}
-        
-        <div className="flex-1">
-          <h2 className="text-lg font-semibold tracking-tight">
+
+        <div className="flex-1 min-w-0">
+          <p className="hidden sm:block text-[11px] uppercase tracking-[0.16em] text-muted-foreground leading-none mb-1">
+            {t('dashboard.title')}
+          </p>
+          <h2 className="text-base sm:text-lg font-semibold tracking-tight truncate leading-tight">
             {t(tabTitles[activeTab])}
           </h2>
         </div>
-        
+
+        <a
+          href="/"
+          target="_blank"
+          rel="noreferrer"
+          className="hidden sm:inline-flex items-center gap-1.5 rounded-full border border-border bg-background px-3.5 h-9 text-sm hover:border-foreground/40 transition-colors"
+        >
+          {t('dashboard.viewSite', { defaultValue: 'View site' })}
+          <ExternalLink className="h-3.5 w-3.5" />
+        </a>
         <LanguageSwitcher variant="ghost" />
+        <div
+          className="h-9 w-9 shrink-0 rounded-full bg-foreground text-background text-xs font-semibold flex items-center justify-center"
+          title={user?.email || ''}
+        >
+          {initials}
+        </div>
       </header>
       
       <div className="flex-1 p-4 sm:p-6 lg:p-8 overflow-auto">
+        <div className="mx-auto w-full max-w-[1400px]">
         <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as DashboardTab)}>
           <TabsContent value="overview" className="mt-0">
             <DashboardOverview onNavigate={setActiveTab} />
@@ -93,6 +114,7 @@ const DashboardContent = ({ activeTab, setActiveTab }: {
             <MaintenanceSettings />
           </TabsContent>
         </Tabs>
+        </div>
       </div>
     </main>
   );
@@ -129,7 +151,7 @@ const Dashboard = () => {
   return (
     <SidebarProvider defaultOpen={true}>
       <div className={cn(
-        "min-h-screen flex w-full bg-background",
+        "voi-admin min-h-screen flex w-full",
         isRTL && "flex-row-reverse"
       )}>
         <DashboardSidebar activeTab={activeTab} onTabChange={setActiveTab} />

@@ -1,200 +1,58 @@
-import { useEffect, useRef } from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { ArrowRight } from "lucide-react";
 import { useProperties } from "@/hooks/useProperties";
 import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
+import RevealOnScroll from "@/components/RevealOnScroll";
 import { Button } from "@/components/ui/button";
 
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 
-// Pinned, scroll-scrubbed property reveal. The first card is already on
-// screen when the section arrives (no wait-for-scroll fade-in); scrolling
-// brings in side annotations (desktop only), then crossfades into the next
-// property. Every crossfade is reversible except the last property, which
-// stays on screen once revealed instead of fading away.
-// Same pin+scrub pattern as ShatterHero: CSS sticky for the pin, GSAP only
-// drives the scrubbed tweens.
+// Showcase of the first few properties, all side by side in a single row.
+// Desktop shows them as a grid; on smaller screens the row scrolls
+// horizontally (snap) so they still sit in one line instead of stacking.
 const PropertyScrollShowcase = () => {
   const { t, i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
   const { properties, loading } = useProperties();
   const featured = properties.slice(0, 3);
 
-  const wrapperRef = useRef<HTMLDivElement | null>(null);
-  const cardRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const leftRefs = useRef<(HTMLDivElement | null)[]>([]);
-  const rightRefs = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    if (featured.length === 0) return;
-
-    let ctx: { revert: () => void } | undefined;
-    let mounted = true;
-
-    (async () => {
-      const [{ default: gsap }, { ScrollTrigger }] = await Promise.all([
-        import("gsap"),
-        import("gsap/ScrollTrigger"),
-      ]);
-      if (!mounted || !wrapperRef.current) return;
-
-      gsap.registerPlugin(ScrollTrigger);
-
-      ctx = gsap.context(() => {
-        const mm = gsap.matchMedia();
-
-        mm.add("(min-width: 768px)", () => {
-          const cards = cardRefs.current.filter(Boolean) as HTMLDivElement[];
-          const lefts = leftRefs.current.filter(Boolean) as HTMLDivElement[];
-          const rights = rightRefs.current.filter(Boolean) as HTMLDivElement[];
-          if (cards.length === 0) return;
-
-          // First card is already visible on arrival; the rest start hidden.
-          gsap.set(cards[0], { opacity: 1, y: 0, scale: 1 });
-          if (cards.length > 1) gsap.set(cards.slice(1), { opacity: 0, y: 40, scale: 0.97 });
-          gsap.set(lefts, { opacity: 0, x: -24 });
-          gsap.set(rights, { opacity: 0, x: 24 });
-
-          const tl = gsap.timeline({
-            scrollTrigger: {
-              trigger: wrapperRef.current,
-              start: "top top",
-              end: "bottom bottom",
-              scrub: 0.6,
-            },
-          });
-
-          // Each property gets an in/hold/out beat; positions are fractions
-          // (0-1) of total scroll progress so the sequence stays legible on
-          // edit. The card fade-in is skipped for index 0 (already visible),
-          // but its side texts still animate in on scroll like the rest.
-          const step = 1 / cards.length;
-          cards.forEach((card, i) => {
-            const start = i * step;
-            if (i > 0) {
-              tl.to(card, { opacity: 1, y: 0, scale: 1, duration: step * 0.35, ease: "power2.out" }, start + step * 0.05);
-            }
-            if (lefts[i]) tl.to(lefts[i], { opacity: 1, x: 0, duration: step * 0.3, ease: "power2.out" }, start + step * 0.15);
-            if (rights[i]) tl.to(rights[i], { opacity: 1, x: 0, duration: step * 0.3, ease: "power2.out" }, start + step * 0.15);
-
-            if (i < cards.length - 1) {
-              tl.to(card, { opacity: 0, y: -40, scale: 0.97, duration: step * 0.35, ease: "power2.in" }, start + step * 0.65);
-              if (lefts[i]) tl.to(lefts[i], { opacity: 0, x: -24, duration: step * 0.3, ease: "power2.in" }, start + step * 0.65);
-              if (rights[i]) tl.to(rights[i], { opacity: 0, x: 24, duration: step * 0.3, ease: "power2.in" }, start + step * 0.65);
-            }
-          });
-          // The last property has no "out" beat above - it stays fully
-          // visible once revealed, instead of fading away like the rest.
-          // Pad the timeline to 1 so there's a hold on the last property
-          // (~half a screen of scroll) before the pin releases; without it
-          // GSAP stretches the timeline to the last tween and the section
-          // scrolls away the moment the final card lands. The wrapper height
-          // below was grown to keep the per-card pacing unchanged.
-          tl.set({}, {}, 1);
-        });
-      }, wrapperRef);
-    })();
-
-    return () => {
-      mounted = false;
-      ctx?.revert();
-    };
-  }, [featured.length]);
-
   if (loading || featured.length === 0) return null;
 
   return (
-    <div ref={wrapperRef} className={`relative bg-background ${featured.length > 1 ? "md:h-[370vh]" : ""}`}>
-      <div className="relative md:sticky md:top-0 md:h-screen w-full flex flex-col items-center justify-center px-6 py-20 md:py-0 overflow-hidden">
-        <div className="text-center mb-6 md:mb-8 max-w-xl" style={{ fontFamily: GENERAL_SANS }}>
-          <div>
-            <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
-              {t("hero.eyebrow")}
-            </div>
-            <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
-              {t("home.showcase.title")}
-            </h2>
+    <section className="bg-background py-14 md:py-20">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-8 md:mb-12 max-w-xl mx-auto" style={{ fontFamily: GENERAL_SANS }}>
+          <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
+            {t("hero.eyebrow")}
           </div>
+          <h2 className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${isRTL ? "font-arabic" : "font-serif"}`}>
+            {t("home.showcase.title")}
+          </h2>
         </div>
 
-        <div className="w-full md:grid md:grid-cols-[1fr_24rem_1fr] md:items-center md:gap-8 md:max-w-4xl md:mx-auto">
-          {/* Left annotation column - desktop only */}
-          <div className="hidden md:block relative h-[560px]">
-            {featured.map((property, i) => (
-              <div
-                key={property.id}
-                ref={(el) => (leftRefs.current[i] = el)}
-                className="absolute inset-0 flex flex-col justify-center items-end text-right"
-              >
-                <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-3">
-                  {property.property_type}
-                </div>
-                <div className={`text-2xl lg:text-3xl leading-[1.15] tracking-[-1px] text-foreground max-w-[220px] ${isRTL ? "font-arabic" : "font-serif"}`}>
-                  {property.district || property.location}
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="-mx-4 px-4 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible">
+          {featured.map((property, i) => (
+            <RevealOnScroll
+              key={property.id}
+              delay={i * 120}
+              className="snap-start shrink-0 w-[78%] sm:w-[45%] md:w-auto"
+            >
+              <PropertyCardMinimal property={property} />
+            </RevealOnScroll>
+          ))}
+        </div>
 
-          {/* Card stack - center. Smaller on desktop so the card, caption,
-              and button comfortably fit the pinned viewport without
-              clipping - mobile isn't height-constrained so it stays larger. */}
-          <div className="relative w-full max-w-sm md:max-w-[280px] mx-auto">
-            <div className="flex flex-col gap-10 md:block md:relative md:h-[560px]">
-              {featured.map((property, i) => (
-                <div
-                  key={property.id}
-                  ref={(el) => (cardRefs.current[i] = el)}
-                  className="md:absolute md:inset-0 flex flex-col justify-center"
-                >
-                  <PropertyCardMinimal property={property} />
-                  {/* Desktop only - mobile gets a single button below the
-                      whole stack instead of one repeated under every card. */}
-                  <Link to="/properties" className="hidden md:block mt-3 shrink-0">
-                    <Button className="w-full bg-gold hover:bg-gold/90 text-white">
-                      {t("hero.exploreProperties")}
-                      <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
-                  </Link>
-                </div>
-              ))}
-            </div>
-
-            <Link to="/properties" className="md:hidden block mt-6">
-              <Button className="w-full bg-gold hover:bg-gold/90 text-white">
-                {t("hero.exploreProperties")}
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Button>
-            </Link>
-          </div>
-
-          {/* Right annotation column - desktop only */}
-          <div className="hidden md:block relative h-[560px]">
-            {featured.map((property, i) => (
-              <div
-                key={property.id}
-                ref={(el) => (rightRefs.current[i] = el)}
-                className="absolute inset-0 flex flex-col justify-center items-start text-left"
-              >
-                <div className="text-3xl lg:text-4xl font-medium tracking-[-1px] text-foreground mb-3">
-                  ${property.price.toLocaleString()}
-                </div>
-                <div className="text-sm text-muted-foreground max-w-[200px]">
-                  {[
-                    property.bedrooms ? t("common.bed", { count: property.bedrooms }) : null,
-                    property.bathrooms ? t("common.bath", { count: property.bathrooms }) : null,
-                    property.area_sqm ? `${property.area_sqm} m²` : null,
-                  ]
-                    .filter(Boolean)
-                    .join(" · ")}
-                </div>
-              </div>
-            ))}
-          </div>
+        <div className="text-center mt-8 md:mt-10">
+          <Link to="/properties">
+            <Button className="rounded-full bg-foreground hover:bg-foreground/85 text-background px-7">
+              {t("hero.exploreProperties")}
+              <ArrowRight className="ml-2 h-4 w-4 rtl:rotate-180" />
+            </Button>
+          </Link>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

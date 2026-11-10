@@ -52,8 +52,8 @@ const FeaturedProperties = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-x-4 gap-y-8 md:gap-x-8 md:gap-y-12 mb-8 md:mb-12">
-          {properties.slice(0, 3).map((property, index) => <PropertyCardMinimal key={property.id} property={property} animationDelay={index * 0.2} />)}
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-12 mb-8 md:mb-12">
+          {properties.slice(0, 4).map((property, index) => <PropertyCardMinimal key={property.id} property={property} animationDelay={index * 0.15} />)}
         </div>
 
         <div className="text-center">

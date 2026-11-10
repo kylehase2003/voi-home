@@ -5,8 +5,8 @@ const WhatsAppButton = () => {
   const location = useLocation();
   const { t } = useTranslation();
 
-  // Hide on single property pages
-  if (location.pathname.startsWith("/property/")) {
+  // Hide on single property pages and the link-in-bio page (it has its own WhatsApp link)
+  if (location.pathname.startsWith("/property/") || location.pathname === "/links") {
     return null;
   }
 

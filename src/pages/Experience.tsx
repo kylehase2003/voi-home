@@ -15,16 +15,12 @@ import ProcessSteps from "@/components/editorial/ProcessSteps";
 import BlogCategoryPicker from "@/components/editorial/BlogCategoryPicker";
 import PropertyScrollShowcase from "@/components/editorial/PropertyScrollShowcase";
 import PhotoScroller from "@/components/editorial/PhotoScroller";
+import PartnerStrip from "@/components/editorial/PartnerStrip";
+import { MUNICIPALITIES } from "@/data/municipalities";
 import serviceKitchen from "@/assets/photos/service-kitchen.webp";
 import serviceTower from "@/assets/photos/service-tower.webp";
 import testimonialBosphorus from "@/assets/photos/testimonial-bosphorus.webp";
 import processLivingRoom from "@/assets/photos/process-living-room.webp";
-import scrollerSkylineTower from "@/assets/photos/scroller-skyline-tower.webp";
-import scrollerBosphorusFerry from "@/assets/photos/scroller-bosphorus-ferry.webp";
-import scrollerHillsideHomes from "@/assets/photos/scroller-hillside-homes.webp";
-import scrollerBosphorusBridge from "@/assets/photos/scroller-bosphorus-bridge.webp";
-import scrollerPeraFacades from "@/assets/photos/scroller-pera-facades.webp";
-import scrollerTurret from "@/assets/photos/scroller-turret.webp";
 
 const Experience = () => {
   const { t, i18n } = useTranslation();
@@ -74,6 +70,8 @@ const Experience = () => {
           <FeaturedProperties />
         </RevealOnScroll>
 
+        <PartnerStrip />
+
         <TestimonialBreak backgroundImage={testimonialBosphorus} />
 
         <StatementSection
@@ -96,10 +94,10 @@ const Experience = () => {
 
         <BlogCategoryPicker />
 
-        <PhotoScroller images={[scrollerSkylineTower, scrollerBosphorusFerry, scrollerHillsideHomes, scrollerBosphorusBridge, scrollerPeraFacades, scrollerTurret]} />
+        <PhotoScroller items={MUNICIPALITIES} />
 
         <RevealOnScroll>
-          <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
+          <section className="py-16 md:py-20 bg-primary text-primary-foreground text-center">
             <div className="container mx-auto px-4">
               <h2 className={`text-3xl md:text-5xl mb-6 ${isRTL ? "" : "font-serif"}`}>
                 {t("experience.ctaTitle")}

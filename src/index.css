@@ -60,21 +60,21 @@ All colors MUST be HSL.
     --primary: 0 0% 0%;
     --primary-foreground: 47 47.3684% 92.549%;
 
-    --secondary: 43 40.6593% 64.3137%;
-    --secondary-foreground: 0 0% 10.5882%;
+    --secondary: 40 20% 92%;
+    --secondary-foreground: 40 15% 10%;
 
     --muted: 40 20% 90%;
     --muted-foreground: 40 10% 45%;
 
-    --accent: 43 40.6593% 64.3137%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 40 20% 92%;
+    --accent-foreground: 40 15% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 40 25% 95%;
 
     --border: 40 15% 88%;
     --input: 40 15% 88%;
-    --ring: 43 41% 64%;
+    --ring: 0 0% 0%;
 
     --radius: 0.5rem;
 
@@ -118,21 +118,21 @@ All colors MUST be HSL.
     --primary: 40 25% 95%;
     --primary-foreground: 0 0% 0%;
 
-    --secondary: 43 41% 64%;
-    --secondary-foreground: 0 0% 0%;
+    --secondary: 0 0% 18%;
+    --secondary-foreground: 40 25% 95%;
 
     --muted: 40 15% 30%;
     --muted-foreground: 40 20% 70%;
 
-    --accent: 43 41% 64%;
-    --accent-foreground: 0 0% 0%;
+    --accent: 0 0% 18%;
+    --accent-foreground: 40 25% 95%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 40 25% 95%;
 
     --border: 40 15% 30%;
     --input: 40 15% 30%;
-    --ring: 43 41% 64%;
+    --ring: 40 25% 95%;
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
@@ -473,4 +473,188 @@ All colors MUST be HSL.
 [dir="rtl"] .phone-input-custom .PhoneInputCountry {
   margin-right: 0;
   margin-left: 0.5rem;
+}
+
+/* ---------------------------------------------------------------------------
+   Properties map (Leaflet) - quiet basemap, price-pill markers, card popups.
+   Scoped to .voi-map so the property detail page map is unaffected.
+--------------------------------------------------------------------------- */
+.voi-map .leaflet-container {
+  background: #eef0f1;
+  font-family: 'General Sans', -apple-system, sans-serif;
+}
+.voi-map[data-style="dark"] .leaflet-container,
+.voi-map[data-style="satellite"] .leaflet-container {
+  background: #1b1c1e;
+}
+/* Fade tiles in rather than popping, for a smoother style switch. */
+.voi-map .leaflet-tile {
+  transition: opacity 0.35s ease;
+}
+.voi-map .leaflet-control-attribution {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-radius: 9999px;
+  margin: 0 12px 14px 0 !important;
+  padding: 3px 10px;
+  font-size: 10px;
+  color: rgba(0, 0, 0, 0.55);
+}
+.voi-map .leaflet-control-attribution a {
+  color: inherit;
+}
+.voi-map[data-style="dark"] .leaflet-control-attribution,
+.voi-map[data-style="satellite"] .leaflet-control-attribution {
+  background: rgba(20, 20, 22, 0.6);
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Price-pill marker: white by default, solid black when active. */
+.voi-price-pin {
+  background: none;
+  border: 0;
+}
+.voi-price-pin span {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  transform: translate(-50%, calc(-100% - 8px));
+  padding: 7px 12px;
+  border-radius: 9999px;
+  background: #fff;
+  color: #1b1a18;
+  font: 600 13px/1 'General Sans', -apple-system, sans-serif;
+  letter-spacing: -0.1px;
+  font-variant-numeric: tabular-nums;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 8px 22px -4px rgba(0, 0, 0, 0.28);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), background-color 0.2s ease, color 0.2s ease;
+  position: relative;
+  cursor: pointer;
+}
+.voi-price-pin span::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -5px;
+  width: 9px;
+  height: 9px;
+  background: inherit;
+  border-right: inherit;
+  border-bottom: inherit;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 0 0 2px 0;
+}
+.voi-price-pin span:hover {
+  transform: translate(-50%, calc(-100% - 8px)) scale(1.06);
+}
+.voi-price-pin.is-active span {
+  background: #1b1a18;
+  color: #fff;
+  border-color: #1b1a18;
+  transform: translate(-50%, calc(-100% - 10px)) scale(1.12);
+}
+.voi-price-pin.is-active {
+  z-index: 1000 !important;
+}
+
+/* Grouped homes: dark count badge with a soft halo. */
+.voi-price-pin--group span {
+  background: #1b1a18;
+  color: #fff;
+  border-color: #1b1a18;
+  transform: translate(-50%, -50%);
+  padding: 9px 14px;
+  box-shadow: 0 0 0 6px rgba(27, 26, 24, 0.14), 0 10px 24px -6px rgba(0, 0, 0, 0.4);
+}
+.voi-price-pin--group span::after {
+  display: none;
+}
+.voi-price-pin--group span:hover {
+  transform: translate(-50%, -50%) scale(1.08);
+}
+
+/* Card popup */
+.voi-popup .leaflet-popup-content-wrapper {
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  background: hsl(var(--card));
+  box-shadow: 0 24px 60px -12px rgba(0, 0, 0, 0.35);
+  animation: voi-popup-in 0.28s cubic-bezier(0.2, 0.9, 0.3, 1.2);
+}
+@keyframes voi-popup-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px) scale(0.96);
+  }
+}
+.voi-popup .leaflet-popup-content {
+  margin: 0;
+  width: 270px !important;
+}
+.voi-popup .leaflet-popup-tip-container {
+  display: none;
+}
+.voi-popup a.leaflet-popup-close-button {
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(8px);
+  color: #1b1a18;
+  font: 400 18px/30px sans-serif;
+  text-align: center;
+  z-index: 2;
+}
+
+/* ---------------------------------------------------------------------------
+   Admin dashboard theme. Scoped to .voi-admin so the public site is untouched:
+   dark sidebar, warm off-white canvas, softer rounded cards and tables.
+--------------------------------------------------------------------------- */
+.voi-admin {
+  --sidebar-background: 30 6% 8%;
+  --sidebar-foreground: 40 25% 94%;
+  --sidebar-primary: 40 25% 94%;
+  --sidebar-primary-foreground: 30 6% 8%;
+  --sidebar-accent: 30 5% 15%;
+  --sidebar-accent-foreground: 40 25% 94%;
+  --sidebar-border: 30 5% 18%;
+  --sidebar-ring: 40 25% 94%;
+  --radius: 0.875rem;
+  background: hsl(40 20% 97%);
+  font-family: 'General Sans', Inter, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+.dark .voi-admin {
+  background: hsl(var(--background));
+}
+.voi-admin .rounded-lg {
+  border-radius: 1rem;
+}
+.voi-admin [data-sidebar] .rounded-lg {
+  border-radius: 0.75rem;
+}
+.voi-admin main .shadow-sm {
+  box-shadow: 0 1px 2px rgba(20, 19, 17, 0.04);
+}
+.voi-admin main table thead th {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 500;
+  color: hsl(var(--muted-foreground));
+}
+.voi-admin main table tbody tr {
+  transition: background-color 0.15s ease;
+}
+.voi-admin main input,
+.voi-admin main textarea,
+.voi-admin main [role="combobox"] {
+  border-radius: 0.75rem;
+}
+.voi-admin main button.h-10:not([role="tab"]),
+.voi-admin main button.h-9:not([role="tab"]) {
+  border-radius: 9999px;
 }

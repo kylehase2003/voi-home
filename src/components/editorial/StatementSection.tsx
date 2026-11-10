@@ -29,7 +29,7 @@ const StatementSection = ({ tag, lines }: StatementSectionProps) => {
   }, []);
 
   return (
-    <div ref={ref} className="py-24 md:py-40 px-6 text-center max-w-4xl mx-auto">
+    <div ref={ref} className="py-14 md:py-24 px-6 text-center max-w-4xl mx-auto">
       <div className="text-xs font-medium uppercase tracking-[2px] text-muted-foreground mb-10">{tag}</div>
       {lines.map((line, i) => (
         <p

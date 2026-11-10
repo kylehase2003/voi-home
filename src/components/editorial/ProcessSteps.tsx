@@ -21,7 +21,7 @@ const ProcessSteps = ({ tag, title, description, image, steps }: ProcessStepsPro
 
   return (
     <section className="min-h-[90vh] grid md:grid-cols-2 bg-primary text-primary-foreground mx-2 md:mx-3 my-3 rounded-[20px] overflow-hidden">
-      <RevealOnScroll className="flex flex-col justify-center px-6 md:px-16 py-16 md:py-20">
+      <RevealOnScroll className="flex flex-col justify-center px-6 md:px-16 py-12 md:py-16">
         <div className="text-xs font-medium uppercase tracking-[1.5px] text-primary-foreground/35 mb-4">{tag}</div>
         <h2 className={`text-3xl md:text-[42px] leading-[1.1] tracking-[-1.5px] mb-5 max-w-[440px] ${isRTL ? "font-arabic" : "font-serif"}`}>
           {title}

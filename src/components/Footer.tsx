@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Facebook, Instagram, Linkedin, Mail, Phone, MapPin } from "lucide-react";
 import { useTranslation } from "react-i18next";
 import { TikTokIcon } from "@/components/icons/TikTokIcon";
-import logo from "@/assets/logo-new.png";
+import logo from "@/assets/logo-horizontal.png";
 
 const Footer = () => {
   const { t, i18n } = useTranslation();
@@ -12,7 +12,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mb-8">
           <div className="lg:col-span-2">
-            <img src={logo} alt="Voi Home" className="h-14 w-auto mb-4" width={66} height={56} />
+            <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-12 w-auto mb-4" width={186} height={48} />
             <p className="text-sm text-primary-foreground/80 leading-relaxed mb-4">{t("footer.description")}</p>
 
             <div className="flex gap-1">
@@ -20,7 +20,7 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61576846872911"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Visit our Facebook page"
               >
                 <Facebook size={18} />
@@ -29,7 +29,7 @@ const Footer = () => {
                 href="https://www.instagram.com/voi.home/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram size={18} />
@@ -38,7 +38,7 @@ const Footer = () => {
                 href="https://www.tiktok.com/@voi_home"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Follow us on TikTok"
               >
                 <TikTokIcon className="w-4 h-4" />
@@ -47,21 +47,21 @@ const Footer = () => {
                 href="https://www.linkedin.com/company/voi-home"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Connect with us on LinkedIn"
               >
                 <Linkedin size={18} />
               </a>
               <a
                 href="tel:+905527971000"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Call us at +90 552 797 10 00"
               >
                 <Phone size={16} />
               </a>
               <a
                 href="mailto:info@voi-home.com"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="Email us at info@voi-home.com"
               >
                 <Mail size={16} />
@@ -70,7 +70,7 @@ const Footer = () => {
                 href="https://maps.app.goo.gl/aduv35z9XnK8S4J49"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-gold flex items-center justify-center transition-smooth"
+                className="w-9 h-9 rounded-full bg-primary-foreground/10 hover:bg-primary-foreground hover:text-primary flex items-center justify-center transition-smooth"
                 aria-label="View our location on Google Maps"
               >
                 <MapPin size={16} />
@@ -84,15 +84,23 @@ const Footer = () => {
               <li>
                 <Link
                   to="/properties"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.browseProperties")}
                 </Link>
               </li>
               <li>
                 <Link
+                  to="/services"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {t("footer.services")}
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/about"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.aboutUs")}
                 </Link>
@@ -100,7 +108,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/partners"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.ourPartners")}
                 </Link>
@@ -108,7 +116,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/contact"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("nav.contact")}
                 </Link>
@@ -122,7 +130,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/properties-map"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("nav.propertiesMap")}
                 </Link>
@@ -130,7 +138,7 @@ const Footer = () => {
               <li>
                 <Link
                   to="/team"
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.ourTeam")}
                 </Link>
@@ -145,7 +153,7 @@ const Footer = () => {
                 <Link
                   to="/properties?propertyType=Apartment"
                   onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.apartments")}
                 </Link>
@@ -154,7 +162,7 @@ const Footer = () => {
                 <Link
                   to="/properties?propertyType=Villa"
                   onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.villas")}
                 </Link>
@@ -163,7 +171,7 @@ const Footer = () => {
                 <Link
                   to="/properties?propertyType=Penthouse"
                   onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.penthouses")}
                 </Link>
@@ -172,7 +180,7 @@ const Footer = () => {
                 <Link
                   to="/properties?propertyType=Commercial"
                   onClick={() => window.scrollTo({ top: 0, behavior: "auto" })}
-                  className="text-sm text-primary-foreground/80 hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
                 >
                   {t("footer.commercial")}
                 </Link>
@@ -186,19 +194,19 @@ const Footer = () => {
           <div className="flex flex-wrap gap-6 text-sm text-primary-foreground/60 justify-center md:justify-end">
             <Link
               to="/privacy"
-              className="hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+              className="hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
             >
               {t("footer.privacyPolicy")}
             </Link>
             <Link
               to="/terms"
-              className="hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+              className="hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
             >
               {t("footer.termsConditions")}
             </Link>
             <Link
               to="/auth"
-              className="hover:text-gold transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-gold hover:after:w-full after:transition-all after:duration-300"
+              className="hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
             >
               {t("footer.admin")}
             </Link>

@@ -48,7 +48,7 @@ const BlogCategoryPicker = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 px-6">
+    <section className="py-14 md:py-20 px-6">
       <RevealOnScroll className="max-w-xl mx-auto text-center mb-12">
         <div className="text-xs font-medium uppercase tracking-[1.5px] text-muted-foreground mb-4">
           {t("blogs.title")}

@@ -128,25 +128,23 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
         onClick={() => handleItemClick(item.value)}
         tooltip={isCollapsed ? item.title : undefined}
         isActive={activeTab === item.value}
-        className={`
-          relative transition-all duration-200
-          ${activeTab === item.value 
-            ? 'bg-gold/15 text-gold font-medium ltr:border-l-2 rtl:border-r-2 border-gold ltr:rounded-l-none rtl:rounded-r-none' 
-            : 'hover:bg-muted/80 ltr:hover:translate-x-1 rtl:hover:-translate-x-1'
-          }
-        `}
+        className={`h-10 rounded-xl transition-colors duration-200 ${
+          activeTab === item.value
+            ? '!bg-sidebar-primary !text-sidebar-primary-foreground font-medium shadow-sm'
+            : 'text-sidebar-foreground/70 hover:!bg-sidebar-accent hover:!text-sidebar-foreground'
+        }`}
       >
-        <item.icon className={`h-4 w-4 ${activeTab === item.value ? 'text-gold' : ''}`} />
+        <item.icon className="h-4 w-4" />
         {!isCollapsed && (
           <span className="flex-1">{item.title}</span>
         )}
         {!isCollapsed && item.count !== undefined && item.count > 0 && (
-          <Badge variant="secondary" className="h-5 min-w-5 px-1.5 text-xs bg-primary/10 text-primary hover:bg-primary/20">
+          <Badge variant="secondary" className={`h-5 min-w-5 px-1.5 text-[11px] font-medium rounded-full border-0 tabular-nums ${activeTab === item.value ? 'bg-black/10 text-current hover:bg-black/10' : 'bg-white/10 text-sidebar-foreground/70 hover:bg-white/10'}`}>
             {item.count}
           </Badge>
         )}
         {!isCollapsed && item.badge && (
-          <Badge variant="destructive" className="h-5 min-w-5 px-1.5 text-xs">
+          <Badge variant="destructive" className="h-5 min-w-5 px-1.5 text-[11px] rounded-full">
             {item.badge}
           </Badge>
         )}
@@ -155,13 +153,14 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
   );
 
   return (
-    <Sidebar collapsible="icon" className="ltr:border-r rtl:border-l border-border/50">
+    <Sidebar collapsible="icon" className="border-none">
       {/* Header */}
-      <SidebarHeader className="border-b border-border/50">
+      <SidebarHeader className="px-3 pt-4 pb-2">
         <div className={`flex items-center ${isCollapsed ? 'justify-center' : 'justify-between'} py-2`}>
           <Link to="/" className="inline-flex items-center gap-2 hover:opacity-80 transition-opacity">
             <img 
               src={logo} 
+              style={{ filter: 'brightness(0) invert(0.94)' }}
               alt="Voi Home"
               className={`transition-all duration-200 ${isCollapsed ? 'h-8 w-8 object-contain' : 'h-10 w-auto'}`} 
             />
@@ -170,7 +169,7 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-8 w-8"
+              className="h-8 w-8 text-sidebar-foreground/60 hover:!bg-sidebar-accent hover:!text-sidebar-foreground"
               onClick={() => setOpenMobile(false)}
             >
               <X className="h-4 w-4" />
@@ -180,7 +179,7 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
             <Button 
               variant="ghost" 
               size="icon" 
-              className="h-8 w-8 opacity-0 group-hover:opacity-100 transition-opacity"
+              className="h-8 w-8 text-sidebar-foreground/60 hover:!bg-sidebar-accent hover:!text-sidebar-foreground"
               onClick={toggleSidebar}
             >
               <ChevronLeft className="h-4 w-4 rtl:rotate-180" />
@@ -193,7 +192,7 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
         {/* Main Navigation */}
         <SidebarGroup>
           {!isCollapsed && (
-            <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground/70 font-semibold">
+            <SidebarGroupLabel className="text-[10px] uppercase tracking-[0.16em] text-sidebar-foreground/40 font-medium">
               {t('dashboard.title')}
             </SidebarGroupLabel>
           )}
@@ -206,12 +205,12 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator />
+        <SidebarSeparator className="bg-sidebar-border/60" />
 
         {/* Content Management */}
         <SidebarGroup>
           {!isCollapsed && (
-            <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground/70 font-semibold">
+            <SidebarGroupLabel className="text-[10px] uppercase tracking-[0.16em] text-sidebar-foreground/40 font-medium">
               {t('dashboard.sectionContent')}
             </SidebarGroupLabel>
           )}
@@ -224,12 +223,12 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
           </SidebarGroupContent>
         </SidebarGroup>
 
-        <SidebarSeparator />
+        <SidebarSeparator className="bg-sidebar-border/60" />
 
         {/* System */}
         <SidebarGroup>
           {!isCollapsed && (
-            <SidebarGroupLabel className="text-xs uppercase tracking-wider text-muted-foreground/70 font-semibold">
+            <SidebarGroupLabel className="text-[10px] uppercase tracking-[0.16em] text-sidebar-foreground/40 font-medium">
               {t('dashboard.sectionSystem')}
             </SidebarGroupLabel>
           )}
@@ -244,13 +243,13 @@ export function DashboardSidebar({ activeTab, onTabChange }: DashboardSidebarPro
       </SidebarContent>
 
       {/* Footer */}
-      <SidebarFooter className="border-t border-border/50 p-2">
+      <SidebarFooter className="p-3">
         <SidebarMenu>
           <SidebarMenuItem>
             <SidebarMenuButton 
               onClick={() => signOut()} 
               tooltip={isCollapsed ? t('dashboard.logout') : undefined}
-              className="hover:bg-destructive/10 hover:text-destructive transition-colors"
+              className="h-10 rounded-xl text-sidebar-foreground/70 hover:!bg-red-500/15 hover:!text-red-300 transition-colors"
             >
               <LogOut className="h-4 w-4" />
               {!isCollapsed && <span>{t('dashboard.logout')}</span>}

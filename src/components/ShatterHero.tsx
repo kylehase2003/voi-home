@@ -4,7 +4,7 @@ import { useTranslation } from "react-i18next";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { ArrowRight, ArrowUpRight, Search } from "lucide-react";
+import { ArrowRight, ArrowUpRight, Map as MapIcon, Search } from "lucide-react";
 import { COUNTRIES, TURKIYE_CITIES, getDistrictsForCity } from "@/constants/property";
 import { useFilterOptions } from "@/hooks/useFilterOptions";
 import heroSkyline from "@/assets/photos/hero-skyline.webp";
@@ -377,6 +377,15 @@ const ShatterHero = () => {
             >
               {t("hero.exploreProperties")}
               <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+            </Button>
+            <Button
+              onClick={() => navigate("/properties-map")}
+              variant="outline"
+              className="group bg-transparent hover:bg-white/10 border-white/40 hover:border-white text-white hover:text-white px-7 py-4 h-auto text-[15px] rounded-full transition-all duration-300"
+              style={{ fontFamily: GENERAL_SANS, fontWeight: 500 }}
+            >
+              <MapIcon className="mr-2 h-4 w-4" />
+              {t("hero.mapView")}
             </Button>
             <Link
               to="/contact"

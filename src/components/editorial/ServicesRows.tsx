@@ -38,11 +38,11 @@ const ServicesRows = ({ headline, subheadline, rows }: ServicesRowsProps) => {
   };
 
   return (
-    <section className="relative bg-black pt-32 md:pt-44 pb-56 md:pb-72">
-      <div className="absolute inset-x-0 top-0 h-32 md:h-40 bg-background pointer-events-none" />
-      <div className="absolute inset-x-0 top-0 h-32 md:h-40 pointer-events-none" style={fadeInStyle} />
-      <div className="absolute inset-x-0 bottom-0 h-48 md:h-64 bg-background pointer-events-none" />
-      <div className="absolute inset-x-0 bottom-0 h-48 md:h-64 pointer-events-none" style={fadeOutStyle} />
+    <section className="relative bg-black pt-20 md:pt-28 pb-36 md:pb-44">
+      <div className="absolute inset-x-0 top-0 h-20 md:h-24 bg-background pointer-events-none" />
+      <div className="absolute inset-x-0 top-0 h-20 md:h-24 pointer-events-none" style={fadeInStyle} />
+      <div className="absolute inset-x-0 bottom-0 h-28 md:h-36 bg-background pointer-events-none" />
+      <div className="absolute inset-x-0 bottom-0 h-28 md:h-36 pointer-events-none" style={fadeOutStyle} />
 
       <RevealOnScroll className="relative px-6 md:px-14 pb-8 md:pb-12 text-center">
         <h3

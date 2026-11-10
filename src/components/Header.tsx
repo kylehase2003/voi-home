@@ -4,7 +4,7 @@ import { Menu, Globe, Home as HomeIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/logo-horizontal.png";
 
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 
@@ -20,6 +20,7 @@ const Header = () => {
   const navigation = [
     { name: t("nav.home"), href: "/" },
     { name: t("nav.properties"), href: "/properties" },
+    { name: t("nav.services"), href: "/services" },
     { name: t("nav.blogs"), href: "/blogs" },
     { name: t("nav.about"), href: "/about" },
   ];
@@ -48,7 +49,7 @@ const Header = () => {
           style={{ fontFamily: GENERAL_SANS }}
         >
           <Link to="/" className="flex items-center shrink-0">
-            <img src={logo} alt="VOI" className="h-14 w-auto" />
+            <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 md:h-11 w-auto" width={170} height={44} />
           </Link>
 
           {/* Desktop links - absolutely centered on the header, independent
@@ -109,7 +110,7 @@ const Header = () => {
         </SheetHeader>
         <div className="flex flex-col h-full" style={{ fontFamily: GENERAL_SANS }}>
           <div className="px-6 pt-10 pb-6 border-b border-white/10">
-            <img src={logo} alt="VOI" className="h-12 w-auto" />
+            <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 w-auto" width={155} height={40} />
           </div>
 
           <nav className="flex-1 px-6 py-6 space-y-1 overflow-y-auto">
