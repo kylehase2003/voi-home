@@ -31,7 +31,9 @@ const PropertyScrollShowcase = () => {
           </h2>
         </div>
 
-        <div className="-mx-4 px-4 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 md:mx-0 md:px-0 md:grid md:grid-cols-3 md:gap-8 md:overflow-visible">
+        <div className={`-mx-4 px-4 flex gap-5 overflow-x-auto snap-x snap-mandatory pb-2 md:mx-0 md:px-0 md:grid md:items-center md:gap-6 lg:gap-10 md:overflow-visible ${
+            featured.length === 3 ? "md:grid-cols-[1fr_1.35fr_1fr] md:max-w-6xl md:mx-auto" : "md:grid-cols-3"
+          }`}>
           {featured.map((property, i) => (
             <RevealOnScroll
               key={property.id}
