@@ -79,8 +79,6 @@ const Experience = () => {
           lines={[t("home.why.line1"), t("home.why.line2")]}
         />
 
-        <PhotoScroller items={MUNICIPALITIES} />
-
         <ProcessSteps
           tag={t("home.process.tag")}
           title={t("home.process.title")}
@@ -93,6 +91,8 @@ const Experience = () => {
             { num: "04", title: t("home.process.step4.title"), desc: t("home.process.step4.desc") },
           ]}
         />
+
+        <PhotoScroller items={MUNICIPALITIES} />
 
         <BlogCategoryPicker />
 
