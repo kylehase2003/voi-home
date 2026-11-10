@@ -6,6 +6,10 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/co
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import logo from "@/assets/logo-horizontal.png";
 
+// Logo temporarily hidden from the header (desktop bar and mobile menu).
+// Set back to true to show it again.
+const SHOW_HEADER_LOGO = false;
+
 const GENERAL_SANS = "'General Sans', -apple-system, sans-serif";
 
 // Site-wide primary nav. A full-width bar pinned to the top edge, not a
@@ -48,9 +52,11 @@ const Header = () => {
           className="relative flex items-center h-20 px-6 lg:px-10"
           style={{ fontFamily: GENERAL_SANS }}
         >
-          <Link to="/" className="flex items-center shrink-0">
-            <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 md:h-11 w-auto" width={170} height={44} />
-          </Link>
+          {SHOW_HEADER_LOGO && (
+            <Link to="/" className="flex items-center shrink-0">
+              <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 md:h-11 w-auto" width={170} height={44} />
+            </Link>
+          )}
 
           {/* Desktop links - absolutely centered on the header, independent
               of the logo/CTA widths on either side. */}
@@ -109,9 +115,11 @@ const Header = () => {
           <SheetTitle>{t("nav.home")}</SheetTitle>
         </SheetHeader>
         <div className="flex flex-col h-full" style={{ fontFamily: GENERAL_SANS }}>
-          <div className="px-6 pt-10 pb-6 border-b border-white/10">
-            <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 w-auto" width={155} height={40} />
-          </div>
+          {SHOW_HEADER_LOGO && (
+            <div className="px-6 pt-10 pb-6 border-b border-white/10">
+              <img src={logo} alt="Voi Home, Luxury Real Estate" className="h-10 w-auto" width={155} height={40} />
+            </div>
+          )}
 
           <nav className="flex-1 px-6 py-6 space-y-1 overflow-y-auto">
             {navigation.map((item) => (
