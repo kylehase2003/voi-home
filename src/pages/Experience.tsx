@@ -79,6 +79,8 @@ const Experience = () => {
           lines={[t("home.why.line1"), t("home.why.line2")]}
         />
 
+        <PhotoScroller items={MUNICIPALITIES} />
+
         <ProcessSteps
           tag={t("home.process.tag")}
           title={t("home.process.title")}
@@ -93,8 +95,6 @@ const Experience = () => {
         />
 
         <BlogCategoryPicker />
-
-        <PhotoScroller items={MUNICIPALITIES} />
 
         <RevealOnScroll>
           <section className="py-16 md:py-20 bg-primary text-primary-foreground text-center">
