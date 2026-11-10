@@ -25,7 +25,7 @@ const TILES = [
   { src: tileInteriorLounge, top: "5%", left: "80%", w: 155, h: 195 },
   { src: tileWalkInCloset, top: "42%", left: "2%", w: 190, h: 145 },
   { src: tilePoolGarden, top: "50%", left: "84%", w: 165, h: 165 },
-  { src: tileMarinaApartments, top: "72%", left: "78%", w: 180, h: 135 },
+  { src: tileMarinaApartments, top: "74%", left: "58%", w: 180, h: 135 },
   { src: tileBrickResidence, top: "22%", left: "20%", w: 135, h: 115 },
 ];
 

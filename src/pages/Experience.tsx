@@ -10,7 +10,6 @@ import FeaturedProperties from "@/components/FeaturedProperties";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ServicesRows from "@/components/editorial/ServicesRows";
 import TestimonialBreak from "@/components/editorial/TestimonialBreak";
-import StatementSection from "@/components/editorial/StatementSection";
 import ProcessSteps from "@/components/editorial/ProcessSteps";
 import BlogCategoryPicker from "@/components/editorial/BlogCategoryPicker";
 import PropertyScrollShowcase from "@/components/editorial/PropertyScrollShowcase";
@@ -74,10 +73,6 @@ const Experience = () => {
 
         <TestimonialBreak backgroundImage={testimonialBosphorus} />
 
-        <StatementSection
-          tag={t("home.why.tag")}
-          lines={[t("home.why.line1"), t("home.why.line2")]}
-        />
 
         <ProcessSteps
           tag={t("home.process.tag")}
