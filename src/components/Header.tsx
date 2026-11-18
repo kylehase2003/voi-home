@@ -86,7 +86,7 @@ const Header = () => {
             <Link to="/contact">
               <Button
                 size="sm"
-                className="rounded-full bg-gold hover:bg-gold/90 text-white text-[13.5px] font-medium py-[11px] px-6"
+                className="rounded-full bg-burgundy hover:bg-burgundy/90 text-white text-[13.5px] font-medium py-[11px] px-6"
               >
                 {t("hero.bookConsultation")}
               </Button>
@@ -146,7 +146,7 @@ const Header = () => {
             </div>
 
             <Link to="/contact">
-              <Button className="w-full bg-gold hover:bg-gold/90 text-white py-5 text-base font-medium">
+              <Button className="w-full bg-burgundy hover:bg-burgundy/90 text-white py-5 text-base font-medium">
                 <HomeIcon className="me-2 h-5 w-5" />
                 {t("nav.contactUs")}
               </Button>

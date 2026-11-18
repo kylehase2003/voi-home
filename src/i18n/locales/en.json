@@ -1353,69 +1353,52 @@
   },
   "servicesPage": {
     "eyebrow": "Our services",
-    "title": "Everything between the first viewing and the years that follow.",
-    "lead": "Buying in another country asks for more than a list of homes. We bring the judgement, the paperwork and the people, and stay with you long after the keys change hands.",
-    "ctaTitle": "Tell us what you are looking for.",
-    "ctaText": "A short conversation is usually enough to know whether we can help, and how.",
-    "items": {
-      "search": {
-        "title": "Home search & selection",
-        "description": "We shortlist only the homes we would buy ourselves, matched to how you actually plan to live or invest.",
-        "points": [
-          "Private shortlist, not a catalogue",
-          "Viewings in person or by video",
-          "Honest notes on every home"
-        ]
-      },
-      "investment": {
-        "title": "Investment counsel",
-        "description": "Yield, appreciation and exit, weighed before you commit, using real numbers from the district rather than brochure figures.",
-        "points": [
-          "Rental yield and resale outlook",
-          "Developer track record",
-          "Payment plan review"
-        ]
-      },
-      "citizenship": {
-        "title": "Turkish citizenship guidance",
-        "description": "For buyers qualifying through property investment, we coordinate the valuation, the deposit and the application with licensed lawyers.",
-        "points": [
-          "Eligibility check",
-          "Official valuation report",
-          "Application follow-through"
-        ]
-      },
-      "legal": {
-        "title": "Purchase & paperwork",
-        "description": "Title checks, contracts, tax number, bank account and the title deed transfer, all handled with independent legal counsel.",
-        "points": [
-          "Title deed (tapu) verification",
-          "Contract review and translation",
-          "Transfer day, managed end to end"
-        ]
-      },
-      "resale": {
-        "title": "Resale",
-        "description": "When it is time to sell, we price it for the market as it is and present it to buyers who will value it.",
-        "points": [
-          "Honest market valuation",
-          "Photography and presentation",
-          "Negotiation to signature"
-        ]
-      },
-      "care": {
-        "title": "Property care",
-        "description": "Furnishing, letting and upkeep for owners who live elsewhere, so the home is looked after while you are away.",
-        "points": [
-          "Furnishing and interior setup",
-          "Tenant search and management",
-          "Utilities, bills and maintenance"
-        ]
-      }
-    },
+    "title": "A complete real estate journey.",
+    "lead": "From property acquisition to after-sales support, we stay involved at every step.",
+    "ctaTitle": "Let's find the right solution together.",
+    "ctaText": "Our team is here to answer your questions and guide you.",
     "whatsapp": "Chat on WhatsApp",
     "askAbout": "Ask about this",
-    "askMessage": "Hello Voi Home, I'd like to ask about {{service}}."
+    "askMessage": "Hello Voi Home, I'd like to ask about {{service}}.",
+    "learnMore": "Learn more",
+    "breadcrumb": "Services",
+    "serviceNumber": "Service {{num}}",
+    "categories": {
+      "property": "Property Services",
+      "investment": "Investment & Advisory",
+      "project": "Project & Design Solutions"
+    },
+    "whatWeOfferTag": "What we do",
+    "whatWeOffer": "What we offer",
+    "stylesTag": "Design styles",
+    "stylesTitle": "The styles we design in.",
+    "stylesLead": "Every home starts from a style. These are the schools of design we work in most often, and we often blend them to suit the way you live.",
+    "why": {
+      "tag": "Why Voi",
+      "title": "Knowledge. Transparency. Continuity.",
+      "knowledge": {
+        "title": "Market knowledge",
+        "text": "We know Istanbul district by district, and we share what the numbers actually say."
+      },
+      "transparency": {
+        "title": "Transparent communication",
+        "text": "Clear answers and honest assessments at every step, with no surprises."
+      },
+      "coordination": {
+        "title": "Professional coordination",
+        "text": "We bring the right specialists together and keep every part of the process on track."
+      },
+      "tailored": {
+        "title": "Tailored solutions",
+        "text": "Every recommendation starts from your goals, your budget and the way you live."
+      },
+      "continuity": {
+        "title": "Continuity",
+        "text": "We stay beside you after the transaction, for as long as you need us."
+      }
+    },
+    "otherServices": "Explore our other services",
+    "allServices": "All services"
   },
   "links": {
     "bio": "Boutique real estate in Istanbul & Bodrum. A few homes, known completely.",

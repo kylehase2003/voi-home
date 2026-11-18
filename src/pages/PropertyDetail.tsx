@@ -605,7 +605,7 @@ const PropertyDetail = () => {
                   </div>
                 </div>
 
-                <Button asChild className="w-full bg-gold hover:bg-gold/90 text-white font-semibold py-6">
+                <Button asChild className="w-full bg-burgundy hover:bg-burgundy/90 text-white font-semibold py-6">
                   <a
                     href={`https://wa.me/905527971000?text=${encodeURIComponent(`${t("propertyDetail.whatsappInquiry", { title: translatedTitle })}\n${window.location.href}`)}`}
                     target="_blank"

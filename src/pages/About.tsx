@@ -126,14 +126,14 @@ const About = () => {
             role="Title, Voi Home"
             /> */}
 
-        <section className="py-20 md:py-28 bg-primary text-primary-foreground text-center">
+        <section className="py-20 md:py-28 bg-gradient-to-b from-burgundy from-35% to-black text-[#E6E2DA] text-center">
           <div className="container mx-auto px-6">
             <RevealOnScroll>
               <h2 className={`text-3xl md:text-5xl mb-8 max-w-2xl mx-auto ${isRTL ? "font-arabic" : "font-serif"}`}>
                 {t("aboutPage.closing.title")}
               </h2>
               <Link to="/contact">
-                <Button size="lg" className="bg-white text-primary hover:bg-white/90">
+                <Button size="lg" className="rounded-full bg-[#E6E2DA] text-burgundy hover:bg-white">
                   {t("aboutCompany.contactButton")}
                 </Button>
               </Link>

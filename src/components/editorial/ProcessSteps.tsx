@@ -20,7 +20,7 @@ const ProcessSteps = ({ tag, title, description, image, steps }: ProcessStepsPro
   const isRTL = i18n.language === "ar";
 
   return (
-    <section className="min-h-[90vh] grid md:grid-cols-2 bg-primary text-primary-foreground mx-2 md:mx-3 my-3 rounded-[20px] overflow-hidden">
+    <section className="min-h-[90vh] grid md:grid-cols-2 bg-evergreen text-[#E6E2DA] mx-2 md:mx-3 my-3 rounded-[20px] overflow-hidden">
       <RevealOnScroll className="flex flex-col justify-center px-6 md:px-16 py-12 md:py-16">
         <div className="text-xs font-medium uppercase tracking-[1.5px] text-primary-foreground/35 mb-4">{tag}</div>
         <h2 className={`text-3xl md:text-[42px] leading-[1.1] tracking-[-1.5px] mb-5 max-w-[440px] ${isRTL ? "font-arabic" : "font-serif"}`}>
@@ -30,7 +30,7 @@ const ProcessSteps = ({ tag, title, description, image, steps }: ProcessStepsPro
 
         <div className="grid grid-cols-2 gap-px bg-primary-foreground/[0.06] rounded-xl overflow-hidden">
           {steps.map((step) => (
-            <div key={step.num} className="p-5 bg-primary text-center">
+            <div key={step.num} className="p-5 bg-evergreen text-center">
               <div className="font-mono text-[10px] text-primary-foreground/20 mb-2">{step.num}</div>
               <div className="text-sm font-medium mb-1">{step.title}</div>
               <div className="text-[11.5px] text-primary-foreground/35 leading-[1.5]">{step.desc}</div>
@@ -40,7 +40,7 @@ const ProcessSteps = ({ tag, title, description, image, steps }: ProcessStepsPro
       </RevealOnScroll>
       <div className="relative hidden md:block">
         <img src={image} alt="" className="absolute inset-0 w-full h-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-primary via-primary/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-evergreen via-evergreen/20 to-transparent rtl:bg-gradient-to-l" />
       </div>
     </section>
   );

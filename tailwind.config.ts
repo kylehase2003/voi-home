@@ -89,6 +89,8 @@ export default {
   				foreground: 'hsl(var(--card-foreground))'
   			},
   			olive: 'hsl(var(--olive))',
+  			burgundy: 'hsl(var(--burgundy) / <alpha-value>)',
+  			evergreen: 'hsl(var(--evergreen) / <alpha-value>)',
   			gold: 'hsl(var(--gold))',
   			cream: 'hsl(var(--cream))',
   			'luxury-black': 'hsl(var(--luxury-black))',

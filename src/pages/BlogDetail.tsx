@@ -158,7 +158,7 @@ const BlogDetail = () => {
                   {t('blogs.sidebarCtaSubtitle')}
                 </p>
                 <Link to="/contact">
-                  <Button className="w-full bg-gold text-white hover:bg-gold/90 font-medium">
+                  <Button className="w-full bg-burgundy text-white hover:bg-burgundy/90 font-medium">
                     {t('blogs.sidebarCtaButton')}
                   </Button>
                 </Link>

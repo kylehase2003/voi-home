@@ -87,8 +87,8 @@ const Contact = () => {
                 <RevealOnScroll key={index} delay={index * 80}>
                   <Card className="bg-card rounded-[20px]">
                     <CardContent className="p-6 flex gap-4">
-                      <div className="w-12 h-12 rounded-full bg-gold/10 flex items-center justify-center flex-shrink-0">
-                        <info.icon className="h-6 w-6 text-gold" />
+                      <div className="w-12 h-12 rounded-full bg-evergreen/10 flex items-center justify-center flex-shrink-0">
+                        <info.icon className="h-6 w-6 text-evergreen" />
                       </div>
                       <div>
                         <h3 className="font-semibold mb-2 text-card-foreground">{info.title}</h3>

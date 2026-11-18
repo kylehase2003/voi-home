@@ -92,22 +92,22 @@ const Experience = () => {
         <BlogCategoryPicker />
 
         <RevealOnScroll>
-          <section className="py-16 md:py-20 bg-primary text-primary-foreground text-center">
+          <section className="py-16 md:py-20 bg-gradient-to-b from-burgundy from-35% to-black text-[#E6E2DA] text-center">
             <div className="container mx-auto px-4">
               <h2 className={`text-3xl md:text-5xl mb-6 ${isRTL ? "" : "font-serif"}`}>
                 {t("experience.ctaTitle")}
               </h2>
-              <p className="max-w-xl mx-auto text-primary-foreground/70 mb-8">{t("hero.subtitle")}</p>
+              <p className="max-w-xl mx-auto text-[#E6E2DA]/75 mb-8">{t("hero.subtitle")}</p>
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <Link to="/properties">
-                  <Button className="bg-gold hover:bg-gold/90 text-white px-7 py-6 text-base rounded-full">
+                  <Button className="bg-[#E6E2DA] hover:bg-white text-burgundy px-7 py-6 text-base rounded-full">
                     {t("hero.exploreProperties")}
                   </Button>
                 </Link>
                 <Link to="/contact">
                   <Button
                     variant="outline"
-                    className="px-7 py-6 text-base rounded-full border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10"
+                    className="px-7 py-6 text-base rounded-full border-[#E6E2DA]/35 bg-transparent text-[#E6E2DA] hover:bg-[#E6E2DA]/10 hover:text-[#E6E2DA]"
                   >
                     {t("hero.bookConsultation")}
                   </Button>
