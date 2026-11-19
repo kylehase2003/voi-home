@@ -143,6 +143,14 @@ const Footer = () => {
                   {t("footer.ourTeam")}
                 </Link>
               </li>
+              <li>
+                <Link
+                  to="/faq"
+                  className="text-sm text-primary-foreground/80 hover:text-primary-foreground transition-smooth cursor-pointer relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[1px] after:bg-primary-foreground hover:after:w-full after:transition-all after:duration-300"
+                >
+                  {t("footer.faq")}
+                </Link>
+              </li>
             </ul>
           </div>
 

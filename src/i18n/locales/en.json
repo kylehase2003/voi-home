@@ -64,7 +64,8 @@
     "buyerGuide": "Buyer Guide",
     "ourTeam": "Our Team",
     "admin": "Admin",
-    "services": "Services"
+    "services": "Services",
+    "faq": "FAQ"
   },
   "hero": {
     "eyebrow": "Boutique real estate · Istanbul & Bodrum",
@@ -1410,5 +1411,22 @@
     "journal": "Read the journal",
     "email": "Email info@voi-home.com",
     "office": "Visit our office"
+  },
+  "faqPage": {
+    "eyebrow": "Questions & answers",
+    "title": "Everything you want to know before you move or buy",
+    "lead": "Sixty clear answers about living in Istanbul, residence, buying, citizenship, renting and taxes. Each one links to a full guide when you want more depth.",
+    "searchPlaceholder": "Search the questions",
+    "clearSearch": "Clear search",
+    "sectionsLabel": "FAQ sections",
+    "noResults": "No questions match your search.",
+    "questionCount_one": "{{count}} question",
+    "questionCount_other": "{{count}} questions",
+    "readGuide": "Read the full guide",
+    "viewService": "See how we help",
+    "contactUs": "Speak with us",
+    "importantInfo": "Important information",
+    "teaserTitle": "Questions we hear often",
+    "readMore": "Read more"
   }
 }

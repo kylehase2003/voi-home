@@ -7,6 +7,7 @@ import { supabase } from "@/integrations/supabase/client";
 import BlogCardMinimal from "@/components/BlogCardMinimal";
 import SEOHead from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
+import { GUIDES, mergeWithGuides } from "@/data/guides";
 interface Blog {
   id: string;
   title: string;
@@ -56,7 +57,7 @@ const Blogs = () => {
         ascending: false
       });
       if (error) throw error;
-      const blogsData = (data || []).map(blog => ({
+      const blogsData = mergeWithGuides(data || []).map(blog => ({
         ...blog,
         tags: Array.isArray(blog.tags) ? blog.tags as string[] : [],
         tags_ar: Array.isArray(blog.tags_ar) ? blog.tags_ar as string[] : [],
@@ -66,6 +67,7 @@ const Blogs = () => {
       setFilteredBlogs(blogsData);
     } catch (error) {
       console.error("Error fetching blogs:", error);
+      setBlogs(GUIDES as Blog[]);
     } finally {
       setLoading(false);
     }

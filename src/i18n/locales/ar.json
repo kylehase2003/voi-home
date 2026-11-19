@@ -68,7 +68,8 @@
     "buyerGuide": "دليل المشتري",
     "ourTeam": "فريقنا",
     "admin": "المسؤول",
-    "services": "الخدمات"
+    "services": "الخدمات",
+    "faq": "الأسئلة الشائعة"
   },
   "hero": {
     "eyebrow": "عقارات بوتيكية · إسطنبول وبودروم",
@@ -1436,5 +1437,26 @@
     "journal": "اقرأ المدونة",
     "email": "راسلنا info@voi-home.com",
     "office": "زر مكتبنا"
+  },
+  "faqPage": {
+    "eyebrow": "أسئلة وأجوبة",
+    "title": "كل ما تريد معرفته قبل الانتقال أو الشراء",
+    "lead": "ستون إجابة واضحة عن الحياة في إسطنبول والإقامة والشراء والجنسية والتأجير والضرائب. وكل إجابة مرتبطة بدليل كامل إذا أردت التعمق أكثر.",
+    "searchPlaceholder": "ابحث في الأسئلة",
+    "clearSearch": "مسح البحث",
+    "sectionsLabel": "أقسام الأسئلة",
+    "noResults": "لا توجد أسئلة تطابق بحثك.",
+    "questionCount_zero": "{{count}} سؤال",
+    "questionCount_one": "سؤال واحد",
+    "questionCount_two": "سؤالان",
+    "questionCount_few": "{{count}} أسئلة",
+    "questionCount_many": "{{count}} سؤالاً",
+    "questionCount_other": "{{count}} سؤال",
+    "readGuide": "اقرأ الدليل الكامل",
+    "viewService": "تعرّف على كيف نساعدك",
+    "contactUs": "تحدث معنا",
+    "importantInfo": "معلومات مهمة",
+    "teaserTitle": "أسئلة نسمعها كثيراً",
+    "readMore": "اقرأ المزيد"
   }
 }

@@ -7,6 +7,7 @@ import SEOHead from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ServiceCard from "@/components/services/ServiceCard";
 import ServicesCta from "@/components/services/ServicesCta";
+import FaqTeaser from "@/components/faq/FaqTeaser";
 import { Button } from "@/components/ui/button";
 import { SERVICES } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
@@ -84,6 +85,8 @@ const Services = () => {
             </div>
           </div>
         </section>
+
+        <FaqTeaser />
 
         <ServicesCta />
       </main>

@@ -11,6 +11,7 @@ import heroImage from "@/assets/photos/fallback-blog.webp";
 import { useTranslation } from "react-i18next";
 import { getTranslatedContent } from "@/lib/i18n-content";
 import SEOHead from "@/components/SEOHead";
+import { GUIDES, findGuide, mergeWithGuides } from "@/data/guides";
 interface Blog {
   id: string;
   title: string;
@@ -47,19 +48,26 @@ const BlogDetail = () => {
         error
       } = await supabase.from('blogs').select('*').eq('slug', slug).eq('published', true).maybeSingle();
       if (error) throw error;
-      setBlog(data);
-      if (data) {
+      // FAQ guides live in code; use one when the database has no such post.
+      const post = (data as Blog | null) ?? (findGuide(slug) as Blog | undefined) ?? null;
+      setBlog(post);
+      if (post) {
         const { data: others } = await supabase
           .from('blogs')
           .select('*')
           .eq('published', true)
-          .neq('id', data.id)
           .order('published_at', { ascending: false })
-          .limit(4);
-        setFeatured((others as Blog[]) || []);
+          .limit(5);
+        const pool = mergeWithGuides((others as Blog[]) || []) as Blog[];
+        setFeatured(pool.filter((b) => b.slug !== post.slug).slice(0, 4));
       }
     } catch (error) {
       console.error('Error fetching blog:', error);
+      const guide = findGuide(slug);
+      if (guide) {
+        setBlog(guide as Blog);
+        setFeatured(GUIDES.filter((g) => g.slug !== guide.slug).slice(0, 4) as Blog[]);
+      }
     } finally {
       setLoading(false);
     }
@@ -134,11 +142,11 @@ const BlogDetail = () => {
             {getTranslatedContent(blog, 'title', i18n.language)}
           </h1>
           <div className="flex items-center justify-center gap-2 text-primary-foreground/80 px-4 py-2 md:px-6 md:py-3 border border-primary-foreground/30 rounded-full max-w-[90%] mx-auto backdrop-blur-sm text-xs md:text-sm">
-            <Link to="/" className="hover:text-gold transition-smooth whitespace-nowrap">{t('blogs.home')}</Link>
+            <Link to="/" className="hover:text-white transition-smooth whitespace-nowrap">{t('blogs.home')}</Link>
             <span>/</span>
-            <Link to="/blogs" className="hover:text-gold transition-smooth whitespace-nowrap">{t('nav.blogs')}</Link>
+            <Link to="/blogs" className="hover:text-white transition-smooth whitespace-nowrap">{t('nav.blogs')}</Link>
             <span>/</span>
-            <span className="text-gold truncate max-w-[150px] sm:max-w-[250px] md:max-w-[350px] lg:max-w-[450px]">{getTranslatedContent(blog, 'title', i18n.language)}</span>
+            <span className="text-white truncate max-w-[150px] sm:max-w-[250px] md:max-w-[350px] lg:max-w-[450px]">{getTranslatedContent(blog, 'title', i18n.language)}</span>
           </div>
         </div>
       </section>

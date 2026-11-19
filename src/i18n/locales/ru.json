@@ -66,7 +66,8 @@
     "buyerGuide": "Руководство покупателя",
     "ourTeam": "Наша команда",
     "admin": "Администратор",
-    "services": "Услуги"
+    "services": "Услуги",
+    "faq": "FAQ"
   },
   "hero": {
     "title": "Выбираем неспешно.\nЗнаем досконально.",
@@ -1412,5 +1413,24 @@
     "journal": "Читать журнал",
     "email": "Написать на info@voi-home.com",
     "office": "Наш офис"
+  },
+  "faqPage": {
+    "eyebrow": "Вопросы и ответы",
+    "title": "Всё, что нужно знать перед переездом или покупкой",
+    "lead": "Шестьдесят ответов о жизни в Стамбуле, ВНЖ, покупке, гражданстве, аренде и налогах. Каждый ведёт к подробному гиду.",
+    "searchPlaceholder": "Поиск по вопросам",
+    "clearSearch": "Очистить поиск",
+    "sectionsLabel": "Разделы",
+    "noResults": "Ничего не найдено.",
+    "questionCount_one": "{{count}} вопрос",
+    "questionCount_few": "{{count}} вопроса",
+    "questionCount_many": "{{count}} вопросов",
+    "questionCount_other": "{{count}} вопросов",
+    "readGuide": "Читать полный гид",
+    "viewService": "Как мы помогаем",
+    "contactUs": "Связаться с нами",
+    "importantInfo": "Важная информация",
+    "teaserTitle": "Частые вопросы",
+    "readMore": "Подробнее"
   }
 }

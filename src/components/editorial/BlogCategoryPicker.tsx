@@ -6,6 +6,7 @@ import { supabase } from "@/integrations/supabase/client";
 import { Button } from "@/components/ui/button";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import BlogCardMinimal from "@/components/BlogCardMinimal";
+import { mergeWithGuides } from "@/data/guides";
 
 interface Blog {
   id: string;
@@ -34,7 +35,7 @@ const BlogCategoryPicker = () => {
         .eq("published", true)
         .order("published_at", { ascending: false })
         .limit(3);
-      if (!error && data && mounted) setPosts(data as Blog[]);
+      if (mounted) setPosts(mergeWithGuides((!error && (data as Blog[])) || []).slice(0, 3) as Blog[]);
     })();
     return () => {
       mounted = false;
