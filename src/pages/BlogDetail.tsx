@@ -10,7 +10,7 @@ import { supabase } from "@/integrations/supabase/client";
 import heroImage from "@/assets/photos/fallback-blog.webp";
 import { useTranslation } from "react-i18next";
 import { getTranslatedContent } from "@/lib/i18n-content";
-import SEOHead from "@/components/SEOHead";
+import SEOHead, { ORG_ID, SITE_URL } from "@/components/SEOHead";
 import { GUIDES, findGuide, mergeWithGuides } from "@/data/guides";
 interface Blog {
   id: string;
@@ -111,21 +111,22 @@ const BlogDetail = () => {
         path={`/blog/${blog.slug}`}
         ogImage={blog.featured_image || undefined}
         ogType="article"
+        breadcrumbs={[
+          { name: "Journal", path: "/blogs" },
+          { name: getTranslatedContent(blog, 'title', 'en'), path: `/blog/${blog.slug}` },
+        ]}
         jsonLd={{
           "@context": "https://schema.org",
-          "@type": "Article",
+          "@type": "BlogPosting",
           headline: blogTitle,
-          image: blog.featured_image ? [blog.featured_image] : undefined,
+          image: blog.featured_image ? [blog.featured_image.startsWith("http") ? blog.featured_image : `${SITE_URL}${blog.featured_image}`] : undefined,
           datePublished: blog.published_at || undefined,
           dateModified: blog.published_at || undefined,
           description: blogExcerpt || undefined,
-          author: { "@type": "Organization", name: "Voi Home" },
-          publisher: {
-            "@type": "Organization",
-            name: "Voi Home",
-            logo: { "@type": "ImageObject", url: "https://voi-home.com/favicon.webp" },
-          },
-          mainEntityOfPage: `https://voi-home.com/blog/${blog.slug}`,
+          inLanguage: i18n.language === 'ar' ? 'ar' : 'en',
+          author: { "@id": ORG_ID },
+          publisher: { "@id": ORG_ID },
+          mainEntityOfPage: `${SITE_URL}/blog/${blog.slug}`,
         }}
       />
       <Header />

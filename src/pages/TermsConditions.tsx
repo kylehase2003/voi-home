@@ -60,6 +60,7 @@ const TermsConditions = () => {
         title="Terms & Conditions"
         description="The terms governing the use of Voi Home's website and real estate advisory services in Türkiye."
         path="/terms"
+        breadcrumbs={[{ name: "Terms and conditions", path: "/terms" }]}
       />
       <Header />
       <main className="pt-24">

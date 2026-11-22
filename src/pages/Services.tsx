@@ -9,7 +9,7 @@ import ServiceCard from "@/components/services/ServiceCard";
 import ServicesCta from "@/components/services/ServicesCta";
 import FaqTeaser from "@/components/faq/FaqTeaser";
 import { Button } from "@/components/ui/button";
-import { SERVICES } from "@/data/services";
+import { SERVICES, getServiceContent } from "@/data/services";
 import { whatsappLink } from "@/lib/whatsapp";
 import heroImage from "@/assets/photos/fallback-blog.webp";
 
@@ -26,6 +26,18 @@ const Services = () => {
         title="Real Estate Services in Istanbul | Voi Home"
         description="Property sales, rentals, investment advisory, property management, after-sales support, citizenship assistance, interior design and sales office setup in Istanbul."
         path="/services"
+        breadcrumbs={[{ name: "Services", path: "/services" }]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          name: "Voi Home services",
+          itemListElement: SERVICES.map((s, i) => ({
+            "@type": "ListItem",
+            position: i + 1,
+            name: getServiceContent(s.slug, "en").name,
+            url: `https://voi-home.com/services/${s.slug}`,
+          })),
+        }}
       />
       <Header />
       <main className="pt-24">

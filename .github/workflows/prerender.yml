@@ -1,0 +1,75 @@
+# Builds the site, prerenders every page for search engines and AI crawlers,
+# and publishes the result to the `deploy` branch.
+#
+# Hostinger must serve the `deploy` branch as-is (no build step) for the
+# snapshots to go live. Until that switch is made, `main` keeps deploying the
+# normal way and this workflow only prepares the branch.
+#
+# Runs on every push to main, nightly (so listings and posts added in the
+# admin get their own pages), and on demand from the Actions tab.
+
+name: Build, prerender and deploy
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 2 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - run: npm ci
+
+      # Kept out of package.json on purpose: Hostinger would download Chrome.
+      - name: Install headless Chrome for prerendering
+        run: npm install --no-save --prefix "$RUNNER_TEMP/prerender-deps" puppeteer@24
+
+      - name: Build
+        run: npm run build
+
+      - name: Prerender
+        run: node scripts/prerender.mjs
+        env:
+          PRERENDER_DEPS: ${{ runner.temp }}/prerender-deps/node_modules
+
+      # Hostinger expects a package.json in the deployed folder.
+      - name: Prepare deploy folder
+        run: echo '{ "name": "voi-home-static", "private": true }' > dist/package.json
+
+      - name: Keep the previous build for IndexNow comparison
+        continue-on-error: true
+        run: |
+          git fetch origin deploy --depth=1
+          git worktree add .previous-build origin/deploy
+
+      - name: Publish to the deploy branch
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: deploy
+          publish_dir: ./dist
+          force_orphan: true
+          enable_jekyll: true
+          commit_message: "Deploy ${{ github.sha }}"
+
+      - name: Notify search engines (IndexNow)
+        continue-on-error: true
+        run: node scripts/indexnow.mjs

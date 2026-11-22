@@ -84,6 +84,7 @@ const Blogs = () => {
         title="The Journal — Notes on Property in Türkiye"
         description="Considered writing on the Istanbul and Bodrum property markets, Turkish citizenship by investment, and the details worth knowing before you buy."
         path="/blogs"
+        breadcrumbs={[{ name: "Journal", path: "/blogs" }]}
       />
       <Header />
       <main className="pt-24 flex-1">

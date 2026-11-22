@@ -81,9 +81,9 @@ All colors MUST be HSL.
     --olive: 0 0% 0%;
     --gold: 0 0% 0%;
     --cream: 40 25% 95%;
-    /* Brand accents (client palette): Deep Burgundy #5D1E21, Emerald Green #154230 */
+    /* Brand accents (client palette): Deep Burgundy #5D1E21, dark olive green #3E4328 (was emerald #154230; client found it too bright) */
     --burgundy: 357 51% 24%;
-    --evergreen: 156 52% 17%;
+    --evergreen: 72 26% 21%;
     --luxury-black: 0 0% 11%;
 
     --gradient-hero: linear-gradient(135deg, hsl(var(--olive)) 0%, hsl(57 22% 25%) 100%);

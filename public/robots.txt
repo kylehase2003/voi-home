@@ -1,40 +1,49 @@
+# Voi Home - crawler rules.
+# Search engines and AI assistants are welcome to read and cite the site.
+# Note: a named User-agent group replaces the `*` group entirely, so every
+# group repeats the Disallow lines for the private admin pages.
+
+# Search engines
 User-agent: Googlebot
-Allow: /
-Disallow: /dashboard
-Disallow: /auth
-
 User-agent: Bingbot
+User-agent: Applebot
+User-agent: DuckDuckBot
+User-agent: YandexBot
 Allow: /
 Disallow: /dashboard
 Disallow: /auth
 
-User-agent: Twitterbot
+# AI search and assistants (ChatGPT, Claude, Perplexity, Gemini, ...)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: anthropic-ai
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: Meta-ExternalAgent
+User-agent: CCBot
 Allow: /
+Disallow: /dashboard
+Disallow: /auth
 
+# Link previews
 User-agent: facebookexternalhit
+User-agent: Twitterbot
+User-agent: LinkedInBot
+User-agent: WhatsApp
+User-agent: TelegramBot
+User-agent: Slackbot
 Allow: /
 
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
 Disallow: /dashboard
 Disallow: /auth
-
-User-agent: PerplexityBot
-Allow: /
-
-User-agent: GPTBot
-Allow: /
-
-User-agent: ChatGPT-User
-Allow: /
-
-User-agent: ClaudeBot
-Allow: /
-
-User-agent: anthropic-ai
-Allow: /
-
-User-agent: Applebot
-Allow: /
 
 Sitemap: https://voi-home.com/sitemap.xml

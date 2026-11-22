@@ -1,8 +1,9 @@
 import type { Guide } from "../types";
-import imgRooftops from "@/assets/photos/about-rooftops.webp";
-import imgSkylineTower from "@/assets/photos/scroller-skyline-tower.webp";
-import imgLiving from "@/assets/photos/process-living-room.webp";
-import imgLounge from "@/assets/photos/tile-interior-lounge.webp";
+// Photos: Unsplash (free to use under the Unsplash License).
+import imgRooftops from "@/assets/photos/guides/tax-calculator.webp";
+import imgSkylineTower from "@/assets/photos/guides/invest-skyline.webp";
+import imgLiving from "@/assets/photos/guides/yield-living-room.webp";
+import imgLounge from "@/assets/photos/guides/renting-keys.webp";
 
 export const taxesAndCosts: Guide = {
   id: "guide-property-taxes-and-costs-in-turkey",
@@ -49,7 +50,7 @@ export const taxesAndCosts: Guide = {
 <p>Rental income from property in Turkey is generally subject to Turkish income tax, including for foreign owners who live abroad. Residential rental income may benefit from an annual exemption amount and from deductions for expenses, and the tax is declared in an annual return. Whether and how much you pay depends on the amount of income, your other income in Turkey, the deduction method and applicable tax treaties. An accountant can set this up correctly from the first year.</p>
 
 <h2>Tax when you sell</h2>
-<p>When you sell, a <strong>capital gains tax</strong> may apply depending on how long you have owned the property and your circumstances. Gains on property sold by an individual after a holding period set by law (currently five years) are generally exempt; gains on earlier sales may be taxable, with adjustments for inflation in some cases. The seller's share of the title deed fee also applies.</p>
+<p>When you sell, a <strong>capital gains tax</strong> may apply depending on how long you have owned the property and your circumstances. Gains on property sold by an individual after five full years of ownership are generally exempt. Gains on earlier sales are taxed as income above an annual exemption amount, with adjustments for inflation in some cases, and must be declared in the following March. The seller's share of the title deed fee also applies.</p>
 
 <h2>Plan the numbers before you buy</h2>
 <p>Include all of these costs when calculating your return. Our guide to <a href="/blog/how-to-calculate-rental-yield">calculating rental yield</a> shows how to work out gross and net returns, and <a href="/services/investment-advisory">Voi Home's investment advisory</a> can build a full cost picture for a specific property.</p>
@@ -85,7 +86,7 @@ export const taxesAndCosts: Guide = {
 <p>يخضع دخل الإيجار من العقارات في تركيا عموماً لضريبة الدخل التركية، بما في ذلك للمالكين الأجانب المقيمين في الخارج. وقد يستفيد دخل إيجار المساكن من حد إعفاء سنوي ومن خصم المصاريف، وتُقدَّم الضريبة في إقرار سنوي. ويعتمد ما إذا كنت ستدفع ومقداره على حجم الدخل ودخلك الآخر في تركيا وطريقة الخصم واتفاقيات الازدواج الضريبي. ويمكن للمحاسب ترتيب ذلك بشكل صحيح من السنة الأولى.</p>
 
 <h2>الضريبة عند البيع</h2>
-<p>عند البيع قد تُفرض <strong>ضريبة على الأرباح الرأسمالية</strong> حسب مدة تملكك للعقار وظروفك. والأرباح من بيع الفرد لعقار بعد فترة يحددها القانون (خمس سنوات حالياً) معفاة عموماً، أما البيع قبل ذلك فقد يخضع للضريبة، مع تعديلات للتضخم في بعض الحالات. كما تنطبق حصة البائع من رسوم الطابو.</p>
+<p>عند البيع قد تُفرض <strong>ضريبة على الأرباح الرأسمالية</strong> حسب مدة تملكك للعقار وظروفك. والأرباح من بيع الفرد لعقار بعد خمس سنوات كاملة من التملك معفاة عموماً. أما الأرباح من البيع قبل ذلك فتخضع لضريبة الدخل فيما يتجاوز حد الإعفاء السنوي، مع تعديلات للتضخم في بعض الحالات، ويجب التصريح بها في شهر مارس من العام التالي. كما تنطبق حصة البائع من رسوم الطابو.</p>
 
 <h2>احسب الأرقام قبل الشراء</h2>
 <p>أدخل كل هذه التكاليف عند حساب عائدك. يشرح دليلنا عن <a href="/blog/how-to-calculate-rental-yield">حساب العائد الإيجاري</a> كيفية حساب العائد الإجمالي والصافي، ويمكن لخدمة <a href="/services/investment-advisory">الاستشارات الاستثمارية في Voi Home</a> إعداد صورة كاملة للتكاليف لعقار محدد.</p>

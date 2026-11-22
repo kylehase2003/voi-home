@@ -54,6 +54,7 @@ const Partners = () => {
         title="Our Partners — Voi Home"
         description="The developers, lawyers and specialists Voi Home trusts with its clients' decisions in Istanbul and Bodrum."
         path="/partners"
+        breadcrumbs={[{ name: "Partners", path: "/partners" }]}
       />
       <Header />
       <main className="pt-24">

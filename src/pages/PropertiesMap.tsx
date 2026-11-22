@@ -288,6 +288,7 @@ const PropertiesMap = () => {
         title="Map of Our Homes in Istanbul & Bodrum"
         description="See where each Voi Home property sits in Istanbul and Bodrum: its street, its neighborhood, its distance to the water."
         path="/properties-map"
+        breadcrumbs={[{ name: "Properties map", path: "/properties-map" }]}
       />
       <Header />
 

@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { ArrowRight, ChevronRight, Compass, Eye, Handshake, Info, MessageCircle, Repeat, Users } from "lucide-react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import SEOHead from "@/components/SEOHead";
+import SEOHead, { ORG_ID, SITE_URL } from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
 import ServiceCard from "@/components/services/ServiceCard";
 import ServicesCta from "@/components/services/ServicesCta";
@@ -36,7 +36,34 @@ const ServiceDetail = () => {
 
   return (
     <div className={`min-h-screen bg-background ${isRTL ? "font-arabic" : ""}`}>
-      <SEOHead title={`${enName} in Istanbul | Voi Home`} description={content.seoDescription} path={`/services/${service.slug}`} />
+      <SEOHead
+        title={`${enName} in Istanbul | Voi Home`}
+        description={content.seoDescription}
+        path={`/services/${service.slug}`}
+        ogImage={service.image}
+        breadcrumbs={[
+          { name: "Services", path: "/services" },
+          { name: enName, path: `/services/${service.slug}` },
+        ]}
+        jsonLd={{
+          "@context": "https://schema.org",
+          "@type": "Service",
+          name: enName,
+          serviceType: enName,
+          description: getServiceContent(service.slug, "en").intro,
+          url: `${SITE_URL}/services/${service.slug}`,
+          provider: { "@id": ORG_ID },
+          areaServed: { "@type": "City", name: "Istanbul" },
+          hasOfferCatalog: {
+            "@type": "OfferCatalog",
+            name: enName,
+            itemListElement: getServiceContent(service.slug, "en").sections.map((sec) => ({
+              "@type": "Offer",
+              itemOffered: { "@type": "Service", name: sec.title, description: sec.items.join("; ") },
+            })),
+          },
+        }}
+      />
       <Header />
       <main className="pt-24">
         {/* Hero */}

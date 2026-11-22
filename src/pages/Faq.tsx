@@ -48,6 +48,7 @@ const Faq = () => {
         title="Buying Property & Living in Istanbul: FAQ | Voi Home"
         description="Answers to 60 common questions about living in Istanbul, residence permits, buying property in Turkey, citizenship by investment, renting, taxes and daily life."
         path="/faq"
+        breadcrumbs={[{ name: "FAQ", path: "/faq" }]}
         jsonLd={jsonLd}
       />
       <Header />

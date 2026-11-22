@@ -37,6 +37,7 @@ const Contact = () => {
         title="Contact Voi Home"
         description="Speak with a Voi Home advisor about homes in Istanbul and Bodrum. Call +90 552 797 10 00, message us on WhatsApp, or write to info@voi-home.com."
         path="/contact"
+        breadcrumbs={[{ name: "Contact", path: "/contact" }]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "LocalBusiness",

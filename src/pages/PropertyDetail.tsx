@@ -274,11 +274,23 @@ const PropertyDetail = () => {
           name: translatedTitle,
           description: translatedDesc,
           url: `https://voi-home.com/property/${property.slug}`,
-          image: mainImage,
-          price: property.price,
-          priceCurrency: "USD",
-          ...(property.location && { address: { "@type": "PostalAddress", addressLocality: property.location } }),
+          image: allImages.length ? allImages.slice(0, 6) : mainImage,
+          ...(property.created_at && { datePosted: property.created_at }),
+          offers: {
+            "@type": "Offer",
+            price: property.price,
+            priceCurrency: "USD",
+            availability: "https://schema.org/InStock",
+            seller: { "@id": "https://voi-home.com/#organization" },
+          },
+          ...(property.location && {
+            address: { "@type": "PostalAddress", addressLocality: property.location, addressCountry: "TR" },
+          }),
         }}
+        breadcrumbs={[
+          { name: "Properties", path: "/properties" },
+          { name: property.title, path: `/property/${property.slug}` },
+        ]}
       />
       <Header />
 

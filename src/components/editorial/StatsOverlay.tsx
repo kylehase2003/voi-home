@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { skipCountUp } from "@/lib/prerender";
 import { useTranslation } from "react-i18next";
 import RevealOnScroll from "@/components/RevealOnScroll";
 
@@ -22,7 +23,7 @@ const StatsOverlay = ({ image, eyebrow, title, description, stats }: StatsOverla
   const { i18n } = useTranslation();
   const isRTL = i18n.language === "ar";
   const [visible, setVisible] = useState(false);
-  const [counts, setCounts] = useState(stats.map(() => 0));
+  const [counts, setCounts] = useState(() => stats.map((s) => (skipCountUp() ? s.value : 0)));
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -42,7 +43,7 @@ const StatsOverlay = ({ image, eyebrow, title, description, stats }: StatsOverla
   }, []);
 
   useEffect(() => {
-    if (!visible) return;
+    if (!visible || skipCountUp()) return;
     const duration = 1400;
     const start = performance.now();
     let frame: number;

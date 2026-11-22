@@ -1,8 +1,9 @@
 import type { Guide } from "../types";
-import imgSkyline from "@/assets/photos/hero-skyline.webp";
-import imgBridge from "@/assets/photos/scroller-bosphorus-bridge.webp";
-import imgGarden from "@/assets/photos/tile-villa-garden.webp";
-import imgFerry from "@/assets/photos/scroller-bosphorus-ferry.webp";
+// Photos: Unsplash (free to use under the Unsplash License).
+import imgSkyline from "@/assets/photos/guides/living-galata.webp";
+import imgBridge from "@/assets/photos/guides/sides-ortakoy.webp";
+import imgGarden from "@/assets/photos/guides/family-seaside-park.webp";
+import imgFerry from "@/assets/photos/guides/daily-tram.webp";
 
 export const livingInIstanbul: Guide = {
   id: "guide-living-in-istanbul-as-a-foreigner",

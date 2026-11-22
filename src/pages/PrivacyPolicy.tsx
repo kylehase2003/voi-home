@@ -72,6 +72,7 @@ const PrivacyPolicy = () => {
         title="Privacy Policy"
         description="How Voi Home collects, uses and protects your personal information."
         path="/privacy"
+        breadcrumbs={[{ name: "Privacy policy", path: "/privacy" }]}
       />
       <Header />
       <main className="pt-24">

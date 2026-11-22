@@ -52,6 +52,7 @@ const Team = () => {
         title="The Team — Voi Home Advisors"
         description="Meet the Voi Home advisors in Istanbul and Bodrum: the people you will work with, from the first conversation to the keys."
         path="/team"
+        breadcrumbs={[{ name: "Our team", path: "/team" }]}
       />
       <Header />
       <main className="pt-24">

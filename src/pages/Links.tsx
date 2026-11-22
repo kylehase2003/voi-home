@@ -46,6 +46,7 @@ const Links = () => {
         title="Voi Home | Links"
         description="Follow Voi Home and get in touch: WhatsApp, phone, Instagram, TikTok, properties and more."
         path="/links"
+        breadcrumbs={[{ name: "Links", path: "/links" }]}
       />
       <Helmet>
         <link

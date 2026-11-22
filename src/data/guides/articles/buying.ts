@@ -1,8 +1,9 @@
 import type { Guide } from "../types";
-import imgFacade from "@/assets/photos/about-facade.webp";
-import imgPera from "@/assets/photos/scroller-pera-facades.webp";
-import imgBrick from "@/assets/photos/tile-brick-residence.webp";
-import imgTower from "@/assets/photos/service-tower.webp";
+// Photos: Unsplash (free to use under the Unsplash License).
+import imgFacade from "@/assets/photos/guides/buy-rooftops.webp";
+import imgPera from "@/assets/photos/guides/residence-facades.webp";
+import imgBrick from "@/assets/photos/guides/tapu-signing.webp";
+import imgTower from "@/assets/photos/guides/offplan-construction.webp";
 
 export const residencePermit: Guide = {
   id: "guide-turkish-residence-permit-through-property",
@@ -30,10 +31,14 @@ export const residencePermit: Guide = {
 <p>No. Owning property gives you a <em>basis</em> to apply, but the application is assessed by the immigration authorities and is not automatic. In general:</p>
 <ul>
   <li>The property must be <strong>residential</strong> (a home, not a shop or land).</li>
-  <li>It must meet the <strong>minimum value</strong> set by current regulations, which is confirmed by an official valuation. At the time of writing this is USD 200,000 in metropolitan cities such as Istanbul, but thresholds have changed before and may change again.</li>
+  <li>It must meet the <strong>minimum value</strong> set by current regulations, which is confirmed by an official valuation. At the time of writing this is USD 200,000, including in Istanbul. The threshold has been raised several times before and may change again.</li>
   <li>Some neighbourhoods have been closed to new residence permit registrations for foreigners. Check the specific address before you buy if a residence permit is important to you.</li>
+  <li>The home is expected to be your residence. A property you rent out to tenants is generally not accepted as the basis for this permit.</li>
   <li>You will need supporting documents such as health insurance, proof of address and biometric photos, and must attend an appointment.</li>
 </ul>
+
+<h2>A new route that doesn't involve property</h2>
+<p>In November 2026 Turkey introduced a separate <strong>investor residence permit</strong> for people who invest at least USD 150,000 (for three years) or USD 200,000 (for five years) in Turkish bank deposits, government bonds, investment funds or the private pension system. Buying property does not count towards it, so it is an alternative for people who want residence without buying a home, or who want to rent out the home they buy.</p>
 
 <h2>Can I get a residence permit with a second-hand property?</h2>
 <p>Yes. New and resale homes are treated the same way for residence permit purposes, as long as the property is residential, meets the value requirement and the other legal conditions. The official valuation is based on the property's current market value, not the price you agreed.</p>
@@ -66,10 +71,14 @@ export const residencePermit: Guide = {
 <p>لا. تملك العقار يمنحك <em>أساساً</em> للتقديم، لكن الطلب تقيّمه إدارة الهجرة ولا يُمنح تلقائياً. وبشكل عام:</p>
 <ul>
   <li>يجب أن يكون العقار <strong>سكنياً</strong> (منزلاً، لا محلاً تجارياً أو أرضاً).</li>
-  <li>يجب أن يحقق <strong>الحد الأدنى للقيمة</strong> الذي تحدده الأنظمة الحالية، ويُثبت ذلك بتقييم رسمي. وقت كتابة هذا الدليل يبلغ الحد 200,000 دولار في المدن الكبرى مثل إسطنبول، لكن هذه الحدود تغيرت سابقاً وقد تتغير مجدداً.</li>
+  <li>يجب أن يحقق <strong>الحد الأدنى للقيمة</strong> الذي تحدده الأنظمة الحالية، ويُثبت ذلك بتقييم رسمي. وقت كتابة هذا الدليل يبلغ الحد 200,000 دولار، بما في ذلك في إسطنبول. وقد رُفع هذا الحد عدة مرات سابقاً وقد يتغير مجدداً.</li>
   <li>أُغلقت بعض الأحياء أمام تسجيل إقامات جديدة للأجانب. تحقق من العنوان المحدد قبل الشراء إذا كانت الإقامة مهمة لك.</li>
+  <li>يُفترض أن يكون المنزل مسكنك. والعقار الذي تؤجره لمستأجرين لا يُقبل عموماً أساساً لهذه الإقامة.</li>
   <li>ستحتاج إلى وثائق داعمة مثل التأمين الصحي وإثبات العنوان والصور البيومترية، ويجب أن تحضر موعداً رسمياً.</li>
 </ul>
+
+<h2>مسار جديد لا يتطلب شراء عقار</h2>
+<p>في نوفمبر 2026 أطلقت تركيا <strong>إقامة مستثمر</strong> منفصلة لمن يستثمر 150,000 دولار على الأقل (لثلاث سنوات) أو 200,000 دولار (لخمس سنوات) في الودائع البنكية التركية أو السندات الحكومية أو صناديق الاستثمار أو نظام التقاعد الخاص. ولا يُحتسب شراء العقار ضمنها، لذا فهي بديل لمن يريد الإقامة دون شراء منزل، أو يريد تأجير المنزل الذي يشتريه.</p>
 
 <h2>هل يمكنني الحصول على إقامة بعقار مستعمل؟</h2>
 <p>نعم. يُعامل العقار الجديد والمستعمل بالطريقة نفسها في الإقامة، ما دام العقار سكنياً ويحقق شرط القيمة والشروط القانونية الأخرى. ويعتمد التقييم الرسمي على القيمة السوقية الحالية للعقار لا على السعر الذي اتفقت عليه.</p>

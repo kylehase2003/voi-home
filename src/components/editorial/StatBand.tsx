@@ -1,4 +1,5 @@
 import { useEffect, useRef, useState } from "react";
+import { skipCountUp } from "@/lib/prerender";
 
 interface Stat {
   value: number;
@@ -16,7 +17,7 @@ interface StatBandProps {
 // only thing moving; everything else about the section stays quiet.
 const StatBand = ({ stats }: StatBandProps) => {
   const [visible, setVisible] = useState(false);
-  const [counts, setCounts] = useState(stats.map(() => 0));
+  const [counts, setCounts] = useState(() => stats.map((s) => (skipCountUp() ? s.value : 0)));
   const ref = useRef<HTMLDivElement | null>(null);
 
   useEffect(() => {
@@ -36,7 +37,7 @@ const StatBand = ({ stats }: StatBandProps) => {
   }, []);
 
   useEffect(() => {
-    if (!visible) return;
+    if (!visible || skipCountUp()) return;
     const duration = 1400;
     const start = performance.now();
     let frame: number;

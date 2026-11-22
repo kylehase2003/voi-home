@@ -35,6 +35,7 @@ const About = () => {
         title="About Voi Home — Boutique Real Estate in Türkiye"
         description="Voi Home is a personal, boutique real estate firm in Istanbul and Bodrum: selective with the homes we represent, attentive to every client."
         path="/about"
+        breadcrumbs={[{ name: "About", path: "/about" }]}
       />
       <Header />
       <main className="pt-24">

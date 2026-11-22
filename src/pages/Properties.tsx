@@ -196,6 +196,7 @@ const Properties = () => {
         title="Homes for Sale in Istanbul & Bodrum"
         description="A short, carefully chosen collection of apartments, villas and investment homes in Istanbul and Bodrum, each one personally visited and checked. Citizenship-eligible homes available."
         path="/properties"
+        breadcrumbs={[{ name: "Properties", path: "/properties" }]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",

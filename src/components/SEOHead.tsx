@@ -1,7 +1,14 @@
 import { Helmet } from "react-helmet-async";
 
-const SITE_URL = "https://voi-home.com";
+export const SITE_URL = "https://voi-home.com";
+/** The business entity declared once in index.html; page schema links to it by @id. */
+export const ORG_ID = `${SITE_URL}/#organization`;
 const DEFAULT_OG_IMAGE = `${SITE_URL}/og-image.jpg`;
+
+export interface Crumb {
+  name: string;
+  path: string;
+}
 
 interface SEOHeadProps {
   title: string;
@@ -10,8 +17,13 @@ interface SEOHeadProps {
   ogImage?: string;
   ogType?: string;
   noindex?: boolean;
-  jsonLd?: Record<string, unknown>;
+  /** One schema.org object or several; each is rendered as its own script. */
+  jsonLd?: Record<string, unknown> | Record<string, unknown>[];
+  /** Trail after "Home", e.g. [{ name: "Services", path: "/services" }]. */
+  breadcrumbs?: Crumb[];
 }
+
+const absolute = (url: string) => (url.startsWith("http") ? url : `${SITE_URL}${url.startsWith("/") ? "" : "/"}${url}`);
 
 const SEOHead = ({
   title,
@@ -21,9 +33,25 @@ const SEOHead = ({
   ogType = "website",
   noindex = false,
   jsonLd,
+  breadcrumbs,
 }: SEOHeadProps) => {
   const canonicalUrl = `${SITE_URL}${path}`;
   const fullTitle = title.includes("Voi Home") ? title : `${title} | Voi Home`;
+  const image = absolute(ogImage);
+
+  const blocks = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+  if (breadcrumbs?.length) {
+    blocks.push({
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [{ name: "Home", path: "/" }, ...breadcrumbs].map((c, i) => ({
+        "@type": "ListItem",
+        position: i + 1,
+        name: c.name,
+        item: `${SITE_URL}${c.path}`,
+      })),
+    });
+  }
 
   return (
     <Helmet>
@@ -37,18 +65,20 @@ const SEOHead = ({
       <meta property="og:url" content={canonicalUrl} />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
-      <meta property="og:image" content={ogImage} />
+      <meta property="og:image" content={image} />
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
       <meta name="twitter:description" content={description} />
-      <meta name="twitter:image" content={ogImage} />
+      <meta name="twitter:image" content={image} />
 
       {/* JSON-LD */}
-      {jsonLd && (
-        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
-      )}
+      {blocks.map((b, i) => (
+        <script key={i} type="application/ld+json">
+          {JSON.stringify(b)}
+        </script>
+      ))}
     </Helmet>
   );
 };

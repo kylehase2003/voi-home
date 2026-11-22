@@ -1,21 +1,58 @@
 # Voi Home
 
-> A boutique real estate firm in Istanbul and Bodrum, Türkiye: a carefully chosen collection of homes, personal advice, and guidance on Turkish citizenship by investment.
+> Voi Home is a boutique real estate advisory in Istanbul, Türkiye. It helps international buyers, investors and families buy, rent, manage and furnish homes in Istanbul, with personal advice in English and Arabic, and guidance on residence permits and Turkish citizenship by investment.
 
-Voi Home is selective by design: every home is chosen and known in full, and every client is advised personally. Before recommending a home in Istanbul or Bodrum we check the details most buyers never see: title deeds, permits, the developer's record, the building and the street around it. We provide end-to-end advisory, from shortlisting to closing, including Turkish citizenship eligibility through qualifying real estate investment (minimum $400,000 USD).
+## Company facts
 
-## Pages
+- Name: Voi Home
+- Website: https://voi-home.com
+- Office: Zeytinburnu, Istanbul, Türkiye
+- Phone and WhatsApp: +90 552 797 10 00
+- Email: info@voi-home.com
+- Languages: English, Arabic
+- Market: Istanbul (European and Asian sides), plus selected homes in Bodrum
+- Instagram: https://www.instagram.com/voi.home/
+- LinkedIn: https://www.linkedin.com/company/voi-home
 
-- [Home](/): Overview of Voi Home services in Istanbul and Bodrum, Türkiye.
-- [Properties](/properties): Searchable catalog of luxury homes, villas, and investment properties.
-- [Properties Map](/properties-map): Map view of available listings across Türkiye.
-- [About](/about): Company background, mission, and expertise in Turkish real estate.
-- [Blog](/blogs): Market insights, neighborhood guides, and investment articles.
-- [Team](/team): Advisors and consultants at Voi Home.
-- [Partners](/partners): Developer and institutional partners.
-- [Contact](/contact): Enquiry form, WhatsApp, and office details.
+## Services
+
+- [Property sales](https://voi-home.com/services/property-sales): finding and buying the right home, from shortlist to title deed.
+- [Property rentals](https://voi-home.com/services/property-rentals): long-term rentals for tenants and landlords.
+- [Investment advisory](https://voi-home.com/services/investment-advisory): area and property analysis, rental yield and resale potential.
+- [Property management](https://voi-home.com/services/property-management): tenants, rent collection and maintenance for owners abroad.
+- [After-sales support](https://voi-home.com/services/after-sales-support): utilities, residence permit paperwork and settling in after purchase.
+- [Citizenship assistance](https://voi-home.com/services/citizenship-assistance): coordinating Turkish citizenship by real estate investment (minimum USD 400,000, held for three years).
+- [Interior design](https://voi-home.com/services/interior-design): design and furnishing in eight styles.
+- [Project sales and sales office setup](https://voi-home.com/services/project-sales-office-setup): sales strategy and sales offices for developers.
+
+## Key pages
+
+- [Properties](https://voi-home.com/properties): current homes for sale in Istanbul and Bodrum.
+- [Properties map](https://voi-home.com/properties-map)
+- [Services](https://voi-home.com/services)
+- [FAQ](https://voi-home.com/faq): 60 questions and answers about living in Istanbul, residence permits, buying, citizenship, renting, taxes and daily life.
+- [About](https://voi-home.com/about)
+- [Contact](https://voi-home.com/contact)
+- [Journal](https://voi-home.com/blogs)
+
+## Guides
+
+- [Living in Istanbul as a foreigner](https://voi-home.com/blog/living-in-istanbul-as-a-foreigner)
+- [European side or Asian side](https://voi-home.com/blog/european-vs-asian-side-istanbul)
+- [Best areas in Istanbul for families](https://voi-home.com/blog/best-areas-in-istanbul-for-families)
+- [Daily life in Istanbul](https://voi-home.com/blog/daily-life-in-istanbul)
+- [Turkish residence permits through property](https://voi-home.com/blog/turkish-residence-permit-through-property)
+- [How to buy property in Turkey as a foreigner](https://voi-home.com/blog/how-to-buy-property-in-turkey-as-a-foreigner)
+- [The Tapu (title deed) explained](https://voi-home.com/blog/tapu-title-deed-turkey-explained)
+- [Buying off-plan property in Istanbul](https://voi-home.com/blog/buying-off-plan-property-in-istanbul)
+- [Property taxes and costs in Turkey](https://voi-home.com/blog/property-taxes-and-costs-in-turkey)
+- [Investing in Istanbul real estate](https://voi-home.com/blog/investing-in-istanbul-real-estate)
+- [How to calculate rental yield](https://voi-home.com/blog/how-to-calculate-rental-yield)
+- [Renting out your property in Turkey](https://voi-home.com/blog/renting-out-your-property-in-turkey)
+- [Turkish citizenship by investment](https://voi-home.com/blog/turkish-citizenship-by-investment-2026)
 
 ## Optional
 
-- [Privacy Policy](/privacy)
-- [Terms & Conditions](/terms)
+- [Sitemap](https://voi-home.com/sitemap.xml)
+- [Privacy policy](https://voi-home.com/privacy)
+- [Terms and conditions](https://voi-home.com/terms)
