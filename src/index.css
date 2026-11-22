@@ -661,3 +661,9 @@ All colors MUST be HSL.
 .voi-admin main button.h-9:not([role="tab"]) {
   border-radius: 9999px;
 }
+
+/* Coming-soon background: a slow drift so the photo feels alive. */
+@keyframes coming-soon-drift {
+  from { transform: scale(1.05) translate3d(0, 0, 0); }
+  to { transform: scale(1.12) translate3d(-1.5%, -1%, 0); }
+}

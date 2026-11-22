@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NOT_DISTRICT_GUIDE } from "@/lib/blog";
 import { useSearchParams } from "react-router-dom";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -53,7 +54,7 @@ const Blogs = () => {
       const {
         data,
         error
-      } = await supabase.from("blogs").select("id, title, title_ar, excerpt, excerpt_ar, featured_image, category, published_at, created_at, slug, tags, tags_ar, region").eq("published", true).order("published_at", {
+      } = await supabase.from("blogs").select("id, title, title_ar, excerpt, excerpt_ar, featured_image, category, published_at, created_at, slug, tags, tags_ar, region").eq("published", true).or(NOT_DISTRICT_GUIDE).order("published_at", {
         ascending: false
       });
       if (error) throw error;

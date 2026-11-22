@@ -208,8 +208,8 @@
     "description": "The architects, developers, lawyers and lenders we trust with our clients' decisions, chosen as carefully as the homes themselves."
   },
   "auth": {
-    "title": "Admin Login",
-    "description": "Sign in to access the admin dashboard",
+    "title": "Welcome back",
+    "description": "Sign in to the Voi Home team area to manage the site and preview it before launch.",
     "email": "Email",
     "password": "Password",
     "rememberMe": "Remember me",
@@ -219,7 +219,13 @@
     "passwordTooShort": "Password must be at least 6 characters",
     "invalidCredentials": "Invalid email or password",
     "loginSuccess": "Logged in successfully",
-    "error": "An error occurred"
+    "error": "An error occurred",
+    "panelEyebrow": "Voi Home team",
+    "panelTitle": "Homes chosen slowly, and known completely.",
+    "backToSite": "Back to site",
+    "help": "Trouble signing in? Write to",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password"
   },
   "dashboard": {
     "loading": "Loading...",
@@ -363,7 +369,8 @@
       "market-update": "Market Update",
       "lifestyle": "Lifestyle",
       "news": "News",
-      "tips": "Tips"
+      "tips": "Tips",
+      "district-guide": "District guide"
     },
     "readMoreAbout": "Read more about"
   },
@@ -1347,7 +1354,10 @@
   "comingSoon": {
     "titleStart": "Something is being prepared,",
     "titleAccent": "with care.",
-    "subtitle": "Boutique real estate in Istanbul and Bodrum. Homes chosen slowly and known completely. We will open our doors shortly."
+    "subtitle": "Boutique real estate in Istanbul and Bodrum. Homes chosen slowly and known completely. We will open our doors shortly.",
+    "eyebrow": "Voi Home · Luxury Real Estate · Istanbul",
+    "whatsapp": "Message us on WhatsApp",
+    "teamLogin": "Team sign in"
   },
   "whatsapp": {
     "defaultMessage": "Hello, I would like to speak with Voi Home about finding a home."

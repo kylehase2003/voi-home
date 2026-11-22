@@ -22,14 +22,20 @@
 
 ## Parked: client feedback for later
 
-- [ ] Colour "Speak with us" burgundy (logo red). Confirm: Services page only, or also the header button?
-- [ ] Olive colour (#747B65) on the "Ask about this" buttons; maybe olive accents elsewhere, as in his mock-ups
-- [ ] Logo: he loves the current "Voi" logo and fonts, so keep them. His mock-ups say "Real Estate Advisory" under the logo; confirm whether he wants that wording
-- [ ] Images: replace placeholder photos with his photos (he has them), including one per service. Swap them in `src/data/services/index.ts`
+- [x] Colour "Speak with us" burgundy: done site-wide
+- [x] Accent green: dark olive (#3E4328) site-wide
+- [x] Logo wording: keep "Luxury Real Estate"
+- [x] Service photos: one Unsplash photo per service (`src/data/services/index.ts`); swap for his own photography when he sends it
+- [x] Municipality guides: Şişli, Üsküdar, Beykoz, Sarıyer, Beyoğlu, Kadıköy (category "district-guide", kept out of the journal)
+- [x] The 17 articles from `Istanbul_Real_Estate_17_Articles.docx`: written, fact-checked, published (EN + AR)
+- [x] FAQ page with 60 questions linked to in-depth guides
 - [ ] Social media at the bottom of every page: more visible "Follow us" row; ask whether there is a YouTube account (shown in his mock-up)
 - [ ] "Activate the WhatsApp button": find out what isn't working for him (floating button? links? hidden on property pages?)
-- [ ] Municipality material (photos and blog posts) is coming from him. Blog slugs needed: sisli, uskudar, beykoz, sariyer, beyoglu, kadikoy
+- [ ] Contact page map: points at the "Mr Property" Google listing; switch to Voi Home's own office listing
+- [ ] Google Search Console and Bing Webmaster Tools: add voi-home.com and submit https://voi-home.com/sitemap.xml
+- [ ] Coming-soon mode is ON (admin > Maintenance). Switch it off at launch
 - [ ] Service pages: FAQ sections (recommended in his brief, but no questions were provided)
 - [ ] Service pages: editable from the admin panel (the brief asks for this; currently the content lives in `src/data/services/`)
-- [ ] Have the Arabic service text checked by a native speaker
+- [ ] The 12 FAQ guides live in code (`src/data/guides`); move them into the blogs table so they can be edited in the admin
+- [ ] Have the Arabic text (services, FAQ, articles) checked by a native speaker
 - [ ] Russian: translations exist (including all services) but Russian isn't switched on in the site's language settings

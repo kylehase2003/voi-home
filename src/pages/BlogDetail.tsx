@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { NOT_DISTRICT_GUIDE } from "@/lib/blog";
 import { useParams, Link } from "react-router-dom";
 import DOMPurify from "dompurify";
 import Header from "@/components/Header";
@@ -56,6 +57,7 @@ const BlogDetail = () => {
           .from('blogs')
           .select('*')
           .eq('published', true)
+          .or(NOT_DISTRICT_GUIDE)
           .order('published_at', { ascending: false })
           .limit(5);
         const pool = mergeWithGuides((others as Blog[]) || []) as Blog[];

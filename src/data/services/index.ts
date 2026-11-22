@@ -8,16 +8,16 @@ import { SERVICES_RU } from "./ru";
 // ("VOI Eight Core Services - Developer Brief"). Each one gets a card on
 // /services and its own page at /services/<slug>, rendered from one template.
 //
-// Images are placeholders from the site's own photography until the client
-// sends final photos for each service - swap them here.
-import imgSales from "@/assets/photos/fallback-property.webp";
-import imgRentals from "@/assets/photos/about-rooftops.webp";
-import imgInvestment from "@/assets/photos/service-tower.webp";
-import imgManagement from "@/assets/photos/about-facade.webp";
-import imgAfterSales from "@/assets/photos/service-kitchen.webp";
-import imgCitizenship from "@/assets/photos/testimonial-bosphorus.webp";
-import imgInterior from "@/assets/photos/process-living-room.webp";
-import imgProjectOffice from "@/assets/photos/scroller-skyline-tower.webp";
+// Images: Unsplash photos (free to use under the Unsplash License) chosen per
+// service. Swap them here when the client sends his own photography.
+import imgSales from "@/assets/photos/services/property-sales.webp";
+import imgRentals from "@/assets/photos/services/property-rentals.webp";
+import imgInvestment from "@/assets/photos/services/investment-advisory.webp";
+import imgManagement from "@/assets/photos/services/property-management.webp";
+import imgAfterSales from "@/assets/photos/services/after-sales-support.webp";
+import imgCitizenship from "@/assets/photos/services/citizenship-assistance.webp";
+import imgInterior from "@/assets/photos/services/interior-design.webp";
+import imgProjectOffice from "@/assets/photos/services/project-sales-office-setup.webp";
 
 export type ServiceSlug =
   | "property-sales"

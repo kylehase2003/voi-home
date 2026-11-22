@@ -149,11 +149,14 @@ async function snapshot(browser, origin, route) {
       title: document.title,
       canonical: !!head.querySelector('link[rel="canonical"][data-rh]'),
       spinner: !!document.querySelector(".animate-spin"),
+      // Maintenance mode: every page intentionally shows the coming-soon page.
+      comingSoon: !!document.querySelector("[data-coming-soon]"),
     };
   });
   await page.close();
 
   const problems = [];
+  if (result.comingSoon) return { ...result, problems };
   if (result.spinner) problems.push("still loading (spinner)");
   if (result.text.length < MIN_TEXT) problems.push(`only ${result.text.length} characters of text`);
   if (/something went wrong/i.test(result.text)) problems.push("error boundary shown");
@@ -270,6 +273,8 @@ async function main() {
     writeFileSync(file, html);
   }
   writeHtaccess();
+  const comingSoon = [...outputs.values()].filter((html) => html.includes("data-coming-soon")).length;
+  if (comingSoon) console.log(`\nMaintenance mode is on: ${comingSoon} page(s) show the coming-soon page.`);
   console.log(`\nWrote ${outputs.size} snapshots, spa-shell.html and .htaccess to ${DIST}`);
 }
 
