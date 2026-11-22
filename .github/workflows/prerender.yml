@@ -52,7 +52,8 @@ jobs:
 
       # Hostinger expects a package.json in the deployed folder.
       - name: Prepare deploy folder
-        run: echo '{ "name": "voi-home-static", "private": true }' > dist/package.json
+        run: |
+          echo '{ "name": "voi-home-static", "private": true }' > dist/package.json
 
       - name: Keep the previous build for IndexNow comparison
         continue-on-error: true
