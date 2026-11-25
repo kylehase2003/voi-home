@@ -52,6 +52,33 @@ export const taxesAndCosts: Guide = {
 <h2>Tax when you sell</h2>
 <p>When you sell, a <strong>capital gains tax</strong> may apply depending on how long you have owned the property and your circumstances. Gains on property sold by an individual after five full years of ownership are generally exempt. Gains on earlier sales are taxed as income above an annual exemption amount, with adjustments for inflation in some cases, and must be declared in the following March. The seller's share of the title deed fee also applies.</p>
 
+<h2>A worked example of purchase costs</h2>
+<p>Imagine a resale apartment with a declared value equivalent to USD 300,000, bought by a foreign buyer who agrees to pay the full title deed fee. The figures below are illustrative and rounded:</p>
+<ul>
+  <li><strong>Title deed fee:</strong> 4% of 300,000 = 12,000 (or 6,000 if split with the seller).</li>
+  <li><strong>Valuation report:</strong> a few hundred dollars.</li>
+  <li><strong>DASK earthquake insurance:</strong> a modest annual premium based on the size and construction of the building.</li>
+  <li><strong>Sworn translation and notary fees:</strong> a few hundred dollars.</li>
+  <li><strong>Legal fees:</strong> depending on the scope of work.</li>
+  <li><strong>Agency commission:</strong> as agreed in writing.</li>
+</ul>
+<p>For a new-build bought from a developer where VAT applies and no exemption is available, the total can be considerably higher. Always ask for a full written breakdown before you commit.</p>
+
+<h2>Inheritance and gifts</h2>
+<p>Turkey has an inheritance and gift tax that can apply when property is passed on after death or given during the owner's lifetime. Rates depend on the relationship between the parties and the value involved, with exemptions for certain amounts. If you are planning for family succession, take advice on both Turkish rules and the rules of your home country, which may also apply.</p>
+
+<h2>Keeping good records</h2>
+<p>Keep every document from the purchase, including the title deed, valuation report, bank transfer receipts, invoices for renovation and furniture, and annual tax payments. These records help with rental income declarations, prove your costs when you sell, and support any residence or citizenship application.</p>
+
+<h2>Annual checklist for owners</h2>
+<ol>
+  <li>Pay the property tax instalments on time.</li>
+  <li>Renew DASK earthquake insurance before it expires.</li>
+  <li>Declare any rental income in the annual return, normally in March.</li>
+  <li>Review aidat and building budgets at the annual owners' meeting.</li>
+  <li>Keep utility accounts and automatic payments up to date.</li>
+</ol>
+
 <h2>Plan the numbers before you buy</h2>
 <p>Include all of these costs when calculating your return. Our guide to <a href="/blog/how-to-calculate-rental-yield">calculating rental yield</a> shows how to work out gross and net returns, and <a href="/services/investment-advisory">Voi Home's investment advisory</a> can build a full cost picture for a specific property.</p>
 
@@ -87,6 +114,33 @@ export const taxesAndCosts: Guide = {
 
 <h2>الضريبة عند البيع</h2>
 <p>عند البيع قد تُفرض <strong>ضريبة على الأرباح الرأسمالية</strong> حسب مدة تملكك للعقار وظروفك. والأرباح من بيع الفرد لعقار بعد خمس سنوات كاملة من التملك معفاة عموماً. أما الأرباح من البيع قبل ذلك فتخضع لضريبة الدخل فيما يتجاوز حد الإعفاء السنوي، مع تعديلات للتضخم في بعض الحالات، ويجب التصريح بها في شهر مارس من العام التالي. كما تنطبق حصة البائع من رسوم الطابو.</p>
+
+<h2>مثال محسوب لتكاليف الشراء</h2>
+<p>تخيل شقة إعادة بيع بقيمة مصرح بها تعادل 300,000 دولار أمريكي، يشتريها مشترٍ أجنبي يوافق على دفع رسوم سند الملكية كاملة. الأرقام التالية توضيحية ومقربة:</p>
+<ul>
+  <li><strong>رسوم سند الملكية:</strong> 4% من 300,000 = 12,000 (أو 6,000 إذا قُسمت مع البائع).</li>
+  <li><strong>تقرير التقييم:</strong> بضع مئات من الدولارات.</li>
+  <li><strong>تأمين داسك ضد الزلازل:</strong> قسط سنوي متواضع بحسب مساحة المبنى ونوع إنشائه.</li>
+  <li><strong>الترجمة المحلفة ورسوم الكاتب العدل:</strong> بضع مئات من الدولارات.</li>
+  <li><strong>الرسوم القانونية:</strong> بحسب نطاق العمل.</li>
+  <li><strong>عمولة الوساطة:</strong> كما يُتفق عليها كتابياً.</li>
+</ul>
+<p>وفي العقار الجديد المشترى من مطور تنطبق عليه ضريبة القيمة المضافة دون إعفاء، قد يكون المجموع أعلى بكثير. اطلب دائماً تفصيلاً مكتوباً كاملاً قبل الالتزام.</p>
+
+<h2>الإرث والهبات</h2>
+<p>في تركيا ضريبة على الإرث والهبات قد تنطبق عند انتقال العقار بعد الوفاة أو هبته في حياة المالك. وتعتمد النسب على صلة القرابة بين الأطراف والقيمة المعنية، مع إعفاءات لمبالغ معينة. وإذا كنت تخطط لانتقال الملكية داخل العائلة، فاستشر حول القواعد التركية وقواعد بلدك التي قد تنطبق أيضاً.</p>
+
+<h2>الاحتفاظ بسجلات جيدة</h2>
+<p>احتفظ بكل وثيقة من عملية الشراء، بما فيها سند الملكية وتقرير التقييم وإيصالات التحويل المصرفي وفواتير التجديد والأثاث ودفعات الضرائب السنوية. فهذه السجلات تساعد في التصريح بدخل الإيجار، وتثبت تكاليفك عند البيع، وتدعم أي طلب إقامة أو جنسية.</p>
+
+<h2>قائمة سنوية للملاك</h2>
+<ol>
+  <li>ادفع أقساط ضريبة العقار في مواعيدها.</li>
+  <li>جدد تأمين داسك ضد الزلازل قبل انتهائه.</li>
+  <li>صرّح بأي دخل إيجار في الإقرار السنوي، عادة في مارس.</li>
+  <li>راجع الآيدات وميزانيات المبنى في الاجتماع السنوي للملاك.</li>
+  <li>حافظ على تحديث حسابات الخدمات والدفعات التلقائية.</li>
+</ol>
 
 <h2>احسب الأرقام قبل الشراء</h2>
 <p>أدخل كل هذه التكاليف عند حساب عائدك. يشرح دليلنا عن <a href="/blog/how-to-calculate-rental-yield">حساب العائد الإيجاري</a> كيفية حساب العائد الإجمالي والصافي، ويمكن لخدمة <a href="/services/investment-advisory">الاستشارات الاستثمارية في Voi Home</a> إعداد صورة كاملة للتكاليف لعقار محدد.</p>
@@ -151,6 +205,30 @@ export const investingInIstanbul: Guide = {
 <h2>Off-plan or ready?</h2>
 <p>Off-plan can offer better prices and payment plans; ready property gives immediate rent and fewer unknowns. Read <a href="/blog/buying-off-plan-property-in-istanbul">buying off-plan in Istanbul</a> for what to check, and <a href="/blog/how-to-calculate-rental-yield">how to calculate rental yield</a> to compare returns.</p>
 
+<h2>Match the strategy to your goal</h2>
+<ul>
+  <li><strong>Steady income:</strong> well-located apartments near metro lines, business districts, hospitals or universities, let to long-term tenants.</li>
+  <li><strong>Capital growth:</strong> areas where new infrastructure or regeneration is arriving, bought at a sensible price and held for the long term.</li>
+  <li><strong>Citizenship:</strong> qualifying property worth at least USD 400,000, chosen so that it remains easy to sell after the three-year holding period.</li>
+  <li><strong>Own use plus investment:</strong> a home you will use part of the year and rent out at other times, within the rules on short-term letting.</li>
+</ul>
+
+<h2>Plan for currency</h2>
+<p>Many international investors earn and measure wealth in dollars, euros or Gulf currencies, while rents in Istanbul are usually paid in Turkish lira. Property prices are often discussed in foreign currency at the top of the market, but local demand is in lira. Think about which currency you will measure your returns in, how you will move money in and out, and how long you can hold the property if exchange rates move against you.</p>
+
+<h2>Think about the exit before you buy</h2>
+<p>Every investment ends with a sale or a handover to the next generation. Ask yourself who the next buyer is likely to be: a local family, a foreign investor, a citizenship buyer or a company. Properties that appeal to several types of buyer, in established areas with good transport, are usually the easiest to sell. Very large, highly customised or unusual properties can take longer.</p>
+
+<h2>A sensible path for a first investment</h2>
+<ol>
+  <li>Set a budget that includes purchase costs, furnishing and a reserve.</li>
+  <li>Shortlist two or three areas based on demand and transport.</li>
+  <li>Compare real rents and sale prices for similar homes.</li>
+  <li>Check the building, title deed and permits thoroughly.</li>
+  <li>Calculate net yield and total return under cautious assumptions.</li>
+  <li>Arrange management if you will not be in Istanbul.</li>
+</ol>
+
 <h2>How Voi Home helps</h2>
 <p>Our <a href="/services/investment-advisory">investment advisory</a> service compares areas and properties against your objectives, with realistic numbers. <a href="/contact">Speak with us</a> about your plans.</p>
 
@@ -195,6 +273,30 @@ export const investingInIstanbul: Guide = {
 
 <h2>على المخطط أم جاهز؟</h2>
 <p>قد يقدم العقار على المخطط أسعاراً وخطط دفع أفضل، بينما يمنحك العقار الجاهز إيجاراً فورياً ومجهولات أقل. اقرأ <a href="/blog/buying-off-plan-property-in-istanbul">الشراء على المخطط في إسطنبول</a> لمعرفة ما يجب فحصه، و<a href="/blog/how-to-calculate-rental-yield">كيفية حساب العائد الإيجاري</a> لمقارنة العوائد.</p>
+
+<h2>طابق الاستراتيجية مع هدفك</h2>
+<ul>
+  <li><strong>دخل ثابت:</strong> شقق في مواقع جيدة قرب خطوط المترو أو مناطق الأعمال أو المستشفيات أو الجامعات، تؤجَّر لمستأجرين لفترات طويلة.</li>
+  <li><strong>نمو رأس المال:</strong> مناطق تصلها بنية تحتية جديدة أو تجديد عمراني، تُشترى بسعر معقول ويُحتفظ بها طويلاً.</li>
+  <li><strong>الجنسية:</strong> عقار مؤهل بقيمة لا تقل عن 400,000 دولار أمريكي، يُختار بحيث يبقى سهل البيع بعد فترة الاحتفاظ البالغة ثلاث سنوات.</li>
+  <li><strong>الاستخدام الشخصي مع الاستثمار:</strong> منزل تستخدمه جزءاً من العام وتؤجره في أوقات أخرى، ضمن قواعد التأجير قصير الأمد.</li>
+</ul>
+
+<h2>خطط للعملة</h2>
+<p>يكسب كثير من المستثمرين الدوليين ثرواتهم ويقيسونها بالدولار أو اليورو أو عملات الخليج، بينما تُدفع الإيجارات في إسطنبول عادة بالليرة التركية. وكثيراً ما تُناقش أسعار العقارات بالعملة الأجنبية في قمة السوق، لكن الطلب المحلي بالليرة. فكّر في العملة التي ستقيس بها عوائدك، وكيف ستحوّل الأموال دخولاً وخروجاً، وإلى متى يمكنك الاحتفاظ بالعقار إذا تحركت أسعار الصرف ضدك.</p>
+
+<h2>فكّر في الخروج قبل الشراء</h2>
+<p>كل استثمار ينتهي ببيع أو بانتقال إلى الجيل التالي. فاسأل نفسك من سيكون المشتري التالي على الأرجح: عائلة محلية، أم مستثمر أجنبي، أم مشترٍ للجنسية، أم شركة. والعقارات التي تجذب أكثر من نوع من المشترين، في مناطق عريقة بمواصلات جيدة، هي عادة الأسهل بيعاً. أما العقارات الكبيرة جداً أو المخصصة بشدة أو غير المألوفة فقد تستغرق وقتاً أطول.</p>
+
+<h2>مسار معقول لأول استثمار</h2>
+<ol>
+  <li>حدد ميزانية تشمل تكاليف الشراء والتأثيث واحتياطياً.</li>
+  <li>ضع قائمة مختصرة بمنطقتين أو ثلاث على أساس الطلب والمواصلات.</li>
+  <li>قارن الإيجارات وأسعار البيع الحقيقية للمنازل المماثلة.</li>
+  <li>افحص المبنى وسند الملكية والتراخيص بدقة.</li>
+  <li>احسب العائد الصافي والعائد الإجمالي بافتراضات حذرة.</li>
+  <li>رتّب الإدارة إذا لم تكن مقيماً في إسطنبول.</li>
+</ol>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>تقارن خدمة <a href="/services/investment-advisory">الاستشارات الاستثمارية</a> لدينا بين المناطق والعقارات وفق أهدافك وبأرقام واقعية. <a href="/contact">تحدث معنا</a> عن خططك.</p>
@@ -262,6 +364,28 @@ export const rentalYield: Guide = {
 <h2>Yield is not the whole return</h2>
 <p>Your total return combines rental income with any change in the property's value. A lower-yielding home in a prime district can outperform a higher-yielding one elsewhere if it grows more in value and is easier to sell. See our <a href="/blog/investing-in-istanbul-real-estate">investment guide</a> and our breakdown of <a href="/blog/property-taxes-and-costs-in-turkey">property taxes and costs</a>.</p>
 
+<h2>Long-term versus short-term letting</h2>
+<p>Short-term rentals can show higher gross income per night, but the comparison with long-term letting is rarely as simple as it looks:</p>
+<ul>
+  <li><strong>Occupancy:</strong> short-term homes are rarely full every night, especially outside peak seasons.</li>
+  <li><strong>Costs:</strong> cleaning, laundry, platform fees, utilities, furnishing and wear are all higher.</li>
+  <li><strong>Permits:</strong> short-term letting requires a permit, and in apartment buildings the consent of other owners is generally needed.</li>
+  <li><strong>Time:</strong> guests need constant management, which usually means paying a manager.</li>
+</ul>
+<p>Once these are included, long-term letting often produces a similar or more reliable net yield with far less effort.</p>
+
+<h2>Measuring yield in two currencies</h2>
+<p>If you buy in dollars and receive rent in lira, calculate your yield in both currencies. Convert each month's rent at the exchange rate when you receive it, not at the rate when you bought. Over a year, this shows the real return in the currency you care about, and helps you decide whether to keep rent in Turkey or transfer it abroad.</p>
+
+<h2>Ways to improve your yield</h2>
+<ol>
+  <li><strong>Buy well.</strong> The purchase price has the biggest effect on yield.</li>
+  <li><strong>Choose the right tenant profile.</strong> Professionals near business districts, students near universities and families near schools all bring steady demand.</li>
+  <li><strong>Furnish sensibly</strong> where the market expects it, without over-spending.</li>
+  <li><strong>Keep the home in good condition</strong> to reduce empty months between tenants.</li>
+  <li><strong>Use professional management</strong> if you are abroad, so problems are solved quickly and tenants stay longer.</li>
+</ol>
+
 <h2>How Voi Home helps</h2>
 <p>We provide realistic rental estimates based on current lettings in the building and area. Our <a href="/services/investment-advisory">investment advisory</a> and <a href="/services/property-rentals">rentals</a> teams can model the numbers for a property you are considering.</p>
 
@@ -309,6 +433,28 @@ export const rentalYield: Guide = {
 
 <h2>العائد الإيجاري ليس كل العائد</h2>
 <p>يجمع عائدك الكلي بين دخل الإيجار وأي تغير في قيمة العقار. وقد يتفوق منزل بعائد إيجاري أقل في منطقة مميزة على منزل بعائد أعلى في مكان آخر، إذا ارتفعت قيمته أكثر وكان بيعه أسهل. راجع <a href="/blog/investing-in-istanbul-real-estate">دليل الاستثمار</a> وتفصيلنا لـ<a href="/blog/property-taxes-and-costs-in-turkey">ضرائب العقارات وتكاليفها</a>.</p>
+
+<h2>التأجير طويل الأمد مقابل القصير</h2>
+<p>قد يُظهر التأجير قصير الأمد دخلاً إجمالياً أعلى في الليلة، لكن المقارنة مع التأجير طويل الأمد نادراً ما تكون بالبساطة التي تبدو عليها:</p>
+<ul>
+  <li><strong>الإشغال:</strong> نادراً ما تكون منازل الإقامات القصيرة ممتلئة كل ليلة، خاصة خارج المواسم.</li>
+  <li><strong>التكاليف:</strong> التنظيف والغسيل ورسوم المنصات والخدمات والتأثيث والاستهلاك كلها أعلى.</li>
+  <li><strong>التراخيص:</strong> التأجير قصير الأمد يتطلب ترخيصاً، وفي المباني السكنية تُشترط عادة موافقة بقية الملاك.</li>
+  <li><strong>الوقت:</strong> الضيوف يحتاجون إلى إدارة مستمرة، ما يعني عادة دفع أجر لمدير.</li>
+</ul>
+<p>وبعد إدراج هذه العوامل، كثيراً ما يحقق التأجير طويل الأمد عائداً صافياً مماثلاً أو أكثر موثوقية بجهد أقل بكثير.</p>
+
+<h2>قياس العائد بعملتين</h2>
+<p>إذا اشتريت بالدولار وتقاضيت الإيجار بالليرة، فاحسب عائدك بالعملتين. حوّل إيجار كل شهر بسعر الصرف عند استلامه لا بسعر يوم الشراء. وعلى مدى عام يُظهر ذلك العائد الحقيقي بالعملة التي تهمك، ويساعدك في تقرير إبقاء الإيجار في تركيا أو تحويله إلى الخارج.</p>
+
+<h2>طرق لتحسين عائدك</h2>
+<ol>
+  <li><strong>اشترِ جيداً.</strong> سعر الشراء له الأثر الأكبر في العائد.</li>
+  <li><strong>اختر فئة المستأجر المناسبة.</strong> المهنيون قرب مناطق الأعمال والطلاب قرب الجامعات والعائلات قرب المدارس كلهم يجلبون طلباً ثابتاً.</li>
+  <li><strong>أثّث بحكمة</strong> حيث يتوقع السوق ذلك، دون إسراف.</li>
+  <li><strong>حافظ على المنزل بحالة جيدة</strong> لتقليل الأشهر الشاغرة بين المستأجرين.</li>
+  <li><strong>استعن بإدارة مهنية</strong> إذا كنت في الخارج، لتُحل المشكلات بسرعة ويبقى المستأجرون مدة أطول.</li>
+</ol>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>نقدم تقديرات إيجار واقعية مبنية على الإيجارات الحالية في المبنى والمنطقة. ويمكن لفريقي <a href="/services/investment-advisory">الاستشارات الاستثمارية</a> و<a href="/services/property-rentals">التأجير</a> حساب الأرقام لعقار تفكر فيه.</p>
@@ -374,6 +520,27 @@ export const rentingOut: Guide = {
 <h2>Can I sell a property that is rented?</h2>
 <p>Yes. A rented property can generally be sold. The existing tenancy usually continues with the new owner, who steps into the landlord's position. A new owner can only end the lease in limited circumstances set out by law, with strict notice periods. If you are selling, tell buyers about the tenancy and its terms; if you are buying a tenanted property, review the lease carefully.</p>
 
+<h2>What a good rental contract includes</h2>
+<ul>
+  <li>The names and identity details of landlord and tenant.</li>
+  <li>The property address and a description of the furniture and appliances included.</li>
+  <li>The rent, the currency, the payment date and how it is paid.</li>
+  <li>The length of the tenancy and the notice rules.</li>
+  <li>The deposit. Under Turkish law, the deposit for a residential lease cannot exceed three months' rent.</li>
+  <li>Who pays aidat, utilities and minor repairs.</li>
+  <li>Rules on pets, subletting and alterations.</li>
+  <li>An inventory with photos, signed by both parties at move-in.</li>
+</ul>
+
+<h2>Choosing a tenant</h2>
+<p>A good tenant is worth more than a slightly higher rent. Ask for identification, proof of income or employment, and references where possible. For corporate tenants, a lease signed by the company can offer extra security. Meet the tenant, or have your manager do so, before signing.</p>
+
+<h2>Ending a tenancy</h2>
+<p>Turkish law gives residential tenants strong protection. A landlord cannot simply end a lease at the end of its term. Termination is possible in specific situations defined by law, such as when the owner or close family genuinely needs the home, when major renovation is required, or after a long period of tenancy, and these usually involve strict notice periods and sometimes court proceedings. Plan with this in mind, especially if you may want to use or sell the home empty in future.</p>
+
+<h2>The short-term rental permit</h2>
+<p>Since 2024, letting a home for short stays requires a permit from the Ministry of Culture and Tourism. In apartment buildings, the agreement of the other owners is generally required. Operating without a permit can lead to significant fines. If short-term letting is part of your plan, check the permit position before you buy.</p>
+
 <h2>How Voi Home helps</h2>
 <p>Voi Home's <a href="/services/property-management">property management</a> and <a href="/services/property-rentals">rentals</a> services look after your home and tenants while you are abroad, with clear reporting. <a href="/contact">Speak with us</a> about your property.</p>
 
@@ -419,6 +586,27 @@ export const rentingOut: Guide = {
 
 <h2>هل يمكنني بيع عقار مؤجر؟</h2>
 <p>نعم. يمكن عموماً بيع العقار المؤجر. ويستمر عقد الإيجار القائم عادة مع المالك الجديد الذي يحل محل المؤجر. ولا يستطيع المالك الجديد إنهاء العقد إلا في حالات محدودة ينص عليها القانون وبمهل صارمة. إذا كنت تبيع فأخبر المشترين بالإيجار وشروطه، وإذا كنت تشتري عقاراً مؤجراً فراجع العقد بعناية.</p>
+
+<h2>ما يتضمنه عقد الإيجار الجيد</h2>
+<ul>
+  <li>أسماء المالك والمستأجر وبيانات هويتهما.</li>
+  <li>عنوان العقار ووصف الأثاث والأجهزة المشمولة.</li>
+  <li>الإيجار وعملته وموعد الدفع وطريقته.</li>
+  <li>مدة الإيجار وقواعد الإشعار.</li>
+  <li>التأمين. ووفق القانون التركي لا يجوز أن يتجاوز التأمين في الإيجار السكني إيجار ثلاثة أشهر.</li>
+  <li>من يدفع الآيدات والخدمات والإصلاحات البسيطة.</li>
+  <li>القواعد الخاصة بالحيوانات الأليفة والتأجير من الباطن والتعديلات.</li>
+  <li>جرد مصوّر يوقعه الطرفان عند الانتقال.</li>
+</ul>
+
+<h2>اختيار المستأجر</h2>
+<p>المستأجر الجيد أثمن من إيجار أعلى قليلاً. اطلب الهوية وإثبات الدخل أو العمل والمراجع عند الإمكان. وفي حالة مستأجري الشركات، قد يمنح العقد الموقع باسم الشركة أماناً إضافياً. التقِ بالمستأجر، أو دع مديرك يفعل ذلك، قبل التوقيع.</p>
+
+<h2>إنهاء الإيجار</h2>
+<p>يمنح القانون التركي المستأجرين في المساكن حماية قوية. فلا يستطيع المالك ببساطة إنهاء العقد عند انتهاء مدته. والإنهاء ممكن في حالات محددة يحددها القانون، مثل حاجة المالك أو أقاربه المقربين الفعلية إلى المسكن، أو الحاجة إلى تجديد كبير، أو بعد مدة إيجار طويلة، وتتضمن هذه الحالات عادة مهل إشعار صارمة وأحياناً إجراءات قضائية. خطط على هذا الأساس، خاصة إذا كنت قد ترغب مستقبلاً في استخدام المنزل أو بيعه خالياً.</p>
+
+<h2>ترخيص التأجير قصير الأمد</h2>
+<p>منذ عام 2024 أصبح تأجير المنزل لإقامات قصيرة يتطلب ترخيصاً من وزارة الثقافة والسياحة. وفي المباني السكنية تُشترط عادة موافقة بقية الملاك. والعمل دون ترخيص قد يؤدي إلى غرامات كبيرة. وإذا كان التأجير القصير جزءاً من خطتك، فتحقق من وضع الترخيص قبل الشراء.</p>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>تعتني خدمتا <a href="/services/property-management">إدارة العقارات</a> و<a href="/services/property-rentals">التأجير</a> في Voi Home بمنزلك ومستأجريك وأنت في الخارج، مع تقارير واضحة. <a href="/contact">تحدث معنا</a> عن عقارك.</p>

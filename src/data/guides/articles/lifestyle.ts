@@ -51,6 +51,25 @@ export const livingInIstanbul: Guide = {
 </ol>
 <p>Prices in Turkey have changed quickly in recent years, so any figure quoted online can be out of date within months. The best approach is to decide on two or three neighbourhoods and price a typical month there: rent or aidat (building fees), utilities, transport, food and schooling.</p>
 
+<h2>Finding your community</h2>
+<p>Istanbul has large international communities from Europe, the Middle East, Central Asia, Russia, Africa and the Americas. Many districts have a mix of long-term foreign residents and Turkish families, and there are clubs, associations, religious communities, sports groups and online networks for almost every nationality and interest. Parents often find their first friends through their children's school, and professionals through work and business groups. Joining one or two activities in your first months makes settling in far easier.</p>
+
+<h2>Climate and seasons</h2>
+<p>Istanbul has four distinct seasons. Summers are warm and often humid, with long evenings by the water. Spring and autumn are mild and many residents' favourite time of year, when the city's parks and the Bosphorus are at their best. Winters are cool and wet, with occasional snow that can briefly disrupt traffic. Homes with good insulation, central heating and air conditioning make life comfortable year-round, so check these when choosing a property.</p>
+
+<h2>Food, markets and everyday shopping</h2>
+<p>Food is one of the great pleasures of life in Istanbul. Every neighbourhood has a weekly street market with fresh fruit, vegetables, cheese and olives, alongside bakeries, butchers, fishmongers and supermarkets. International products are widely available in larger supermarkets and specialist shops, and delivery apps bring groceries and restaurant meals to your door in most districts. Eating out is part of daily life, from simple neighbourhood restaurants to some of the most acclaimed kitchens in the region.</p>
+
+<h2>Safety and earthquake preparedness</h2>
+<p>Like any large city, Istanbul has areas that are busier and more crowded than others, and normal city precautions apply. Most residential neighbourhoods feel safe for families, and many residents walk at night without concern. The more important safety question for homeowners is earthquake resilience. Istanbul is in an active seismic zone, so choose a building that meets modern standards, keep your compulsory earthquake insurance (DASK) up to date, and know your building's emergency arrangements.</p>
+
+<h2>A realistic first year</h2>
+<ol>
+  <li><strong>First weeks:</strong> tax number, bank account, mobile phone line, Istanbulkart and a temporary home if your purchase is not complete.</li>
+  <li><strong>First months:</strong> residence permit application, school enrolment, utilities, address registration and health insurance.</li>
+  <li><strong>First year:</strong> basic Turkish, a trusted network of professionals, and a clear picture of which neighbourhoods suit your routine.</li>
+</ol>
+
 <h2>Where to start</h2>
 <p>Start with the area, not the apartment. Read our comparison of the <a href="/blog/european-vs-asian-side-istanbul">European and Asian sides</a> and our guide to <a href="/blog/best-areas-in-istanbul-for-families">family-friendly areas</a>, then speak to someone who knows the streets. Voi Home can shortlist neighbourhoods and homes that fit your routine before you travel. <a href="/contact">Get in touch</a> to start.</p>
 
@@ -85,6 +104,25 @@ export const livingInIstanbul: Guide = {
   <li><strong>نمط الحياة.</strong> امتلاك سيارة وتناول الطعام خارج المنزل والتأمين الصحي الخاص كلها تضيف إلى التكلفة.</li>
 </ol>
 <p>تغيرت الأسعار في تركيا بسرعة خلال السنوات الأخيرة، لذا قد يصبح أي رقم منشور على الإنترنت قديماً خلال أشهر. الأفضل أن تختار حيين أو ثلاثة وتحسب شهراً نموذجياً فيها: الإيجار أو العائدات (رسوم المبنى)، والفواتير، والمواصلات، والطعام، والمدارس.</p>
+
+<h2>إيجاد مجتمعك</h2>
+<p>في إسطنبول مجتمعات دولية كبيرة من أوروبا والشرق الأوسط وآسيا الوسطى وروسيا وأفريقيا والأمريكتين. وفي أحياء كثيرة مزيج من المقيمين الأجانب لفترات طويلة والعائلات التركية، وتوجد نوادٍ وجمعيات ومجتمعات دينية ومجموعات رياضية وشبكات إلكترونية لكل جنسية واهتمام تقريباً. وكثيراً ما يجد الآباء أصدقاءهم الأوائل عبر مدرسة أطفالهم، والمهنيون عبر العمل ومجموعات الأعمال. والانضمام إلى نشاط أو اثنين في الأشهر الأولى يسهّل الاستقرار كثيراً.</p>
+
+<h2>المناخ والفصول</h2>
+<p>لإسطنبول أربعة فصول واضحة. الصيف دافئ ورطب غالباً، بأمسيات طويلة على الماء. والربيع والخريف معتدلان، وهما الوقت المفضل لدى كثير من السكان، حين تكون حدائق المدينة والبوسفور في أجمل حالاتهما. والشتاء بارد وماطر، مع ثلوج أحياناً قد تعطل حركة المرور لفترة قصيرة. والمنازل ذات العزل الجيد والتدفئة المركزية والتكييف تجعل الحياة مريحة طوال العام، لذا تحقق من ذلك عند اختيار العقار.</p>
+
+<h2>الطعام والأسواق والتسوق اليومي</h2>
+<p>الطعام من أكبر متع الحياة في إسطنبول. ففي كل حي سوق أسبوعي في الشارع بالفواكه والخضار والأجبان والزيتون الطازجة، إلى جانب المخابز والجزارين وباعة السمك والمتاجر الكبرى. والمنتجات العالمية متوفرة على نطاق واسع في المتاجر الكبرى والمحلات المتخصصة، وتوصل تطبيقات التوصيل البقالة ووجبات المطاعم إلى بابك في معظم الأحياء. والأكل خارج البيت جزء من الحياة اليومية، من مطاعم الأحياء البسيطة إلى بعض أشهر المطابخ في المنطقة.</p>
+
+<h2>الأمان والاستعداد للزلازل</h2>
+<p>كأي مدينة كبيرة، في إسطنبول مناطق أكثر ازدحاماً من غيرها، وتنطبق احتياطات المدن المعتادة. ومعظم الأحياء السكنية تبدو آمنة للعائلات، ويمشي كثير من السكان ليلاً دون قلق. أما سؤال الأمان الأهم لملاك المنازل فهو مقاومة الزلازل. فإسطنبول تقع في منطقة زلزالية نشطة، لذا اختر مبنى يستوفي المعايير الحديثة، وحافظ على تجديد تأمينك الإلزامي ضد الزلازل (داسك)، واعرف ترتيبات الطوارئ في مبناك.</p>
+
+<h2>عام أول واقعي</h2>
+<ol>
+  <li><strong>الأسابيع الأولى:</strong> الرقم الضريبي والحساب المصرفي وخط الهاتف المحمول وبطاقة إسطنبول كارت ومسكن مؤقت إذا لم يكتمل شراؤك.</li>
+  <li><strong>الأشهر الأولى:</strong> طلب الإقامة وتسجيل المدرسة والخدمات وتسجيل العنوان والتأمين الصحي.</li>
+  <li><strong>العام الأول:</strong> أساسيات التركية، وشبكة موثوقة من المختصين، وصورة واضحة عن الأحياء التي تناسب نمط حياتك.</li>
+</ol>
 
 <h2>من أين تبدأ؟</h2>
 <p>ابدأ بالمنطقة لا بالشقة. اقرأ مقارنتنا بين <a href="/blog/european-vs-asian-side-istanbul">الجانبين الأوروبي والآسيوي</a> ودليلنا عن <a href="/blog/best-areas-in-istanbul-for-families">المناطق المناسبة للعائلات</a>، ثم تحدث مع من يعرف الشوارع جيداً. يمكن لفريق Voi Home أن يقترح عليك الأحياء والمنازل المناسبة لروتينك قبل أن تسافر. <a href="/contact">تواصل معنا</a> للبدء.</p>
@@ -131,6 +169,30 @@ export const europeanVsAsianSide: Guide = {
 <h2>Crossing between the two</h2>
 <p>Commuting is easier than it used to be. The Marmaray rail tunnel runs under the Bosphorus, the Eurasia Tunnel carries cars, and ferries link both shores many times an hour. Many residents choose a home within walking distance of a ferry or Marmaray station, which turns the crossing into a pleasant 20-minute trip.</p>
 
+<h2>District snapshots: European side</h2>
+<ul>
+  <li><strong>Beşiktaş:</strong> central, lively and on the Bosphorus, with Ortaköy, Bebek, Etiler and Levent within its borders. One of the most sought-after districts in the city.</li>
+  <li><strong>Şişli:</strong> Nişantaşı's boutiques, Bomonti's towers and the business district of Mecidiyeköy, with excellent metro access. See our <a href="/blog/sisli">Şişli guide</a>.</li>
+  <li><strong>Beyoğlu:</strong> culture, history and nightlife, from Galata to Cihangir. See our <a href="/blog/beyoglu">Beyoğlu guide</a>.</li>
+  <li><strong>Sarıyer:</strong> Bosphorus villages, forests, international schools and the business towers of Maslak. See our <a href="/blog/sariyer">Sarıyer guide</a>.</li>
+  <li><strong>Başakşehir and Beylikdüzü:</strong> newer, planned districts in the west with family compounds and more space for the price.</li>
+</ul>
+
+<h2>District snapshots: Asian side</h2>
+<ul>
+  <li><strong>Kadıköy:</strong> markets, cafés, culture and the Marmara seafront, from Moda to Bostancı. See our <a href="/blog/kadikoy">Kadıköy guide</a>.</li>
+  <li><strong>Üsküdar:</strong> historic mosques, Bosphorus villages and strong transport links. See our <a href="/blog/uskudar">Üsküdar guide</a>.</li>
+  <li><strong>Ataşehir:</strong> modern towers, shopping centres and the Istanbul International Finance Center.</li>
+  <li><strong>Beykoz:</strong> forests, villas and the quiet upper Bosphorus. See our <a href="/blog/beykoz">Beykoz guide</a>.</li>
+  <li><strong>Çekmeköy, Maltepe and Kartal:</strong> growing residential districts with newer buildings, metro access and, on the coast, long seaside parks.</li>
+</ul>
+
+<h2>Lifestyle differences</h2>
+<p>Residents often describe the European side as faster and more international, and the Asian side as calmer and more residential. That is a generalisation, as Kadıköy is as lively as anywhere in the city and parts of Sarıyer are as peaceful as any village. But it is true that the Asian side's coast offers long stretches of public seafront, while the European side has more of the city's offices, nightlife and major cultural venues.</p>
+
+<h2>Prices in general terms</h2>
+<p>Prices vary far more by neighbourhood, building and view than by side. The most expensive homes in the city are found on both shores of the Bosphorus. In general, central European districts such as Beşiktaş and Şişli are among the most expensive per square metre, while Kadıköy's coastal neighbourhoods are comparable, and outer districts on both sides offer more space for the same budget.</p>
+
 <h2>How to decide</h2>
 <ol>
   <li><strong>Map your weekly routine.</strong> Work, school, family and friends. Live on the side where you spend most weekdays.</li>
@@ -163,6 +225,30 @@ export const europeanVsAsianSide: Guide = {
 
 <h2>التنقل بين الجانبين</h2>
 <p>أصبح التنقل أسهل من قبل. يمر نفق مرمراي للقطارات تحت البوسفور، وينقل نفق أوراسيا السيارات، وتربط العبارات الضفتين مرات كثيرة في الساعة. ويختار كثير من السكان منزلاً قريباً من محطة عبارة أو مرمراي، فيصبح العبور رحلة ممتعة مدتها نحو 20 دقيقة.</p>
+
+<h2>لمحات عن الأحياء: الجانب الأوروبي</h2>
+<ul>
+  <li><strong>بشكتاش:</strong> مركزية ونابضة بالحياة وعلى البوسفور، وتضم أورتاكوي وبيبك وإتيلر وليفنت. من أكثر أحياء المدينة طلباً.</li>
+  <li><strong>شيشلي:</strong> متاجر نيشانتاشي وأبراج بومونتي ومنطقة أعمال مجيدية كوي، مع وصول ممتاز إلى المترو. اطلع على <a href="/blog/sisli">دليل شيشلي</a>.</li>
+  <li><strong>بيوغلو:</strong> الثقافة والتاريخ والحياة الليلية، من غلطة إلى جيهانغير. اطلع على <a href="/blog/beyoglu">دليل بيوغلو</a>.</li>
+  <li><strong>صارير:</strong> قرى البوسفور والغابات والمدارس الدولية وأبراج الأعمال في مسلك. اطلع على <a href="/blog/sariyer">دليل صارير</a>.</li>
+  <li><strong>باشاك شهير وبيليك دوزو:</strong> أحياء أحدث ومخططة في الغرب، بمجمعات عائلية ومساحة أكبر مقابل السعر.</li>
+</ul>
+
+<h2>لمحات عن الأحياء: الجانب الآسيوي</h2>
+<ul>
+  <li><strong>قاضي كوي:</strong> الأسواق والمقاهي والثقافة وواجهة مرمرة البحرية، من مودا إلى بوستانجي. اطلع على <a href="/blog/kadikoy">دليل قاضي كوي</a>.</li>
+  <li><strong>أوسكودار:</strong> المساجد التاريخية وقرى البوسفور ووسائل النقل القوية. اطلع على <a href="/blog/uskudar">دليل أوسكودار</a>.</li>
+  <li><strong>أتاشهير:</strong> أبراج حديثة ومراكز تسوق ومركز إسطنبول المالي الدولي.</li>
+  <li><strong>بيكوز:</strong> الغابات والفيلات وأعالي البوسفور الهادئة. اطلع على <a href="/blog/beykoz">دليل بيكوز</a>.</li>
+  <li><strong>تشكمه كوي ومالتبه وكارتال:</strong> أحياء سكنية نامية بمبانٍ أحدث ووصول إلى المترو، وعلى الساحل حدائق طويلة على البحر.</li>
+</ul>
+
+<h2>فروق أسلوب الحياة</h2>
+<p>كثيراً ما يصف السكان الجانب الأوروبي بأنه أسرع وأكثر دولية، والجانب الآسيوي بأنه أهدأ وأكثر سكنية. وهذا تعميم، فقاضي كوي نابضة بالحياة كأي مكان في المدينة، وأجزاء من صارير هادئة كأي قرية. لكن الصحيح أن ساحل الجانب الآسيوي يقدم امتدادات طويلة من الواجهات البحرية العامة، بينما يضم الجانب الأوروبي معظم مكاتب المدينة وحياتها الليلية ومرافقها الثقافية الكبرى.</p>
+
+<h2>الأسعار بشكل عام</h2>
+<p>تختلف الأسعار بحسب الحي والمبنى والإطلالة أكثر بكثير مما تختلف بحسب الجانب. وأغلى المنازل في المدينة موجودة على ضفتي البوسفور. وعموماً تُعد الأحياء الأوروبية المركزية مثل بشكتاش وشيشلي من الأغلى للمتر المربع، بينما تقاربها أحياء قاضي كوي الساحلية، وتقدم الأحياء الخارجية على الجانبين مساحة أكبر بالميزانية نفسها.</p>
 
 <h2>كيف تختار؟</h2>
 <ol>
@@ -224,6 +310,29 @@ export const familyAreas: Guide = {
 <h2>International schools</h2>
 <p>Istanbul has several international schools offering British, American, International Baccalaureate, French, German and other curricula. Places can be limited and admission timelines vary, so contact schools early, ideally before you choose a home.</p>
 
+<h2>More districts worth a look</h2>
+<h3>Etiler and Ulus (European side)</h3>
+<p>Established, green and close to Levent, with garden apartments, villas, good restaurants and several schools nearby. Prices are high, but the neighbourhoods are among the most popular with families who want to stay central. See our article on <a href="/blog/etiler-luxury-residences">Etiler</a>.</p>
+<h3>Kadıköy's coast (Asian side)</h3>
+<p>Caddebostan, Suadiye and Erenköy combine modern apartment buildings with the long coastal park, Bağdat Avenue's shops and good transport. Many older buildings have been rebuilt under urban renewal. See our <a href="/blog/kadikoy">Kadıköy guide</a>.</p>
+<h3>Beykoz (Asian side)</h3>
+<p>Forests, villas and garden homes for families who want space and nature and are comfortable driving. See our <a href="/blog/beykoz">Beykoz guide</a>.</p>
+<h3>Göktürk (European side)</h3>
+<p>Villa compounds and residential complexes near the Belgrad Forest, popular with expatriate families, with easy access to the motorways and Istanbul Airport.</p>
+
+<h2>Activities for children</h2>
+<p>Istanbul offers plenty to do with children: parks such as Emirgan, Yıldız and the seaside parks of the Asian side; the Rahmi M. Koç Museum with its ships, trains and planes; aquariums, science centres and play centres in shopping malls; sailing, swimming and sports clubs; and ferry rides that children never seem to tire of. Weekend trips to the Princes' Islands, the Black Sea beaches or the Belgrad Forest are easy from most districts.</p>
+
+<h2>What to check in a family compound</h2>
+<ul>
+  <li>Safe play areas, walking paths and green space within the compound.</li>
+  <li>Security arrangements and how visitors are managed.</li>
+  <li>Distance and transport to your shortlisted schools, including school bus routes.</li>
+  <li>Indoor and outdoor pools, and who supervises them.</li>
+  <li>The age and earthquake resilience of the buildings.</li>
+  <li>The monthly aidat and what it covers.</li>
+</ul>
+
 <h2>Choosing the right area for your family</h2>
 <ol>
   <li>Decide on school options and your work location first.</li>
@@ -265,6 +374,29 @@ export const familyAreas: Guide = {
 
 <h2>المدارس الدولية</h2>
 <p>في إسطنبول عدة مدارس دولية تقدم مناهج بريطانية وأمريكية والبكالوريا الدولية والفرنسية والألمانية وغيرها. المقاعد قد تكون محدودة ومواعيد القبول تختلف، لذا تواصل مع المدارس مبكراً، ويفضل قبل اختيار المنزل.</p>
+
+<h2>أحياء أخرى تستحق النظر</h2>
+<h3>إتيلر وأولوس (الجانب الأوروبي)</h3>
+<p>أحياء عريقة وخضراء وقريبة من ليفنت، بشقق بحدائق وفيلات ومطاعم جيدة وعدة مدارس قريبة. الأسعار مرتفعة، لكنها من أكثر الأحياء شعبية لدى العائلات التي تريد البقاء قرب المركز. اطلع على مقالنا عن <a href="/blog/etiler-luxury-residences">إتيلر</a>.</p>
+<h3>ساحل قاضي كوي (الجانب الآسيوي)</h3>
+<p>تجمع جادة بوستان وسوادية وإرين كوي المباني السكنية الحديثة مع الحديقة الساحلية الطويلة ومتاجر جادة بغداد والمواصلات الجيدة. وأعيد بناء كثير من المباني القديمة ضمن التجديد العمراني. اطلع على <a href="/blog/kadikoy">دليل قاضي كوي</a>.</p>
+<h3>بيكوز (الجانب الآسيوي)</h3>
+<p>غابات وفيلات ومنازل بحدائق للعائلات التي تريد المساحة والطبيعة ولا تمانع القيادة. اطلع على <a href="/blog/beykoz">دليل بيكوز</a>.</p>
+<h3>غوك تورك (الجانب الأوروبي)</h3>
+<p>مجمعات فيلات ومشاريع سكنية قرب غابة بلغراد، محبوبة لدى العائلات الأجنبية، مع وصول سهل إلى الطرق السريعة ومطار إسطنبول.</p>
+
+<h2>أنشطة للأطفال</h2>
+<p>تقدم إسطنبول الكثير للأطفال: حدائق مثل أميرغان ويلدز والحدائق الساحلية على الجانب الآسيوي، ومتحف رحمي م. كوتش بسفنه وقطاراته وطائراته، وأحواض الأسماك ومراكز العلوم ومراكز اللعب في مراكز التسوق، ونوادي الإبحار والسباحة والرياضة، ورحلات العبّارات التي لا يملّها الأطفال أبداً. ورحلات نهاية الأسبوع إلى جزر الأميرات أو شواطئ البحر الأسود أو غابة بلغراد سهلة من معظم الأحياء.</p>
+
+<h2>ما يجب التحقق منه في المجمع العائلي</h2>
+<ul>
+  <li>أماكن لعب آمنة وممرات للمشي ومساحات خضراء داخل المجمع.</li>
+  <li>ترتيبات الأمن وطريقة إدارة الزوار.</li>
+  <li>المسافة والمواصلات إلى المدارس في قائمتك، بما فيها خطوط الحافلات المدرسية.</li>
+  <li>المسابح الداخلية والخارجية ومن يشرف عليها.</li>
+  <li>عمر المباني ومقاومتها للزلازل.</li>
+  <li>الآيدات الشهرية وما تغطيه.</li>
+</ul>
 
 <h2>كيف تختار المنطقة المناسبة لعائلتك؟</h2>
 <ol>
@@ -317,6 +449,21 @@ export const dailyLife: Guide = {
 <h2>Setting up a company</h2>
 <p>Foreign nationals can establish companies in Turkey, most commonly a limited company (Ltd. Şti.) or a joint-stock company (A.Ş.). The process involves registering with the trade registry, opening a capital account, appointing an accountant and meeting tax registration requirements. Running a business is separate from residence: if you plan to work in your own company, you will also need the right work permit. Speak to a lawyer and an accountant before you start.</p>
 
+<h2>Utilities and internet</h2>
+<p>Electricity, natural gas and water are supplied by separate companies, and subscriptions are opened in the name of the owner or tenant. You will usually need your title deed or rental contract, your passport and your Turkish tax number. Many subscriptions can be opened online or at service points, and bills can be paid by automatic bank payment. Fibre internet is available in most central districts; check coverage for your building before you move in, as speeds vary.</p>
+
+<h2>Mobile phones</h2>
+<p>You can buy a Turkish SIM card with your passport. Phones bought abroad can be used on Turkish networks for a limited period, around 120 days, after which they must be registered with the authorities, which involves a fee. Residents planning to stay long-term often register their phone early or buy a phone in Turkey.</p>
+
+<h2>Address registration and e-Devlet</h2>
+<p>Once you have a residence permit, you can register your address and use e-Devlet, the government's online portal, for many services: viewing property records, paying some taxes and fees, checking official documents and booking appointments. A Turkish mobile number is usually needed to set up access.</p>
+
+<h2>Emergencies</h2>
+<p>The single emergency number in Turkey is <strong>112</strong>, for ambulance, police and fire. Private hospitals also run their own emergency departments. Save the address of your nearest hospital and your building manager's number in your phone when you move in.</p>
+
+<h2>Shopping and deliveries</h2>
+<p>Istanbul is one of the easiest cities in the world for deliveries. Groceries, meals, medicines and household goods can be ordered through apps, often within an hour. Large shopping centres, neighbourhood markets and online retailers cover almost every need, and cash is still useful at small shops and street markets.</p>
+
 <h2>Settling in</h2>
 <p>Most practical problems get easier once you have a local network: a building manager you trust, a reliable handyman, a good accountant. If you buy through Voi Home, our <a href="/services/after-sales-support">after-sales support</a> helps with utility connections, residence permit paperwork and the first months in your new home.</p>
 
@@ -343,6 +490,21 @@ export const dailyLife: Guide = {
 
 <h2>تأسيس شركة</h2>
 <p>يمكن للأجانب تأسيس شركات في تركيا، وأكثرها شيوعاً الشركة ذات المسؤولية المحدودة (Ltd. Şti.) والشركة المساهمة (A.Ş.). وتشمل الإجراءات التسجيل في السجل التجاري وفتح حساب لرأس المال وتعيين محاسب واستيفاء متطلبات التسجيل الضريبي. وإدارة شركة أمر منفصل عن الإقامة، فإذا كنت ستعمل في شركتك فستحتاج أيضاً إلى إذن العمل المناسب. استشر محامياً ومحاسباً قبل أن تبدأ.</p>
+
+<h2>الخدمات والإنترنت</h2>
+<p>تزوّد شركات منفصلة الكهرباء والغاز الطبيعي والمياه، وتُفتح الاشتراكات باسم المالك أو المستأجر. وستحتاج عادة إلى سند الملكية أو عقد الإيجار وجواز سفرك ورقمك الضريبي التركي. ويمكن فتح اشتراكات كثيرة إلكترونياً أو في نقاط الخدمة، ودفع الفواتير بالخصم المصرفي التلقائي. والإنترنت بالألياف متوفر في معظم الأحياء المركزية، فتحقق من التغطية في مبناك قبل الانتقال، لأن السرعات تختلف.</p>
+
+<h2>الهواتف المحمولة</h2>
+<p>يمكنك شراء شريحة تركية بجواز سفرك. والهواتف المشتراة من الخارج يمكن استخدامها على الشبكات التركية لفترة محدودة، نحو 120 يوماً، يجب بعدها تسجيلها لدى السلطات مقابل رسوم. وكثيراً ما يسجل المقيمون الذين يخططون للبقاء طويلاً هواتفهم مبكراً أو يشترون هاتفاً في تركيا.</p>
+
+<h2>تسجيل العنوان وبوابة إي دولت</h2>
+<p>بعد حصولك على تصريح الإقامة، يمكنك تسجيل عنوانك واستخدام إي دولت، البوابة الحكومية الإلكترونية، لخدمات كثيرة: الاطلاع على سجلات العقارات، ودفع بعض الضرائب والرسوم، والتحقق من الوثائق الرسمية، وحجز المواعيد. ويُحتاج عادة إلى رقم هاتف تركي لإعداد الدخول.</p>
+
+<h2>الطوارئ</h2>
+<p>رقم الطوارئ الموحد في تركيا هو <strong>112</strong> للإسعاف والشرطة والإطفاء. كما تدير المستشفيات الخاصة أقسام طوارئ خاصة بها. احفظ عنوان أقرب مستشفى ورقم مدير المبنى في هاتفك عند انتقالك.</p>
+
+<h2>التسوق والتوصيل</h2>
+<p>إسطنبول من أسهل مدن العالم في التوصيل. فيمكن طلب البقالة والوجبات والأدوية والمستلزمات المنزلية عبر التطبيقات، غالباً خلال ساعة. وتغطي مراكز التسوق الكبيرة وأسواق الأحياء والمتاجر الإلكترونية كل الاحتياجات تقريباً، وما زال النقد مفيداً في المتاجر الصغيرة والأسواق الشعبية.</p>
 
 <h2>الاستقرار</h2>
 <p>تصبح معظم المشكلات العملية أسهل عندما تكوّن شبكة محلية: مدير مبنى تثق به، وفني صيانة موثوق، ومحاسب جيد. وإذا اشتريت عن طريق Voi Home فإن <a href="/services/after-sales-support">خدمة ما بعد البيع</a> لدينا تساعدك في توصيل الخدمات وأوراق الإقامة والأشهر الأولى في منزلك الجديد.</p>

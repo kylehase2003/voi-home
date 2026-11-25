@@ -56,6 +56,33 @@ export const residencePermit: Guide = {
 <h2>Do I need a residence permit to buy property?</h2>
 <p>No. Foreign nationals can buy property in Turkey without having a residence permit first. Many buyers purchase on a tourist visa, or even remotely, and apply for residence afterwards. See <a href="/blog/how-to-buy-property-in-turkey-as-a-foreigner">how to buy property in Turkey as a foreigner</a>.</p>
 
+<h2>The application step by step</h2>
+<ol>
+  <li><strong>Buy and register the property.</strong> The title deed must be in your name, and the valuation report must show that the property meets the value requirement.</li>
+  <li><strong>Complete the online application</strong> on the website of the Presidency of Migration Management. You enter your personal details, address and the basis of your application, and choose an appointment.</li>
+  <li><strong>Prepare your documents</strong>: passport and copies, biometric photos, the title deed, the valuation report, health insurance valid in Turkey, and proof of sufficient means where requested.</li>
+  <li><strong>Attend the appointment</strong> at the provincial migration office, where your documents are checked and your fingerprints may be taken.</li>
+  <li><strong>Receive your permit card</strong> by post at your registered address once the application is approved.</li>
+</ol>
+
+<h2>Registering your address</h2>
+<p>Once you live at your property, your address should be registered in the national address system. This matters because official letters, including your residence permit card, are sent to your registered address, and an incorrect address can cause problems at renewal. Your building manager or our team can help you gather the documents needed.</p>
+
+<h2>Renewing your permit</h2>
+<p>Residence permits are granted for a set period and must be renewed before they expire. Applications for renewal can usually be made in the weeks before the expiry date, and you should not let a permit lapse, since overstaying can lead to fines and difficulties entering Turkey in future. Keep your health insurance, address and property details up to date so that renewal is straightforward.</p>
+
+<h2>The path to long-term residence</h2>
+<p>People who have lived in Turkey legally and continuously on residence permits for eight years can apply for a long-term residence permit, which does not need regular renewal. Time spent on some permit types, such as student permits, may count differently, so check how your own history is treated before you plan around it.</p>
+
+<h2>Common reasons for delays or refusal</h2>
+<ul>
+  <li>A property value below the threshold in the official valuation.</li>
+  <li>An address in a neighbourhood closed to new residence registrations for foreigners.</li>
+  <li>Missing or expired health insurance.</li>
+  <li>Inconsistent information between the application, the title deed and the registered address.</li>
+  <li>Using a rented-out property as the basis for the application.</li>
+</ul>
+
 <h2>How Voi Home helps</h2>
 <p>If a residence permit is part of your plan, tell us before you start viewing. We will check value and location requirements for each property, and our <a href="/services/after-sales-support">after-sales team</a> can help coordinate your application once you have bought.</p>
 
@@ -95,6 +122,33 @@ export const residencePermit: Guide = {
 
 <h2>هل أحتاج إلى إقامة لشراء عقار؟</h2>
 <p>لا. يمكن للأجانب شراء العقارات في تركيا دون الحصول على إقامة أولاً. كثير من المشترين يشترون بتأشيرة سياحية أو حتى عن بُعد، ثم يتقدمون للإقامة بعد ذلك. اقرأ <a href="/blog/how-to-buy-property-in-turkey-as-a-foreigner">كيف تشتري عقاراً في تركيا كأجنبي</a>.</p>
+
+<h2>خطوات الطلب</h2>
+<ol>
+  <li><strong>اشترِ العقار وسجّله.</strong> يجب أن يكون سند الملكية باسمك، وأن يُظهر تقرير التقييم أن العقار يستوفي شرط القيمة.</li>
+  <li><strong>أكمل الطلب الإلكتروني</strong> على موقع رئاسة إدارة الهجرة، حيث تدخل بياناتك الشخصية وعنوانك وأساس طلبك، وتختار موعداً.</li>
+  <li><strong>جهّز وثائقك</strong>: جواز السفر ونسخه، والصور البيومترية، وسند الملكية، وتقرير التقييم، وتأميناً صحياً سارياً في تركيا، وإثبات الملاءة المالية عند الطلب.</li>
+  <li><strong>احضر الموعد</strong> في مديرية الهجرة في الولاية، حيث تُراجع وثائقك وقد تؤخذ بصماتك.</li>
+  <li><strong>استلم بطاقة الإقامة</strong> بالبريد على عنوانك المسجل بعد الموافقة على الطلب.</li>
+</ol>
+
+<h2>تسجيل العنوان</h2>
+<p>بعد أن تسكن في عقارك، ينبغي تسجيل عنوانك في نظام العناوين الوطني. وهذا مهم لأن الرسائل الرسمية، ومنها بطاقة الإقامة، تُرسل إلى عنوانك المسجل، والعنوان غير الصحيح قد يسبب مشكلات عند التجديد. ويمكن لمدير المبنى أو لفريقنا المساعدة في جمع الوثائق اللازمة.</p>
+
+<h2>تجديد الإقامة</h2>
+<p>تُمنح تصاريح الإقامة لمدة محددة ويجب تجديدها قبل انتهائها. ويمكن عادة تقديم طلب التجديد في الأسابيع السابقة لتاريخ الانتهاء، ولا ينبغي ترك التصريح ينتهي، لأن تجاوز المدة قد يؤدي إلى غرامات وصعوبات في دخول تركيا مستقبلاً. حافظ على تحديث تأمينك الصحي وعنوانك وبيانات عقارك ليكون التجديد سهلاً.</p>
+
+<h2>الطريق إلى الإقامة طويلة الأمد</h2>
+<p>يمكن لمن عاش في تركيا بشكل قانوني ومتواصل بتصاريح إقامة لمدة ثماني سنوات التقدم لتصريح إقامة طويلة الأمد لا يحتاج إلى تجديد دوري. وقد تُحتسب المدة التي تقضى ببعض أنواع التصاريح، مثل تصاريح الطلاب، بشكل مختلف، لذا تحقق من كيفية معاملة سجلك قبل التخطيط على أساسه.</p>
+
+<h2>أسباب شائعة للتأخير أو الرفض</h2>
+<ul>
+  <li>قيمة عقار أقل من الحد في التقييم الرسمي.</li>
+  <li>عنوان في حي مغلق أمام تسجيلات الإقامة الجديدة للأجانب.</li>
+  <li>تأمين صحي ناقص أو منتهي الصلاحية.</li>
+  <li>معلومات غير متطابقة بين الطلب وسند الملكية والعنوان المسجل.</li>
+  <li>استخدام عقار مؤجر كأساس للطلب.</li>
+</ul>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>إذا كانت الإقامة جزءاً من خطتك فأخبرنا قبل أن تبدأ المعاينات. سنتحقق من شروط القيمة والموقع لكل عقار، ويمكن لـ<a href="/services/after-sales-support">فريق ما بعد البيع</a> مساعدتك في تنسيق طلبك بعد الشراء.</p>
@@ -160,6 +214,34 @@ export const howToBuy: Guide = {
 <h2>Don't forget the extra costs</h2>
 <p>On top of the price, budget for title deed fees, possibly VAT on new-builds, the valuation, translations, legal fees and insurance. Our guide to <a href="/blog/property-taxes-and-costs-in-turkey">property taxes and costs in Turkey</a> sets them out.</p>
 
+<h2>Choosing the right professionals</h2>
+<p>A smooth purchase usually involves a small team. Each has a different role, and it helps to know who does what:</p>
+<ul>
+  <li><strong>A licensed real estate agent</strong> helps you find and compare properties, negotiate and coordinate the process.</li>
+  <li><strong>An independent lawyer</strong> checks the title deed, permits and contract, and can act for you under a power of attorney.</li>
+  <li><strong>A licensed valuer</strong> prepares the official valuation report.</li>
+  <li><strong>A sworn translator</strong> attends the title deed transfer if you do not speak Turkish.</li>
+  <li><strong>An accountant</strong> helps with tax registration, rental income declarations and, later, the sale.</li>
+</ul>
+
+<h2>Buying with a mortgage</h2>
+<p>Some Turkish banks offer mortgages to foreign buyers, usually for completed properties with full condominium title and an occupancy permit. Loan amounts, interest rates and the share of the price a bank will lend vary, and conditions can change quickly with the economy. Many international buyers pay in cash or arrange finance in their home country instead. If you need a mortgage, speak to banks before you choose a property, since the property itself must meet the bank's criteria.</p>
+
+<h2>Buying through a company</h2>
+<p>Foreign investors can also buy through a company established in Turkey, which may suit commercial property or larger portfolios. Company ownership has different tax, accounting and reporting rules, and it is not suitable for every goal. A residence permit or citizenship application based on property is normally made by an individual owner. Ask a lawyer and accountant before choosing this route.</p>
+
+<h2>Common mistakes to avoid</h2>
+<ol>
+  <li><strong>Paying a large deposit before checks.</strong> Keep any reservation payment small until the title deed has been reviewed.</li>
+  <li><strong>Declaring a lower price on the title deed.</strong> Under-declaring to save fees can cause problems with tax, valuation and future sale, and is not lawful.</li>
+  <li><strong>Ignoring running costs.</strong> High aidat and maintenance can change the economics of a purchase.</li>
+  <li><strong>Choosing the property before the area.</strong> Location, transport and building quality matter more than finishes.</li>
+  <li><strong>Forgetting the paperwork after completion.</strong> Utilities, property tax registration and DASK renewals all need setting up.</li>
+</ol>
+
+<h2>After you get the keys</h2>
+<p>Once the title deed is in your name, transfer the electricity, gas, water and internet subscriptions, register with the building management, renew the earthquake insurance each year and keep copies of all documents in one place. If you plan to rent the property out, set up the rental and tax arrangements from the start.</p>
+
 <h2>How Voi Home helps</h2>
 <p>Voi Home guides you from the first shortlist to the keys in your hand, coordinating viewings, checks, documents and the professionals you need. <a href="/services/property-sales">See our property sales service</a> or <a href="/contact">speak with us</a>.</p>
 
@@ -205,6 +287,34 @@ export const howToBuy: Guide = {
 
 <h2>لا تنسَ التكاليف الإضافية</h2>
 <p>إلى جانب السعر، خصص ميزانية لرسوم الطابو، وربما ضريبة القيمة المضافة على العقارات الجديدة، والتقييم، والترجمات، وأتعاب المحامي، والتأمين. يعرض دليلنا عن <a href="/blog/property-taxes-and-costs-in-turkey">ضرائب العقارات وتكاليفها في تركيا</a> هذه البنود.</p>
+
+<h2>اختيار المختصين المناسبين</h2>
+<p>تتطلب عملية الشراء السلسة عادة فريقاً صغيراً، لكل منهم دور مختلف، ومن المفيد معرفة من يفعل ماذا:</p>
+<ul>
+  <li><strong>وسيط عقاري مرخص</strong> يساعدك في إيجاد العقارات ومقارنتها والتفاوض وتنسيق العملية.</li>
+  <li><strong>محامٍ مستقل</strong> يفحص سند الملكية والتراخيص والعقد، ويمكنه التصرف نيابة عنك بموجب وكالة.</li>
+  <li><strong>مقيّم مرخص</strong> يعد تقرير التقييم الرسمي.</li>
+  <li><strong>مترجم محلف</strong> يحضر نقل سند الملكية إذا كنت لا تتحدث التركية.</li>
+  <li><strong>محاسب</strong> يساعد في التسجيل الضريبي والتصريح بدخل الإيجار، ولاحقاً عند البيع.</li>
+</ul>
+
+<h2>الشراء بقرض عقاري</h2>
+<p>تقدم بعض المصارف التركية قروضاً عقارية للمشترين الأجانب، عادة للعقارات المكتملة ذات سند الملكية الطابقية الكاملة ورخصة الإسكان. وتختلف مبالغ القروض وأسعار الفائدة ونسبة السعر التي يقرضها المصرف، وقد تتغير الشروط بسرعة مع الاقتصاد. ويدفع كثير من المشترين الدوليين نقداً أو يرتبون التمويل في بلدهم. وإذا احتجت إلى قرض، تحدث إلى المصارف قبل اختيار العقار، لأن العقار نفسه يجب أن يستوفي معايير المصرف.</p>
+
+<h2>الشراء عبر شركة</h2>
+<p>يمكن للمستثمرين الأجانب أيضاً الشراء عبر شركة مؤسسة في تركيا، وقد يناسب ذلك العقارات التجارية أو المحافظ الأكبر. ولملكية الشركات قواعد مختلفة في الضرائب والمحاسبة والتقارير، وهي لا تناسب كل هدف. ويُقدَّم طلب الإقامة أو الجنسية القائم على العقار عادة من مالك فرد. استشر محامياً ومحاسباً قبل اختيار هذا المسار.</p>
+
+<h2>أخطاء شائعة ينبغي تجنبها</h2>
+<ol>
+  <li><strong>دفع عربون كبير قبل الفحوصات.</strong> أبقِ أي دفعة حجز صغيرة حتى تتم مراجعة سند الملكية.</li>
+  <li><strong>التصريح بسعر أقل في سند الملكية.</strong> التصريح بأقل من القيمة لتوفير الرسوم قد يسبب مشكلات في الضرائب والتقييم والبيع مستقبلاً، وهو غير قانوني.</li>
+  <li><strong>تجاهل تكاليف التشغيل.</strong> الآيدات المرتفعة والصيانة قد تغيّر جدوى الشراء.</li>
+  <li><strong>اختيار العقار قبل المنطقة.</strong> الموقع والمواصلات وجودة المبنى أهم من التشطيبات.</li>
+  <li><strong>نسيان الإجراءات بعد الإتمام.</strong> الخدمات وتسجيل ضريبة العقار وتجديد تأمين داسك كلها تحتاج إلى ترتيب.</li>
+</ol>
+
+<h2>بعد استلام المفاتيح</h2>
+<p>بعد أن يصبح سند الملكية باسمك، انقل اشتراكات الكهرباء والغاز والمياه والإنترنت، وسجّل لدى إدارة المبنى، وجدد التأمين ضد الزلازل كل عام، واحتفظ بنسخ من كل الوثائق في مكان واحد. وإذا كنت تنوي تأجير العقار، فرتّب إجراءات التأجير والضرائب منذ البداية.</p>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>ترافقك Voi Home من القائمة الأولى حتى استلام المفاتيح، وتنسق المعاينات والفحوصات والوثائق والمختصين الذين تحتاجهم. <a href="/services/property-sales">تعرّف على خدمة بيع العقارات</a> أو <a href="/contact">تحدث معنا</a>.</p>
@@ -262,6 +372,30 @@ export const tapuGuide: Guide = {
 <h2>After you receive the Tapu</h2>
 <p>Keep the original Tapu somewhere safe, and note that you can also check your property records online through the e-Devlet system. Register the property for annual real estate tax and transfer the utility subscriptions into your name.</p>
 
+<h2>How to read a Tapu</h2>
+<p>A Tapu contains a lot of information in a compact format. The key fields to understand are:</p>
+<ul>
+  <li><strong>Province, district and neighbourhood:</strong> where the property is located.</li>
+  <li><strong>Block and parcel (ada and parsel):</strong> the land plot on which the building stands, as recorded in the cadastre.</li>
+  <li><strong>Qualification (nitelik):</strong> what the land or unit is, for example a residence, shop or land with a building.</li>
+  <li><strong>Independent section number:</strong> the number of your apartment within the building.</li>
+  <li><strong>Floor:</strong> the level of the unit.</li>
+  <li><strong>Land share (arsa payı):</strong> your share of the land under the building.</li>
+  <li><strong>Owner details:</strong> the name of the owner and, where relevant, the share each owner holds.</li>
+</ul>
+
+<h2>Why the land share matters</h2>
+<p>In an apartment building, each owner holds a share of the land the building stands on. The land share affects your rights in the building and becomes especially important in urban renewal, when an older building is demolished and rebuilt. In that case, owners' entitlements in the new building are often calculated from their land shares. A larger land share can therefore be valuable, particularly in older buildings in good locations.</p>
+
+<h2>Checking records online</h2>
+<p>Owners can view their property records through the e-Devlet government portal, and the Land Registry offers online services for appointments and applications. Before buying, your lawyer can obtain a current extract from the Land Registry that shows ownership, mortgages, attachments and annotations. Always rely on a current extract rather than an old copy provided by the seller.</p>
+
+<h2>Title deeds and urban renewal</h2>
+<p>If a building is designated as at risk under the urban renewal programme, owners may decide to demolish and rebuild it with a contractor. This is recorded on the title records. If you are buying in an older building, ask whether a risk assessment has been carried out, whether a renewal agreement is planned, and what the terms would mean for your unit.</p>
+
+<h2>Lost or damaged Tapu</h2>
+<p>Ownership is recorded in the Land Registry, not just on the paper document. If the original Tapu is lost or damaged, the owner can apply to the Land Registry for a replacement. Your ownership is not affected by losing the paper.</p>
+
 <h2>How Voi Home helps</h2>
 <p>Voi Home coordinates the checks and the professionals you need, so that you understand exactly what you are buying before you commit. <a href="/contact">Speak with our team</a> about a property you are considering.</p>
 
@@ -299,6 +433,30 @@ export const tapuGuide: Guide = {
 
 <h2>بعد استلام الطابو</h2>
 <p>احتفظ بالطابو الأصلي في مكان آمن، ويمكنك أيضاً الاطلاع على سجلات عقارك عبر نظام إي دولت (e-Devlet). سجّل العقار في ضريبة العقار السنوية وانقل اشتراكات الخدمات إلى اسمك.</p>
+
+<h2>كيف تقرأ سند الطابو</h2>
+<p>يحتوي الطابو على معلومات كثيرة في شكل مختصر. وأهم الحقول التي ينبغي فهمها:</p>
+<ul>
+  <li><strong>الولاية والمنطقة والحي:</strong> موقع العقار.</li>
+  <li><strong>الكتلة والقطعة (آدا وبارسل):</strong> قطعة الأرض التي يقوم عليها المبنى كما هي مسجلة في المساحة.</li>
+  <li><strong>الصفة (نيتيليك):</strong> طبيعة الأرض أو الوحدة، مثل مسكن أو متجر أو أرض عليها مبنى.</li>
+  <li><strong>رقم القسم المستقل:</strong> رقم شقتك داخل المبنى.</li>
+  <li><strong>الطابق:</strong> مستوى الوحدة.</li>
+  <li><strong>حصة الأرض (أرسا بايي):</strong> حصتك من الأرض التي يقوم عليها المبنى.</li>
+  <li><strong>بيانات المالك:</strong> اسم المالك، والحصة التي يملكها كل مالك عند الاقتضاء.</li>
+</ul>
+
+<h2>لماذا تهم حصة الأرض</h2>
+<p>في المبنى السكني يملك كل مالك حصة من الأرض التي يقوم عليها المبنى. وتؤثر هذه الحصة في حقوقك داخل المبنى، وتصبح مهمة بشكل خاص في التجديد العمراني، عندما يُهدم مبنى قديم ويعاد بناؤه، إذ تُحسب استحقاقات الملاك في المبنى الجديد غالباً على أساس حصصهم من الأرض. لذا قد تكون الحصة الأكبر ذات قيمة، خاصة في المباني القديمة في المواقع الجيدة.</p>
+
+<h2>التحقق من السجلات إلكترونياً</h2>
+<p>يمكن للملاك الاطلاع على سجلات عقاراتهم عبر بوابة الحكومة الإلكترونية (إي دولت)، ويقدم السجل العقاري خدمات إلكترونية للمواعيد والطلبات. وقبل الشراء يمكن لمحاميك الحصول على مستخرج حديث من السجل العقاري يُظهر الملكية والرهون والحجوزات والقيود. واعتمد دائماً على مستخرج حديث لا على نسخة قديمة يقدمها البائع.</p>
+
+<h2>سندات الملكية والتجديد العمراني</h2>
+<p>إذا صُنف مبنى بأنه معرض للخطر ضمن برنامج التجديد العمراني، فقد يقرر الملاك هدمه وإعادة بنائه مع مقاول، ويُسجل ذلك في سجلات الملكية. وإذا كنت تشتري في مبنى قديم، فاسأل عما إذا أُجري تقييم للمخاطر، وما إذا كان هناك اتفاق تجديد مخطط، وما تعنيه شروطه لوحدتك.</p>
+
+<h2>ضياع الطابو أو تلفه</h2>
+<p>الملكية مسجلة في السجل العقاري لا على الورقة فقط. فإذا ضاع الطابو الأصلي أو تلف، يمكن للمالك التقدم إلى السجل العقاري للحصول على بديل، ولا تتأثر ملكيتك بفقدان الورقة.</p>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>تنسق Voi Home الفحوصات والمختصين الذين تحتاجهم لتعرف تماماً ما الذي تشتريه قبل أن تلتزم. <a href="/contact">تحدث مع فريقنا</a> عن عقار تفكر فيه.</p>
@@ -357,6 +515,27 @@ export const offPlan: Guide = {
 <h2>Is off-plan a good investment?</h2>
 <p>It can be. Off-plan can offer attractive opportunities, but the outcome depends on the developer's reliability, construction progress, the payment plan and the expected delivery date. The best off-plan purchases are usually from developers with a solid track record, in areas where real infrastructure is arriving. Read our <a href="/blog/investing-in-istanbul-real-estate">guide to investing in Istanbul real estate</a> for more on choosing areas.</p>
 
+<h2>How off-plan payment plans usually work</h2>
+<p>Payment plans differ between developers, but a common structure looks like this:</p>
+<ol>
+  <li><strong>A reservation or down payment</strong> when you sign, often a significant share of the price.</li>
+  <li><strong>Instalments during construction</strong>, monthly, quarterly or linked to construction stages.</li>
+  <li><strong>A final payment at handover</strong>, when the keys are delivered.</li>
+</ol>
+<p>Some developers offer discounts for paying in full at the start. Compare the discount with the risk of having more money tied up before completion. Make sure the contract states the currency of each payment and whether any amounts are indexed.</p>
+
+<h2>Contracts and consumer protection</h2>
+<p>Off-plan purchases from developers are usually made through a sales contract signed before a notary, sometimes called a promise of sale contract, until the title deed can be transferred. Turkish consumer law gives individual buyers of pre-paid homes certain protections, including formal requirements for the contract and a cooling-off period after signing. Ask your lawyer how these apply to your purchase, especially if you are buying as an investor or through a company.</p>
+
+<h2>When is the title deed transferred?</h2>
+<p>This is one of the most important questions in any off-plan purchase. In some projects, the title deed can be transferred to you early as construction servitude (kat irtifakı), giving you registered rights during construction. In others, transfer only happens near or after completion. An early title transfer generally gives buyers more security, and it is essential if you need the property for a citizenship or residence application.</p>
+
+<h2>Handover and snagging</h2>
+<p>When the building is complete, inspect your unit carefully before accepting it. Check that the size, layout, materials and finishes match the contract, and list any defects, such as cracks, leaks, faulty fittings or unfinished work. A professional inspection can be worthwhile. Agree in writing when the developer will fix each item. Also confirm that the occupancy permit has been issued and that the title deed will be upgraded to full condominium ownership.</p>
+
+<h2>Reselling before completion</h2>
+<p>Some buyers plan to sell an off-plan unit before completion. Check whether the contract allows transfer to a new buyer and whether the developer charges a fee. Remember that when many investors in the same project try to sell at once, prices can be held back.</p>
+
 <h2>How Voi Home helps</h2>
 <p>Voi Home works with developers across Istanbul and assesses projects from the buyer's side. Our <a href="/services/investment-advisory">investment advisory</a> service helps you compare projects, payment plans and expected delivery, and our <a href="/services/project-sales-office-setup">project sales work</a> means we know how new projects are built and sold.</p>
 
@@ -395,6 +574,27 @@ export const offPlan: Guide = {
 
 <h2>هل الشراء على المخطط استثمار جيد؟</h2>
 <p>قد يكون كذلك. فهو يقدم فرصاً جذابة، لكن النتيجة تعتمد على موثوقية المطور وتقدم البناء وخطة الدفع وموعد التسليم المتوقع. وأفضل الصفقات غالباً تكون مع مطورين ذوي سجل متين، في مناطق تصلها بنية تحتية حقيقية. اقرأ <a href="/blog/investing-in-istanbul-real-estate">دليل الاستثمار العقاري في إسطنبول</a> لمعرفة المزيد عن اختيار المناطق.</p>
+
+<h2>كيف تعمل خطط الدفع على المخطط عادة</h2>
+<p>تختلف خطط الدفع بين المطورين، لكن الهيكل الشائع يكون كالتالي:</p>
+<ol>
+  <li><strong>دفعة حجز أو دفعة أولى</strong> عند التوقيع، وغالباً ما تكون نسبة كبيرة من السعر.</li>
+  <li><strong>أقساط أثناء البناء</strong>، شهرية أو فصلية أو مرتبطة بمراحل البناء.</li>
+  <li><strong>دفعة نهائية عند التسليم</strong>، حين تُسلم المفاتيح.</li>
+</ol>
+<p>يقدم بعض المطورين خصومات للدفع الكامل في البداية. قارن الخصم بخطر تجميد مبلغ أكبر قبل الإنجاز. وتأكد من أن العقد يحدد عملة كل دفعة وما إذا كانت أي مبالغ مرتبطة بمؤشر.</p>
+
+<h2>العقود وحماية المستهلك</h2>
+<p>تتم عمليات الشراء على المخطط من المطورين عادة عبر عقد بيع يوقع أمام كاتب العدل، يسمى أحياناً عقد الوعد بالبيع، إلى أن يمكن نقل سند الملكية. ويمنح قانون المستهلك التركي المشترين الأفراد للمنازل المدفوعة مسبقاً حمايات معينة، منها متطلبات شكلية للعقد وفترة تراجع بعد التوقيع. اسأل محاميك عن كيفية تطبيقها على عملية شرائك، خاصة إذا كنت تشتري كمستثمر أو عبر شركة.</p>
+
+<h2>متى يُنقل سند الملكية؟</h2>
+<p>هذا من أهم الأسئلة في أي شراء على المخطط. ففي بعض المشاريع يمكن نقل سند الملكية إليك مبكراً كحق ارتفاق طابقي (كات إرتفاقي)، ما يمنحك حقوقاً مسجلة أثناء البناء. وفي مشاريع أخرى لا يتم النقل إلا قرب الإنجاز أو بعده. والنقل المبكر لسند الملكية يمنح المشترين أماناً أكبر عموماً، وهو ضروري إذا كنت تحتاج العقار لطلب جنسية أو إقامة.</p>
+
+<h2>التسليم وفحص العيوب</h2>
+<p>عند اكتمال المبنى افحص وحدتك بعناية قبل قبولها. تحقق من أن المساحة والتقسيم والمواد والتشطيبات تطابق العقد، ودوّن أي عيوب مثل الشقوق أو التسربات أو التجهيزات المعطلة أو الأعمال غير المكتملة. وقد يستحق الأمر فحصاً مهنياً. واتفق كتابياً على موعد إصلاح المطور لكل بند. وتأكد كذلك من صدور رخصة الإسكان ومن أن سند الملكية سيُرقّى إلى ملكية طابقية كاملة.</p>
+
+<h2>إعادة البيع قبل الإنجاز</h2>
+<p>يخطط بعض المشترين لبيع الوحدة قبل الإنجاز. تحقق مما إذا كان العقد يسمح بالنقل إلى مشترٍ جديد وما إذا كان المطور يتقاضى رسوماً. وتذكر أنه عندما يحاول مستثمرون كثيرون في المشروع نفسه البيع في الوقت نفسه، قد تنكبح الأسعار.</p>
 
 <h2>كيف تساعدك Voi Home</h2>
 <p>تعمل Voi Home مع مطورين في أنحاء إسطنبول وتقيّم المشاريع من جهة المشتري. تساعدك خدمة <a href="/services/investment-advisory">الاستشارات الاستثمارية</a> في مقارنة المشاريع وخطط الدفع ومواعيد التسليم، كما أن عملنا في <a href="/services/project-sales-office-setup">مبيعات المشاريع</a> يعني أننا نعرف كيف تُبنى المشاريع الجديدة وتُباع.</p>
