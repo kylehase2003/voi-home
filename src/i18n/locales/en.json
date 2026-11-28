@@ -1033,6 +1033,24 @@
       "mersin": "Mersin",
       "alanya": "Alanya",
       "fethiye": "Fethiye"
+    },
+    "quick": {
+      "city": "City",
+      "type": "Type",
+      "area": "Area",
+      "price": "Price",
+      "allCities": "All cities",
+      "anyType": "Any type",
+      "anyArea": "Any area",
+      "anyPrice": "Any price",
+      "fivePlus": "5+1 and more",
+      "popular": "Popular",
+      "allAreas": "All districts",
+      "to": "to",
+      "moreFilters": "More filters",
+      "loadMore": "Load more homes",
+      "viewHome": "View home",
+      "showing": "Showing {{shown}} of {{total}} homes"
     }
   },
   "propertyDetail": {
@@ -1282,7 +1300,7 @@
   "seo": {
     "h1": {
       "home": "Luxury Real Estate in Istanbul & Bodrum, Türkiye",
-      "properties": "Homes for sale in Istanbul and Bodrum, Türkiye",
+      "properties": "Homes for sale in Istanbul",
       "about": "About Voi Home, boutique real estate in Türkiye",
       "contact": "Contact Voi Home — Real Estate Advisors in Istanbul & Bodrum"
     }

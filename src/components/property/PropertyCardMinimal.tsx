@@ -102,10 +102,10 @@ const PropertyCardMinimal = ({ property, animationDelay = 0 }: PropertyCardMinim
   return (
     <Link
       to={`/property/${property.slug}`}
-      className="group block animate-fade-in"
+      className="group block animate-fade-in rounded-2xl transition-transform duration-300 hover:-translate-y-1 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-burgundy/40 focus-visible:ring-offset-4"
       style={{ animationDelay: `${animationDelay}s` }}
     >
-      <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-muted mb-5">
+      <div className="relative overflow-hidden rounded-2xl aspect-[4/5] bg-muted mb-5 shadow-sm transition-shadow duration-300 group-hover:shadow-xl">
         <OptimizedImage
           src={mainImage}
           alt={property.title}
@@ -125,14 +125,14 @@ const PropertyCardMinimal = ({ property, animationDelay = 0 }: PropertyCardMinim
           </div>
         )}
 
-        <div className="absolute bottom-4 right-4 h-9 w-9 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center opacity-0 translate-y-1 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300">
-          <ArrowUpRight className="h-4 w-4 text-primary" />
+        <div className="absolute bottom-4 right-4 h-10 w-10 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center shadow-sm transition-colors duration-300 group-hover:bg-burgundy">
+          <ArrowUpRight className="h-4 w-4 text-foreground transition-colors group-hover:text-white" />
         </div>
       </div>
 
       <div className={`flex items-start justify-between gap-4 ${isRTL ? "font-arabic" : ""}`}>
         <div className="min-w-0">
-          <h3 className="font-serif text-lg md:text-xl text-foreground leading-tight line-clamp-1 group-hover:text-gold transition-colors">
+          <h3 className="font-serif text-lg md:text-xl text-foreground leading-tight line-clamp-1 group-hover:text-burgundy transition-colors">
             {getTranslatedContent(property, "title", i18n.language)}
           </h3>
           <div className="flex items-center gap-1.5 mt-2 text-sm text-muted-foreground">
@@ -155,6 +155,10 @@ const PropertyCardMinimal = ({ property, animationDelay = 0 }: PropertyCardMinim
             </div>
           )}
         </div>
+      </div>
+      <div className={`mt-4 inline-flex items-center gap-1.5 text-sm font-medium text-burgundy ${isRTL ? "font-arabic" : ""}`}>
+        {t("properties.quick.viewHome")}
+        <span aria-hidden="true" className="transition-transform duration-300 group-hover:translate-x-1 rtl:rotate-180 rtl:group-hover:-translate-x-1">→</span>
       </div>
     </Link>
   );

@@ -5,24 +5,16 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
-import { Filter } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { useProperties } from "@/hooks/useProperties";
 import { useFilterOptions } from "@/hooks/useFilterOptions";
 import { PropertyFilters as Filters } from "@/types/property";
 import PropertyCardMinimal from "@/components/property/PropertyCardMinimal";
 import { PropertyFilters } from "@/components/property/PropertyFilters";
 import LoadingSpinner from "@/components/property/LoadingSpinner";
+import QuickFilterBar from "@/components/property/QuickFilterBar";
 import SEOHead from "@/components/SEOHead";
 import RevealOnScroll from "@/components/RevealOnScroll";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationItem,
-  PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
-  PaginationEllipsis,
-} from "@/components/ui/pagination";
 
 const Properties = () => {
   const { t, i18n } = useTranslation();
@@ -117,35 +109,18 @@ const Properties = () => {
     loading: propertiesLoading
   } = useProperties(filters);
 
-  // Pagination
-  const PAGE_SIZE = 12;
-  const [currentPage, setCurrentPage] = useState(1);
+  // Show 8 homes (two rows of four), then 8 more each time "Load more" is pressed
+  const BATCH = 8;
+  const [visibleCount, setVisibleCount] = useState(BATCH);
   useEffect(() => {
-    setCurrentPage(1);
+    setVisibleCount(BATCH);
   }, [filters]);
-  const totalPages = Math.max(1, Math.ceil(properties.length / PAGE_SIZE));
-  const paginatedProperties = properties.slice(
-    (currentPage - 1) * PAGE_SIZE,
-    currentPage * PAGE_SIZE
-  );
-  const goToPage = (page: number) => {
-    const clamped = Math.min(Math.max(1, page), totalPages);
-    setCurrentPage(clamped);
-    if (typeof window !== "undefined") {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
-  const getPageNumbers = (): (number | "ellipsis")[] => {
-    if (totalPages <= 7) return Array.from({ length: totalPages }, (_, i) => i + 1);
-    const pages: (number | "ellipsis")[] = [1];
-    if (currentPage > 3) pages.push("ellipsis");
-    const start = Math.max(2, currentPage - 1);
-    const end = Math.min(totalPages - 1, currentPage + 1);
-    for (let i = start; i <= end; i++) pages.push(i);
-    if (currentPage < totalPages - 2) pages.push("ellipsis");
-    pages.push(totalPages);
-    return pages;
-  };
+  const visibleProperties = properties.slice(0, visibleCount);
+  const [moreOpen, setMoreOpen] = useState(false);
+
+  const handleQuickChange = (patch: Partial<Filters>) => setFilters((prev) => ({ ...prev, ...patch }));
+  const activeMoreCount = [filters.propertyType, filters.transactionType, filters.constructionStatus].filter(Boolean).length
+    + (filters.benefits?.length || 0) + (filters.amenities?.length || 0);
 
   const handleFilterChange = (key: keyof Filters, value: string | string[]) => {
     setFilters(prev => {
@@ -193,15 +168,15 @@ const Properties = () => {
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Homes for Sale in Istanbul & Bodrum"
-        description="A short, carefully chosen collection of apartments, villas and investment homes in Istanbul and Bodrum, each one personally visited and checked. Citizenship-eligible homes available."
+        title="Homes for Sale in Istanbul"
+        description="A short, carefully chosen collection of apartments, villas and investment homes in Istanbul, each one personally visited and checked. Citizenship-eligible homes available."
         path="/properties"
         breadcrumbs={[{ name: "Properties", path: "/properties" }]}
         jsonLd={{
           "@context": "https://schema.org",
           "@type": "CollectionPage",
-          name: "Homes for Sale in Istanbul & Bodrum, Türkiye",
-          description: "A carefully chosen collection of homes in Istanbul and Bodrum, each one personally visited and checked.",
+          name: "Homes for Sale in Istanbul, Türkiye",
+          description: "A carefully chosen collection of homes in Istanbul, each one personally visited and checked.",
           url: "https://voi-home.com/properties",
           isPartOf: {
             "@type": "WebSite",
@@ -217,7 +192,7 @@ const Properties = () => {
             {t("properties.title")}
           </div>
           <h1
-            className={`text-3xl md:text-[42px] leading-[1.12] tracking-[-1.2px] text-foreground ${
+            className={`whitespace-nowrap text-[clamp(22px,6.6vw,42px)] leading-[1.12] tracking-[-1px] md:tracking-[-1.2px] text-foreground ${
               i18n.language === "ar" ? "font-arabic" : "font-serif"
             }`}
           >
@@ -227,47 +202,20 @@ const Properties = () => {
         {/* Properties Listing Section */}
         <section className="py-12 bg-background">
           <div className="container mx-auto px-4">
-            {/* Mobile Filter Button */}
-            <div className="lg:hidden mb-6">
-              <Sheet>
-                <SheetTrigger asChild>
-                  <Button variant="outline" className="w-full rounded-full">
-                    <Filter className="mr-2 h-4 w-4" />
-                    {t('properties.filters')}
-                  </Button>
-                </SheetTrigger>
-                <SheetContent side="left" className="w-[300px] overflow-y-auto bg-background">
-                  <SheetHeader>
-                    <SheetTitle>{t('properties.filters')}</SheetTitle>
-                  </SheetHeader>
-                  <div className="mt-6 pb-6">
-                    <PropertyFilters
-                      filters={filters}
-                      onFilterChange={handleFilterChange}
-                      onClearFilters={clearFilters}
-                      availableAmenities={filterOptions.amenities}
-                      availablePropertyTypes={filterOptions.propertyTypes}
-                      availableLayouts={filterOptions.layouts}
-                      availableTransactionTypes={filterOptions.transactionTypes}
-                      availableBenefits={filterOptions.benefits}
-                      availableStatuses={filterOptions.statuses}
-                    />
-                  </div>
-                </SheetContent>
-              </Sheet>
-            </div>
+            <QuickFilterBar
+              filters={filters}
+              onChange={handleQuickChange}
+              onOpenMore={() => setMoreOpen(true)}
+              activeMoreCount={activeMoreCount}
+            />
 
-            <div className="flex gap-10">
-              {/* Desktop Sidebar Filters */}
-              <aside className="hidden lg:block w-64 space-y-6 flex-shrink-0 max-h-[calc(100vh-12rem)] overflow-y-auto sticky top-28">
-                <div className="pr-2">
-                  <h2
-                    className={`text-xs font-medium uppercase tracking-[1.5px] mb-5 text-muted-foreground ${
-                      i18n.language === 'ar' ? 'font-arabic' : ''
-                    }`}
-                  >
-                    {t('properties.filters')}
-                  </h2>
+            {/* Full filter list, opened from "More filters" */}
+            <Sheet open={moreOpen} onOpenChange={setMoreOpen}>
+              <SheetContent side={i18n.language === "ar" ? "right" : "left"} className="w-[320px] overflow-y-auto bg-background">
+                <SheetHeader>
+                  <SheetTitle>{t('properties.filters')}</SheetTitle>
+                </SheetHeader>
+                <div className="mt-6 pb-6">
                   <PropertyFilters
                     filters={filters}
                     onFilterChange={handleFilterChange}
@@ -280,78 +228,51 @@ const Properties = () => {
                     availableStatuses={filterOptions.statuses}
                   />
                 </div>
-              </aside>
+              </SheetContent>
+            </Sheet>
 
-              {/* Properties Grid */}
-              <div className="flex-1 min-w-0">
-                {loading ? (
-                  <LoadingSpinner message={t('properties.loading')} />
-                ) : properties.length === 0 ? (
-                  <div className="text-center py-12">
-                    <p className="mb-6 text-muted-foreground">
-                      {t('properties.noProperties')}
-                    </p>
+            {loading ? (
+              <LoadingSpinner message={t('properties.loading')} />
+            ) : properties.length === 0 ? (
+              <div className="text-center py-12">
+                <p className="mb-6 text-muted-foreground">
+                  {t('properties.noProperties')}
+                </p>
+                <Button
+                  variant="outline"
+                  className="border-burgundy text-burgundy hover:bg-burgundy hover:text-white rounded-full"
+                  onClick={clearFilters}
+                >
+                  {t('properties.viewAllProperties')}
+                </Button>
+              </div>
+            ) : (
+              <>
+                <p className="mb-6 text-sm text-muted-foreground">
+                  {t('properties.quick.showing', { shown: visibleProperties.length, total: properties.length })}
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-6 gap-y-10">
+                  {visibleProperties.map((property, index) => (
+                    <RevealOnScroll key={property.id} delay={(index % BATCH) * 40}>
+                      <PropertyCardMinimal property={property} />
+                    </RevealOnScroll>
+                  ))}
+                </div>
+                {visibleCount < properties.length && (
+                  <div className="mt-14 flex justify-center">
                     <Button
+                      size="lg"
                       variant="outline"
-                      className="border-gold text-gold hover:bg-gold hover:text-white rounded-full"
-                      onClick={clearFilters}
+                      className="group rounded-full border-foreground/20 px-8"
+                      onClick={() => setVisibleCount((c) => c + BATCH)}
                     >
-                      {t('properties.viewAllProperties')}
+                      {t('properties.quick.loadMore')}
+                      <ArrowRight className="ms-2 h-4 w-4 rotate-90 transition-transform group-hover:translate-y-0.5" />
                     </Button>
                   </div>
-                ) : (
-                  <>
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-10">
-                      {paginatedProperties.map((property, index) => (
-                        <RevealOnScroll key={property.id} delay={(index % PAGE_SIZE) * 40}>
-                          <PropertyCardMinimal property={property} />
-                        </RevealOnScroll>
-                      ))}
-                    </div>
-                    {totalPages > 1 && (
-                      <Pagination className="mt-12">
-                        <PaginationContent className="flex-wrap justify-center">
-                          <PaginationItem>
-                            <PaginationPrevious
-                              href="#"
-                              onClick={(e) => { e.preventDefault(); goToPage(currentPage - 1); }}
-                              aria-disabled={currentPage === 1}
-                              className={currentPage === 1 ? "pointer-events-none opacity-50" : ""}
-                            />
-                          </PaginationItem>
-                          {getPageNumbers().map((p, idx) =>
-                            p === "ellipsis" ? (
-                              <PaginationItem key={`e-${idx}`}>
-                                <PaginationEllipsis />
-                              </PaginationItem>
-                            ) : (
-                              <PaginationItem key={p}>
-                                <PaginationLink
-                                  href="#"
-                                  isActive={p === currentPage}
-                                  onClick={(e) => { e.preventDefault(); goToPage(p); }}
-                                  className={p === currentPage ? "bg-gold text-white border-gold hover:bg-gold/90 hover:text-white" : ""}
-                                >
-                                  {p}
-                                </PaginationLink>
-                              </PaginationItem>
-                            )
-                          )}
-                          <PaginationItem>
-                            <PaginationNext
-                              href="#"
-                              onClick={(e) => { e.preventDefault(); goToPage(currentPage + 1); }}
-                              aria-disabled={currentPage === totalPages}
-                              className={currentPage === totalPages ? "pointer-events-none opacity-50" : ""}
-                            />
-                          </PaginationItem>
-                        </PaginationContent>
-                      </Pagination>
-                    )}
-                  </>
                 )}
-              </div>
-            </div>
+              </>
+            )}
           </div>
         </section>
       </main>
